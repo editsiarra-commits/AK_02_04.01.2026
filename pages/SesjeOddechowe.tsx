@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 const SesjeOddechowe: React.FC = () => {
   return (
@@ -22,6 +24,12 @@ const SesjeOddechowe: React.FC = () => {
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16 lg:py-24">
         <div className="max-w-3xl mx-auto">
+        <div className="mb-8">
+            <Link to="/" className="inline-flex items-center text-coffee-300 hover:text-coffee-200 transition-colors">
+              <ArrowLeft size={20} className="mr-2" />
+              <span>Powrót do strony głównej</span>
+            </Link>
+          </div>
           <div className="prose prose-lg prose-invert text-warm-300 font-light leading-relaxed">
             <p>
             Oddech jest najpotężniejszym, a jednocześnie najbardziej niedocenianym narzędziem, jakie posiadamy. To brama do naszego układu nerwowego, emocji i najgłębszych stanów świadomości. Sesje oddechowe to praktyka wykorzystująca świadome, połączone oddychanie, aby uwolnić zablokowaną energię, przetworzyć stłumione emocje i wejść w odmienny stan świadomości w całkowicie naturalny sposób.
