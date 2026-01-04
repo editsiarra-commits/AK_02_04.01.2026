@@ -6,8 +6,19 @@ const CAT: React.FC = () => {
   return (
     <div className="bg-warm-900 text-warm-200">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 bg-warm-950/70 border-b border-warm-800">
-        <div className="absolute inset-0 bg-gradient-to-t from-warm-900 to-transparent"></div>
+      <section className="relative py-24 md:py-32 border-b border-warm-800 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+            src="/assets/video3.mp4"
+          />
+          <div className="absolute inset-0 bg-warm-950/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 to-transparent"></div>
+        </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <p className="text-coffee-400 font-sans text-xs font-bold uppercase tracking-[0.3em] mb-4">
             Głęboka Praca Terapeutyczna
