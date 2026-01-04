@@ -14,7 +14,7 @@ const SesjeOddechowe: React.FC = () => {
             muted
             playsInline
             className="w-full h-full object-cover"
-            src="/assets/video2.mp4"
+            src="/assets/video4.mp4"
           />
           <div className="absolute inset-0 bg-warm-950/70"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 to-transparent"></div>
