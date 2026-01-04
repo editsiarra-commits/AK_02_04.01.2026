@@ -5,6 +5,11 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import { OfferDetail } from './pages/Offer';
 import { NavItem } from './types';
+import Hipnoterapia from './pages/Hipnoterapia';
+import IntegracjaPsychodeliczna from './pages/IntegracjaPsychodeliczna';
+import SesjeOddechowe from './pages/SesjeOddechowe';
+import CAT from './pages/CAT';
+
 
 // ScrollToTop component
 const ScrollToTop = () => {
@@ -23,10 +28,10 @@ const navItems: NavItem[] = [
     label: 'Oferta', 
     path: '#offer',
     children: [
-      { label: 'HIPNOTERAPIA', path: '#offer' },
-      { label: 'INTEGRACJA PSYCHODELICZNA', path: '#offer' },
-      { label: 'SESJE ODDECHOWE', path: '#offer' },
-      { label: 'CAT Cannabis Assisted Therapy', path: '#offer' }
+      { label: 'HIPNOTERAPIA', path: '/hipnoterapia' },
+      { label: 'INTEGRACJA PSYCHODELICZNA', path: '/integracja-psychodeliczna' },
+      { label: 'SESJE ODDECHOWE', path: '/sesje-oddechowe' },
+      { label: 'CAT Cannabis Assisted Therapy', path: '/cat' }
     ]
   },
   { label: 'Cennik', path: '#pricing' },
@@ -44,6 +49,10 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/offer/:id" element={<OfferDetail />} />
+            <Route path="/hipnoterapia" element={<Hipnoterapia />} />
+            <Route path="/integracja-psychodeliczna" element={<IntegracjaPsychodeliczna />} />
+            <Route path="/sesje-oddechowe" element={<SesjeOddechowe />} />
+            <Route path="/cat" element={<CAT />} />
             {/* Redirect legacy routes to home sections if needed, or handle via simple routing */}
             <Route path="*" element={<Home />} />
           </Routes>
