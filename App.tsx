@@ -23,10 +23,10 @@ const navItems: NavItem[] = [
     label: 'Oferta', 
     path: '#offer',
     children: [
-      { label: 'Stres i Lęk', path: '/offer/stress-anxiety' },
-      { label: 'Rzucanie Palenia', path: '/offer/smoking-cessation' },
-      { label: 'Regresja', path: '/offer/regression' },
-      { label: 'Pewność Siebie', path: '/offer/confidence' }
+      { label: 'Stres i Lęk', path: '#offer' },
+      { label: 'Rzucanie Palenia', path: '#offer' },
+      { label: 'Regresja', path: '#offer' },
+      { label: 'Pewność Siebie', path: '#offer' }
     ]
   },
   { label: 'Cennik', path: '#pricing' },
