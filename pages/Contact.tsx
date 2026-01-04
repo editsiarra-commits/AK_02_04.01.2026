@@ -24,7 +24,7 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
           
           <div className="space-y-10">
             <div>
-               <h2 className="font-serif text-4xl text-warm-100 mb-6">Skontaktuj się</h2>
+               <h2 className="font-serif text-4xl text-warm-100 mb-6">Umów Konsultację</h2>
                <p className="text-warm-400 leading-relaxed text-lg font-light">
                  Gotowy, by rozpocząć swoją podróż? Masz pytania dotyczące procesu? Jestem tutaj, aby pomóc. Skontaktuj się za pomocą formularza lub poniższych danych.
                </p>
@@ -37,7 +37,7 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
                  </div>
                  <div>
                    <h3 className="font-serif text-xl text-warm-200">Telefon</h3>
-                   <p className="text-warm-400">+48 500 000 000</p>
+                   <p className="text-warm-400">+48 537 537 277</p>
                    <p className="text-warm-600 text-sm mt-1">Pon-Pt, 9:00 - 18:00</p>
                  </div>
                </div>

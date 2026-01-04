@@ -104,7 +104,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
               <Link 
                 to="/" 
                 onClick={handleLogoClick}
-                className="font-serif text-xl md:text-2xl font-semibold tracking-wider text-warm-100 hover:text-white transition-colors cursor-pointer"
+                className="font-serif text-xl md:text-xl font-semibold tracking-wider text-warm-100 hover:text-white transition-colors cursor-pointer"
               >
                 AGNIESZKA KOCHANOWSKA
               </Link>

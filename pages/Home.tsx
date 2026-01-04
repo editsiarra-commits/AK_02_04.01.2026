@@ -1,5 +1,6 @@
 import { Brain, ChevronDown, Pause, Play, ShieldCheck, Sparkles, Volume2, VolumeX } from 'lucide-react';
 import React, { Suspense, lazy, useEffect, useRef, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import LazyLoad from '../components/LazyLoad';
 
 const About = lazy(() => import('./About'));
@@ -13,6 +14,18 @@ const Home: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const element = document.getElementById(location.state.scrollTo);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location.state]);
 
   useEffect(() => {
     const video = videoRef.current;

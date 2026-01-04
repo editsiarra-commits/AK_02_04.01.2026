@@ -155,18 +155,16 @@ const Hipnoterapia: React.FC = () => {
               </ul>
 
 
-            
-
-
-
-
             <h2 className="font-serif text-2xl text-warm-100 mt-16 mb-6">Jeśli masz wrażenie, że utknąłeś w schematach, z których nie potrafisz się wydostać samodzielnie – hipnoterapia bardzo często okazuje się przełomem. Chcesz sprawdzić, czy to dobry kierunek właśnie dla Ciebie? Zapraszam na spokojną, bez zobowiązań konsultację.</h2>
 
-
-
-
-            
-            
+            <div className="mt-8 text-center">
+                <a
+                    href="/#contact"
+                    className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20"
+                >
+                    Umów Konsultację
+                </a>
+            </div>
           </div>
         </div>
       </div>
