@@ -91,7 +91,7 @@ const Home: React.FC = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 h-full flex flex-col justify-end items-center text-center px-4 max-w-4xl mx-auto pb-24">
+        <div className="relative z-10 h-full flex flex-col justify-end items-center text-center px-4 max-w-4xl mx-auto">
           <span className="text-coffee-300 uppercase tracking-[0.3em] mb-6 text-sm md:text-base animate-fade-in-up font-medium" style={{ animationFillMode: 'both' }}>
             Certyfikowana Hipnoterapeutka
           </span>
