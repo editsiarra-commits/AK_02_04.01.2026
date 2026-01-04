@@ -23,10 +23,10 @@ const navItems: NavItem[] = [
     label: 'Oferta', 
     path: '#offer',
     children: [
-      { label: 'Stres i Lęk', path: '#offer' },
-      { label: 'Rzucanie Palenia', path: '#offer' },
-      { label: 'Regresja', path: '#offer' },
-      { label: 'Pewność Siebie', path: '#offer' }
+      { label: 'HIPNOTERAPIA', path: '#offer' },
+      { label: 'INTEGRACJA PSYCHODELICZNA', path: '#offer' },
+      { label: 'SESJE ODDECHOWE', path: '#offer' },
+      { label: 'CAT Cannabis Assisted Therapy', path: '#offer' }
     ]
   },
   { label: 'Cennik', path: '#pricing' },
