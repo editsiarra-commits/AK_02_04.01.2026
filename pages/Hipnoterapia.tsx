@@ -27,7 +27,7 @@ const Hipnoterapia: React.FC = () => {
             Hipnoterapia
           </h1>
           <p className="text-2xl md:text-3xl text-warm-300 font-serif italic max-w-3xl mx-auto">
-            Pomoc w odzyskaniu równowagi emocjonalnej
+          to pogłębiona, świadoma praca z umysłem i emocjami, która wykorzystuje naturalne stany skupienia i zawężonej uwagi, aby dotrzeć do źródeł trudności - tam, gdzie klasyczna rozmowa często zatrzymuje się na powierzchni.
           </p>
         </div>
       </section>
@@ -43,33 +43,129 @@ const Hipnoterapia: React.FC = () => {
           </div>
           <div className="prose prose-lg prose-invert text-warm-300 font-light leading-relaxed">
             <p>
-              Hipnoterapia to bezpieczna i naturalna metoda pracy z podświadomością, która pozwala dotrzeć do źródła problemów i odblokować wewnętrzny potencjał. W stanie głębokiego relaksu, przy zachowaniu pełnej świadomości, otwieramy drzwi do umysłu podświadomego, gdzie zapisane są nasze najgłębsze przekonania, wzorce i emocje.
+            Stan hipnotyczny jest czymś, co każdy z nas zna z codziennego życia - kiedy „odpływamy” myślami, głęboko się skupiamy lub wchodzimy w flow. W terapii świadomie korzystamy z tego stanu, by bezpiecznie i łagodnie dotknąć podświadomych przekonań, emocji, wspomnień i wzorców, które zazwyczaj pozostają poza zasięgiem świadomej refleksji.
             </p>
+          
+
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Na czym polega ta forma pracy?</h2>
             <p>
-              To właśnie tam, w bezpiecznej przestrzeni, możemy dokonać transformujących zmian. Możemy uwolnić się od lęków, zmienić niechciane nawyki, wzmocnić poczucie własnej wartości i odzyskać wewnętrzną harmonię.
+            Hipnoterapia w mojej praktyce opiera się na współpracy, uważności i realnej sprawczości osoby uczestniczącej w procesie. Pracujemy z tym, co jest aktualnie gotowe do zobaczenia i zintegrowania - w tempie dostosowanym do Twoich granic i możliwości. W trakcie sesji wykorzystywane są m.in.:
+            </p> 
+
+            <p>
+                 .          
             </p>
 
-            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Dla kogo jest Hipnoterapia?</h2>
-            <p>
-              Zapraszam Cię, jeśli zmagasz się z:
-            </p>
             <ul>
-              <li>Lękiem, stresem i atakami paniki</li>
-              <li>Niskim poczuciem własnej wartości i brakiem pewności siebie</li>
-              <li>Trudnościami w relacjach</li>
-              <li>Przewlekłym bólem lub napięciem w ciele</li>
-              <li>Niechcianymi nawykami i nałogami</li>
-              <li>Problemami ze snem</li>
-              <li>Poczuciem utknięcia i braku celu w życiu</li>
+              <li>- kierowanie uwagi i wyobraźnia</li>
+              <li>- metafora i praca symboliczna</li>
+              <li>- kontakt z odczuciami z ciała</li>
+              <li>- dialog wewnętrzny i integracja części</li>
+              
             </ul>
+            <p>
+                 .          
+            </p>
+            <p>
+            Celem nie jest „naprawianie” ani forsowanie zmiany, lecz stworzenie warunków, w których zmiana może pojawić się w sposób bardziej naturalny, trwały i spójny z Twoim doświadczeniem.
+            </p>
+          
+
+
+
+
+
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Dla kogo jest szczególnie pomocna?</h2>
+            <p>
+            
+            </p> 
+
+
+            <ul>
+              <li>- gdy czujesz, że powtarzające się emocje, lęki czy blokady wracają mimo racjonalnego rozumienia problemu</li>
+              <li>- blokady twórcze, prokrastynacja, sabotowanie siebie</li>
+              <li>- niskie poczucie własnej wartości, wewnętrzny krytyk</li>
+              <li>- gdy chcesz lepiej zrozumieć wewnętrzne konflikty i schematy „jedna część mnie chce…, a druga nie pozwala"</li>
+              <li>- gdy klasyczna rozmowa nie wystarcza, by dotrzeć do głębszych warstw</li>
+              <li>- gdy potrzebujesz łagodnej, ale naprawdę głębokiej pracy z traumą, napięciem, niskim poczuciem wartości czy trudnościami w relacjach</li>
+              <li>- wstyd, poczucie winy, żal, emocje powracające mimo pracy „na poziomie głowy”</li>
+            </ul>
+           
+
+
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Jak wygląda sesja?</h2>
             <p>
-              Każda sesja jest unikalna i dopasowana do Twoich potrzeb. Zaczynamy od rozmowy, podczas której omawiamy Twoje cele i obawy. Następnie, poprzez techniki relaksacyjne, wprowadzam Cię w stan hipnozy – przyjemny stan głębokiego odprężenia. W tym stanie, z pełnym poczuciem bezpieczeństwa i kontroli, pracujemy nad transformacją ograniczających Cię wzorców.
+            Sesja trwa zazwyczaj 60-90 minut. Zaczynamy od spokojnej rozmowy. Ustalamy cel, kontekst i to, co jest dla Ciebie teraz najważniejsze. Następnie przechodzimy do pracy w stanie hipnotycznym, który większość osób opisuje jako głęboki, regenerujący odpoczynek przy zachowanej świadomości.
+            </p> 
+
+            <p>
+                 .          
             </p>
-            <blockquote className="border-l-4 border-coffee-600 pl-6 italic text-warm-200">
-              Hipnoterapia jest procesem indywidualnym — dlatego właściwy kierunek i tempo pracy ustalamy wspólnie, w bezpiecznej i wspierającej przestrzeni. Celem jest odzyskanie kontroli, wewnętrznej równowagi i realnej wolności wyboru.
-            </blockquote>
+
+            <ul>
+              <li>- Nie tracisz kontroli</li>
+              <li>- Nie robisz nic wbrew sobie</li>
+              <li>- Masz możliwość zatrzymania, zmiany tempa lub wyjścia z procesu w każdej chwili</li>
+            </ul>
+          
+          
+
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Podejście trauma-informed i inkluzywne</h2>
+            <p>
+            Pracuję z szczególną uważnością na sygnały układu nerwowego, poczucie bezpieczeństwa i Twoją sprawczość. Zawsze możesz zatrzymać proces, zmienić kierunek lub powiedzieć „dość”. Nie ma presji, nie ma „wchodzenia głębiej za wszelką cenę”. Każda historia, doświadczenie i potrzeba są traktowane z szacunkiem - bez założeń i bez jednej „normy”.
+            </p> 
+
+            
+
+            
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Czym hipnoterapia nie jest?</h2>
+            <p>
+            
+            </p> 
+
+
+            <ul>
+              <li>- nie jest utratą kontroli ani manipulacją</li>
+              <li>- nie jest doświadczeniem rekreacyjnym, ani „magicznym”</li>
+              <li>- nie polega na szybkim „kasowaniu” problemów </li>
+              <li>- nie zastępuje leczenia medycznego</li>
+              </ul>
+              <p>
+                 .          
+            </p>
+
+              <p>
+              To świadomy, aktywny proces wymagający Twojego zaangażowania - i dający trwałe efekty.
+            </p>
+           
+           
+
+
+
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Przykłady efektów, których najczęściej doświadczają moi Klienci</h2>
+
+            <ul>
+              <li>- wyraźny spokój wewnętrzny i zmniejszenie napięcia</li>
+              <li>- zanik lub znaczne osłabienie fobii, lęków i wewnętrznego krytyka</li>
+              <li>- lżejsze relacje z innymi i z samym sobą</li>
+              <li>- powrót poczucia sprawczości i energii do działania</li>
+              <li>- umiejętność spokojniejszego radzenia sobie z trudnymi emocjam</li>
+              </ul>
+
+
+            
+
+
+
+
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Jeśli masz wrażenie, że utknąłeś w schematach, z których nie potrafisz się wydostać samodzielnie – hipnoterapia bardzo często okazuje się przełomem. Chcesz sprawdzić, czy to dobry kierunek właśnie dla Ciebie? Zapraszam na spokojną, bez zobowiązań konsultację</h2>
+
+
+
+
+            
+            
           </div>
         </div>
       </div>
