@@ -20,14 +20,14 @@ const IntegracjaPsychodeliczna: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 to-transparent"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <p className="text-coffee-400 font-sans text-xs font-bold uppercase tracking-[0.3em] mb-4">
+          <p className="text-coffee-400 font-sans text-xl font-bold uppercase tracking-[0.3em] mb-4">
             Przekształcanie Wglądów w Zmianę
           </p>
           <h1 className="font-serif text-4xl md:text-6xl text-warm-100 mb-4">
-            Integracja Psychodeliczna
+          Przygotowanie i Integracja Doświadczeń Psychodelicznych
           </h1>
           <p className="text-2xl md:text-3xl text-warm-300 font-serif italic max-w-3xl mx-auto">
-            Wsparcie w przełożeniu głębokich doświadczeń na trwałe zmiany w życiu
+          „Prawdziwa transformacja zaczyna się wtedy, gdy wizja spotyka codzienność.”
           </p>
         </div>
       </section>
@@ -43,31 +43,95 @@ const IntegracjaPsychodeliczna: React.FC = () => {
           </div>
           <div className="prose prose-lg prose-invert text-warm-300 font-light leading-relaxed">
             <p>
-            Doświadczenie psychodeliczne może być głęboko transformujące, otwierając drzwi do nowych perspektyw, głębszego samopoznania i uzdrowienia. Jednak prawdziwa praca zaczyna się po zakończeniu sesji. Integracja psychodeliczna to proces nadawania sensu, znaczenia i praktycznego zastosowania wglądom zdobytym podczas doświadczenia.
+            Doświadczenia psychodeliczne — czy to z użyciem Ayahuaski, psylocybiny, MDMA, ketaminy, medycznej marihuany, czy poprzez oddech, medytację i inne poszerzone stany świadomości - potrafią być głębokie, graniczne i transformujące. Często poruszają warstwy emocjonalne, cielesne i egzystencjalne, otwierając przestrzenie, do których na co dzień nie mamy dostępu.
             </p>
             <p>
-              Bez odpowiedniego wsparcia, cenne wglądy mogą z czasem wyblaknąć, a potencjał transformacyjny może zostać utracony. Celem integracji jest zakotwiczenie tych odkryć w codziennym życiu, prowadząc do trwałych i pozytywnych zmian w Twoim zachowaniu, relacjach i ogólnym samopoczuciu.
+            Jednocześnie samo doświadczenie to dopiero początek. To, co wydarza się przed i po — przygotowanie oraz integracja - decyduje o tym, czy stanie się ono realną, wspierającą zmianą, czy pozostanie intensywnym, ale niezintegrowanym przeżyciem.
             </p>
 
-            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Dla kogo jest Integracja?</h2>
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Dla kogo jest ta praca?</h2>
             <p>
-              Sesje integracji psychodelicznej są dla Ciebie, jeśli:
+            Ta forma pracy jest dla osób, które:
             </p>
             <ul>
-              <li>Miałeś/aś niedawno doświadczenie psychodeliczne i chcesz je w pełni zrozumieć.</li>
-              <li>Chcesz przełożyć wglądy z doświadczenia na konkretne działania i zmiany.</li>
-              <li>Doświadczyłeś/aś trudnych lub dezorientujących momentów i potrzebujesz wsparcia w ich przepracowaniu.</li>
-              <li>Chcesz utrwalić pozytywne zmiany i zapobiec powrotowi do starych wzorców.</li>
-              <li>Szukasz sposobów na włączenie nowo nabytej mądrości do swojego życia duchowego i codziennego.</li>
+              <li>* mają za sobą doświadczenie psychodeliczne i czują, że „coś się otworzyło”, ale nie wiedzą jeszcze, jak z tym żyć</li>
+              <li>* planują takie doświadczenie i chcą podejść do niego świadomie i odpowiedzialnie</li>
+              <li>* doświadczyły intensywnych stanów świadomości (także poprzez oddech lub medytację) i nie chcą zostawiać ich bez integracji.</li>
+              <p>
+              Jeśli rozpoznajesz się w którymkolwiek z tych punktów, integracja może być kluczowym etapem Twojego procesu.
+            </p>
             </ul>
 
-            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Jak wygląda sesja integracyjna?</h2>
+           
+
+
+
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Przygotowanie !</h2>
             <p>
-            Sesja integracyjna to bezpieczna przestrzeń do otwartej rozmowy o Twoim doświadczeniu. Nie skupiamy się na ocenie, lecz na ciekawym i empatycznym badaniu tego, co się pojawiło. Pomagam Ci połączyć kropki, nazwać nienazwane i stworzyć osobistą mapę Twojej podróży. Pracujemy z metaforami, symbolami, odczuciami w ciele i emocjami, abyś mógł/mogła w pełni przyswoić i ucieleśnić swoje wglądy.
+            Przygotowanie to moment zatrzymania i wsłuchania się w to, co naprawdę Cię woła.
+To praca z intencją, regulacją ciała i układu nerwowego, z lękami, oczekiwaniami i granicami — a także ze świadomym budowaniem set & setting, czyli wewnętrznych i zewnętrznych warunków, w jakich doświadczenie może się wydarzyć.
             </p>
-            <blockquote className="border-l-4 border-coffee-600 pl-6 italic text-warm-200">
-            Integracja to most między niezwykłym doświadczeniem a zwykłym życiem. To sztuka przekuwania mistycznych wglądów w ludzką mądrość, która służy Tobie i światu.            
-            </blockquote>
+            <ul>
+              
+              <p>
+              Nie chodzi o kontrolowanie procesu, lecz o naukę bycia w tym, co się pojawi — także w tym, co nieznane, trudne lub intensywne. Dobre przygotowanie tworzy wewnętrzną przestrzeń, w której doświadczenie może zostać bezpiecznie przeżyte.
+            </p>
+            </ul>
+
+
+
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Integracja</h2>
+            <p>
+            Integracja zaczyna się wtedy, gdy doświadczenie się kończy. To proces rozumienia i osadzania tego, co zostało przeżyte, w codziennym życiu.
+            </p>
+            <ul>
+            <p>
+              Pracujemy z wglądami, symbolami i emocjami, przekładając je na realne zmiany — w relacjach, decyzjach, granicach i sposobie bycia ze sobą. Bez pośpiechu, bez idealizowania, z uważnością na regulację i ugruntowanie.
+            </p>
+              <p>
+              Integracja sprawia, że to, co było intensywnym przeżyciem, może stać się żywym, wspierającym procesem zmiany, a nie tylko wspomnieniem „tripa”.
+            </p>
+            </ul>
+
+
+
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Ważna informacja prawna !</h2>
+            <p>
+            Oferowana przeze mnie praca:
+            </p>
+            <ul>
+              <li>* mnie obejmuje podawania, rekomendowania ani dostarczania substancji psychoaktywnych</li>
+              <li>* nie zachęca do ich stosowania</li>
+              <li>* nie zastępuje opieki medycznej ani decyzji lekarskich</li>
+              <p>
+              Przygotowanie i integracja mają charakter procesu rozwojowego i integracyjnego, prowadzonego zgodnie z obowiązującym prawem w Polsce.
+            </p>
+
+            <p>
+            Jeśli to, co przeżyłaś / przeżyłeś, wciąż w Tobie pracuje — integracja może być kolejnym, ważnym krokiem.
+            </p>
+
+
+
+
+            </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
           </div>
             <div className="mt-8 text-center">
                 <Link

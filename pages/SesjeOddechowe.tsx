@@ -52,9 +52,9 @@ const SesjeOddechowe: React.FC = () => {
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Jeśli tu jesteś i czytasz ten tekst…</h2>
             
             <ul>
-              <li>- Bardzo możliwe, że coś w Tobie już wie, że rozmowa nie sięga wystarczająco głęboko.
+              <li>* bardzo możliwe, że coś w Tobie już wie, że rozmowa nie sięga wystarczająco głęboko.
               Być może czujesz napięcie w ciele, emocje bez jasnej przyczyny, poczucie utknięcia albo wewnętrzne wezwanie do zmiany, której nie da się „przegadać”.</li>
-              <li>- Sesje oddechowe są zaproszeniem do spotkania z tym, co chce zostać zobaczone i przeżyte, a nie tylko zrozumiane</li>
+              <li>* sesje oddechowe są zaproszeniem do spotkania z tym, co chce zostać zobaczone i przeżyte, a nie tylko zrozumiane.</li>
               
             </ul>
 
@@ -67,10 +67,10 @@ const SesjeOddechowe: React.FC = () => {
            
 
             <ul>
-              <li>- oddech świadomie prowadzony, intensywniejszy, otwiera dostęp do poszerzonego stanu świadomości. To w nim często ujawniają się emocje, wspomnienia i obrazy, które do tej pory pozostawały poza zasięgiem uwagi.</li>
-              <li>- muzyka towarzyszy kadej sesji. Przygotowany przeze mnie set muzyczny, który prowadzi proces i pogłębia doświadczenie, wspierając naturalny rytm tego, co się pojawia.</li>
-              <li>- pracujemy w bezpiecznej, komfortowej przestrzeni — z materacem i opaską na oczy — tak, abyś mógł/mogła w pełni skierować uwagę do wewnątrz.</li>
-              <li>- body scanning i praca z ciałem. Sesja rozpoczyna się od świadomego skanowania ciała. W trakcie procesu stosuję również delikatne techniki pracy z ciałem, które pomagają uwalniać napięcia i domykać pojawiające się procesy — zawsze z uważnością na granice i zgodę.</li>
+              <li>* oddech świadomie prowadzony, intensywniejszy, otwiera dostęp do poszerzonego stanu świadomości. To w nim często ujawniają się emocje, wspomnienia i obrazy, które do tej pory pozostawały poza zasięgiem uwagi.</li>
+              <li>* muzyka towarzyszy kadej sesji. Przygotowany przeze mnie set muzyczny, który prowadzi proces i pogłębia doświadczenie, wspierając naturalny rytm tego, co się pojawia.</li>
+              <li>* pracujemy w bezpiecznej, komfortowej przestrzeni — z materacem i opaską na oczy — tak, abyś mógł/mogła w pełni skierować uwagę do wewnątrz.</li>
+              <li>* body scanning i praca z ciałem. Sesja rozpoczyna się od świadomego skanowania ciała. W trakcie procesu stosuję również delikatne techniki pracy z ciałem, które pomagają uwalniać napięcia i domykać pojawiające się procesy — zawsze z uważnością na granice i zgodę.</li>
               
             </ul>
 
@@ -83,7 +83,7 @@ Dlatego integralną częścią pracy jest osobna sesja integracyjna, podczas kt�
             </p> 
 
             <p>
-                 .          
+                          
             </p>
 
             <ul>
@@ -105,8 +105,8 @@ Dlatego integralną częścią pracy jest osobna sesja integracyjna, podczas kt�
             </p>
 
             <ul>
-              <li>ok. 4-godzinna sesja oddechowa inspirowana oddychaniem holotropowym, połączona z body scanningiem i pracą z ciałem.</li>
-              <li>2-godzinna sesja integracyjna, odbywająca się po procesie oddechowym.</li>
+              <li>* ok. 4-godzinna sesja oddechowa inspirowana oddychaniem holotropowym, połączona z body scanningiem i pracą z ciałem.</li>
+              <li>* 2-godzinna sesja integracyjna, odbywająca się po procesie oddechowym.</li>
               
             </ul>
 
@@ -125,14 +125,8 @@ Dlatego integralną częścią pracy jest osobna sesja integracyjna, podczas kt�
 
 
 
-            <p>
-            .
-            </p>
 
-
-            <blockquote className="border-l-4 border-coffee-600 pl-6 italic text-warm-200">
-            Twój oddech jest Twoim wewnętrznym uzdrowicielem. Naucz się go słuchać, a zaprowadzi Cię dokładnie tam, gdzie potrzebujesz być.
-            </blockquote>
+           
 
 
 
