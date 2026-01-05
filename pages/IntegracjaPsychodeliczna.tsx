@@ -53,10 +53,24 @@ const IntegracjaPsychodeliczna: React.FC = () => {
             <p>
             Ta forma pracy jest dla osób, które:
             </p>
+            <p>
+                 .          
+            </p>
+
+
+
+
+
             <ul>
               <li>* mają za sobą doświadczenie psychodeliczne i czują, że „coś się otworzyło”, ale nie wiedzą jeszcze, jak z tym żyć</li>
               <li>* planują takie doświadczenie i chcą podejść do niego świadomie i odpowiedzialnie</li>
               <li>* doświadczyły intensywnych stanów świadomości (także poprzez oddech lub medytację) i nie chcą zostawiać ich bez integracji.</li>
+             
+              <p>
+                 .          
+            </p>
+             
+             
               <p>
               Jeśli rozpoznajesz się w którymkolwiek z tych punktów, integracja może być kluczowym etapem Twojego procesu.
             </p>
@@ -99,17 +113,29 @@ To praca z intencją, regulacją ciała i układu nerwowego, z lękami, oczekiwa
             <p>
             Oferowana przeze mnie praca:
             </p>
+
+            <p>
+                 .          
+            </p>
+
+
+
             <ul>
-              <li>* mnie obejmuje podawania, rekomendowania ani dostarczania substancji psychoaktywnych</li>
+              <li>* nie obejmuje podawania, rekomendowania ani dostarczania substancji psychoaktywnych</li>
               <li>* nie zachęca do ich stosowania</li>
               <li>* nie zastępuje opieki medycznej ani decyzji lekarskich</li>
+              
+              <p>
+                 .          
+            </p>
+              
+              
+              
               <p>
               Przygotowanie i integracja mają charakter procesu rozwojowego i integracyjnego, prowadzonego zgodnie z obowiązującym prawem w Polsce.
             </p>
-
-            <p>
-            Jeśli to, co przeżyłaś / przeżyłeś, wciąż w Tobie pracuje — integracja może być kolejnym, ważnym krokiem.
-            </p>
+            <h2 className="font-serif text-2xl text-warm-100 mt-16 mb-6">Jeśli to, co przeżyłaś / przeżyłeś, wciąż w Tobie pracuje — integracja może być kolejnym, ważnym krokiem.</h2>
+            
 
 
 

@@ -59,10 +59,10 @@ const CAT: React.FC = () => {
             <p>
             Oferowana przeze mnie praca:
             </p>
-            
             <p>
                  .          
             </p>
+            
             
             <ul>
               <li>* nie obejmuje podawania, rekomendowania ani stosowania jakichkolwiek substancji psychoaktywnych</li>
@@ -106,7 +106,9 @@ const CAT: React.FC = () => {
               <p>
               U wielu osób proces ten sprzyja:
             </p>
-            
+            <p>
+                 .          
+            </p>
             </ul>
 
             <ul>
@@ -174,14 +176,14 @@ const CAT: React.FC = () => {
               <li>* tempo, zakres i głębokość procesu są zawsze indywidualnie dostosowane</li>
               <li>* granice i gotowość klienta pozostają kluczowe na każdym etapie</li>
               
-              
-              <p>
-                 .          
-            </p>
-              
-              <p>
-              Jeśli czujesz, że potrzebujesz pogłębionej, uważnej pracy integracyjnej, która pomoże Ci lepiej zrozumieć i uporządkować własne doświadczenia, to podejście może być dla Ciebie wartościowym elementem procesu zmiany.
-            </p>
+           
+            <h2 className="font-serif text-2xl text-warm-100 mt-16 mb-6">Jeśli czujesz, że potrzebujesz pogłębionej, uważnej pracy integracyjnej, która pomoże Ci lepiej zrozumieć i uporządkować własne doświadczenia, to podejście może być dla Ciebie wartościowym elementem procesu zmiany.</h2>
+
+
+
+
+
+            
             </ul>
 
 

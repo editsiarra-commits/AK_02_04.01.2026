@@ -111,17 +111,9 @@ Dlatego integralną częścią pracy jest osobna sesja integracyjna, podczas kt�
             </ul>
 
 
-
-
-
-            <p>
-                 .          
-            </p>
-            <p>
-            Ta struktura pozwala Ci nie tylko przeżyć doświadczenie, ale także je zrozumieć, zintegrować i włączyć w codzienne funkcjonowanie.
-            </p>
+           
           
-
+            <h2 className="font-serif text-2xl text-warm-100 mt-16 mb-6">Ta struktura pozwala Ci nie tylko przeżyć doświadczenie, ale także je zrozumieć, zintegrować i włączyć w codzienne funkcjonowanie.</h2>
 
 
 
