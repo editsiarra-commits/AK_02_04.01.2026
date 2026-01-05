@@ -103,25 +103,11 @@ const Testimonials: React.FC<{ id?: string }> = ({ id }) => {
                                     "{testimonial.content}"
                                 </p>
                             </blockquote>
+                           
 
-                            <button 
-                                onClick={() => handleCopy(testimonial.content, testimonial.id)}
-                                className="flex items-center space-x-2 text-xs font-bold uppercase tracking-widest text-coffee-500 hover:text-coffee-300 transition-colors mb-8 group py-2 px-4 rounded-full hover:bg-warm-950/50"
-                                aria-label="Skopiuj cytat do schowka"
-                            >
-                                {copiedId === testimonial.id ? (
-                                    <>
-                                        <Check size={14} className="text-green-500" />
-                                        <span className="text-green-500">Skopiowano</span>
-                                    </>
-                                ) : (
-                                    <>
-                                        <Share2 size={14} className="group-hover:scale-110 transition-transform" />
-                                        <span>Udostępnij</span>
-                                    </>
-                                )}
-                            </button>
 
+
+                           
                             <div className="flex flex-col items-center">
                                 <div className="w-16 h-16 rounded-full overflow-hidden border border-coffee-700 mb-4 shadow-lg shadow-black/30">
                                     <img src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />

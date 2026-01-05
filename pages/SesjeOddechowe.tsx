@@ -71,14 +71,14 @@ const SesjeOddechowe: React.FC = () => {
             </blockquote>
           </div>
             <div className="mt-8 text-center">
-                <Link
-                    to="/"
-                    state={{ scrollTo: 'contact' }}
-                    className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20"
-                >
-                    Umów Konsultację
-                </Link>
-            </div>
+                            <Link
+                                to="/"
+                                state={{ scrollTo: 'contact' }}
+                                className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20"
+                            >
+                                Umów Konsultację
+                            </Link>
+                        </div>
         </div>
       </div>
     </div>
