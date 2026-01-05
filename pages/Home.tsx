@@ -18,24 +18,25 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     if (location.state?.scrollTo) {
-      const element = document.getElementById(location.state.scrollTo);
-      // Wait a bit longer to ensure content is rendered/lazy loaded
-      if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-      } else {
-        // Retry if element is not immediately found (due to lazy loading)
-         const interval = setInterval(() => {
-             const el = document.getElementById(location.state.scrollTo);
-             if (el) {
-                 el.scrollIntoView({ behavior: 'smooth' });
-                 clearInterval(interval);
-             }
-         }, 100);
-         // Clear interval after 2 seconds to avoid infinite loop
-         setTimeout(() => clearInterval(interval), 2000);
-      }
+      // Small delay to allow potential lazy loading to initiate
+      setTimeout(() => {
+        const element = document.getElementById(location.state.scrollTo);
+        if (element) {
+           element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            // Retry logic in case component is not yet mounted
+            const interval = setInterval(() => {
+                const el = document.getElementById(location.state.scrollTo);
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                    clearInterval(interval);
+                }
+            }, 100);
+            
+            // Clear interval after 3 seconds
+            setTimeout(() => clearInterval(interval), 3000);
+        }
+      }, 100);
     }
   }, [location.state]);
 
@@ -195,6 +196,10 @@ const Home: React.FC = () => {
           <OfferSection id="offer" />
         </LazyLoad>
 
+        <LazyLoad id="contact" forceVisible={location.state?.scrollTo === 'contact'}>
+          <Contact id="contact" />
+        </LazyLoad>
+
         {/* Why Hypnotherapy Section */}
         <section className="py-24 bg-warm-900 relative overflow-hidden border-t border-warm-800">
           {/* Decorative background elements */}
@@ -258,9 +263,7 @@ const Home: React.FC = () => {
         <LazyLoad id="pricing">
           <Pricing id="pricing" />
         </LazyLoad>
-        <LazyLoad id="contact" forceVisible={location.state?.scrollTo === 'contact'}>
-          <Contact id="contact" />
-        </LazyLoad>
+        
       </Suspense>
     </div>
   );
