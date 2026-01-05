@@ -2,6 +2,7 @@ import { ArrowLeft, Check } from 'lucide-react';
 import React from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { OfferSubCategory } from '../types';
+import AnimatedTile from '../components/AnimatedTile';
 
 // Data for offers
 const offers: Record<string, OfferSubCategory> = {
@@ -110,32 +111,23 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ id }) => (
        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
          {Object.values(offers).map((offer) => (
            <Link to={`/offer/${offer.id}`} key={offer.id} className="group relative h-[420px] overflow-hidden bg-warm-950 block">
-             {/* Image Background */}
-             <div className="absolute inset-0">
-               <img
-                 src={offer.image}
-                 alt={offer.title}
-                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-40"
-               />
-               <div className="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent opacity-90"></div>
-             </div>
-
-             {/* Content */}
-             <div className="absolute inset-0 p-6 flex flex-col justify-start text-center items-center z-10">
-                <div className="transform transition-transform duration-500 group-hover:-translate-y-4 pt-8">
-                    <h3 className="font-display text-2xl text-warm-100 mb-2 tracking-wide drop-shadow-lg">{offer.title}</h3>
-                    
-                    {/* Animated Line */}
-                    <div className="w-0 h-px bg-coffee-400 mx-auto mb-4 transition-all duration-500 group-hover:w-12 opacity-80"></div>
-                    
-                    <p className="text-warm-300 font-sans text-sm font-light leading-relaxed max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0 delay-75">
-                        {offer.description}
-                    </p>
-                </div>
-             </div>
-             
-             {/* Frame Effect */}
-             <div className="absolute inset-4 border border-warm-100/10 group-hover:border-coffee-500/40 transition-colors duration-700 pointer-events-none"></div>
+             <AnimatedTile offerId={offer.id}>
+                 <div className="absolute inset-0 p-6 flex flex-col justify-center text-center items-center z-10">
+                    <div className="transform transition-transform duration-500 group-hover:-translate-y-4">
+                        <h3 className="font-display text-2xl text-warm-100 mb-2 tracking-wide drop-shadow-lg">{offer.title}</h3>
+                        
+                        {/* Animated Line */}
+                        <div className="w-0 h-px bg-coffee-400 mx-auto mb-4 transition-all duration-500 group-hover:w-12 opacity-80"></div>
+                        
+                        <p className="text-warm-300 font-sans text-sm font-light leading-relaxed max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0 delay-75">
+                            {offer.description}
+                        </p>
+                    </div>
+                 </div>
+                 
+                 {/* Frame Effect */}
+                 <div className="absolute inset-4 border border-warm-100/10 group-hover:border-coffee-500/40 transition-colors duration-700 pointer-events-none"></div>
+             </AnimatedTile>
            </Link>
          ))}
        </div>
@@ -168,13 +160,14 @@ export const OfferDetail: React.FC = () => {
     <div className="min-h-screen bg-warm-900 pb-20">
        {/* Hero for Detail */}
        <div className="h-[60vh] relative overflow-hidden">
-         <img src={offer.image} alt={offer.title} className="w-full h-full object-cover filter brightness-75 grayscale-[0.3]" />
-         <div className="absolute inset-0 bg-warm-900/60 flex items-center justify-center">
-            <div className="text-center px-4 max-w-4xl">
-              <span className="block text-coffee-300 uppercase tracking-widest text-sm mb-6 font-bold">Szczegóły Usługi</span>
-              <h1 className="font-display text-4xl md:text-7xl text-white tracking-wide mb-6">{offer.title}</h1>
-            </div>
-         </div>
+         <AnimatedTile offerId={offer.id}>
+             <div className="absolute inset-0 bg-warm-900/60 flex items-center justify-center">
+                <div className="text-center px-4 max-w-4xl z-10">
+                  <span className="block text-coffee-300 uppercase tracking-widest text-sm mb-6 font-bold">Szczegóły Usługi</span>
+                  <h1 className="font-display text-4xl md:text-7xl text-white tracking-wide mb-6">{offer.title}</h1>
+                </div>
+             </div>
+         </AnimatedTile>
        </div>
 
        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 relative z-10">
