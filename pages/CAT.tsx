@@ -20,14 +20,14 @@ const CAT: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 to-transparent"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <p className="text-coffee-400 font-sans text-xs font-bold uppercase tracking-[0.3em] mb-4">
+          <p className="text-coffee-400 font-sans text-xl font-bold uppercase tracking-[0.3em] mb-4">
             Głęboka Praca Terapeutyczna
           </p>
           <h1 className="font-serif text-4xl md:text-6xl text-warm-100 mb-4">
-            CAT (Cannabis Assisted Therapy)
+            Terapia wspomagana konopiami
           </h1>
           <p className="text-2xl md:text-3xl text-warm-300 font-serif italic max-w-3xl mx-auto">
-            Terapia wspomagana konopiami w celu głębszego wglądu i uzdrowienia
+          Cannabis Assisted Therapy - CAT
           </p>
         </div>
       </section>
@@ -43,31 +43,156 @@ const CAT: React.FC = () => {
           </div>
           <div className="prose prose-lg prose-invert text-warm-300 font-light leading-relaxed">
             <p>
-            CAT (Cannabis Assisted Therapy) to innowacyjna metoda terapeutyczna, która wykorzystuje medyczne właściwości konopi do pogłębienia procesu terapeutycznego. W bezpiecznych i kontrolowanych warunkach, przy wsparciu wykwalifikowanego terapeuty, pacjent może uzyskać dostęp do głębszych warstw świadomości, co ułatwia przepracowanie traum, lęków i ograniczających wzorców.
+            Praca integracyjna inspirowana podejściem Cannabis-Assisted Therapy (CAT) koncentruje się na pogłębianiu kontaktu z doświadczeniem wewnętrznym, emocjami oraz utrwalonymi schematami, które wpływają na codzienne funkcjonowanie. Podejście to opiera się na założeniu, że określone stany świadomości mogą sprzyjać intensywniejszej introspekcji oraz lepszemu dostępowi do treści, które w klasycznej pracy werbalnej bywają trudniej osiągalne.
             </p>
             <p>
-            Konopie, stosowane w sposób świadomy i intencjonalny, mogą działać jako katalizator, wzmacniając połączenie umysł-ciało, obniżając mechanizmy obronne i otwierając na nowe perspektywy. To nie jest rekreacyjne użycie, ale głęboko terapeutyczna praca w odmiennym stanie świadomości.
+            Istotą tej formy pracy nie jest wywoływanie określonych stanów, lecz ich rozumienie, porządkowanie i integrowanie. Proces ma charakter rozwojowy i wglądowy, a jego celem jest zwiększenie samoświadomości, lepsze rozpoznanie własnych reakcji emocjonalnych oraz stopniowe budowanie bardziej spójnej relacji z samą sobą.
             </p>
 
-            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Dla kogo jest CAT?</h2>
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Pochodzenie podejścia</h2>
             <p>
-              Terapia wspomagana konopiami może być pomocna dla osób, które:
+            Podejście inspirowane CAT nie stanowi zamkniętej, autorskiej metody. Wywodzi się z połączenia psychologii humanistycznej i transpersonalnej, pracy z uważnością, pracy z ciałem oraz współczesnych nurtów integracji doświadczeń poszerzonych stanów świadomości. Rozwijane było przede wszystkim w środowiskach rozwojowych i integracyjnych w Stanach Zjednoczonych i Kanadzie jako sposób pracy z doświadczeniem, a nie jako odrębna forma terapii klinicznej.
             </p>
+            
+
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Pełna zgodność z prawem w Polsce</h2>
+            <p>
+            Oferowana przeze mnie praca:
+            </p>
+            
+            <p>
+                 .          
+            </p>
+            
             <ul>
-              <li>Doświadczają trudności w dostępie do swoich emocji lub wspomnień.</li>
-              <li>Czują, że utknęły w tradycyjnej terapii "przez rozmowę".</li>
-              <li>Mają za sobą doświadczenia traumatyczne (PTSD).</li>
-              <li>Cierpią na chroniczny stres, lęki lub depresję.</li>
-              <li>Są zainteresowane głęboką pracą somatyczną i eksploracją świadomości.</li>
+              <li>* nie obejmuje podawania, rekomendowania ani stosowania jakichkolwiek substancji psychoaktywnych</li>
+              <li>* nie zastępuje leczenia medycznego ani decyzji lekarskich</li>
+              <li>* ma charakter procesu integracyjnego i rozwojowego</li>
+              <li>* jest prowadzona w pełnej zgodzie z obowiązującym prawem Rzeczypospolitej Polskiej</li>
+              
+              
+              <p>
+                 .          
+            </p>
+              
+              <p>
+              W Polsce medyczna marihuana jest lekiem dostępnym wyłącznie na receptę, przepisywaną przez uprawnionego lekarza i wydawanym w aptece jako kontrolowany surowiec farmaceutyczny - zgodnie z ustawą o przeciwdziałaniu narkomanii oraz prawem farmaceutycznym. Decyzja o jej stosowaniu należy wyłącznie do lekarza i pacjenta.
+            </p>
             </ul>
 
-            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Jak wygląda sesja CAT?</h2>
+
+
+
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Na czym polega ta forma pracy?</h2>
             <p>
-            Proces CAT składa się z trzech etapów. Zaczynamy od sesji przygotowawczej, gdzie omawiamy Twoją historię, intencje i budujemy zaufanie. Sama sesja z użyciem konopi trwa kilka godzin i odbywa się w bezpiecznej, komfortowej przestrzeni, z moim pełnym wsparciem. Po sesji następuje kluczowy etap integracji, podczas którego pracujemy nad przełożeniem wglądów i doświadczeń na realne zmiany w życiu.
+            Praca integracyjna może być szczególnie pomocna dla osób, które:
             </p>
-            <blockquote className="border-l-4 border-coffee-600 pl-6 italic text-warm-200">
-            CAT to nie magiczne rozwiązanie, ale potężne narzędzie w rękach świadomego pacjenta i doświadczonego terapeuty. To zaproszenie do głębokiego spotkania z samym sobą, aby uzdrowić to, co boli i odkryć swoją wewnętrzną siłę.
-            </blockquote>
+            
+            <p>
+                 .          
+            </p>
+            
+            <ul>
+              <li>* mają za sobą legalne doświadczenia związane z medyczną marihuaną, niezwiązane bezpośrednio z procesem terapeutycznym</li>
+              <li>* chcą lepiej zrozumieć pojawiające się wglądy, emocje i reakcje</li>
+              <li>* potrzebują bezpiecznej przestrzeni do uporządkowania trudnych lub intensywnych przeżyć</li>
+              
+              
+              
+              <p>
+                 .          
+            </p>
+              
+              <p>
+              U wielu osób proces ten sprzyja:
+            </p>
+            
+            </ul>
+
+            <ul>
+              <li>* pogłębieniu kontaktu z emocjami i wewnętrznymi schematami</li>
+              <li>* lepszemu rozumieniu reakcji ciała i psychiki</li>
+              <li>* integracji doświadczeń traumatycznych, egzystencjalnych oraz zablokowanych uczuć</li>
+              <li>* poszerzeniu perspektywy postrzegania siebie i własnej historii</li>
+              <li>* dotarciu do obszarów, które w klasycznej pracy werbalnej bywają trudno dostępne</li>
+              
+              
+              <p>
+                 .          
+            </p>
+              
+              <p>
+              W trakcie spotkań wykorzystywane są m.in. elementy rozmowy wglądowej, techniki uważności, pracy z oddechem, muzyka wspierająca oraz kierowana uwaga - zawsze w granicach komfortu i gotowości klienta.
+            </p>
+            
+            </ul>
+
+
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">To nie jest doświadczenie rekreacyjne</h2>
+            <p>
+            Nie jest to forma relaksu ani „łagodnego rozluźnienia”. To świadomy, pogłębiony proces pracy z doświadczeniem wewnętrznym, skierowany do osób, które czują, że klasyczne formy rozmowy nie zawsze pozwalają dotrzeć do głębszych warstw przeżyć.
+            </p>
+            <p>
+            Dla wielu osób jest to sposób na lepsze zrozumienie źródeł wewnętrznych konfliktów, reakcji emocjonalnych oraz utrwalonych wzorców, które wpływają na codzienne funkcjonowanie.
+            </p>
+
+
+
+
+
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Co może wspierać ten proces</h2>
+            <p>
+            U wielu osób praca ta sprzyja:
+            </p>
+            
+            <p>
+                 .          
+            </p>
+            
+            <ul>
+              <li>* pogłębieniu kontaktu z własnymi zasobami</li>
+              <li>* wzmocnieniu poczucia sprawczości i zaufania do siebie</li>
+              <li>* rozwijaniu zdolności do samoregulacji emocjonalnej</li>
+              <li>* bardziej świadomemu odnoszeniu się do własnych potrzeb i granic</li>
+              
+              
+             
+              
+              
+            </ul>
+
+
+
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Zasady bezpieczeństwa i odpowiedzialności</h2>
+            
+            
+            
+            
+            <ul>
+              <li>* praca odbywa się wyłącznie w granicach obowiązującego prawa</li>
+              <li>* nie ingeruje w decyzje medyczne ani farmakologiczne</li>
+              <li>* tempo, zakres i głębokość procesu są zawsze indywidualnie dostosowane</li>
+              <li>* granice i gotowość klienta pozostają kluczowe na każdym etapie</li>
+              
+              
+              <p>
+                 .          
+            </p>
+              
+              <p>
+              Jeśli czujesz, że potrzebujesz pogłębionej, uważnej pracy integracyjnej, która pomoże Ci lepiej zrozumieć i uporządkować własne doświadczenia, to podejście może być dla Ciebie wartościowym elementem procesu zmiany.
+            </p>
+            </ul>
+
+
+
+
+
+
+
+
+            
+            
           </div>
             <div className="mt-8 text-center">
                 <Link
