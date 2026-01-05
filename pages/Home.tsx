@@ -118,31 +118,7 @@ const Home: React.FC = () => {
 
         {/* Content */}
         <div className="relative z-10 h-full flex flex-col justify-end items-center text-center px-4 max-w-4xl mx-auto pb-10">
-          {/* Video Controls - Centered below buttons */}
-          <div className="mb-4 flex space-x-4">
-            <button
-              onClick={togglePlay}
-              className="group p-4 rounded-full bg-warm-950/40 border border-warm-200/20 backdrop-blur-md text-warm-200 hover:bg-coffee-600 hover:border-coffee-500 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-coffee-900/50 focus:outline-none focus:ring-2 focus:ring-coffee-400"
-              aria-label={isPlaying ? "Zatrzymaj wideo" : "Odtwórz wideo"}
-            >
-              {isPlaying ? (
-                <Pause size={20} strokeWidth={2} className="fill-current opacity-90" />
-              ) : (
-                <Play size={20} strokeWidth={2} className="fill-current opacity-90 ml-1" />
-              )}
-            </button>
-            <button
-              onClick={toggleMute}
-              className="group p-4 rounded-full bg-warm-950/40 border border-warm-200/20 backdrop-blur-md text-warm-200 hover:bg-coffee-600 hover:border-coffee-500 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-coffee-900/50 focus:outline-none focus:ring-2 focus:ring-coffee-400"
-              aria-label={isMuted ? "Włącz dźwięk" : "Wycisz"}
-            >
-              {isMuted ? (
-                <VolumeX size={20} strokeWidth={2} className="opacity-90" />
-              ) : (
-                <Volume2 size={20} strokeWidth={2} className="opacity-90" />
-              )}
-            </button>
-          </div>
+          
           <span className="text-coffee-300 uppercase tracking-[0.3em] mb-6 text-sm md:text-base animate-fade-in-up font-medium" style={{ animationFillMode: 'both' }}>
             Certyfikowana Hipnoterapeutka
           </span>
@@ -153,11 +129,38 @@ const Home: React.FC = () => {
             Przestrzeń Integracji  <br/> Świadomości <br/> i Rozwoju
           </h1>
           <p
-            className="font-sans text-warm-200 text-lg md:text-xl max-w-2xl mb-12 font-light leading-relaxed tracking-wide animate-fade-in-up"
+            className="font-sans text-warm-200 text-lg md:text-xl max-w-2xl mb-4 font-light leading-relaxed tracking-wide animate-fade-in-up"
             style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
           >
             Zapraszam Cię do spotkania z Tym, co w Tobie jest źródłem Mocy <br/>  <br/> 
           </p>
+
+          {/* Video Controls - Moved after text */}
+          <div className="mb-8 flex space-x-2 animate-fade-in-up" style={{ animationDelay: '0.5s', animationFillMode: 'both' }}>
+            <button
+              onClick={togglePlay}
+              className="group p-2 rounded-full bg-warm-950/40 border border-warm-200/20 backdrop-blur-md text-warm-200 hover:bg-coffee-600 hover:border-coffee-500 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-coffee-900/50 focus:outline-none focus:ring-2 focus:ring-coffee-400"
+              aria-label={isPlaying ? "Zatrzymaj wideo" : "Odtwórz wideo"}
+            >
+              {isPlaying ? (
+                <Pause size={10} strokeWidth={2} className="fill-current opacity-90" />
+              ) : (
+                <Play size={10} strokeWidth={2} className="fill-current opacity-90 ml-0.5" />
+              )}
+            </button>
+            <button
+              onClick={toggleMute}
+              className="group p-2 rounded-full bg-warm-950/40 border border-warm-200/20 backdrop-blur-md text-warm-200 hover:bg-coffee-600 hover:border-coffee-500 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-coffee-900/50 focus:outline-none focus:ring-2 focus:ring-coffee-400"
+              aria-label={isMuted ? "Włącz dźwięk" : "Wycisz"}
+            >
+              {isMuted ? (
+                <VolumeX size={10} strokeWidth={2} className="opacity-90" />
+              ) : (
+                <Volume2 size={10} strokeWidth={2} className="opacity-90" />
+              )}
+            </button>
+          </div>
+
           <div
             className="flex flex-col sm:flex-row gap-6 animate-fade-in-up"
             style={{ animationDelay: '0.6s', animationFillMode: 'both' }}

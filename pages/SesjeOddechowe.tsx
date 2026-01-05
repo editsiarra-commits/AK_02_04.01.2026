@@ -43,32 +43,105 @@ const SesjeOddechowe: React.FC = () => {
           </div>
           <div className="prose prose-lg prose-invert text-warm-300 font-light leading-relaxed">
             <p>
-            Oddech jest najpotężniejszym, a jednocześnie najbardziej niedocenianym narzędziem, jakie posiadamy. To brama do naszego układu nerwowego, emocji i najgłębszych stanów świadomości. Sesje oddechowe to praktyka wykorzystująca świadome, połączone oddychanie, aby uwolnić zablokowaną energię, przetworzyć stłumione emocje i wejść w odmienny stan świadomości w całkowicie naturalny sposób.
+            W moim gabinecie możesz skorzystać z indywidualnych sesji oddechowych inspirowanych oddychaniem holotropowym — pogłębionej pracy z oddechem, ciałem i świadomością, która umożliwia kontakt z głębokimi warstwami doświadczenia wewnętrznego. Sesje te łączą świadomy, intensywniejszy oddech, muzykę oraz pracę z ciałem, tworząc spójny, ugruntowany proces. Dla wielu osób są to doświadczenia poruszające, inicjacyjne i transformujące - odbywające się bez użycia substancji.
             </p>
             <p>
-            Poprzez intensywną pracę z oddechem omijamy analityczny umysł, pozwalając ciału i podświadomości na ujawnienie tego, co wymaga uzdrowienia. To głęboko somatyczne doświadczenie, które może prowadzić do katharsis, uwolnienia traumy i głębokiego wglądu duchowego.
+            
             </p>
 
-            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Dla kogo są Sesje Oddechowe?</h2>
-            <p>
-              Ta forma pracy jest szczególnie skuteczna, jeśli:
-            </p>
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Jeśli tu jesteś i czytasz ten tekst…</h2>
+            
             <ul>
-              <li>Czujesz się odcięty/a od swojego ciała i emocji.</li>
-              <li>Pragniesz uwolnić się od stresu, napięcia i lęku.</li>
-              <li>Masz poczucie utknięcia, a tradycyjne metody terapii nie przynoszą rezultatów.</li>
-              <li>Chcesz pogłębić swoją praktykę medytacyjną lub duchową.</li>
-              <li>Jesteś gotowy/a na głęboką pracę transformacyjną i spotkanie z samym/samą sobą.</li>
-              <li>Chcesz w bezpieczny sposób zbadać odmienne stany świadomości.</li>
+              <li>- Bardzo możliwe, że coś w Tobie już wie, że rozmowa nie sięga wystarczająco głęboko.
+              Być może czujesz napięcie w ciele, emocje bez jasnej przyczyny, poczucie utknięcia albo wewnętrzne wezwanie do zmiany, której nie da się „przegadać”.</li>
+              <li>- Sesje oddechowe są zaproszeniem do spotkania z tym, co chce zostać zobaczone i przeżyte, a nie tylko zrozumiane</li>
+              
             </ul>
 
-            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Jak wygląda sesja oddechowa?</h2>
+            
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Na czym polega sesja?</h2>
             <p>
-            Sesja odbywa się w bezpiecznej i podtrzymującej przestrzeni. Rozpoczyna się rozmową i ustaleniem intencji. Następnie, leżąc wygodnie, przy specjalnie dobranej muzyce, jesteś prowadzony/a przez proces świadomego, połączonego oddechu. Czas trwania intensywnego oddychania jest dostosowany do Twoich potrzeb. Przez cały czas jestem przy Tobie, dbając o Twoje bezpieczeństwo i wspierając Twój proces. Sesję kończymy relaksacją i integracją doświadczenia.
+            Proces sesji oddechowej składa się z kilku elementów, które prowadzą Cię krok po kroku w głąb doświadczenia:
+            </p> 
+
+           
+
+            <ul>
+              <li>- oddech świadomie prowadzony, intensywniejszy, otwiera dostęp do poszerzonego stanu świadomości. To w nim często ujawniają się emocje, wspomnienia i obrazy, które do tej pory pozostawały poza zasięgiem uwagi.</li>
+              <li>- muzyka towarzyszy kadej sesji. Przygotowany przeze mnie set muzyczny, który prowadzi proces i pogłębia doświadczenie, wspierając naturalny rytm tego, co się pojawia.</li>
+              <li>- pracujemy w bezpiecznej, komfortowej przestrzeni — z materacem i opaską na oczy — tak, abyś mógł/mogła w pełni skierować uwagę do wewnątrz.</li>
+              <li>- body scanning i praca z ciałem. Sesja rozpoczyna się od świadomego skanowania ciała. W trakcie procesu stosuję również delikatne techniki pracy z ciałem, które pomagają uwalniać napięcia i domykać pojawiające się procesy — zawsze z uważnością na granice i zgodę.</li>
+              
+            </ul>
+
+
+
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Integracja — to, co najważniejsze</h2>
+            <p>
+            To, co wydarza się podczas sesji oddechowej, nie kończy się wraz z ostatnim oddechem.
+Dlatego integralną częścią pracy jest osobna sesja integracyjna, podczas której pomagam Ci zrozumieć i osadzić to, co się ujawniło — oraz przełożyć doświadczenie na realne życie.
+            </p> 
+
+            <p>
+                 .          
             </p>
+
+            <ul>
+              <li>Integracja sprawia, że to, co głębokie i intensywne, może stać się wspierającą zmianą, a nie tylko silnym przeżyciem.</li>
+              
+              
+            </ul>
+
+
+
+
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Forma pracy</h2>
+            <p>
+            Sesje oddechowe prowadzę w pakiecie dwuetapowym:
+            </p> 
+
+            <p>
+                 .          
+            </p>
+
+            <ul>
+              <li>ok. 4-godzinna sesja oddechowa inspirowana oddychaniem holotropowym, połączona z body scanningiem i pracą z ciałem.</li>
+              <li>2-godzinna sesja integracyjna, odbywająca się po procesie oddechowym.</li>
+              
+            </ul>
+
+
+
+
+
+            <p>
+                 .          
+            </p>
+            <p>
+            Ta struktura pozwala Ci nie tylko przeżyć doświadczenie, ale także je zrozumieć, zintegrować i włączyć w codzienne funkcjonowanie.
+            </p>
+          
+
+
+
+
+            <p>
+            .
+            </p>
+
+
             <blockquote className="border-l-4 border-coffee-600 pl-6 italic text-warm-200">
             Twój oddech jest Twoim wewnętrznym uzdrowicielem. Naucz się go słuchać, a zaprowadzi Cię dokładnie tam, gdzie potrzebujesz być.
             </blockquote>
+
+
+
+
+
+
+
+
+            
           </div>
             <div className="mt-8 text-center">
                             <Link
