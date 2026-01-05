@@ -27,7 +27,7 @@ const SesjeOddechowe: React.FC = () => {
             Sesje Oddechowe
           </h1>
           <p className="text-2xl md:text-3xl text-warm-300 font-serif italic max-w-3xl mx-auto">
-            Odkryj uzdrawiającą moc świadomego oddechu
+          „Oddech jest mostem między ciałem, a umysłem” - Thích Nhất Hạnh
           </p>
         </div>
       </section>
@@ -70,6 +70,15 @@ const SesjeOddechowe: React.FC = () => {
             Twój oddech jest Twoim wewnętrznym uzdrowicielem. Naucz się go słuchać, a zaprowadzi Cię dokładnie tam, gdzie potrzebujesz być.
             </blockquote>
           </div>
+            <div className="mt-8 text-center">
+                <Link
+                    to="/"
+                    state={{ scrollTo: 'contact' }}
+                    className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20"
+                >
+                    Umów Konsultację
+                </Link>
+            </div>
         </div>
       </div>
     </div>

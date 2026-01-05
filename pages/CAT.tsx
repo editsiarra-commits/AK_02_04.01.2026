@@ -69,6 +69,15 @@ const CAT: React.FC = () => {
             CAT to nie magiczne rozwiązanie, ale potężne narzędzie w rękach świadomego pacjenta i doświadczonego terapeuty. To zaproszenie do głębokiego spotkania z samym sobą, aby uzdrowić to, co boli i odkryć swoją wewnętrzną siłę.
             </blockquote>
           </div>
+            <div className="mt-8 text-center">
+                <Link
+                    to="/"
+                    state={{ scrollTo: 'contact' }}
+                    className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20"
+                >
+                    Umów Konsultację
+                </Link>
+            </div>
         </div>
       </div>
     </div>
