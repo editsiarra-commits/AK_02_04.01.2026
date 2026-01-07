@@ -4,14 +4,20 @@ import React, { useEffect, useRef } from 'react';
 interface AnimatedTileProps {
   offerId: string;
   children: React.ReactNode;
+  backgroundImage?: string;
 }
 
-const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children }) => {
+const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children, backgroundImage }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+
+    // If there is a background image, we don't need the canvas animation
+    if (backgroundImage) {
+        return;
+    }
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
@@ -82,11 +88,18 @@ const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children }) => {
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, [offerId]);
+  }, [offerId, backgroundImage]);
 
   return (
     <div className="absolute inset-0">
-        <canvas ref={canvasRef} className="w-full h-full opacity-70 group-hover:opacity-90 transition-opacity duration-700" />
+        {backgroundImage ? (
+             <div 
+             className="w-full h-full bg-cover bg-center opacity-70 group-hover:opacity-90 transition-opacity duration-700"
+             style={{ backgroundImage: `url(${backgroundImage})` }}
+           />
+        ) : (
+            <canvas ref={canvasRef} className="w-full h-full opacity-70 group-hover:opacity-90 transition-opacity duration-700" />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent opacity-80"></div>
         {children}
     </div>

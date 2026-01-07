@@ -5,6 +5,7 @@ export interface OfferSubCategory {
   fullDescription: string;
   benefits: string[];
   image: string;
+  tileBackgroundImage?: string;
   additionalInfo: string;
   autonomousHeadline: string;
   benefitsHeadline: string;
