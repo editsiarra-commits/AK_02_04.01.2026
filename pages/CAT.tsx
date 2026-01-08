@@ -20,10 +20,10 @@ const CAT: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 to-transparent"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <p className="text-coffee-400 font-sans text-xl font-bold uppercase tracking-[0.3em] mb-4">
+          <p className="text-coffee-400 font-sans text-xl font-bold uppercase tracking-[0.3em] mb-2">
             Głęboka Praca Terapeutyczna
           </p>
-          <h1 className="font-serif text-4xl md:text-6xl text-warm-100 mb-4">
+          <h1 className="font-serif text-4xl md:text-6xl text-warm-100 mb-2">
             Terapia wspomagana konopiami
           </h1>
           <p className="text-2xl md:text-3xl text-warm-300 font-serif italic max-w-3xl mx-auto">
