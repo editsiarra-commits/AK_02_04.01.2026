@@ -100,8 +100,8 @@ const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children, backgrou
         ) : (
             <canvas ref={canvasRef} className="w-full h-full opacity-70 group-hover:opacity-90 transition-opacity duration-700" />
         )}
-        <div className="absolute inset-0 bg-warm-950/20 group-hover:bg-warm-950/50 transition-colors duration-700"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent opacity-80"></div>
+        <div className="absolute inset-0 bg-warm-950/60 group-hover:bg-warm-950/80 transition-colors duration-700"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/40 to-transparent opacity-80"></div>
         {children}
     </div>
   );

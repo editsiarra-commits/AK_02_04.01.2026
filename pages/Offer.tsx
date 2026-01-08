@@ -34,7 +34,7 @@ const offers: Record<string, OfferSubCategory> = {
     id: 'regression',
     title: 'Zwiekszenie poczucia wartości i pewności siebie',
     description: 'Niskie poczucie własnej wartości rzadko pokazuje się wprost. Częściej czai się w ciągłym porównywaniu do innych, nadmiernej samokontroli, problemach ze stawianiem granic czy wrażeniu, że „po prostu nie jestem dość dobra/y”. Z czasem to wycofuje, buduje napięcie i każe rezygnować z własnych potrzeb',
-    fullDescription: 'Częściej czai się w ciągłym porównywaniu do innych, nadmiernej samokontroli, problemach ze stawianiem granic czy wrażeniu, że „po prostu nie jestem dość dobra/y”. Z czasem to wycofuje, buduje napięcie i każe rezygnować z własnych potrzeb. Pewność siebie to nie wrodzona cecha, ale stan, który rośnie z wewnętrznych przekonań, emocji i doświadczeń. To Twój automatyczny sposób patrzenia na siebie, reagowania na wyzwania i podejmowania decyzji - często bez świadomej refleksji. W hipnoterapii skupiamy się na przemianie tych głębokich, nieuświadomionych wzorców, które podkopują Twoją wartość. Pracujemy z wewnętrznym dialogiem, emocjami i zapisanymi w podświadomości schematami, by budować stabilne poczucie sprawczości, wewnętrznej pewności i zaufania do siebie.',
+    fullDescription: 'Częściej czai się w ciągłym porównywaniu do innych, nadmiernej samokontroli, problemach ze stawianiem granic czy wrażeniu, że „po prostu nie jestem dość dobra/y”. Z czasem to wycofuje, buduje napięcie i każe rezygnować z własnych potrzeb. Pewność siebie to nie wrodzona cecha, ale stan, który rośnie z wewnętrznych przekonań, emocji i doświadczeń. To Twój automatyczny sposób patrzenia na siebie, reagowania na wyzwania i podejmowania decyzji - często bez świadomej refleksji. W hipnoterapii skupiamy się na przemianie tych głębokich, nieuświadomionych wzorców, które podkopują Twoją wartość. Pracujemy z wewnętrznym dialogiem, emocjami i zapisanymi w podświadomości schematami, by budować stabilne pocie sprawczości, wewnętrznej pewności i zaufania do siebie.',
     benefits: [' nie udawanie pewności, ale odzyskanie naturalnego dostępu do Twoich zasobów', 'prawo do bycia sobą, bez ciągłego kwestionowania własnej wartości'],
     image: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80',
     tileBackgroundImage: '/assets/TILES_3.jpg',
@@ -125,7 +125,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ id }) => (
                         <h3 className="font-display text-2xl text-warm-100 mb-2 tracking-wide drop-shadow-lg">{offer.title}</h3>
                         
                         {/* Animated Line */}
-                        <div className="w-0 h-px bg-coffee-400 mx-auto mb-4 transition-all duration-500 group-hover:w-12 opacity-80"></div>
+                        <div className="w-0 h-px bg-coffee-400 mx-auto mb-4 transition-all duration-500 group-hover:w-12 opacity-90"></div>
                         
                         <p className="text-warm-300 font-sans text-sm font-light leading-relaxed max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0 delay-75">
                             {offer.description}
@@ -164,15 +164,21 @@ export const OfferDetail: React.FC = () => {
     );
   }
 
+  // Custom margin for stress-anxiety
+  const titleMarginClass = offer.id === 'stress-anxiety' ? 'mb-2' : 'mb-4';
+  
+  // Custom height class for stress-anxiety, smoking-cessation and regression (70% of 60vh = 42vh)
+  const heroHeightClass = (offer.id === 'stress-anxiety' || offer.id === 'smoking-cessation' || offer.id === 'regression') ? 'h-[42vh]' : 'h-[60vh]';
+
   return (
     <div className="min-h-screen bg-warm-900 pb-20">
        {/* Hero for Detail */}
-       <div className="h-[60vh] relative overflow-hidden">
+       <div className={`${heroHeightClass} relative overflow-hidden transition-all duration-300`}>
          <AnimatedTile offerId={offer.id} backgroundImage={offer.tileBackgroundImage}>
              <div className="absolute inset-0 bg-warm-900/60 flex items-center justify-center">
                 <div className="text-center px-4 max-w-4xl z-10">
-                  <span className="block text-coffee-300 uppercase tracking-widest text-sm mb-6 font-bold">Szczegóły Usługi</span>
-                  <h1 className="font-display text-4xl md:text-7xl text-white tracking-wide mb-6">{offer.title}</h1>
+                  <span className={`block text-coffee-300 uppercase tracking-widest text-sm ${titleMarginClass} font-bold`}>Szczegóły Usługi</span>
+                  <h1 className={`font-display text-4xl md:text-7xl text-white tracking-wide ${titleMarginClass}`}>{offer.title}</h1>
                 </div>
              </div>
          </AnimatedTile>
