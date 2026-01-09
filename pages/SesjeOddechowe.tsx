@@ -52,36 +52,26 @@ const SesjeOddechowe: React.FC = () => {
             <p>
             W moim gabinecie możesz skorzystać z indywidualnych sesji oddechowych inspirowanych oddychaniem holotropowym — pogłębionej pracy z oddechem, ciałem i świadomością, która umożliwia kontakt z głębokimi warstwami doświadczenia wewnętrznego. Sesje te łączą świadomy, intensywniejszy oddech, muzykę oraz pracę z ciałem, tworząc spójny, ugruntowany proces. Dla wielu osób są to doświadczenia poruszające, inicjacyjne i transformujące - odbywające się bez użycia substancji.
             </p>
-            <p>
             
-            </p>
-
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Jeśli tu jesteś i czytasz ten tekst…</h2>
             
-            <ul>
+            <ul className="list-none space-y-2 pl-0">
               <li>* bardzo możliwe, że coś w Tobie już wie, że rozmowa nie sięga wystarczająco głęboko.
               Być może czujesz napięcie w ciele, emocje bez jasnej przyczyny, poczucie utknięcia albo wewnętrzne wezwanie do zmiany, której nie da się „przegadać”.</li>
               <li>* sesje oddechowe są zaproszeniem do spotkania z tym, co chce zostać zobaczone i przeżyte, a nie tylko zrozumiane.</li>
-              
             </ul>
 
-            
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Na czym polega sesja?</h2>
             <p>
             Proces sesji oddechowej składa się z kilku elementów, które prowadzą Cię krok po kroku w głąb doświadczenia:
             </p> 
 
-           
-
-            <ul>
+            <ul className="list-none space-y-2 pl-0 mt-4">
               <li>* oddech świadomie prowadzony, intensywniejszy, otwiera dostęp do poszerzonego stanu świadomości. To w nim często ujawniają się emocje, wspomnienia i obrazy, które do tej pory pozostawały poza zasięgiem uwagi.</li>
               <li>* muzyka towarzyszy kadej sesji. Przygotowany przeze mnie set muzyczny, który prowadzi proces i pogłębia doświadczenie, wspierając naturalny rytm tego, co się pojawia.</li>
               <li>* pracujemy w bezpiecznej, komfortowej przestrzeni — z materacem i opaską na oczy — tak, abyś mógł/mogła w pełni skierować uwagę do wewnątrz.</li>
               <li>* body scanning i praca z ciałem. Sesja rozpoczyna się od świadomego skanowania ciała. W trakcie procesu stosuję również delikatne techniki pracy z ciałem, które pomagają uwalniać napięcia i domykać pojawiające się procesy — zawsze z uważnością na granice i zgodę.</li>
-              
             </ul>
-
-
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Integracja — to, co najważniejsze</h2>
             <p>
@@ -89,51 +79,21 @@ const SesjeOddechowe: React.FC = () => {
 Dlatego integralną częścią pracy jest osobna sesja integracyjna, podczas której pomagam Ci zrozumieć i osadzić to, co się ujawniło — oraz przełożyć doświadczenie na realne życie.
             </p> 
 
-            <p>
-                          
-            </p>
-
-            <ul>
+            <ul className="list-none space-y-2 pl-0 mt-4">
               <li>Integracja sprawia, że to, co głębokie i intensywne, może stać się wspierającą zmianą, a nie tylko silnym przeżyciem.</li>
-              
-              
             </ul>
-
-
-
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Forma pracy</h2>
             <p>
             Sesje oddechowe prowadzę w pakiecie dwuetapowym:
             </p> 
 
-            <p>
-                 .          
-            </p>
-
-            <ul>
+            <ul className="list-none space-y-2 pl-0 mt-4">
               <li>* ok. 4-godzinna sesja oddechowa inspirowana oddychaniem holotropowym, połączona z body scanningiem i pracą z ciałem.</li>
               <li>* 2-godzinna sesja integracyjna, odbywająca się po procesie oddechowym.</li>
-              
             </ul>
 
-
-           
-          
             <h2 className="font-serif text-2xl text-warm-100 mt-16 mb-6">Ta struktura pozwala Ci nie tylko przeżyć doświadczenie, ale także je zrozumieć, zintegrować i włączyć w codzienne funkcjonowanie.</h2>
-
-
-
-
-           
-
-
-
-
-
-
-
-
             
           </div>
             <div className="mt-8 text-center">

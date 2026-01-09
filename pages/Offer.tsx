@@ -194,7 +194,7 @@ export const OfferDetail: React.FC = () => {
              <div className="bg-warm-900/30 p-10 rounded border border-warm-700/50 mb-12">
                <h3 className="font-display text-2xl text-coffee-300 mb-8">{offer.benefitsHeadline}</h3>
                <ul className="space-y-4">
-                 {offer.benefits.map((benefit, index) => (
+                 {offer.benefits.filter(b => b.trim() !== '').map((benefit, index) => (
                    <li key={index} className="flex items-start">
                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-coffee-900/50 flex items-center justify-center mt-1 mr-4 border border-coffee-700/50">
                        <Check size={12} className="text-coffee-400" />
@@ -203,9 +203,11 @@ export const OfferDetail: React.FC = () => {
                    </li>
                  ))}
                </ul>
-                <h3 className="font-display text-2xl text-coffee-300 mt-8 mb-8">
-                 {offer.additionalInfo}
-                </h3>
+                {offer.additionalInfo && offer.additionalInfo.trim() !== '' && (
+                    <h3 className="font-display text-2xl text-coffee-300 mt-8 mb-8">
+                     {offer.additionalInfo}
+                    </h3>
+                )}
              </div>
 
              <div className="text-center border-t border-warm-700/50 pt-12">

@@ -66,76 +66,44 @@ const CAT: React.FC = () => {
             <p>
             Oferowana przeze mnie praca:
             </p>
-            <p>
-                 .          
-            </p>
             
-            
-            <ul>
+            <ul className="list-none space-y-2 pl-0">
               <li>* nie obejmuje podawania, rekomendowania ani stosowania jakichkolwiek substancji psychoaktywnych</li>
               <li>* nie zastępuje leczenia medycznego ani decyzji lekarskich</li>
               <li>* ma charakter procesu integracyjnego i rozwojowego</li>
               <li>* jest prowadzona w pełnej zgodzie z obowiązującym prawem Rzeczypospolitej Polskiej</li>
+            </ul>
               
-              
-              <p>
-                 .          
-            </p>
-              
-              <p>
+            <p className="mt-6">
               W Polsce medyczna marihuana jest lekiem dostępnym wyłącznie na receptę, przepisywaną przez uprawnionego lekarza i wydawanym w aptece jako kontrolowany surowiec farmaceutyczny - zgodnie z ustawą o przeciwdziałaniu narkomanii oraz prawem farmaceutycznym. Decyzja o jej stosowaniu należy wyłącznie do lekarza i pacjenta.
             </p>
-            </ul>
-
-
-
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Na czym polega ta forma pracy?</h2>
             <p>
             Praca integracyjna może być szczególnie pomocna dla osób, które:
             </p>
             
-            <p>
-                 .          
-            </p>
-            
-            <ul>
+            <ul className="list-none space-y-2 pl-0">
               <li>* mają za sobą legalne doświadczenia związane z medyczną marihuaną, niezwiązane bezpośrednio z procesem terapeutycznym</li>
               <li>* chcą lepiej zrozumieć pojawiające się wglądy, emocje i reakcje</li>
               <li>* potrzebują bezpiecznej przestrzeni do uporządkowania trudnych lub intensywnych przeżyć</li>
+            </ul>
               
-              
-              
-              <p>
-                 .          
-            </p>
-              
-              <p>
+            <p className="mt-6">
               U wielu osób proces ten sprzyja:
             </p>
-            <p>
-                 .          
-            </p>
-            </ul>
 
-            <ul>
+            <ul className="list-none space-y-2 pl-0 mt-4">
               <li>* pogłębieniu kontaktu z emocjami i wewnętrznymi schematami</li>
               <li>* lepszemu rozumieniu reakcji ciała i psychiki</li>
               <li>* integracji doświadczeń traumatycznych, egzystencjalnych oraz zablokowanych uczuć</li>
               <li>* poszerzeniu perspektywy postrzegania siebie i własnej historii</li>
               <li>* dotarciu do obszarów, które w klasycznej pracy werbalnej bywają trudno dostępne</li>
+            </ul>
               
-              
-              <p>
-                 .          
-            </p>
-              
-              <p>
+            <p className="mt-6">
               W trakcie spotkań wykorzystywane są m.in. elementy rozmowy wglądowej, techniki uważności, pracy z oddechem, muzyka wspierająca oraz kierowana uwaga - zawsze w granicach komfortu i gotowości klienta.
             </p>
-            
-            </ul>
-
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">To nie jest doświadczenie rekreacyjne</h2>
             <p>
@@ -145,63 +113,28 @@ const CAT: React.FC = () => {
             Dla wielu osób jest to sposób na lepsze zrozumienie źródeł wewnętrznych konfliktów, reakcji emocjonalnych oraz utrwalonych wzorców, które wpływają na codzienne funkcjonowanie.
             </p>
 
-
-
-
-
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Co może wspierać ten proces</h2>
             <p>
             U wielu osób praca ta sprzyja:
             </p>
             
-            <p>
-                 .          
-            </p>
-            
-            <ul>
+            <ul className="list-none space-y-2 pl-0">
               <li>* pogłębieniu kontaktu z własnymi zasobami</li>
               <li>* wzmocnieniu poczucia sprawczości i zaufania do siebie</li>
               <li>* rozwijaniu zdolności do samoregulacji emocjonalnej</li>
               <li>* bardziej świadomemu odnoszeniu się do własnych potrzeb i granic</li>
-              
-              
-             
-              
-              
             </ul>
-
-
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Zasady bezpieczeństwa i odpowiedzialności</h2>
             
-            
-            
-            
-            <ul>
+            <ul className="list-none space-y-2 pl-0">
               <li>* praca odbywa się wyłącznie w granicach obowiązującego prawa</li>
               <li>* nie ingeruje w decyzje medyczne ani farmakologiczne</li>
               <li>* tempo, zakres i głębokość procesu są zawsze indywidualnie dostosowane</li>
               <li>* granice i gotowość klienta pozostają kluczowe na każdym etapie</li>
-              
+            </ul>
            
             <h2 className="font-serif text-2xl text-warm-100 mt-16 mb-6">Jeśli czujesz, że potrzebujesz pogłębionej, uważnej pracy integracyjnej, która pomoże Ci lepiej zrozumieć i uporządkować własne doświadczenia, to podejście może być dla Ciebie wartościowym elementem procesu zmiany.</h2>
-
-
-
-
-
-            
-            </ul>
-
-
-
-
-
-
-
-
-            
-            
           </div>
             <div className="mt-8 text-center">
                 <button

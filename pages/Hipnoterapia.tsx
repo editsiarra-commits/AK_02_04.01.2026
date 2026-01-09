@@ -60,36 +60,20 @@ const Hipnoterapia: React.FC = () => {
             Hipnoterapia w mojej praktyce opiera się na współpracy, uważności i realnej sprawczości osoby uczestniczącej w procesie. Pracujemy z tym, co jest aktualnie gotowe do zobaczenia i zintegrowania - w tempie dostosowanym do Twoich granic i możliwości. W trakcie sesji wykorzystywane są m.in.:
             </p> 
 
-            <p>
-                 .          
-            </p>
-
-            <ul>
+            <ul className="list-none space-y-2 pl-0 mt-4">
               <li>- kierowanie uwagi i wyobraźnia</li>
               <li>- metafora i praca symboliczna</li>
               <li>- kontakt z odczuciami z ciała</li>
               <li>- dialog wewnętrzny i integracja części</li>
-              
             </ul>
-            <p>
-                 .          
-            </p>
-            <p>
+            
+            <p className="mt-6">
             Celem nie jest „naprawianie” ani forsowanie zmiany, lecz stworzenie warunków, w których zmiana może pojawić się w sposób bardziej naturalny, trwały i spójny z Twoim doświadczeniem.
             </p>
           
-
-
-
-
-
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Dla kogo jest szczególnie pomocna?</h2>
-            <p>
-            
-            </p> 
 
-
-            <ul>
+            <ul className="list-none space-y-2 pl-0">
               <li>- gdy czujesz, że powtarzające się emocje, lęki czy blokady wracają mimo racjonalnego rozumienia problemu</li>
               <li>- blokady twórcze, prokrastynacja, sabotowanie siebie</li>
               <li>- niskie poczucie własnej wartości, wewnętrzny krytyk</li>
@@ -99,68 +83,44 @@ const Hipnoterapia: React.FC = () => {
               <li>- wstyd, poczucie winy, żal, emocje powracające mimo pracy „na poziomie głowy”</li>
             </ul>
            
-
-
-
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Jak wygląda sesja?</h2>
             <p>
-            Sesja trwa zazwyczaj 60-90 minut. Zaczynamy od spokojnej rozmowy. Ustalamy cel, kontekst i to, co jest dla Ciebie teraz najważniejsze. Następnie przechodzimy do pracy w stanie hipnotycznym, który większość osób opisuje jako głęboki, regenerujący odpoczynek przy zachowanej świadomości.
+            Sesje trwają zazwyczaj 60-90 minut. Zaczynamy od spokojnej rozmowy. Ustalamy cel, kontekst i to, co jest dla Ciebie teraz najważniejsze. Następnie przechodzimy do pracy w stanie hipnotycznym, który większość osób opisuje jako głęboki, regenerujący odpoczynek przy zachowanej świadomości.
             </p> 
 
-            <p>
-                 .          
-            </p>
-
-            <ul>
+            <ul className="list-none space-y-2 pl-0 mt-4">
               <li>- Nie tracisz kontroli</li>
               <li>- Nie robisz nic wbrew sobie</li>
               <li>- Masz możliwość zatrzymania, zmiany tempa lub wyjścia z procesu w każdej chwili</li>
             </ul>
           
-          
-
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Podejście trauma-informed i inkluzywne</h2>
             <p>
             Pracuję z szczególną uważnością na sygnały układu nerwowego, poczucie bezpieczeństwa i Twoją sprawczość. Zawsze możesz zatrzymać proces, zmienić kierunek lub powiedzieć „dość”. Nie ma presji, nie ma „wchodzenia głębiej za wszelką cenę”. Każda historia, doświadczenie i potrzeba są traktowane z szacunkiem - bez założeń i bez jednej „normy”.
             </p> 
-
-            
-
             
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Czym hipnoterapia nie jest?</h2>
-            <p>
-            
-            </p> 
 
-
-            <ul>
+            <ul className="list-none space-y-2 pl-0">
               <li>- nie jest utratą kontroli ani manipulacją</li>
               <li>- nie jest doświadczeniem rekreacyjnym, ani „magicznym”</li>
               <li>- nie polega na szybkim „kasowaniu” problemów </li>
               <li>- nie zastępuje leczenia medycznego</li>
-              </ul>
-              <p>
-                 .          
-            </p>
+            </ul>
 
-              <p>
+            <p className="mt-6">
               To świadomy, aktywny proces wymagający Twojego zaangażowania - i dający trwałe efekty.
             </p>
            
-           
-
-
-
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Przykłady efektów, których najczęściej doświadczają moi Klienci</h2>
 
-            <ul>
+            <ul className="list-none space-y-2 pl-0">
               <li>- wyraźny spokój wewnętrzny i zmniejszenie napięcia</li>
               <li>- zanik lub znaczne osłabienie fobii, lęków i wewnętrznego krytyka</li>
               <li>- lżejsze relacje z innymi i z samym sobą</li>
               <li>- powrót poczucia sprawczości i energii do działania</li>
-              <li>- umiejętność spokojniejszego radzenia sobie z trudnymi emocjam</li>
-              </ul>
-
+              <li>- umiejętność spokojniejszego radzenia sobie z trudnymi emocjami</li>
+            </ul>
 
             <h2 className="font-serif text-2xl text-warm-100 mt-16 mb-6">Jeśli masz wrażenie, że utknąłeś w schematach, z których nie potrafisz się wydostać samodzielnie – hipnoterapia bardzo często okazuje się przełomem. Chcesz sprawdzić, czy to dobry kierunek właśnie dla Ciebie? Zapraszam na spokojną, bez zobowiązań konsultację.</h2>
 

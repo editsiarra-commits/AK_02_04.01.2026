@@ -60,111 +60,55 @@ const IntegracjaPsychodeliczna: React.FC = () => {
             <p>
             Ta forma pracy jest dla osób, które:
             </p>
-            <p>
-                 .          
-            </p>
 
-
-
-
-
-            <ul>
+            <ul className="list-none space-y-2 pl-0 mt-4">
               <li>* mają za sobą doświadczenie psychodeliczne i czują, że „coś się otworzyło”, ale nie wiedzą jeszcze, jak z tym żyć</li>
               <li>* planują takie doświadczenie i chcą podejść do niego świadomie i odpowiedzialnie</li>
               <li>* doświadczyły intensywnych stanów świadomości (także poprzez oddech lub medytację) i nie chcą zostawiać ich bez integracji.</li>
+            </ul>
              
-              <p>
-                 .          
-            </p>
-             
-             
-              <p>
+            <p className="mt-6">
               Jeśli rozpoznajesz się w którymkolwiek z tych punktów, integracja może być kluczowym etapem Twojego procesu.
             </p>
-            </ul>
-
-           
-
-
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Przygotowanie !</h2>
             <p>
             Przygotowanie to moment zatrzymania i wsłuchania się w to, co naprawdę Cię woła.
 To praca z intencją, regulacją ciała i układu nerwowego, z lękami, oczekiwaniami i granicami — a także ze świadomym budowaniem set & setting, czyli wewnętrznych i zewnętrznych warunków, w jakich doświadczenie może się wydarzyć.
             </p>
-            <ul>
-              
-              <p>
+            
+            <p className="mt-4">
               Nie chodzi o kontrolowanie procesu, lecz o naukę bycia w tym, co się pojawi — także w tym, co nieznane, trudne lub intensywne. Dobre przygotowanie tworzy wewnętrzną przestrzeń, w której doświadczenie może zostać bezpiecznie przeżyte.
             </p>
-            </ul>
-
-
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Integracja</h2>
             <p>
             Integracja zaczyna się wtedy, gdy doświadczenie się kończy. To proces rozumienia i osadzania tego, co zostało przeżyte, w codziennym życiu.
             </p>
-            <ul>
-            <p>
+            
+            <p className="mt-4">
               Pracujemy z wglądami, symbolami i emocjami, przekładając je na realne zmiany — w relacjach, decyzjach, granicach i sposobie bycia ze sobą. Bez pośpiechu, bez idealizowania, z uważnością na regulację i ugruntowanie.
             </p>
-              <p>
+            <p className="mt-4">
               Integracja sprawia, że to, co było intensywnym przeżyciem, może stać się żywym, wspierającym procesem zmiany, a nie tylko wspomnieniem „tripa”.
             </p>
-            </ul>
-
-
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Ważna informacja prawna !</h2>
             <p>
             Oferowana przeze mnie praca:
             </p>
 
-            <p>
-                 .          
-            </p>
-
-
-
-            <ul>
+            <ul className="list-none space-y-2 pl-0 mt-4">
               <li>* nie obejmuje podawania, rekomendowania ani dostarczania substancji psychoaktywnych</li>
               <li>* nie zachęca do ich stosowania</li>
               <li>* nie zastępuje opieki medycznej ani decyzji lekarskich</li>
+            </ul>
               
-              <p>
-                 .          
-            </p>
-              
-              
-              
-              <p>
+            <p className="mt-6">
               Przygotowanie i integracja mają charakter procesu rozwojowego i integracyjnego, prowadzonego zgodnie z obowiązującym prawem w Polsce.
             </p>
+
             <h2 className="font-serif text-2xl text-warm-100 mt-16 mb-6">Jeśli to, co przeżyłaś / przeżyłeś, wciąż w Tobie pracuje — integracja może być kolejnym, ważnym krokiem.</h2>
-            
-
-
-
-
-            </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-
-
           </div>
             <div className="mt-8 text-center">
                 <button
