@@ -55,30 +55,6 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
     }
   };
 
-  // Handle scroll after navigation from another page
-  useEffect(() => {
-    if (location.pathname === '/') {
-      // Check for state-based scroll (from navigation) or hash-based scroll (from URL)
-      const stateId = (location.state as any)?.scrollTo;
-      const hashId = location.hash ? location.hash.substring(1) : null;
-      const id = stateId || hashId;
-
-      if (id) {
-        setTimeout(() => {
-          const element = document.getElementById(id);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
-        }, 100);
-
-        // Clear state if it was used to prevent sticky scroll behavior on refresh
-        if (stateId) {
-           navigate(location.pathname, { replace: true, state: {} });
-        }
-      }
-    }
-  }, [location, navigate]);
-
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${

@@ -1,6 +1,6 @@
 import { Brain, ChevronDown, Pause, Play, ShieldCheck, Sparkles, Volume2, VolumeX } from 'lucide-react';
 import React, { Suspense, lazy, useEffect, useRef, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import LazyLoad from '../components/LazyLoad';
 
 const About = lazy(() => import('./About'));
@@ -15,33 +15,44 @@ const Home: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
   const location = useLocation();
+  const navigate = useNavigate();
   
   // Determine the target section from state or hash
   const scrollToSection = location.state?.scrollTo || (location.hash ? location.hash.substring(1) : null);
 
   useEffect(() => {
     if (scrollToSection) {
-      // Small delay to allow potential lazy loading to initiate
-      setTimeout(() => {
+      // Use requestAnimationFrame for smoother timing or a slightly longer delay
+      const timer = setTimeout(() => {
         const element = document.getElementById(scrollToSection);
         if (element) {
            element.scrollIntoView({ behavior: 'smooth' });
+           
+           // If it's coming from state, we should clear it to prevent sticky scroll on refresh
+           if (location.state?.scrollTo) {
+               navigate(location.pathname, { replace: true, state: {} });
+           }
         } else {
-            // Retry logic in case component is not yet mounted
-            const interval = setInterval(() => {
-                const el = document.getElementById(scrollToSection);
-                if (el) {
-                    el.scrollIntoView({ behavior: 'smooth' });
-                    clearInterval(interval);
-                }
-            }, 100);
-            
-            // Clear interval after 3 seconds
-            setTimeout(() => clearInterval(interval), 3000);
+             // Fallback retry if element is not ready (though LazyLoad wrapper should be there)
+             let attempts = 0;
+             const interval = setInterval(() => {
+                 const el = document.getElementById(scrollToSection);
+                 if (el) {
+                     el.scrollIntoView({ behavior: 'smooth' });
+                     clearInterval(interval);
+                     if (location.state?.scrollTo) {
+                        navigate(location.pathname, { replace: true, state: {} });
+                     }
+                 }
+                 attempts++;
+                 if (attempts > 20) clearInterval(interval); // Stop after 2 seconds
+             }, 100);
         }
-      }, 100);
+      }, 300); // Increased delay to 300ms to allow layout to settle
+
+      return () => clearTimeout(timer);
     }
-  }, [scrollToSection]);
+  }, [scrollToSection, location.state, location.pathname, navigate]);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -195,15 +206,15 @@ const Home: React.FC = () => {
 
       {/* Sections */}
       <Suspense fallback={<div>Loading...</div>}>
-        <LazyLoad id="about" forceVisible={scrollToSection === 'about'}>
-          <About id="about" />
+        <LazyLoad id="about" forceVisible={scrollToSection === 'about'} className="scroll-mt-20">
+          <About />
         </LazyLoad>
-        <LazyLoad id="offer" forceVisible={scrollToSection === 'offer'}>
-          <OfferSection id="offer" />
+        <LazyLoad id="offer" forceVisible={scrollToSection === 'offer'} className="scroll-mt-20">
+          <OfferSection />
         </LazyLoad>
 
-        <LazyLoad id="contact" forceVisible={scrollToSection === 'contact'}>
-          <Contact id="contact" />
+        <LazyLoad id="contact" forceVisible={scrollToSection === 'contact'} className="scroll-mt-20">
+          <Contact />
         </LazyLoad>
 
         {/* Why Hypnotherapy Section */}
@@ -260,14 +271,14 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        <LazyLoad id="faq" forceVisible={scrollToSection === 'faq'}>
-          <FAQ id="faq" />
+        <LazyLoad id="faq" forceVisible={scrollToSection === 'faq'} className="scroll-mt-20">
+          <FAQ />
         </LazyLoad>
-        <LazyLoad id="testimonials" forceVisible={scrollToSection === 'testimonials'}>
-          <Testimonials id="testimonials" />
+        <LazyLoad id="testimonials" forceVisible={scrollToSection === 'testimonials'} className="scroll-mt-20">
+          <Testimonials />
         </LazyLoad>
-        <LazyLoad id="pricing" forceVisible={scrollToSection === 'pricing'}>
-          <Pricing id="pricing" />
+        <LazyLoad id="pricing" forceVisible={scrollToSection === 'pricing'} className="scroll-mt-20">
+          <Pricing />
         </LazyLoad>
         
       </Suspense>
