@@ -212,7 +212,7 @@ export const OfferDetail: React.FC = () => {
                 <p className="text-warm-400 mb-8 italic font-serif text-xl">Jeśli masz dość życia na skróconej smyczy lęku albo ciągłego wewnętrznego prokuratora -
                 zapraszam. Możemy wspólnie sprawdzić, jak to jest, kiedy stare programy w końcu dostają zgodę na emeryturę.</p>
                 <a href="#contact" onClick={(e) => handleNavigate(e, 'contact')} className="inline-block px-12 py-5 bg-coffee-800 text-white font-sans text-xs font-bold uppercase tracking-[0.2em] hover:bg-coffee-700 transition-all shadow-lg hover:shadow-coffee-900/30 cursor-pointer">
-                  Zarezerwuj tę Sesję
+                  ZAREZERWUJ TĘ SESJĘ
                 </a>
              </div>
            </div>

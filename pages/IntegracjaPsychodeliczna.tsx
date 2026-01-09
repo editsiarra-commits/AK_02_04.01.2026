@@ -1,8 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
 const IntegracjaPsychodeliczna: React.FC = () => {
+    const navigate = useNavigate();
+
+    const handleContactClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+        navigate('/', { state: { scrollTo: 'contact' } });
+    };
+
   return (
     <div className="bg-warm-900 text-warm-200">
       {/* Hero Section */}
@@ -160,13 +167,12 @@ To praca z intencją, regulacją ciała i układu nerwowego, z lękami, oczekiwa
 
           </div>
             <div className="mt-8 text-center">
-                <Link
-                    to="/"
-                    state={{ scrollTo: 'contact' }}
-                    className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20"
+                <button
+                    onClick={handleContactClick}
+                    className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20 inline-block cursor-pointer"
                 >
-                    Umów Konsultację
-                </Link>
+                    ZAREZERWUJ TĘ SESJĘ
+                </button>
             </div>
         </div>
       </div>

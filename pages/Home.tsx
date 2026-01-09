@@ -15,18 +15,21 @@ const Home: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
   const location = useLocation();
+  
+  // Determine the target section from state or hash
+  const scrollToSection = location.state?.scrollTo || (location.hash ? location.hash.substring(1) : null);
 
   useEffect(() => {
-    if (location.state?.scrollTo) {
+    if (scrollToSection) {
       // Small delay to allow potential lazy loading to initiate
       setTimeout(() => {
-        const element = document.getElementById(location.state.scrollTo);
+        const element = document.getElementById(scrollToSection);
         if (element) {
            element.scrollIntoView({ behavior: 'smooth' });
         } else {
             // Retry logic in case component is not yet mounted
             const interval = setInterval(() => {
-                const el = document.getElementById(location.state.scrollTo);
+                const el = document.getElementById(scrollToSection);
                 if (el) {
                     el.scrollIntoView({ behavior: 'smooth' });
                     clearInterval(interval);
@@ -38,7 +41,7 @@ const Home: React.FC = () => {
         }
       }, 100);
     }
-  }, [location.state]);
+  }, [scrollToSection]);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -176,7 +179,7 @@ const Home: React.FC = () => {
               onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}}
               className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20"
             >
-              Umów Konsultację
+              ZAREZERWUJ TĘ SESJĘ
             </a>
           </div>
           
@@ -192,14 +195,14 @@ const Home: React.FC = () => {
 
       {/* Sections */}
       <Suspense fallback={<div>Loading...</div>}>
-        <LazyLoad id="about">
+        <LazyLoad id="about" forceVisible={scrollToSection === 'about'}>
           <About id="about" />
         </LazyLoad>
-        <LazyLoad id="offer">
+        <LazyLoad id="offer" forceVisible={scrollToSection === 'offer'}>
           <OfferSection id="offer" />
         </LazyLoad>
 
-        <LazyLoad id="contact" forceVisible={location.state?.scrollTo === 'contact'}>
+        <LazyLoad id="contact" forceVisible={scrollToSection === 'contact'}>
           <Contact id="contact" />
         </LazyLoad>
 
@@ -257,13 +260,13 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        <LazyLoad id="faq">
+        <LazyLoad id="faq" forceVisible={scrollToSection === 'faq'}>
           <FAQ id="faq" />
         </LazyLoad>
-        <LazyLoad id="testimonials">
+        <LazyLoad id="testimonials" forceVisible={scrollToSection === 'testimonials'}>
           <Testimonials id="testimonials" />
         </LazyLoad>
-        <LazyLoad id="pricing">
+        <LazyLoad id="pricing" forceVisible={scrollToSection === 'pricing'}>
           <Pricing id="pricing" />
         </LazyLoad>
         
