@@ -3,12 +3,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
 const Hipnoterapia: React.FC = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const handleContactClick = (e: React.MouseEvent) => {
-        e.preventDefault();
-        navigate('/', { state: { scrollTo: 'contact' } });
-    };
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate('/', { state: { scrollTo: 'contact' } });
+  };
 
   return (
     <div className="bg-warm-900 text-warm-200">
@@ -34,8 +34,8 @@ const Hipnoterapia: React.FC = () => {
             Hipnoterapia
           </h1>
           <p className="text-2xl md:text-3xl text-warm-300 font-serif italic max-w-3xl mx-auto">
-          "Dopóki nie uczynimy nieświadomego świadomym, będzie ono kierowało naszym życiem, a my będziemy nazywać to losem.”
-— Sigmund Freud
+            "Dopóki MY nie uczynimy nieświadomego świadomym, będzie ono kierowało naszym życiem, a my będziemy nazywać to losem.”
+            — Sigmund Freud
           </p>
         </div>
       </section>
@@ -43,7 +43,7 @@ const Hipnoterapia: React.FC = () => {
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16 lg:py-24">
         <div className="max-w-3xl mx-auto">
-        <div className="mb-8">
+          <div className="mb-8">
             <Link to="/" className="inline-flex items-center text-coffee-300 hover:text-coffee-200 transition-colors">
               <ArrowLeft size={20} className="mr-2" />
               <span>Powrót do strony głównej</span>
@@ -51,14 +51,14 @@ const Hipnoterapia: React.FC = () => {
           </div>
           <div className="prose prose-lg prose-invert text-warm-300 font-light leading-relaxed">
             <p>
-            To pogłębiona, świadoma praca z umysłem i emocjami, która wykorzystuje naturalne stany skupienia i zawężonej uwagi, aby dotrzeć do źródeł trudności - tam, gdzie klasyczna rozmowa często zatrzymuje się na powierzchni. Stan hipnotyczny jest czymś, co każdy z nas zna z codziennego życia - kiedy „odpływamy” myślami, głęboko się skupiamy lub wchodzimy w flow. W terapii świadomie korzystamy z tego stanu, by bezpiecznie i łagodnie dotknąć podświadomych przekonań, emocji, wspomnień i wzorców, które zazwyczaj pozostają poza zasięgiem świadomej refleksji.
+              To pogłębiona, świadoma praca z umysłem i emocjami, która wykorzystuje naturalne stany skupienia i zawężonej uwagi, aby dotrzeć do źródeł trudności - tam, gdzie klasyczna rozmowa często zatrzymuje się na powierzchni. Stan hipnotyczny jest czymś, co każdy z nas zna z codziennego życia - kiedy „odpływamy” myślami, głęboko się skupiamy lub wchodzimy w flow. W terapii świadomie korzystamy z tego stanu, by bezpiecznie i łagodnie dotknąć podświadomych przekonań, emocji, wspomnień i wzorców, które zazwyczaj pozostają poza zasięgiem świadomej refleksji.
             </p>
-          
+
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Na czym polega ta forma pracy?</h2>
             <p>
-            Hipnoterapia w mojej praktyce opiera się na współpracy, uważności i realnej sprawczości osoby uczestniczącej w procesie. Pracujemy z tym, co jest aktualnie gotowe do zobaczenia i zintegrowania - w tempie dostosowanym do Twoich granic i możliwości. W trakcie sesji wykorzystywane są m.in.:
-            </p> 
+              Hipnoterapia w mojej praktyce opiera się na współpracy, uważności i realnej sprawczości osoby uczestniczącej w procesie. Pracujemy z tym, co jest aktualnie gotowe do zobaczenia i zintegrowania - w tempie dostosowanym do Twoich granic i możliwości. W trakcie sesji wykorzystywane są m.in.:
+            </p>
 
             <ul className="list-none space-y-2 pl-0 mt-4">
               <li>- kierowanie uwagi i wyobraźnia</li>
@@ -66,11 +66,11 @@ const Hipnoterapia: React.FC = () => {
               <li>- kontakt z odczuciami z ciała</li>
               <li>- dialog wewnętrzny i integracja części</li>
             </ul>
-            
+
             <p className="mt-6">
-            Celem nie jest „naprawianie” ani forsowanie zmiany, lecz stworzenie warunków, w których zmiana może pojawić się w sposób bardziej naturalny, trwały i spójny z Twoim doświadczeniem.
+              Celem nie jest „naprawianie” ani forsowanie zmiany, lecz stworzenie warunków, w których zmiana może pojawić się w sposób bardziej naturalny, trwały i spójny z Twoim doświadczeniem.
             </p>
-          
+
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Dla kogo jest szczególnie pomocna?</h2>
 
             <ul className="list-none space-y-2 pl-0">
@@ -82,23 +82,23 @@ const Hipnoterapia: React.FC = () => {
               <li>- gdy potrzebujesz łagodnej, ale naprawdę głębokiej pracy z traumą, napięciem, niskim poczuciem wartości czy trudnościami w relacjach</li>
               <li>- wstyd, poczucie winy, żal, emocje powracające mimo pracy „na poziomie głowy”</li>
             </ul>
-           
+
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Jak wygląda sesja?</h2>
             <p>
-            Sesje trwają zazwyczaj 60-90 minut. Zaczynamy od spokojnej rozmowy. Ustalamy cel, kontekst i to, co jest dla Ciebie teraz najważniejsze. Następnie przechodzimy do pracy w stanie hipnotycznym, który większość osób opisuje jako głęboki, regenerujący odpoczynek przy zachowanej świadomości.
-            </p> 
+              Sesje trwają zazwyczaj 60-90 minut. Zaczynamy od spokojnej rozmowy. Ustalamy cel, kontekst i to, co jest dla Ciebie teraz najważniejsze. Następnie przechodzimy do pracy w stanie hipnotycznym, który większość osób opisuje jako głęboki, regenerujący odpoczynek przy zachowanej świadomości.
+            </p>
 
             <ul className="list-none space-y-2 pl-0 mt-4">
               <li>- Nie tracisz kontroli</li>
               <li>- Nie robisz nic wbrew sobie</li>
               <li>- Masz możliwość zatrzymania, zmiany tempa lub wyjścia z procesu w każdej chwili</li>
             </ul>
-          
+
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Podejście trauma-informed i inkluzywne</h2>
             <p>
-            Pracuję z szczególną uważnością na sygnały układu nerwowego, poczucie bezpieczeństwa i Twoją sprawczość. Zawsze możesz zatrzymać proces, zmienić kierunek lub powiedzieć „dość”. Nie ma presji, nie ma „wchodzenia głębiej za wszelką cenę”. Każda historia, doświadczenie i potrzeba są traktowane z szacunkiem - bez założeń i bez jednej „normy”.
-            </p> 
-            
+              Pracuję z szczególną uważnością na sygnały układu nerwowego, poczucie bezpieczeństwa i Twoją sprawczość. Zawsze możesz zatrzymać proces, zmienić kierunek lub powiedzieć „dość”. Nie ma presji, nie ma „wchodzenia głębiej za wszelką cenę”. Każda historia, doświadczenie i potrzeba są traktowane z szacunkiem - bez założeń i bez jednej „normy”.
+            </p>
+
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Czym hipnoterapia nie jest?</h2>
 
             <ul className="list-none space-y-2 pl-0">
@@ -111,7 +111,7 @@ const Hipnoterapia: React.FC = () => {
             <p className="mt-6">
               To świadomy, aktywny proces wymagający Twojego zaangażowania - i dający trwałe efekty.
             </p>
-           
+
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Przykłady efektów, których najczęściej doświadczają moi Klienci</h2>
 
             <ul className="list-none space-y-2 pl-0">
@@ -125,12 +125,12 @@ const Hipnoterapia: React.FC = () => {
             <h2 className="font-serif text-2xl text-warm-100 mt-16 mb-6">Jeśli masz wrażenie, że utknąłeś w schematach, z których nie potrafisz się wydostać samodzielnie – hipnoterapia bardzo często okazuje się przełomem. Chcesz sprawdzić, czy to dobry kierunek właśnie dla Ciebie? Zapraszam na spokojną, bez zobowiązań konsultację.</h2>
 
             <div className="mt-8 text-center">
-                <button
-                    onClick={handleContactClick}
-                    className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20 inline-block cursor-pointer"
-                >
-                    ZAREZERWUJ TĘ SESJĘ
-                </button>
+              <button
+                onClick={handleContactClick}
+                className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20 inline-block cursor-pointer"
+              >
+                ZAREZERWUJ TĘ SESJĘ
+              </button>
             </div>
           </div>
         </div>
