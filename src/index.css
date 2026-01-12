@@ -1,1 +1,17 @@
-/* Add your own custom styles here */
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+/* Custom scrollbar for dark theme (moved from index.html) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #292524;
+}
+::-webkit-scrollbar-thumb {
+  background: #5d4037;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #795548;
+}
