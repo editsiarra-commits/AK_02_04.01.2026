@@ -16,7 +16,7 @@ const Home: React.FC = () => {
   const [isMuted, setIsMuted] = useState(true);
   const location = useLocation();
   const navigate = useNavigate();
-  
+
   // Determine the target section from state or hash
   const scrollToSection = location.state?.scrollTo || (location.hash ? location.hash.substring(1) : null);
 
@@ -26,27 +26,27 @@ const Home: React.FC = () => {
       const timer = setTimeout(() => {
         const element = document.getElementById(scrollToSection);
         if (element) {
-           element.scrollIntoView({ behavior: 'smooth' });
-           
-           // If it's coming from state, we should clear it to prevent sticky scroll on refresh
-           if (location.state?.scrollTo) {
-               navigate(location.pathname, { replace: true, state: {} });
-           }
+          element.scrollIntoView({ behavior: 'smooth' });
+
+          // If it's coming from state, we should clear it to prevent sticky scroll on refresh
+          if (location.state?.scrollTo) {
+            navigate(location.pathname, { replace: true, state: {} });
+          }
         } else {
-             // Fallback retry if element is not ready (though LazyLoad wrapper should be there)
-             let attempts = 0;
-             const interval = setInterval(() => {
-                 const el = document.getElementById(scrollToSection);
-                 if (el) {
-                     el.scrollIntoView({ behavior: 'smooth' });
-                     clearInterval(interval);
-                     if (location.state?.scrollTo) {
-                        navigate(location.pathname, { replace: true, state: {} });
-                     }
-                 }
-                 attempts++;
-                 if (attempts > 20) clearInterval(interval); // Stop after 2 seconds
-             }, 100);
+          // Fallback retry if element is not ready (though LazyLoad wrapper should be there)
+          let attempts = 0;
+          const interval = setInterval(() => {
+            const el = document.getElementById(scrollToSection);
+            if (el) {
+              el.scrollIntoView({ behavior: 'smooth' });
+              clearInterval(interval);
+              if (location.state?.scrollTo) {
+                navigate(location.pathname, { replace: true, state: {} });
+              }
+            }
+            attempts++;
+            if (attempts > 20) clearInterval(interval); // Stop after 2 seconds
+          }, 100);
         }
       }, 300); // Increased delay to 300ms to allow layout to settle
 
@@ -132,7 +132,7 @@ const Home: React.FC = () => {
 
         {/* Content */}
         <div className="relative z-10 h-full flex flex-col justify-end items-center text-center px-4 max-w-4xl mx-auto pb-10">
-          
+
           <span className="text-coffee-300 uppercase tracking-[0.3em] mb-6 text-sm md:text-base animate-fade-in-up font-medium" style={{ animationFillMode: 'both' }}>
             Certyfikowana Hipnoterapeutka
           </span>
@@ -140,13 +140,13 @@ const Home: React.FC = () => {
             className="font-serif text-5xl md:text-7xl text-warm-50 mb-8 leading-tight drop-shadow-2xl animate-fade-in-up"
             style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
           >
-            Przestrzeń Integracji  <br/> Świadomości <br/> i Rozwoju
+            Przestrzeń Integracji  <br /> Świadomości <br /> i Rozwoju
           </h1>
           <p
             className="font-sans text-warm-200 text-lg md:text-xl max-w-2xl mb-4 font-light leading-relaxed tracking-wide animate-fade-in-up"
             style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
           >
-            Zapraszam Cię do spotkania z Tym, co w Tobie jest źródłem Mocy <br/>  <br/> 
+            Zapraszam Cię do spotkania z Tym, co w Tobie jest źródłem Mocy <br />  <br />
           </p>
 
           {/* Video Controls - Moved after text */}
@@ -179,7 +179,7 @@ const Home: React.FC = () => {
             className="flex flex-col sm:flex-row gap-6 animate-fade-in-up"
             style={{ animationDelay: '0.6s', animationFillMode: 'both' }}
           >
-             <button
+            <button
               onClick={scrollToAbout}
               className="px-10 py-4 bg-transparent border border-warm-200 text-warm-100 font-sans text-xs uppercase tracking-widest hover:bg-warm-200 hover:text-warm-900 transition-all duration-300"
             >
@@ -187,13 +187,13 @@ const Home: React.FC = () => {
             </button>
             <a
               href="#contact"
-              onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}}
+              onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) }}
               className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20"
             >
               ZAREZERWUJ TĘ SESJĘ
             </a>
           </div>
-          
+
           <button
             onClick={scrollToAbout}
             className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-warm-400 hover:text-white transition-colors animate-bounce"
@@ -216,13 +216,16 @@ const Home: React.FC = () => {
         <LazyLoad id="contact" forceVisible={scrollToSection === 'contact'} className="scroll-mt-20">
           <Contact />
         </LazyLoad>
+        <LazyLoad id="pricing" forceVisible={scrollToSection === 'pricing'} className="scroll-mt-20">
+          <Pricing />
+        </LazyLoad>
 
         {/* Why Hypnotherapy Section */}
         <section className="py-24 bg-warm-900 relative overflow-hidden border-t border-warm-800">
           {/* Decorative background elements */}
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-coffee-600 to-transparent opacity-20"></div>
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-coffee-900/10 to-transparent pointer-events-none"></div>
-          
+
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
               <span className="text-coffee-400 font-sans text-xs font-bold uppercase tracking-[0.3em] mb-3 block">Zrozumienie Metody</span>
@@ -233,40 +236,40 @@ const Home: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-               {/* Card 1 */}
-               <div className="bg-warm-950/50 p-8 rounded-sm border border-warm-800 hover:border-coffee-600 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-coffee-900/20">
-                  <Brain className="text-coffee-500 mb-6 group-hover:scale-110 transition-transform duration-300" size={40} strokeWidth={1.5} />
-                  <h3 className="font-serif text-2xl text-warm-100 mb-4">Nurt Holistyczny</h3>
-                  <p className="text-warm-400 font-light leading-relaxed">
+              {/* Card 1 */}
+              <div className="bg-warm-950/50 p-8 rounded-sm border border-warm-800 hover:border-coffee-600 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-coffee-900/20">
+                <Brain className="text-coffee-500 mb-6 group-hover:scale-110 transition-transform duration-300" size={40} strokeWidth={1.5} />
+                <h3 className="font-serif text-2xl text-warm-100 mb-4">Nurt Holistyczny</h3>
+                <p className="text-warm-400 font-light leading-relaxed">
                   W Nurcie Holistycznym korzystam z metod, które pozwalają dotrzeć głębiej niż sama rozmowa: łączę hipnoterapię, techniki oddechowe, pracę z ciałem i wizualizację. Takie podejście umożliwia dotarcie do źródła napięć, emocji i przekonań, które wpływają na nasze samopoczucie i życiowe wybory.
-                  </p>
-               </div>
-               {/* Card 2 */}
-               <div className="bg-warm-950/50 p-8 rounded-sm border border-warm-800 hover:border-coffee-600 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-coffee-900/20">
-                  <Sparkles className="text-coffee-500 mb-6 group-hover:scale-110 transition-transform duration-300" size={40} strokeWidth={1.5} />
-                  <h3 className="font-serif text-2xl text-warm-100 mb-4">Nurt Integratywny</h3>
-                  <p className="text-warm-400 font-light leading-relaxed">
+                </p>
+              </div>
+              {/* Card 2 */}
+              <div className="bg-warm-950/50 p-8 rounded-sm border border-warm-800 hover:border-coffee-600 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-coffee-900/20">
+                <Sparkles className="text-coffee-500 mb-6 group-hover:scale-110 transition-transform duration-300" size={40} strokeWidth={1.5} />
+                <h3 className="font-serif text-2xl text-warm-100 mb-4">Nurt Integratywny</h3>
+                <p className="text-warm-400 font-light leading-relaxed">
                   W Nurcie Integratywnym nie ograniczam się do jednego sposobu pracy — dopasowuję metody do Ciebie i Twojego procesu. Czasem będzie to głęboka praca z podświadomością, czasem łagodna eksploracja poprzez ciało, oddech lub obraz. Zawsze w atmosferze bezpieczeństwa, uważności i zaufania.
-                  </p>
-               </div>
-               {/* Card 3 */}
-               <div className="bg-warm-950/50 p-8 rounded-sm border border-warm-800 hover:border-coffee-600 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-coffee-900/20">
-                  <ShieldCheck className="text-coffee-500 mb-6 group-hover:scale-110 transition-transform duration-300" size={40} strokeWidth={1.5} />
-                  <h3 className="font-serif text-2xl text-warm-100 mb-4">Naturalne i Bezpieczne</h3>
-                  <p className="text-warm-400 font-light leading-relaxed">
+                </p>
+              </div>
+              {/* Card 3 */}
+              <div className="bg-warm-950/50 p-8 rounded-sm border border-warm-800 hover:border-coffee-600 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-coffee-900/20">
+                <ShieldCheck className="text-coffee-500 mb-6 group-hover:scale-110 transition-transform duration-300" size={40} strokeWidth={1.5} />
+                <h3 className="font-serif text-2xl text-warm-100 mb-4">Naturalne i Bezpieczne</h3>
+                <p className="text-warm-400 font-light leading-relaxed">
                   Celem mojej pracy jest wspieranie świadomej transformacji - takiej, w której odzyskujesz kontakt ze sobą, zaufanie do wewnętrznej mądrości i poczucie równowagi w życiu.
-                  </p>
-               </div>
+                </p>
+              </div>
             </div>
 
             {/* Quote/Stat */}
             <div className="mt-16 text-center">
-               <div className="inline-block p-8 border-y border-warm-800 bg-warm-950/30 backdrop-blur-sm max-w-4xl">
-                 <p className="font-serif text-xl md:text-2xl text-warm-200 italic leading-relaxed">
-                   "Hipnoza ma 93% wskaźnik skuteczności po zaledwie 6 sesjach, w porównaniu do 38% skuteczności po 600 sesjach psychoanalizy."
-                 </p>
-                 <p className="text-coffee-400 text-xs font-bold uppercase tracking-widest mt-4">— American Health Magazine</p>
-               </div>
+              <div className="inline-block p-8 border-y border-warm-800 bg-warm-950/30 backdrop-blur-sm max-w-4xl">
+                <p className="font-serif text-xl md:text-2xl text-warm-200 italic leading-relaxed">
+                  "Hipnoza ma 93% wskaźnik skuteczności po zaledwie 6 sesjach, w porównaniu do 38% skuteczności po 600 sesjach psychoanalizy."
+                </p>
+                <p className="text-coffee-400 text-xs font-bold uppercase tracking-widest mt-4">— American Health Magazine</p>
+              </div>
             </div>
           </div>
         </section>
@@ -277,10 +280,7 @@ const Home: React.FC = () => {
         <LazyLoad id="testimonials" forceVisible={scrollToSection === 'testimonials'} className="scroll-mt-20">
           <Testimonials />
         </LazyLoad>
-        <LazyLoad id="pricing" forceVisible={scrollToSection === 'pricing'} className="scroll-mt-20">
-          <Pricing />
-        </LazyLoad>
-        
+
       </Suspense>
     </div>
   );

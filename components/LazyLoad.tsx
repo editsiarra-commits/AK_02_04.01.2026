@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useRef, useState } from 'react';
+import React, { ReactNode } from 'react';
 
 interface LazyLoadProps {
   children: ReactNode;
@@ -7,39 +7,11 @@ interface LazyLoadProps {
   className?: string;
 }
 
-const LazyLoad: React.FC<LazyLoadProps> = ({ children, id, forceVisible = false, className = '' }) => {
-  const [isVisible, setIsVisible] = useState(forceVisible);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (forceVisible) {
-      setIsVisible(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true);
-        observer.disconnect();
-      }
-    }, {
-      rootMargin: '100px',
-    });
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, [forceVisible]);
-
+const LazyLoad: React.FC<LazyLoadProps> = ({ children, id, className = '' }) => {
+  // Render content immediately to prevent layout shifts during scrolling
   return (
-    <div ref={ref} id={id} className={className} style={{ minHeight: isVisible ? 'auto' : '10px' }}>
-      {isVisible ? children : null}
+    <div id={id} className={`scroll-mt-20 ${className}`}>
+      {children}
     </div>
   );
 };
