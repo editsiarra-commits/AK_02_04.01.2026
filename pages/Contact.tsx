@@ -18,7 +18,7 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
   };
 
   return (
-    <section id={id} className="relative py-24 bg-warm-900 scroll-mt-20">
+    <section id={id} className="relative py-24 bg-warm-950 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           
@@ -32,18 +32,18 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
 
             <div className="space-y-8 pt-6">
                <div className="flex items-start space-x-6">
-                 <div className="bg-coffee-900 p-4 rounded-full text-coffee-400 border border-coffee-800">
+                 <div className="bg-coffee-900 p-4 rounded-xl text-coffee-400 border border-coffee-800">
                    <Phone size={24} />
                  </div>
                  <div>
                    <h3 className="font-serif text-xl text-warm-200">Telefon</h3>
                    <p className="text-warm-400">+48 537 537 277</p>
-                   <p className="text-warm-600 text-sm mt-1">Pon-Pt, 9:00 - 18:00</p>
+                   <p className="text-warm-500 text-sm mt-1">Pon-Pt, 9:00 - 18:00</p>
                  </div>
                </div>
 
                <div className="flex items-start space-x-6">
-                 <div className="bg-coffee-900 p-4 rounded-full text-coffee-400 border border-coffee-800">
+                 <div className="bg-coffee-900 p-4 rounded-xl text-coffee-400 border border-coffee-800">
                    <Mail size={24} />
                  </div>
                  <div>
@@ -53,7 +53,7 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
                </div>
 
                <div className="flex items-start space-x-6">
-                 <div className="bg-coffee-900 p-4 rounded-full text-coffee-400 border border-coffee-800">
+                 <div className="bg-coffee-900 p-4 rounded-xl text-coffee-400 border border-coffee-800">
                    <MapPin size={24} />
                  </div>
                  <div>
@@ -65,10 +65,10 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
             </div>
           </div>
 
-          <div className="bg-warm-800 p-8 md:p-10 rounded shadow-xl border border-warm-700">
+          <div className="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-warm-800">
             {formStatus === 'success' ? (
               <div className="h-full flex flex-col items-center justify-center text-center space-y-6">
-                <div className="w-20 h-20 bg-green-900/30 rounded-full flex items-center justify-center text-green-500 border border-green-800">
+                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center text-green-600 border border-green-200">
                   <Check size={40} />
                 </div>
                 <h3 className="font-serif text-3xl text-warm-100">Wiadomość Wysłana!</h3>
@@ -84,32 +84,32 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-xs uppercase tracking-wider text-warm-500 mb-2">Imię</label>
+                    <label htmlFor="name" className="block text-xs uppercase tracking-wider text-warm-400 mb-2">Imię</label>
                     <input 
                       type="text" 
                       id="name" 
                       required
-                      className="w-full px-4 py-3 bg-warm-900 border border-warm-700 rounded text-warm-200 focus:outline-none focus:ring-1 focus:ring-coffee-500 focus:border-coffee-500 transition-all placeholder-warm-700"
+                      className="w-full px-4 py-3 bg-warm-900 border border-warm-800 rounded-xl text-warm-200 focus:outline-none focus:ring-1 focus:ring-coffee-400 focus:border-coffee-400 transition-all placeholder-warm-500"
                       placeholder="Twoje imię"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-xs uppercase tracking-wider text-warm-500 mb-2">Email</label>
+                    <label htmlFor="email" className="block text-xs uppercase tracking-wider text-warm-400 mb-2">Email</label>
                     <input 
                       type="email" 
                       id="email" 
                       required
-                      className="w-full px-4 py-3 bg-warm-900 border border-warm-700 rounded text-warm-200 focus:outline-none focus:ring-1 focus:ring-coffee-500 focus:border-coffee-500 transition-all placeholder-warm-700"
+                      className="w-full px-4 py-3 bg-warm-900 border border-warm-800 rounded-xl text-warm-200 focus:outline-none focus:ring-1 focus:ring-coffee-400 focus:border-coffee-400 transition-all placeholder-warm-500"
                       placeholder="twoj@email.com"
                     />
                   </div>
                 </div>
 
                 <div>
-                   <label htmlFor="subject" className="block text-xs uppercase tracking-wider text-warm-500 mb-2">Temat</label>
+                   <label htmlFor="subject" className="block text-xs uppercase tracking-wider text-warm-400 mb-2">Temat</label>
                    <select 
                      id="subject"
-                     className="w-full px-4 py-3 bg-warm-900 border border-warm-700 rounded text-warm-200 focus:outline-none focus:ring-1 focus:ring-coffee-500 focus:border-coffee-500 transition-all"
+                     className="w-full px-4 py-3 bg-warm-900 border border-warm-800 rounded-xl text-warm-200 focus:outline-none focus:ring-1 focus:ring-coffee-400 focus:border-coffee-400 transition-all"
                    >
                      <option>Zapytanie Ogólne</option>
                      <option>Umówienie Sesji</option>
@@ -119,12 +119,12 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-xs uppercase tracking-wider text-warm-500 mb-2">Wiadomość</label>
+                  <label htmlFor="message" className="block text-xs uppercase tracking-wider text-warm-400 mb-2">Wiadomość</label>
                   <textarea 
                     id="message" 
                     rows={4}
                     required
-                    className="w-full px-4 py-3 bg-warm-900 border border-warm-700 rounded text-warm-200 focus:outline-none focus:ring-1 focus:ring-coffee-500 focus:border-coffee-500 transition-all placeholder-warm-700"
+                    className="w-full px-4 py-3 bg-warm-900 border border-warm-800 rounded-xl text-warm-200 focus:outline-none focus:ring-1 focus:ring-coffee-400 focus:border-coffee-400 transition-all placeholder-warm-500"
                     placeholder="W czym mogę Ci pomóc?"
                   ></textarea>
                 </div>
@@ -132,7 +132,7 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
                 <button 
                   type="submit" 
                   disabled={formStatus === 'submitting'}
-                  className="w-full py-4 bg-coffee-700 text-white font-sans uppercase tracking-widest hover:bg-coffee-600 transition-colors shadow-md flex items-center justify-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed text-xs font-bold"
+                  className="w-full py-4 bg-coffee-700 text-white font-sans uppercase tracking-widest hover:bg-coffee-600 transition-colors shadow-md flex items-center justify-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed text-xs font-bold rounded-full"
                 >
                   {formStatus === 'submitting' ? (
                     <span>Wysyłanie...</span>

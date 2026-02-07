@@ -80,7 +80,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
               <Link 
                 to="/" 
                 onClick={handleLogoClick}
-                className="font-serif text-xl md:text-xl font-semibold tracking-wider text-warm-100 hover:text-white transition-colors cursor-pointer"
+                className="font-serif text-xl md:text-xl font-semibold tracking-wider text-warm-100 hover:text-coffee-400 transition-colors cursor-pointer"
               >
                 AGNIESZKA KOCHANOWSKA
               </Link>
@@ -108,12 +108,12 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                     
                     {/* Dropdown Menu */}
                     <div className="absolute top-full left-0 w-64 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
-                      <div className="bg-warm-900 rounded-sm shadow-xl overflow-hidden py-2 border border-warm-800">
+                      <div className="bg-warm-950 rounded-xl shadow-xl overflow-hidden py-2 border border-warm-800">
                         {item.children.map((child) => (
                           <Link
                             key={child.path}
                             to={child.path}
-                            className="block px-6 py-3 text-xs uppercase tracking-wider text-warm-300 hover:bg-warm-800 hover:text-coffee-300 transition-colors border-b border-warm-800/50 last:border-0 font-medium"
+                            className="block px-6 py-3 text-xs uppercase tracking-wider text-warm-300 hover:bg-warm-900 hover:text-coffee-400 transition-colors border-b border-warm-800/50 last:border-0 font-medium"
                           >
                             {child.label}
                           </Link>
@@ -139,7 +139,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-warm-100 hover:text-white"
+              className="p-2 rounded-md text-warm-100 hover:text-coffee-400"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -149,7 +149,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-warm-900 shadow-xl h-screen overflow-y-auto pb-20 border-t border-warm-800 flex flex-col">
+        <div className="md:hidden bg-warm-950 shadow-xl h-screen overflow-y-auto pb-20 border-t border-warm-800 flex flex-col">
           <div className="px-4 pt-4 pb-3 space-y-1 flex-grow">
             {navItems.map((item) => (
               <div key={item.label}>
@@ -172,12 +172,12 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                      </div>
                      
                      {activeDropdown === item.label && (
-                       <div className="bg-warm-950/30 py-2">
+                       <div className="bg-warm-900/50 py-2 rounded-lg">
                          {item.children.map(child => (
                            <Link
                              key={child.path}
                              to={child.path}
-                             className="block px-8 py-3 text-xs uppercase tracking-wider text-warm-300 hover:text-coffee-300"
+                             className="block px-8 py-3 text-xs uppercase tracking-wider text-warm-300 hover:text-coffee-400"
                              onClick={() => setIsOpen(false)}
                            >
                              {child.label}
@@ -190,7 +190,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                   <a
                     href={item.path}
                     onClick={(e) => handleNavClick(e, item.path)}
-                    className="block px-3 py-4 text-sm font-bold text-warm-100 uppercase tracking-widest border-b border-warm-800 hover:bg-warm-800"
+                    className="block px-3 py-4 text-sm font-bold text-warm-100 uppercase tracking-widest border-b border-warm-800 hover:bg-warm-900"
                   >
                     {item.label}
                   </a>
@@ -200,13 +200,13 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
           </div>
           
           {/* Mobile Socials */}
-          <div className="px-8 py-8 border-t border-warm-800 bg-warm-950/50">
+          <div className="px-8 py-8 border-t border-warm-800 bg-warm-900/50">
              <p className="text-center text-xs text-warm-500 uppercase tracking-widest mb-4">Obserwuj Mnie</p>
              <div className="flex justify-center space-x-8">
-                <a href="https://instagram.com" className="text-warm-300 hover:text-white transition-colors">
+                <a href="https://instagram.com" className="text-warm-300 hover:text-coffee-400 transition-colors">
                     <Instagram size={24} strokeWidth={1.5} />
                 </a>
-                <a href="https://facebook.com" className="text-warm-300 hover:text-white transition-colors">
+                <a href="https://facebook.com" className="text-warm-300 hover:text-coffee-400 transition-colors">
                     <Facebook size={24} strokeWidth={1.5} />
                 </a>
              </div>

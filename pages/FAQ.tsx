@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   {
@@ -36,9 +36,7 @@ const FAQ: React.FC<FAQProps> = ({ id }) => {
   };
 
   return (
-    <section id={id} className="py-24 bg-warm-950 border-t border-warm-800 relative scroll-mt-20">
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02]"></div>
-      
+    <section id={id} className="py-24 bg-warm-900 border-t border-warm-800 relative scroll-mt-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <span className="text-coffee-400 font-sans text-xs font-bold uppercase tracking-[0.3em] mb-3 block">Wyjaśnienie</span>
@@ -50,10 +48,10 @@ const FAQ: React.FC<FAQProps> = ({ id }) => {
           {faqs.map((faq, index) => (
             <div 
               key={index} 
-              className={`border transition-all duration-300 rounded-sm overflow-hidden ${
+              className={`border transition-all duration-300 rounded-2xl overflow-hidden ${
                 openIndex === index 
-                  ? 'border-coffee-600 bg-warm-900/50 shadow-lg shadow-black/20' 
-                  : 'border-warm-800 bg-warm-900/20 hover:border-warm-700 hover:bg-warm-900/40'
+                  ? 'border-coffee-400 bg-white shadow-lg shadow-coffee-900/10' 
+                  : 'border-warm-800 bg-white hover:border-warm-700'
               }`}
             >
               <button
@@ -62,14 +60,14 @@ const FAQ: React.FC<FAQProps> = ({ id }) => {
                 aria-expanded={openIndex === index}
               >
                 <span className={`font-serif text-lg md:text-xl transition-colors pr-4 ${
-                  openIndex === index ? 'text-coffee-300' : 'text-warm-200'
+                  openIndex === index ? 'text-warm-100' : 'text-warm-200'
                 }`}>
                   {faq.question}
                 </span>
-                <div className={`flex-shrink-0 p-1 rounded-full border transition-all duration-300 ${
-                   openIndex === index ? 'border-coffee-500 text-coffee-500 rotate-180 bg-coffee-950/30' : 'border-warm-700 text-warm-500'
+                <div className={`flex-shrink-0 transition-all duration-300 ${
+                   openIndex === index ? 'text-coffee-400 rotate-180' : 'text-warm-500'
                 }`}>
-                  {openIndex === index ? <Minus size={16} /> : <Plus size={16} />}
+                  <ChevronDown size={20} />
                 </div>
               </button>
               <div 

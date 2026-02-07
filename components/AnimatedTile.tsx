@@ -36,20 +36,20 @@ const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children, backgrou
 
       ctx.clearRect(0, 0, width, height);
 
-      // Consistent Dark Cafe Gradient Mesh for all tiles
+      // Light theme gradient mesh - soft pastels
       
-      // Background Gradient: Deep Espresso / Dark Chocolate
+      // Background Gradient: Soft lavender / warm white
       const gradient1 = ctx.createLinearGradient(0, 0, width, height);
-      gradient1.addColorStop(0, `hsla(${25 + Math.sin(t * 0.05) * 5}, 30%, 12%, 1)`); 
-      gradient1.addColorStop(1, `hsla(${35 + Math.cos(t * 0.05) * 5}, 25%, 8%, 1)`); 
+      gradient1.addColorStop(0, `hsla(${260 + Math.sin(t * 0.05) * 5}, 20%, 94%, 1)`); 
+      gradient1.addColorStop(1, `hsla(${30 + Math.cos(t * 0.05) * 5}, 15%, 96%, 1)`); 
       ctx.fillStyle = gradient1;
       ctx.fillRect(0, 0, width, height);
       
       // Soft moving blobs for the mesh effect
       ctx.filter = 'blur(60px)'; 
       
-      // Blob 1: Warm Coffee/Mocha
-      ctx.fillStyle = `hsla(${28 + Math.sin(t * 0.2) * 10}, 40%, 22%, 0.4)`;
+      // Blob 1: Soft coral tint
+      ctx.fillStyle = `hsla(${15 + Math.sin(t * 0.2) * 10}, 60%, 88%, 0.3)`;
       ctx.beginPath();
       ctx.arc(
         width * 0.3 + Math.sin(t * 0.2) * width * 0.2,
@@ -58,8 +58,8 @@ const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children, backgrou
       );
       ctx.fill();
 
-      // Blob 2: Deep Brown
-      ctx.fillStyle = `hsla(${18 + Math.cos(t * 0.15) * 10}, 35%, 18%, 0.4)`;
+      // Blob 2: Soft lavender
+      ctx.fillStyle = `hsla(${260 + Math.cos(t * 0.15) * 10}, 30%, 86%, 0.3)`;
       ctx.beginPath();
       ctx.arc(
         width * 0.7 - Math.sin(t * 0.25) * width * 0.2,
@@ -68,8 +68,8 @@ const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children, backgrou
       );
       ctx.fill();
 
-      // Blob 3: Subtle Caramel/Gold Accent
-      ctx.fillStyle = `hsla(${38 + Math.sin(t * 0.1) * 10}, 45%, 25%, 0.3)`;
+      // Blob 3: Soft warm peach
+      ctx.fillStyle = `hsla(${30 + Math.sin(t * 0.1) * 10}, 40%, 90%, 0.25)`;
       ctx.beginPath();
       ctx.arc(
         width * 0.5 + Math.cos(t * 0.4) * width * 0.2,

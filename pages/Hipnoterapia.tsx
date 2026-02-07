@@ -34,7 +34,7 @@ const Hipnoterapia: React.FC = () => {
             Hipnoterapia
           </h1>
           <p className="text-2xl md:text-3xl text-warm-300 font-serif italic max-w-3xl mx-auto">
-            "Dopóki MY nie uczynimy nieświadomego świadomym, będzie ono kierowało naszym życiem, a my będziemy nazywać to losem.”
+            "Dopóki MY nie uczynimy nieświadomego świadomym, będzie ono kierowało naszym życiem, a my będziemy nazywać to losem."
             — Sigmund Freud
           </p>
         </div>
@@ -44,14 +44,14 @@ const Hipnoterapia: React.FC = () => {
       <div className="container mx-auto px-4 py-16 lg:py-24">
         <div className="max-w-3xl mx-auto">
           <div className="mb-8">
-            <Link to="/" className="inline-flex items-center text-coffee-300 hover:text-coffee-200 transition-colors">
+            <Link to="/" className="inline-flex items-center text-coffee-400 hover:text-coffee-300 transition-colors">
               <ArrowLeft size={20} className="mr-2" />
               <span>Powrót do strony głównej</span>
             </Link>
           </div>
-          <div className="prose prose-lg prose-invert text-warm-300 font-light leading-relaxed">
+          <div className="prose prose-lg text-warm-300 font-light leading-relaxed">
             <p>
-              To pogłębiona, świadoma praca z umysłem i emocjami, która wykorzystuje naturalne stany skupienia i zawężonej uwagi, aby dotrzeć do źródeł trudności - tam, gdzie klasyczna rozmowa często zatrzymuje się na powierzchni. Stan hipnotyczny jest czymś, co każdy z nas zna z codziennego życia - kiedy „odpływamy” myślami, głęboko się skupiamy lub wchodzimy w flow. W terapii świadomie korzystamy z tego stanu, by bezpiecznie i łagodnie dotknąć podświadomych przekonań, emocji, wspomnień i wzorców, które zazwyczaj pozostają poza zasięgiem świadomej refleksji.
+              To pogłębiona, świadoma praca z umysłem i emocjami, która wykorzystuje naturalne stany skupienia i zawężonej uwagi, aby dotrzeć do źródeł trudności - tam, gdzie klasyczna rozmowa często zatrzymuje się na powierzchni. Stan hipnotyczny jest czymś, co każdy z nas zna z codziennego życia - kiedy „odpływamy" myślami, głęboko się skupiamy lub wchodzimy w flow. W terapii świadomie korzystamy z tego stanu, by bezpiecznie i łagodnie dotknąć podświadomych przekonań, emocji, wspomnień i wzorców, które zazwyczaj pozostają poza zasięgiem świadomej refleksji.
             </p>
 
 
@@ -68,7 +68,7 @@ const Hipnoterapia: React.FC = () => {
             </ul>
 
             <p className="mt-6">
-              Celem nie jest „naprawianie” ani forsowanie zmiany, lecz stworzenie warunków, w których zmiana może pojawić się w sposób bardziej naturalny, trwały i spójny z Twoim doświadczeniem.
+              Celem nie jest „naprawianie" ani forsowanie zmiany, lecz stworzenie warunków, w których zmiana może pojawić się w sposób bardziej naturalny, trwały i spójny z Twoim doświadczeniem.
             </p>
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Dla kogo jest szczególnie pomocna?</h2>
@@ -80,7 +80,7 @@ const Hipnoterapia: React.FC = () => {
               <li>- gdy chcesz lepiej zrozumieć wewnętrzne konflikty i schematy „jedna część mnie chce…, a druga nie pozwala"</li>
               <li>- gdy klasyczna rozmowa nie wystarcza, by dotrzeć do głębszych warstw</li>
               <li>- gdy potrzebujesz łagodnej, ale naprawdę głębokiej pracy z traumą, napięciem, niskim poczuciem wartości czy trudnościami w relacjach</li>
-              <li>- wstyd, poczucie winy, żal, emocje powracające mimo pracy „na poziomie głowy”</li>
+              <li>- wstyd, poczucie winy, żal, emocje powracające mimo pracy „na poziomie głowy"</li>
             </ul>
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Jak wygląda sesja?</h2>
@@ -96,15 +96,15 @@ const Hipnoterapia: React.FC = () => {
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Podejście trauma-informed i inkluzywne</h2>
             <p>
-              Pracuję z szczególną uważnością na sygnały układu nerwowego, poczucie bezpieczeństwa i Twoją sprawczość. Zawsze możesz zatrzymać proces, zmienić kierunek lub powiedzieć „dość”. Nie ma presji, nie ma „wchodzenia głębiej za wszelką cenę”. Każda historia, doświadczenie i potrzeba są traktowane z szacunkiem - bez założeń i bez jednej „normy”.
+              Pracuję z szczególną uważnością na sygnały układu nerwowego, poczucie bezpieczeństwa i Twoją sprawczość. Zawsze możesz zatrzymać proces, zmienić kierunek lub powiedzieć „dość". Nie ma presji, nie ma „wchodzenia głębiej za wszelką cenę". Każda historia, doświadczenie i potrzeba są traktowane z szacunkiem - bez założeń i bez jednej „normy".
             </p>
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Czym hipnoterapia nie jest?</h2>
 
             <ul className="list-none space-y-2 pl-0">
               <li>- nie jest utratą kontroli ani manipulacją</li>
-              <li>- nie jest doświadczeniem rekreacyjnym, ani „magicznym”</li>
-              <li>- nie polega na szybkim „kasowaniu” problemów </li>
+              <li>- nie jest doświadczeniem rekreacyjnym, ani „magicznym"</li>
+              <li>- nie polega na szybkim „kasowaniu" problemów </li>
               <li>- nie zastępuje leczenia medycznego</li>
             </ul>
 
@@ -127,7 +127,7 @@ const Hipnoterapia: React.FC = () => {
             <div className="mt-8 text-center">
               <button
                 onClick={handleContactClick}
-                className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20 inline-block cursor-pointer"
+                className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20 inline-block cursor-pointer rounded-full"
               >
                 ZAREZERWUJ TĘ SESJĘ
               </button>

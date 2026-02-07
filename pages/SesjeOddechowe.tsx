@@ -34,7 +34,7 @@ const SesjeOddechowe: React.FC = () => {
             Sesje Oddechowe
           </h1>
           <p className="text-2xl md:text-3xl text-warm-300 font-serif italic max-w-3xl mx-auto">
-          „Oddech jest mostem między ciałem, a umysłem” - Thích Nhất Hạnh
+          „Oddech jest mostem między ciałem, a umysłem" - Thích Nhất Hạnh
           </p>
         </div>
       </section>
@@ -43,12 +43,12 @@ const SesjeOddechowe: React.FC = () => {
       <div className="container mx-auto px-4 py-16 lg:py-24">
         <div className="max-w-3xl mx-auto">
         <div className="mb-8">
-            <Link to="/" className="inline-flex items-center text-coffee-300 hover:text-coffee-200 transition-colors">
+            <Link to="/" className="inline-flex items-center text-coffee-400 hover:text-coffee-300 transition-colors">
               <ArrowLeft size={20} className="mr-2" />
               <span>Powrót do strony głównej</span>
             </Link>
           </div>
-          <div className="prose prose-lg prose-invert text-warm-300 font-light leading-relaxed">
+          <div className="prose prose-lg text-warm-300 font-light leading-relaxed">
             <p>
             W moim gabinecie możesz skorzystać z indywidualnych sesji oddechowych inspirowanych oddychaniem holotropowym — pogłębionej pracy z oddechem, ciałem i świadomością, która umożliwia kontakt z głębokimi warstwami doświadczenia wewnętrznego. Sesje te łączą świadomy, intensywniejszy oddech, muzykę oraz pracę z ciałem, tworząc spójny, ugruntowany proces. Dla wielu osób są to doświadczenia poruszające, inicjacyjne i transformujące - odbywające się bez użycia substancji.
             </p>
@@ -57,7 +57,7 @@ const SesjeOddechowe: React.FC = () => {
             
             <ul className="list-none space-y-2 pl-0">
               <li>* bardzo możliwe, że coś w Tobie już wie, że rozmowa nie sięga wystarczająco głęboko.
-              Być może czujesz napięcie w ciele, emocje bez jasnej przyczyny, poczucie utknięcia albo wewnętrzne wezwanie do zmiany, której nie da się „przegadać”.</li>
+              Być może czujesz napięcie w ciele, emocje bez jasnej przyczyny, poczucie utknięcia albo wewnętrzne wezwanie do zmiany, której nie da się „przegadać".</li>
               <li>* sesje oddechowe są zaproszeniem do spotkania z tym, co chce zostać zobaczone i przeżyte, a nie tylko zrozumiane.</li>
             </ul>
 
@@ -99,7 +99,7 @@ Dlatego integralną częścią pracy jest osobna sesja integracyjna, podczas kt�
             <div className="mt-8 text-center">
                             <button
                                 onClick={handleContactClick}
-                                className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20 inline-block cursor-pointer"
+                                className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20 inline-block cursor-pointer rounded-full"
                             >
                                 ZAREZERWUJ TĘ SESJĘ
                             </button>

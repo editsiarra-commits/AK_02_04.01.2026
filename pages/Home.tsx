@@ -126,24 +126,24 @@ const Home: React.FC = () => {
             <source src="/assets/Video_background_00.mp4" type="video/mp4" />
             Twoja przeglądarka nie obsługuje znacznika wideo.
           </video>
-          {/* Overlay - Darker for the warm dark grey theme */}
-          <div className="absolute inset-0 bg-warm-900/60 backdrop-blur-[1px]"></div>
+          {/* Overlay - Light frosted glass effect */}
+          <div className="absolute inset-0 bg-warm-950/70 backdrop-blur-[2px]"></div>
         </div>
 
         {/* Content */}
         <div className="relative z-10 h-full flex flex-col justify-end items-center text-center px-4 max-w-4xl mx-auto pb-10">
 
-          <span className="text-coffee-300 uppercase tracking-[0.3em] mb-6 text-sm md:text-base animate-fade-in-up font-medium" style={{ animationFillMode: 'both' }}>
+          <span className="text-coffee-400 uppercase tracking-[0.3em] mb-6 text-sm md:text-base animate-fade-in-up font-medium" style={{ animationFillMode: 'both' }}>
             Certyfikowana Hipnoterapeutka
           </span>
           <h1
-            className="font-serif text-5xl md:text-7xl text-warm-50 mb-8 leading-tight drop-shadow-2xl animate-fade-in-up"
+            className="font-serif text-5xl md:text-7xl text-warm-100 mb-8 leading-tight drop-shadow-2xl animate-fade-in-up"
             style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
           >
             Przestrzeń Integracji  <br /> Świadomości <br /> i Rozwoju
           </h1>
           <p
-            className="font-sans text-warm-200 text-lg md:text-xl max-w-2xl mb-4 font-light leading-relaxed tracking-wide animate-fade-in-up"
+            className="font-sans text-warm-300 text-lg md:text-xl max-w-2xl mb-4 font-light leading-relaxed tracking-wide animate-fade-in-up"
             style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
           >
             Zapraszam Cię do spotkania z Tym, co w Tobie jest źródłem Mocy <br />  <br />
@@ -153,7 +153,7 @@ const Home: React.FC = () => {
           <div className="mb-8 flex space-x-2 animate-fade-in-up" style={{ animationDelay: '0.5s', animationFillMode: 'both' }}>
             <button
               onClick={togglePlay}
-              className="group p-2 rounded-full bg-warm-950/40 border border-warm-200/20 backdrop-blur-md text-warm-200 hover:bg-coffee-600 hover:border-coffee-500 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-coffee-900/50 focus:outline-none focus:ring-2 focus:ring-coffee-400"
+              className="group p-2 rounded-full bg-warm-900/40 border border-warm-300/20 backdrop-blur-md text-warm-200 hover:bg-coffee-600 hover:border-coffee-500 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-coffee-900/50 focus:outline-none focus:ring-2 focus:ring-coffee-400"
               aria-label={isPlaying ? "Zatrzymaj wideo" : "Odtwórz wideo"}
             >
               {isPlaying ? (
@@ -164,7 +164,7 @@ const Home: React.FC = () => {
             </button>
             <button
               onClick={toggleMute}
-              className="group p-2 rounded-full bg-warm-950/40 border border-warm-200/20 backdrop-blur-md text-warm-200 hover:bg-coffee-600 hover:border-coffee-500 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-coffee-900/50 focus:outline-none focus:ring-2 focus:ring-coffee-400"
+              className="group p-2 rounded-full bg-warm-900/40 border border-warm-300/20 backdrop-blur-md text-warm-200 hover:bg-coffee-600 hover:border-coffee-500 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-coffee-900/50 focus:outline-none focus:ring-2 focus:ring-coffee-400"
               aria-label={isMuted ? "Włącz dźwięk" : "Wycisz"}
             >
               {isMuted ? (
@@ -188,7 +188,7 @@ const Home: React.FC = () => {
             <a
               href="#contact"
               onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) }}
-              className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20"
+              className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20 rounded-full"
             >
               ZAREZERWUJ TĘ SESJĘ
             </a>
@@ -196,7 +196,7 @@ const Home: React.FC = () => {
 
           <button
             onClick={scrollToAbout}
-            className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-warm-400 hover:text-white transition-colors animate-bounce"
+            className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-warm-400 hover:text-warm-100 transition-colors animate-bounce"
             style={{ animationDelay: '1s' }}
           >
             <ChevronDown size={32} />
@@ -221,9 +221,9 @@ const Home: React.FC = () => {
         </LazyLoad>
 
         {/* Why Hypnotherapy Section */}
-        <section className="py-24 bg-warm-900 relative overflow-hidden border-t border-warm-800">
+        <section className="py-24 bg-warm-950 relative overflow-hidden border-t border-warm-800">
           {/* Decorative background elements */}
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-coffee-600 to-transparent opacity-20"></div>
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-coffee-400 to-transparent opacity-20"></div>
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-coffee-900/10 to-transparent pointer-events-none"></div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -237,24 +237,30 @@ const Home: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Card 1 */}
-              <div className="bg-warm-950/50 p-8 rounded-sm border border-warm-800 hover:border-coffee-600 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-coffee-900/20">
-                <Brain className="text-coffee-500 mb-6 group-hover:scale-110 transition-transform duration-300" size={40} strokeWidth={1.5} />
+              <div className="bg-white p-8 rounded-2xl border border-warm-800 hover:border-coffee-400 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-coffee-900/20">
+                <div className="bg-coffee-900 p-3 rounded-xl inline-block mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Brain className="text-coffee-500" size={40} strokeWidth={1.5} />
+                </div>
                 <h3 className="font-serif text-2xl text-warm-100 mb-4">Nurt Holistyczny</h3>
                 <p className="text-warm-400 font-light leading-relaxed">
                   W Nurcie Holistycznym korzystam z metod, które pozwalają dotrzeć głębiej niż sama rozmowa: łączę hipnoterapię, techniki oddechowe, pracę z ciałem i wizualizację. Takie podejście umożliwia dotarcie do źródła napięć, emocji i przekonań, które wpływają na nasze samopoczucie i życiowe wybory.
                 </p>
               </div>
               {/* Card 2 */}
-              <div className="bg-warm-950/50 p-8 rounded-sm border border-warm-800 hover:border-coffee-600 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-coffee-900/20">
-                <Sparkles className="text-coffee-500 mb-6 group-hover:scale-110 transition-transform duration-300" size={40} strokeWidth={1.5} />
+              <div className="bg-white p-8 rounded-2xl border border-warm-800 hover:border-coffee-400 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-coffee-900/20">
+                <div className="bg-coffee-900 p-3 rounded-xl inline-block mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Sparkles className="text-coffee-500" size={40} strokeWidth={1.5} />
+                </div>
                 <h3 className="font-serif text-2xl text-warm-100 mb-4">Nurt Integratywny</h3>
                 <p className="text-warm-400 font-light leading-relaxed">
                   W Nurcie Integratywnym nie ograniczam się do jednego sposobu pracy — dopasowuję metody do Ciebie i Twojego procesu. Czasem będzie to głęboka praca z podświadomością, czasem łagodna eksploracja poprzez ciało, oddech lub obraz. Zawsze w atmosferze bezpieczeństwa, uważności i zaufania.
                 </p>
               </div>
               {/* Card 3 */}
-              <div className="bg-warm-950/50 p-8 rounded-sm border border-warm-800 hover:border-coffee-600 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-coffee-900/20">
-                <ShieldCheck className="text-coffee-500 mb-6 group-hover:scale-110 transition-transform duration-300" size={40} strokeWidth={1.5} />
+              <div className="bg-white p-8 rounded-2xl border border-warm-800 hover:border-coffee-400 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-coffee-900/20">
+                <div className="bg-coffee-900 p-3 rounded-xl inline-block mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <ShieldCheck className="text-coffee-500" size={40} strokeWidth={1.5} />
+                </div>
                 <h3 className="font-serif text-2xl text-warm-100 mb-4">Naturalne i Bezpieczne</h3>
                 <p className="text-warm-400 font-light leading-relaxed">
                   Celem mojej pracy jest wspieranie świadomej transformacji - takiej, w której odzyskujesz kontakt ze sobą, zaufanie do wewnętrznej mądrości i poczucie równowagi w życiu.
@@ -264,7 +270,7 @@ const Home: React.FC = () => {
 
             {/* Quote/Stat */}
             <div className="mt-16 text-center">
-              <div className="inline-block p-8 border-y border-warm-800 bg-warm-950/30 backdrop-blur-sm max-w-4xl">
+              <div className="inline-block p-8 border-y border-warm-800 bg-warm-900/30 backdrop-blur-sm max-w-4xl rounded-2xl">
                 <p className="font-serif text-xl md:text-2xl text-warm-200 italic leading-relaxed">
                   "Hipnoza ma 93% wskaźnik skuteczności po zaledwie 6 sesjach, w porównaniu do 38% skuteczności po 600 sesjach psychoanalizy."
                 </p>

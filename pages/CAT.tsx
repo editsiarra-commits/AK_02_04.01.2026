@@ -43,12 +43,12 @@ const CAT: React.FC = () => {
       <div className="container mx-auto px-4 py-16 lg:py-24">
         <div className="max-w-3xl mx-auto">
         <div className="mb-8">
-            <Link to="/" className="inline-flex items-center text-coffee-300 hover:text-coffee-200 transition-colors">
+            <Link to="/" className="inline-flex items-center text-coffee-400 hover:text-coffee-300 transition-colors">
               <ArrowLeft size={20} className="mr-2" />
               <span>Powrót do strony głównej</span>
             </Link>
           </div>
-          <div className="prose prose-lg prose-invert text-warm-300 font-light leading-relaxed">
+          <div className="prose prose-lg text-warm-300 font-light leading-relaxed">
             <p>
             Praca integracyjna inspirowana podejściem Cannabis-Assisted Therapy (CAT) koncentruje się na pogłębianiu kontaktu z doświadczeniem wewnętrznym, emocjami oraz utrwalonymi schematami, które wpływają na codzienne funkcjonowanie. Podejście to opiera się na założeniu, że określone stany świadomości mogą sprzyjać intensywniejszej introspekcji oraz lepszemu dostępowi do treści, które w klasycznej pracy werbalnej bywają trudniej osiągalne.
             </p>
@@ -107,7 +107,7 @@ const CAT: React.FC = () => {
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">To nie jest doświadczenie rekreacyjne</h2>
             <p>
-            Nie jest to forma relaksu ani „łagodnego rozluźnienia”. To świadomy, pogłębiony proces pracy z doświadczeniem wewnętrznym, skierowany do osób, które czują, że klasyczne formy rozmowy nie zawsze pozwalają dotrzeć do głębszych warstw przeżyć.
+            Nie jest to forma relaksu ani „łagodnego rozluźnienia". To świadomy, pogłębiony proces pracy z doświadczeniem wewnętrznym, skierowany do osób, które czują, że klasyczne formy rozmowy nie zawsze pozwalają dotrzeć do głębszych warstw przeżyć.
             </p>
             <p>
             Dla wielu osób jest to sposób na lepsze zrozumienie źródeł wewnętrznych konfliktów, reakcji emocjonalnych oraz utrwalonych wzorców, które wpływają na codzienne funkcjonowanie.
@@ -139,7 +139,7 @@ const CAT: React.FC = () => {
             <div className="mt-8 text-center">
                 <button
                     onClick={handleContactClick}
-                    className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20 inline-block cursor-pointer"
+                    className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20 inline-block cursor-pointer rounded-full"
                 >
                     ZAREZERWUJ TĘ SESJĘ
                 </button>

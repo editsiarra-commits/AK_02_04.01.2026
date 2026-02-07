@@ -23,7 +23,7 @@ const credentials = [
   {
     title: "Facilitator Certification Program",
     org: "Grof Transpersonal Training",
-    desc: "Od 2024 r uczestniczę w programie „ Facilitator Certification Program”, gdzie doskonalę swoje umiejętności terapeutyczne w nurcie transpersonalnym i przygotowuję się do uzyskania certyfikacji facylitatora GTT",
+    desc: 'Od 2024 r uczestniczę w programie „Facilitator Certification Program\u201D, gdzie doskonalę swoje umiejętności terapeutyczne w nurcie transpersonalnym i przygotowuję się do uzyskania certyfikacji facylitatora GTT',
     icon: Award
   },
   {
@@ -56,8 +56,6 @@ const About: React.FC<SectionProps> = ({ id }) => {
         }
       `}</style>
       
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
            <h2 className="font-serif text-4xl md:text-5xl tracking-wide mb-6 text-warm-100">O Mnie</h2>
@@ -66,18 +64,18 @@ const About: React.FC<SectionProps> = ({ id }) => {
 
         <div className="flex flex-col md:flex-row gap-16 items-start mb-20">
            <div className="w-full md:w-5/12">
-              <div className="aspect-[3/4] bg-warm-900 overflow-hidden shadow-2xl relative group sticky top-24">
-                <div className="absolute inset-0 border border-white/10 z-10 m-4 transition-all duration-500 group-hover:m-0"></div>
+              <div className="aspect-[3/4] bg-warm-800 overflow-hidden shadow-2xl relative group sticky top-24 rounded-2xl">
+                <div className="absolute inset-0 border border-warm-700 z-10 m-4 transition-all duration-500 group-hover:m-0 rounded-xl"></div>
                 <img
                   src="/assets/aboutme.jpg"
                   alt="Agnieszka Kochanowska"
-                  className="absolute inset-0 w-full h-full object-cover filter sepia-[0.2] contrast-100 brightness-90 group-hover:sepia-0 transition-all duration-1000 opacity-100"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 opacity-100"
                 />
               </div>
            </div>
            <div className="w-full md:w-7/12 space-y-8">
-              <h3 className="font-serif text-3xl text-coffee-300 italic">Moja Podróż</h3>
-              <p className="text-warm-300 leading-relaxed font-light text-lg">
+              <h3 className="font-serif text-3xl text-coffee-400 italic">Moja Podróż</h3>
+              <p className="flex text-warm-300 leading-relaxed font-light text-lg">
                 Zawsze fascynowała mnie potęga ludzkiego umysłu. Moja przygoda z hipnoterapią rozpoczęła się ponad 6 lat temu, kiedy byłam świadkiem głębokich zmian, jakie może ona przynieść w życiu ludzi — zmian, na które tradycyjne terapie często potrzebowały lat.
               </p>
               <p className="text-warm-300 leading-relaxed font-light text-lg">
@@ -89,7 +87,7 @@ const About: React.FC<SectionProps> = ({ id }) => {
               </p>
               
               <div className="py-8">
-                <blockquote className="border-l-2 border-coffee-600 pl-8 italic text-warm-100 text-xl font-serif leading-relaxed">
+                <blockquote className="border-l-2 border-coffee-400 pl-8 italic text-warm-100 text-xl font-serif leading-relaxed">
                   "Przestrzeń świadomej przemiany. Hipnoterapia, oddech, integracja doświadczeń."
                 </blockquote>
               </div>
@@ -106,8 +104,8 @@ const About: React.FC<SectionProps> = ({ id }) => {
            
            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {credentials.map((cred, index) => (
-                <div key={index} className="bg-warm-900/40 p-6 border border-warm-800/60 rounded-sm hover:border-coffee-700/50 transition-colors flex items-start space-x-4 group">
-                    <div className="flex-shrink-0 bg-warm-950 p-3 rounded-full text-coffee-500 group-hover:text-coffee-400 border border-warm-800 group-hover:border-coffee-900 transition-colors">
+                <div key={index} className="bg-white p-6 border border-warm-800 rounded-xl hover:border-coffee-400 transition-colors flex items-start space-x-4 group shadow-sm hover:shadow-lg">
+                    <div className="flex-shrink-0 bg-coffee-900 p-3 rounded-xl text-coffee-500 group-hover:text-coffee-400 border border-coffee-800 group-hover:border-coffee-400 transition-colors">
                         <cred.icon size={24} strokeWidth={1.5} />
                     </div>
                     <div>

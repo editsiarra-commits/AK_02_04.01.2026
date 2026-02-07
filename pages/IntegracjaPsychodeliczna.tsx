@@ -34,7 +34,7 @@ const IntegracjaPsychodeliczna: React.FC = () => {
           Przygotowanie i Integracja Doświadczeń Psychodelicznych
           </h1>
           <p className="text-2xl md:text-3xl text-warm-300 font-serif italic max-w-3xl mx-auto">
-          „Prawdziwa transformacja zaczyna się wtedy, gdy wizja spotyka codzienność.”
+          „Prawdziwa transformacja zaczyna się wtedy, gdy wizja spotyka codzienność."
           </p>
         </div>
       </section>
@@ -43,12 +43,12 @@ const IntegracjaPsychodeliczna: React.FC = () => {
       <div className="container mx-auto px-4 py-16 lg:py-24">
         <div className="max-w-3xl mx-auto">
         <div className="mb-8">
-            <Link to="/" className="inline-flex items-center text-coffee-300 hover:text-coffee-200 transition-colors">
+            <Link to="/" className="inline-flex items-center text-coffee-400 hover:text-coffee-300 transition-colors">
               <ArrowLeft size={20} className="mr-2" />
               <span>Powrót do strony głównej</span>
             </Link>
           </div>
-          <div className="prose prose-lg prose-invert text-warm-300 font-light leading-relaxed">
+          <div className="prose prose-lg text-warm-300 font-light leading-relaxed">
             <p>
             Doświadczenia psychodeliczne — czy to z użyciem Ayahuaski, psylocybiny, MDMA, ketaminy, medycznej marihuany, czy poprzez oddech, medytację i inne poszerzone stany świadomości - potrafią być głębokie, graniczne i transformujące. Często poruszają warstwy emocjonalne, cielesne i egzystencjalne, otwierając przestrzenie, do których na co dzień nie mamy dostępu.
             </p>
@@ -62,7 +62,7 @@ const IntegracjaPsychodeliczna: React.FC = () => {
             </p>
 
             <ul className="list-none space-y-2 pl-0 mt-4">
-              <li>* mają za sobą doświadczenie psychodeliczne i czują, że „coś się otworzyło”, ale nie wiedzą jeszcze, jak z tym żyć</li>
+              <li>* mają za sobą doświadczenie psychodeliczne i czują, że „coś się otworzyło", ale nie wiedzą jeszcze, jak z tym żyć</li>
               <li>* planują takie doświadczenie i chcą podejść do niego świadomie i odpowiedzialnie</li>
               <li>* doświadczyły intensywnych stanów świadomości (także poprzez oddech lub medytację) i nie chcą zostawiać ich bez integracji.</li>
             </ul>
@@ -90,7 +90,7 @@ To praca z intencją, regulacją ciała i układu nerwowego, z lękami, oczekiwa
               Pracujemy z wglądami, symbolami i emocjami, przekładając je na realne zmiany — w relacjach, decyzjach, granicach i sposobie bycia ze sobą. Bez pośpiechu, bez idealizowania, z uważnością na regulację i ugruntowanie.
             </p>
             <p className="mt-4">
-              Integracja sprawia, że to, co było intensywnym przeżyciem, może stać się żywym, wspierającym procesem zmiany, a nie tylko wspomnieniem „tripa”.
+              Integracja sprawia, że to, co było intensywnym przeżyciem, może stać się żywym, wspierającym procesem zmiany, a nie tylko wspomnieniem „tripa".
             </p>
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Ważna informacja prawna !</h2>
@@ -113,7 +113,7 @@ To praca z intencją, regulacją ciała i układu nerwowego, z lękami, oczekiwa
             <div className="mt-8 text-center">
                 <button
                     onClick={handleContactClick}
-                    className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20 inline-block cursor-pointer"
+                    className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20 inline-block cursor-pointer rounded-full"
                 >
                     ZAREZERWUJ TĘ SESJĘ
                 </button>

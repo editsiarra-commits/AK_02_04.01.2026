@@ -17,8 +17,8 @@ const Pricing: React.FC<SectionProps> = ({ id }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           {/* Basic Card */}
-          <div className="bg-warm-900 rounded shadow-lg overflow-hidden border border-warm-800 flex flex-col group hover:border-coffee-700 transition-all duration-300">
-            <div className="p-8 text-center border-b border-warm-800 bg-warm-900/50">
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-warm-800 flex flex-col group hover:border-coffee-400 transition-all duration-300">
+            <div className="p-8 text-center border-b border-warm-800">
               <h3 className="font-serif text-2xl text-warm-200">Pojedyncza Sesja</h3>
               <div className="mt-4 flex justify-center items-baseline">
                 <span className="text-4xl font-bold text-warm-100">500 zł</span>
@@ -26,7 +26,7 @@ const Pricing: React.FC<SectionProps> = ({ id }) => {
               </div>
               <p className="mt-4 text-xs uppercase tracking-wider text-warm-500">Eksploracja</p>
             </div>
-            <div className="p-8 flex-1 bg-warm-900/30">
+            <div className="p-8 flex-1">
               <ul className="space-y-4">
                 <li className="flex items-center text-warm-300 text-sm">
                   <Check size={16} className="text-coffee-500 mr-3" /> Sesja 60-minutowa
@@ -39,20 +39,20 @@ const Pricing: React.FC<SectionProps> = ({ id }) => {
                 </li>
               </ul>
             </div>
-            <div className="p-8 bg-warm-900/50 border-t border-warm-800">
-              <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}} className="block w-full py-3 text-center border border-coffee-800 text-coffee-400 font-medium hover:bg-coffee-800 hover:text-white transition-colors uppercase text-xs tracking-widest">
+            <div className="p-8 border-t border-warm-800">
+              <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}} className="block w-full py-3 text-center border border-coffee-400 text-coffee-400 font-medium hover:bg-coffee-700 hover:text-white hover:border-coffee-700 transition-colors uppercase text-xs tracking-widest rounded-full">
                 Zarezerwuj
               </a>
             </div>
           </div>
 
           {/* Popular Card */}
-          <div className="bg-warm-800 rounded shadow-2xl overflow-hidden border border-coffee-800 transform md:-translate-y-4 flex flex-col relative">
-            <div className="absolute top-0 right-0 bg-coffee-600 text-white text-[10px] font-bold px-3 py-1 uppercase tracking-wider">Najpopularniejszy</div>
-            <div className="p-8 text-center border-b border-warm-700 bg-warm-800">
-              <h3 className="font-serif text-3xl text-coffee-200">Transformacja</h3>
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-2 border-coffee-400 transform md:-translate-y-4 flex flex-col relative">
+            <div className="absolute top-0 right-0 bg-coffee-700 text-white text-[10px] font-bold px-3 py-1 uppercase tracking-wider rounded-bl-xl">Najpopularniejszy</div>
+            <div className="p-8 text-center border-b border-warm-800">
+              <h3 className="font-serif text-3xl text-coffee-400">Transformacja</h3>
               <div className="mt-4 flex justify-center items-baseline">
-                <span className="text-5xl font-bold text-white">1400 zł</span>
+                <span className="text-5xl font-bold text-warm-100">1400 zł</span>
                 <span className="ml-1 text-warm-400">/ 3 sesje</span>
               </div>
               <p className="mt-4 text-xs uppercase tracking-wider text-coffee-400">Rekomendowane</p>
@@ -73,16 +73,16 @@ const Pricing: React.FC<SectionProps> = ({ id }) => {
                 </li>
               </ul>
             </div>
-            <div className="p-8 bg-warm-800 border-t border-warm-700">
-              <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}} className="block w-full py-4 text-center bg-coffee-700 text-white font-medium hover:bg-coffee-600 transition-colors uppercase text-xs tracking-widest shadow-lg">
+            <div className="p-8 border-t border-warm-800">
+              <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}} className="block w-full py-4 text-center bg-coffee-700 text-white font-medium hover:bg-coffee-600 transition-colors uppercase text-xs tracking-widest shadow-lg rounded-full">
                 Rozpocznij
               </a>
             </div>
           </div>
 
           {/* Premium Card */}
-          <div className="bg-warm-900 rounded shadow-lg overflow-hidden border border-warm-800 flex flex-col group hover:border-coffee-700 transition-all duration-300">
-            <div className="p-8 text-center border-b border-warm-800 bg-warm-900/50">
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-warm-800 flex flex-col group hover:border-coffee-400 transition-all duration-300">
+            <div className="p-8 text-center border-b border-warm-800">
               <h3 className="font-serif text-2xl text-warm-200">Głębokie Uzdrowienie</h3>
               <div className="mt-4 flex justify-center items-baseline">
                 <span className="text-4xl font-bold text-warm-100">2000 zł</span>
@@ -90,7 +90,7 @@ const Pricing: React.FC<SectionProps> = ({ id }) => {
               </div>
               <p className="mt-4 text-xs uppercase tracking-wider text-warm-500">Kompleksowe</p>
             </div>
-            <div className="p-8 flex-1 bg-warm-900/30">
+            <div className="p-8 flex-1">
               <ul className="space-y-4">
                 <li className="flex items-center text-warm-300 text-sm">
                   <Check size={16} className="text-coffee-500 mr-3" /> 5 x Sesja 60-minutowa
@@ -106,8 +106,8 @@ const Pricing: React.FC<SectionProps> = ({ id }) => {
                 </li>
               </ul>
             </div>
-            <div className="p-8 bg-warm-900/50 border-t border-warm-800">
-              <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}} className="block w-full py-3 text-center border border-coffee-800 text-coffee-400 font-medium hover:bg-coffee-800 hover:text-white transition-colors uppercase text-xs tracking-widest">
+            <div className="p-8 border-t border-warm-800">
+              <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}} className="block w-full py-3 text-center border border-coffee-400 text-coffee-400 font-medium hover:bg-coffee-700 hover:text-white hover:border-coffee-700 transition-colors uppercase text-xs tracking-widest rounded-full">
                 Zarezerwuj
               </a>
             </div>
