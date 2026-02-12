@@ -181,7 +181,7 @@ const Home: React.FC = () => {
           >
             <button
               onClick={scrollToAbout}
-              className="px-10 py-4 bg-transparent border border-warm-200 text-warm-100 font-sans text-xs uppercase tracking-widest hover:bg-warm-200 hover:text-warm-900 transition-all duration-300"
+              className="px-10 py-4 bg-transparent border border-warm-200 text-warm-100 font-sans text-xs uppercase tracking-widest hover:bg-warm-200 hover:text-warm-900 transition-all duration-300 rounded-[30px]"
             >
               Dowiedz się Więcej
             </button>

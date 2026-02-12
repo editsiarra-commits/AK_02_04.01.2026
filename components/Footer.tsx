@@ -35,16 +35,16 @@ const Footer: React.FC = () => {
             <h4 className="font-sans text-xs font-bold uppercase text-warm-500 tracking-widest">Kontakt</h4>
             <div className="space-y-4">
               <div className="flex items-center space-x-3 text-warm-300 hover:text-warm-100 transition-colors cursor-pointer group">
-                <Mail size={16} className="text-coffee-400 group-hover:text-coffee-400" />
-                <span className="text-sm font-light">agnieszka@hypno-therapy.example</span>
+                <Mail size={16} className="text-coffee-400 group-hover:text-coffee-300" />
+                <span className="text-sm font-light">agnieszka_kochanowska@wp.pl</span>
               </div>
               <div className="flex items-center space-x-3 text-warm-300 hover:text-warm-100 transition-colors cursor-pointer group">
-                <Phone size={16} className="text-coffee-400 group-hover:text-coffee-400" />
-                <span className="text-sm font-light">+48 500 000 000</span>
+                <Phone size={16} className="text-coffee-400 group-hover:text-coffee-300" />
+                <span className="text-sm font-light">+48 537 537 277</span>
               </div>
               <div className="flex items-center space-x-3 text-warm-300 group">
                 <MapPin size={16} className="text-coffee-400" />
-                <span className="text-sm font-light">Warszawa, Polska</span>
+                <span className="text-sm font-light">Bialystok, Warszawa, Online</span>
               </div>
             </div>
           </div>

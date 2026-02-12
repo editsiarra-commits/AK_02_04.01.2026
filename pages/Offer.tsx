@@ -113,7 +113,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ id }) => (
      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
             <span className="text-coffee-400 font-sans text-s font-bold uppercase tracking-[0.3em] mb-3 block"> </span>
-            <h2 className="font-display text-4xl md:text-4xl text-warm-100 tracking-wide">OTO W CZYM MOGĘ CI POMÓC:</h2>
+            <h2 className="font-display text-4xl md:text-4xl text-warm-100 tracking-wide py-0 -mt-[25px] -mb-[25px]">OTO W CZYM MOGĘ CI POMÓC:</h2>
         </div>
 
        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

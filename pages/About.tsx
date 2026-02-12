@@ -119,7 +119,7 @@ const About: React.FC<SectionProps> = ({ id }) => {
         </div>
 
         {/* Logo Slider Section */}
-        <div className="border-t border-warm-800 pt-16">
+        <div className="pt-0 -mt-[50px] -mb-[50px]">
            <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-coffee-500 mb-10">       </p>
            <div className="relative w-full overflow-hidden group/slider">
               {/* Fade edges */}

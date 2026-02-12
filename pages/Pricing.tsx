@@ -9,8 +9,13 @@ const Pricing: React.FC<SectionProps> = ({ id }) => {
   return (
     <section id={id} className="relative py-24 bg-warm-950 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-        <h2 className="font-serif text-4xl md:text-5xl text-warm-100 mb-6">Inwestycja w Siebie</h2>
-        <p className="text-warm-400 max-w-xl mx-auto text-lg font-light">Przejrzysty cennik Twojej drogi do dobrostanu.</p>
+        <h2 className="font-serif text-4xl md:text-5xl text-warm-100 mb-6">Inwestycja w Twoją zmianę</h2>
+        
+        <p className="text-warm-400 max-w-xl mx-auto text-lg font-light">Przed dokonaniem jakiejkolwiek płatności zapraszam Cię na bezpłatną, 15-minutową konsultację telefoniczną.</p>
+        <p className="text-warm-400 max-w-xl mx-auto text-lg font-light">To spokojna przestrzeń, w której wspólnie:
+precyzyjnie nazwiemy to, co naprawdę chcecie zmienić / uzdrowić / rozwinąć
+poczujemy, która ścieżka będzie dla Ciebie najbardziej precyzyjna i bezpieczna
+ustalimy rytm i terminy, które będą Ci służyć..</p>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
