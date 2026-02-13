@@ -24,8 +24,8 @@ const ScrollToTop = () => {
 
 const navItems: NavItem[] = [
   { label: 'O Mnie', path: '#about' },
-  { 
-    label: 'Oferta', 
+  {
+    label: 'Oferta',
     path: '#offer',
     children: [
       { label: 'HIPNOTERAPIA', path: '/hipnoterapia' },
@@ -42,9 +42,9 @@ const App: React.FC = () => {
   return (
     <HashRouter>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen bg-warm-900 font-sans text-warm-200 selection:bg-coffee-600 selection:text-white">
+      <div className="flex flex-col min-h-screen bg-surface font-sans text-gray-600 selection:bg-coral-500 selection:text-white">
         <Navbar navItems={navItems} />
-        
+
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -57,7 +57,7 @@ const App: React.FC = () => {
             <Route path="*" element={<Home />} />
           </Routes>
         </main>
-        
+
         <Footer />
       </div>
     </HashRouter>

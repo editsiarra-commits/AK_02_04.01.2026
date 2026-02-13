@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Quote, Share2, Check } from 'lucide-react';
+import { Quote } from 'lucide-react';
 
 interface Testimonial {
   id: number;
@@ -49,88 +49,71 @@ const testimonials: Testimonial[] = [
 
 const Testimonials: React.FC<{ id?: string }> = ({ id }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [copiedId, setCopiedId] = useState<number | null>(null);
 
   useEffect(() => {
-    // Auto-advance logic
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-      setCopiedId(null);
-    }, 5000); // Increased slightly to give time to click button
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
-  const handleCopy = (content: string, id: number) => {
-    navigator.clipboard.writeText(`"${content}"`);
-    setCopiedId(id);
-    setTimeout(() => setCopiedId(null), 2000);
-  };
-
   return (
-    <section id={id} className="py-24 bg-warm-900 relative overflow-hidden scroll-mt-20 border-t border-warm-800">
-       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-[0.05]"></div>
-       
-       {/* Decorative blob */}
-       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-coffee-900/20 rounded-full blur-[100px] pointer-events-none"></div>
+    <section id={id} className="py-24 bg-surface-100 relative overflow-hidden scroll-mt-20 border-t border-surface-300">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl text-warm-100 mb-6">Dobre Słowa</h2>
-          <p className="text-warm-400 max-w-xl mx-auto text-lg font-light">
+          <span className="text-coral-500 font-sans text-xs font-bold uppercase tracking-[0.3em] mb-3 block">Opinie</span>
+          <h2 className="font-serif text-4xl md:text-5xl text-navy-900 mb-6">Dobre Słowa</h2>
+          <p className="text-gray-500 max-w-xl mx-auto text-lg font-light">
             Prawdziwe transformacje prawdziwych ludzi.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-            <div className="relative min-h-[450px] flex items-center justify-center">
-                {testimonials.map((testimonial, index) => {
-                    const isActive = index === currentIndex;
-                    return (
-                        <div 
-                            key={testimonial.id}
-                            className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-1000 ease-in-out px-4 ${
-                                isActive ? 'opacity-100 translate-x-0 z-20' : 
-                                index === (currentIndex + 1) % testimonials.length ? 'opacity-0 translate-x-8 z-10' : 
-                                'opacity-0 -translate-x-8 z-10'
-                            }`}
-                        >
-                            <div className="text-coffee-600 mb-6 transform scale-125">
-                                <Quote size={40} className="fill-current opacity-30" />
-                            </div>
-                            
-                            <blockquote className="text-center mb-6 max-w-2xl">
-                                <p className="font-serif text-2xl md:text-3xl text-warm-200 leading-relaxed italic font-light">
-                                    "{testimonial.content}"
-                                </p>
-                            </blockquote>
-                           
+          <div className="relative min-h-[450px] flex items-center justify-center">
+            {testimonials.map((testimonial, index) => {
+              const isActive = index === currentIndex;
+              return (
+                <div
+                  key={testimonial.id}
+                  className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-1000 ease-in-out px-4 ${isActive ? 'opacity-100 translate-x-0 z-20' :
+                      index === (currentIndex + 1) % testimonials.length ? 'opacity-0 translate-x-8 z-10' :
+                        'opacity-0 -translate-x-8 z-10'
+                    }`}
+                >
+                  <div className="text-coral-300 mb-6 transform scale-125">
+                    <Quote size={40} className="fill-current opacity-40" />
+                  </div>
 
+                  <blockquote className="text-center mb-6 max-w-2xl">
+                    <p className="font-serif text-2xl md:text-3xl text-navy-900 leading-relaxed italic font-light">
+                      "{testimonial.content}"
+                    </p>
+                  </blockquote>
 
+                  <div className="flex flex-col items-center">
+                    <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-coral-200 mb-4 shadow-md">
+                      <img src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                    </div>
+                    <h4 className="font-sans text-lg font-medium text-navy-900 uppercase tracking-widest">{testimonial.name}</h4>
+                    <span className="text-coral-500 text-xs font-bold uppercase tracking-wide mt-1">{testimonial.role}</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
 
-                           
-                            <div className="flex flex-col items-center">
-                                <div className="w-16 h-16 rounded-full overflow-hidden border border-coffee-700 mb-4 shadow-lg shadow-black/30">
-                                    <img src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
-                                </div>
-                                <h4 className="font-sans text-lg font-medium text-warm-100 uppercase tracking-widest">{testimonial.name}</h4>
-                                <span className="text-coffee-500 text-xs font-bold uppercase tracking-wide mt-1">{testimonial.role}</span>
-                            </div>
-                        </div>
-                    );
-                })}
-            </div>
-            
-            {/* Indicators */}
-            <div className="flex justify-center space-x-3 mt-4">
-                {testimonials.map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => setCurrentIndex(index)}
-                        className={`h-1 rounded-full transition-all duration-500 ${index === currentIndex ? 'bg-coffee-600 w-8' : 'bg-warm-800 w-2 hover:bg-warm-700'}`}
-                        aria-label={`Przejdź do opinii ${index + 1}`}
-                    />
-                ))}
-            </div>
+          {/* Indicators */}
+          <div className="flex justify-center space-x-3 mt-4">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`h-1 rounded-full transition-all duration-500 ${index === currentIndex ? 'bg-coral-500 w-8' : 'bg-surface-400 w-2 hover:bg-surface-500'}`}
+                aria-label={`Przejdź do opinii ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

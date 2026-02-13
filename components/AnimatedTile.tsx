@@ -16,7 +16,7 @@ const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children, backgrou
 
     // If there is a background image, we don't need the canvas animation
     if (backgroundImage) {
-        return;
+      return;
     }
 
     const ctx = canvas.getContext('2d');
@@ -26,7 +26,7 @@ const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children, backgrou
     // Seed time based on offerId to desynchronize animations slightly
     let t = 0;
     for (let i = 0; i < offerId.length; i++) {
-        t += offerId.charCodeAt(i) * 0.1;
+      t += offerId.charCodeAt(i) * 0.1;
     }
 
     const draw = () => {
@@ -36,20 +36,20 @@ const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children, backgrou
 
       ctx.clearRect(0, 0, width, height);
 
-      // Consistent Dark Cafe Gradient Mesh for all tiles
-      
-      // Background Gradient: Deep Espresso / Dark Chocolate
+      // Soft warm gradient mesh for light theme tiles
+
+      // Background Gradient
       const gradient1 = ctx.createLinearGradient(0, 0, width, height);
-      gradient1.addColorStop(0, `hsla(${25 + Math.sin(t * 0.05) * 5}, 30%, 12%, 1)`); 
-      gradient1.addColorStop(1, `hsla(${35 + Math.cos(t * 0.05) * 5}, 25%, 8%, 1)`); 
+      gradient1.addColorStop(0, `hsla(${25 + Math.sin(t * 0.05) * 5}, 30%, 85%, 1)`);
+      gradient1.addColorStop(1, `hsla(${35 + Math.cos(t * 0.05) * 5}, 25%, 80%, 1)`);
       ctx.fillStyle = gradient1;
       ctx.fillRect(0, 0, width, height);
-      
+
       // Soft moving blobs for the mesh effect
-      ctx.filter = 'blur(60px)'; 
-      
-      // Blob 1: Warm Coffee/Mocha
-      ctx.fillStyle = `hsla(${28 + Math.sin(t * 0.2) * 10}, 40%, 22%, 0.4)`;
+      ctx.filter = 'blur(60px)';
+
+      // Blob 1: Warm light tone
+      ctx.fillStyle = `hsla(${28 + Math.sin(t * 0.2) * 10}, 40%, 75%, 0.4)`;
       ctx.beginPath();
       ctx.arc(
         width * 0.3 + Math.sin(t * 0.2) * width * 0.2,
@@ -58,8 +58,8 @@ const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children, backgrou
       );
       ctx.fill();
 
-      // Blob 2: Deep Brown
-      ctx.fillStyle = `hsla(${18 + Math.cos(t * 0.15) * 10}, 35%, 18%, 0.4)`;
+      // Blob 2: Soft coral tone
+      ctx.fillStyle = `hsla(${12 + Math.cos(t * 0.15) * 10}, 45%, 70%, 0.3)`;
       ctx.beginPath();
       ctx.arc(
         width * 0.7 - Math.sin(t * 0.25) * width * 0.2,
@@ -68,8 +68,8 @@ const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children, backgrou
       );
       ctx.fill();
 
-      // Blob 3: Subtle Caramel/Gold Accent
-      ctx.fillStyle = `hsla(${38 + Math.sin(t * 0.1) * 10}, 45%, 25%, 0.3)`;
+      // Blob 3: Subtle warm accent
+      ctx.fillStyle = `hsla(${38 + Math.sin(t * 0.1) * 10}, 45%, 78%, 0.3)`;
       ctx.beginPath();
       ctx.arc(
         width * 0.5 + Math.cos(t * 0.4) * width * 0.2,
@@ -92,17 +92,17 @@ const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children, backgrou
 
   return (
     <div className="absolute inset-0">
-        {backgroundImage ? (
-             <div 
-             className="w-full h-full bg-cover bg-center opacity-70 group-hover:opacity-90 transition-opacity duration-700"
-             style={{ backgroundImage: `url(${backgroundImage})` }}
-           />
-        ) : (
-            <canvas ref={canvasRef} className="w-full h-full opacity-70 group-hover:opacity-90 transition-opacity duration-700" />
-        )}
-        <div className="absolute inset-0 bg-warm-950/60 group-hover:bg-warm-950/80 transition-colors duration-700"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/40 to-transparent opacity-80"></div>
-        {children}
+      {backgroundImage ? (
+        <div
+          className="w-full h-full bg-cover bg-center opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+          style={{ backgroundImage: `url(${backgroundImage})` }}
+        />
+      ) : (
+        <canvas ref={canvasRef} className="w-full h-full opacity-80 group-hover:opacity-100 transition-opacity duration-700" />
+      )}
+      <div className="absolute inset-0 bg-navy-900/50 group-hover:bg-navy-900/70 transition-colors duration-700"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-transparent opacity-80"></div>
+      {children}
     </div>
   );
 };

@@ -36,48 +36,42 @@ const FAQ: React.FC<FAQProps> = ({ id }) => {
   };
 
   return (
-    <section id={id} className="py-24 bg-warm-950 border-t border-warm-800 relative scroll-mt-20">
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02]"></div>
-      
+    <section id={id} className="py-24 bg-white border-t border-surface-300 relative scroll-mt-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <span className="text-coffee-400 font-sans text-xs font-bold uppercase tracking-[0.3em] mb-3 block">Wyjaśnienie</span>
-          <h2 className="font-serif text-4xl md:text-5xl text-warm-100 mb-6">Często Zadawane Pytania</h2>
-          <p className="text-warm-400 font-light">Wszystko, co musisz wiedzieć, zanim zaczniemy.</p>
+          <span className="text-coral-500 font-sans text-xs font-bold uppercase tracking-[0.3em] mb-3 block">Wyjaśnienie</span>
+          <h2 className="font-serif text-4xl md:text-5xl text-navy-900 mb-6">Często Zadawane Pytania</h2>
+          <p className="text-gray-500 font-light">Wszystko, co musisz wiedzieć, zanim zaczniemy.</p>
         </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div 
-              key={index} 
-              className={`border transition-all duration-300 rounded-sm overflow-hidden ${
-                openIndex === index 
-                  ? 'border-coffee-600 bg-warm-900/50 shadow-lg shadow-black/20' 
-                  : 'border-warm-800 bg-warm-900/20 hover:border-warm-700 hover:bg-warm-900/40'
-              }`}
+            <div
+              key={index}
+              className={`border transition-all duration-300 rounded-xl overflow-hidden ${openIndex === index
+                  ? 'border-coral-300 bg-white shadow-lg'
+                  : 'border-surface-300 bg-white hover:border-coral-200 hover:shadow-md'
+                }`}
             >
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full flex justify-between items-center p-6 text-left focus:outline-none"
                 aria-expanded={openIndex === index}
               >
-                <span className={`font-serif text-lg md:text-xl transition-colors pr-4 ${
-                  openIndex === index ? 'text-coffee-300' : 'text-warm-200'
-                }`}>
+                <span className={`font-serif text-lg md:text-xl transition-colors pr-4 ${openIndex === index ? 'text-coral-500' : 'text-navy-900'
+                  }`}>
                   {faq.question}
                 </span>
-                <div className={`flex-shrink-0 p-1 rounded-full border transition-all duration-300 ${
-                   openIndex === index ? 'border-coffee-500 text-coffee-500 rotate-180 bg-coffee-950/30' : 'border-warm-700 text-warm-500'
-                }`}>
+                <div className={`flex-shrink-0 p-1 rounded-full border transition-all duration-300 ${openIndex === index ? 'border-coral-500 text-coral-500 rotate-180 bg-coral-50' : 'border-surface-400 text-gray-400'
+                  }`}>
                   {openIndex === index ? <Minus size={16} /> : <Plus size={16} />}
                 </div>
               </button>
-              <div 
-                className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                  openIndex === index ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
-                }`}
+              <div
+                className={`transition-all duration-500 ease-in-out overflow-hidden ${openIndex === index ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
               >
-                <div className="px-6 pb-6 text-warm-400 font-light leading-relaxed border-t border-warm-800/50 pt-4 mt-2 mx-6">
+                <div className="px-6 pb-6 text-gray-500 font-light leading-relaxed border-t border-surface-300/50 pt-4 mt-2 mx-6">
                   {faq.answer}
                 </div>
               </div>
