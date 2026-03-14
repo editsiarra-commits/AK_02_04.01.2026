@@ -217,7 +217,7 @@ const Home: React.FC = () => {
           <Contact />
         </LazyLoad>
         <LazyLoad id="pricing" forceVisible={scrollToSection === 'pricing'} className="scroll-mt-20">
-          <Pricing />
+          <Pricing id="pricing" />
         </LazyLoad>
 
         {/* Why Hypnotherapy Section */}
