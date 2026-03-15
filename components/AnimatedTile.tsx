@@ -14,13 +14,17 @@ const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children, backgrou
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    // If there is a background image, we don't need the canvas animation
-    if (backgroundImage) {
-        return;
-    }
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
+
+    const resizeCanvas = () => {
+        if (canvas.parentElement) {
+            canvas.width = canvas.parentElement.offsetWidth;
+            canvas.height = canvas.parentElement.offsetHeight;
+        }
+    };
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
     let animationFrameId: number;
     // Seed time based on offerId to desynchronize animations slightly
@@ -40,16 +44,16 @@ const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children, backgrou
       
       // Background Gradient: Soft lavender / warm white
       const gradient1 = ctx.createLinearGradient(0, 0, width, height);
-      gradient1.addColorStop(0, `hsla(${260 + Math.sin(t * 0.05) * 5}, 20%, 94%, 1)`); 
-      gradient1.addColorStop(1, `hsla(${30 + Math.cos(t * 0.05) * 5}, 15%, 96%, 1)`); 
+      gradient1.addColorStop(0, `hsla(${260 + Math.sin(t * 0.05) * 5}, 30%, 90%, 1)`); 
+      gradient1.addColorStop(1, `hsla(${30 + Math.cos(t * 0.05) * 5}, 25%, 92%, 1)`); 
       ctx.fillStyle = gradient1;
       ctx.fillRect(0, 0, width, height);
       
       // Soft moving blobs for the mesh effect
-      ctx.filter = 'blur(60px)'; 
+      ctx.filter = 'blur(40px)'; 
       
       // Blob 1: Soft coral tint
-      ctx.fillStyle = `hsla(${15 + Math.sin(t * 0.2) * 10}, 60%, 88%, 0.3)`;
+      ctx.fillStyle = `hsla(${15 + Math.sin(t * 0.2) * 10}, 70%, 82%, 0.4)`;
       ctx.beginPath();
       ctx.arc(
         width * 0.3 + Math.sin(t * 0.2) * width * 0.2,
@@ -59,7 +63,7 @@ const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children, backgrou
       ctx.fill();
 
       // Blob 2: Soft lavender
-      ctx.fillStyle = `hsla(${260 + Math.cos(t * 0.15) * 10}, 30%, 86%, 0.3)`;
+      ctx.fillStyle = `hsla(${260 + Math.cos(t * 0.15) * 10}, 40%, 80%, 0.4)`;
       ctx.beginPath();
       ctx.arc(
         width * 0.7 - Math.sin(t * 0.25) * width * 0.2,
@@ -69,7 +73,7 @@ const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children, backgrou
       ctx.fill();
 
       // Blob 3: Soft warm peach
-      ctx.fillStyle = `hsla(${30 + Math.sin(t * 0.1) * 10}, 40%, 90%, 0.25)`;
+      ctx.fillStyle = `hsla(${30 + Math.sin(t * 0.1) * 10}, 50%, 84%, 0.35)`;
       ctx.beginPath();
       ctx.arc(
         width * 0.5 + Math.cos(t * 0.4) * width * 0.2,
@@ -86,22 +90,26 @@ const AnimatedTile: React.FC<AnimatedTileProps> = ({ offerId, children, backgrou
     draw();
 
     return () => {
+      window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrameId);
     };
   }, [offerId, backgroundImage]);
 
   return (
     <div className="absolute inset-0">
-        {backgroundImage ? (
+        <canvas 
+            ref={canvasRef} 
+            className={`absolute inset-0 w-full h-full transition-opacity duration-700 ${backgroundImage ? 'opacity-70 group-hover:opacity-0' : 'opacity-70 group-hover:opacity-90'}`} 
+        />
+        {backgroundImage && (
              <div 
-             className="w-full h-full bg-cover bg-center opacity-70 group-hover:opacity-90 transition-opacity duration-700"
-             style={{ backgroundImage: `url(${backgroundImage})` }}
-           />
-        ) : (
-            <canvas ref={canvasRef} className="w-full h-full opacity-70 group-hover:opacity-90 transition-opacity duration-700" />
+             className="absolute inset-0 w-full h-full bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-no-repeat"
+             style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover' }}
+           >
+                <div className="absolute inset-0 bg-warm-950/60 group-hover:bg-warm-950/40 transition-colors duration-700 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/40 to-transparent opacity-80 pointer-events-none"></div>
+           </div>
         )}
-        <div className="absolute inset-0 bg-warm-950/60 group-hover:bg-warm-950/80 transition-colors duration-700"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/40 to-transparent opacity-80"></div>
         {children}
     </div>
   );

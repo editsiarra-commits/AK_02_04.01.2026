@@ -116,26 +116,26 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ id }) => (
             <h2 className="font-display text-4xl md:text-4xl text-warm-100 tracking-wide py-0 -mt-[25px] -mb-[25px]">OTO W CZYM MOGĘ CI POMÓC:</h2>
         </div>
 
-       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-fr">
          {Object.values(offers).map((offer) => (
-           <Link to={`/offer/${offer.id}`} key={offer.id} className="group relative h-[420px] overflow-hidden bg-warm-800 block rounded-2xl">
-             <AnimatedTile offerId={offer.id} backgroundImage={offer.tileBackgroundImage}>
-                 <div className="absolute inset-0 p-6 flex flex-col justify-start text-center items-center z-10 pt-10">
-                    <div className="transform transition-transform duration-500 group-hover:-translate-y-4">
-                        <h3 className="font-display text-2xl text-warm-100 mb-2 tracking-wide drop-shadow-lg leading-tight px-4">{offer.title}</h3>
-                        
-                        {/* Animated Line */}
-                        <div className="w-0 h-px bg-coffee-400 mx-auto mb-4 transition-all duration-500 group-hover:w-12 opacity-80"></div>
-                        
-                        <p className="text-warm-300 font-sans text-sm font-light leading-relaxed max-w-[240px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0 delay-75">
-                            {offer.description}
-                        </p>
-                    </div>
-                 </div>
-                 
+           <Link to={`/offer/${offer.id}`} key={offer.id} className="group relative flex flex-col h-full overflow-hidden bg-warm-800 rounded-2xl">
+             <AnimatedTile offerId={offer.id} backgroundImage={offer.tileBackgroundImage} />
+             
+             <div className="relative z-10 p-6 pt-10 flex flex-col justify-start text-center items-center flex-grow">
                  {/* Frame Effect */}
-                 <div className="absolute inset-4 border border-warm-950/10 group-hover:border-coffee-400/40 transition-colors duration-700 pointer-events-none rounded-xl"></div>
-             </AnimatedTile>
+                 <div className="absolute inset-3 border border-warm-950/10 group-hover:border-coffee-400/40 transition-colors duration-700 pointer-events-none rounded-xl"></div>
+                 
+                 <div className="transform transition-transform duration-500 group-hover:-translate-y-2 w-full flex flex-col items-center">
+                    <h3 className="font-display text-xl text-warm-100 mb-2 tracking-wide drop-shadow-lg leading-tight px-2">{offer.title}</h3>
+                    
+                    {/* Animated Line */}
+                    <div className="w-0 h-px bg-coffee-400 mx-auto mb-4 transition-all duration-500 group-hover:w-12 opacity-80"></div>
+                    
+                    <p className="text-warm-300 font-sans text-xs font-light leading-relaxed max-w-[240px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0 delay-75">
+                        {offer.description}
+                    </p>
+                 </div>
+             </div>
            </Link>
          ))}
        </div>
