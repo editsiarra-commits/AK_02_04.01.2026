@@ -102,15 +102,15 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
           </p>
           <ul className="space-y-3 mb-8">
             <li className="flex items-start text-warm-300">
-              <Check size={20} className="text-coffee-400 mr-3 mt-0.5 flex-shrink-0" /> 
+              <Check size={20} className="text-coffee-400 mr-3 mt-0.5 shrink-0" /> 
               <span>precyzyjnie nazwiemy to, co naprawdę chcecie zmienić / uzdrowić / rozwinąć</span>
             </li>
             <li className="flex items-start text-warm-300">
-              <Check size={20} className="text-coffee-400 mr-3 mt-0.5 flex-shrink-0" /> 
+              <Check size={20} className="text-coffee-400 mr-3 mt-0.5 shrink-0" /> 
               <span>poczujemy, która ścieżka będzie dla Ciebie najbardziej precyzyjna i bezpieczna</span>
             </li>
             <li className="flex items-start text-warm-300">
-              <Check size={20} className="text-coffee-400 mr-3 mt-0.5 flex-shrink-0" /> 
+              <Check size={20} className="text-coffee-400 mr-3 mt-0.5 shrink-0" /> 
               <span>ustalimy rytm i terminy, które będą Ci służyć.</span>
             </li>
           </ul>
@@ -151,7 +151,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {pricingItems.map((item, index) => (
-                <div key={item.id} className="w-full flex-shrink-0 px-2 sm:px-4 py-2 md:py-4">
+                <div key={item.id} className="w-full shrink-0 px-2 sm:px-4 py-2 md:py-4">
                   <div className="bg-warm-900/60 backdrop-blur-sm rounded-[40px] shadow-[0_10px_40px_rgb(0,0,0,0.03)] overflow-hidden border border-warm-800/40 flex flex-col md:flex-row h-full">
                     
                     {/* Left Column: Title & Price */}
@@ -201,7 +201,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                         <ul className="space-y-5">
                           {item.details.map((detail, i) => (
                             <li key={i} className="flex items-start text-warm-200">
-                              <div className="mt-2.5 mr-5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-coffee-300/40"></div>
+                              <div className="mt-2.5 mr-5 shrink-0 w-1.5 h-1.5 rounded-full bg-coffee-300/40"></div>
                               <span className="font-light leading-relaxed text-[15px]">{detail}</span>
                             </li>
                           ))}

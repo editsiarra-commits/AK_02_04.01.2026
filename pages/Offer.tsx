@@ -187,7 +187,7 @@ export const OfferDetail: React.FC = () => {
 
            <div className="prose max-w-none">
              <h2 className="font-display text-3xl md:text-4xl text-warm-100 mb-8">{offer.autonomousHeadline}</h2>
-             <p className="text-warm-300 text-lg leading-loose mb-12 font-light">
+             <p className="text-warm-300 text-lg leading-[30px] mb-[15px] font-light">
                {offer.fullDescription}
              </p>
 
@@ -199,19 +199,19 @@ export const OfferDetail: React.FC = () => {
                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-coffee-900 flex items-center justify-center mt-1 mr-4 border border-coffee-800">
                        <Check size={12} className="text-coffee-400" />
                      </div>
-                     <span className="text-warm-200 font-light text-lg">{benefit}</span>
+                     <span className="text-warm-200 font-semibold text-lg">{benefit}</span>
                    </li>
                  ))}
                </ul>
                 {offer.additionalInfo && offer.additionalInfo.trim() !== '' && (
-                    <h3 className="font-display text-2xl text-coffee-400 mt-8 mb-8">
+                    <h3 className="font-display text-lg font-light text-warm-200 mt-[25px] mb-[25px] w-[640px] max-w-full">
                      {offer.additionalInfo}
                     </h3>
                 )}
              </div>
 
-             <div className="text-center border-t border-warm-800 pt-12">
-                <p className="text-warm-400 mb-8 italic font-serif text-xl">Jeśli masz dość życia na skróconej smyczy lęku albo ciągłego wewnętrznego prokuratora -
+             <div className="text-center border-t border-warm-800 pt-0">
+                <p className="text-coffee-400 mb-8 italic font-serif text-xl font-normal">Jeśli masz dość życia na skróconej smyczy lęku albo ciągłego wewnętrznego prokuratora -
                 zapraszam. Możemy wspólnie sprawdzić, jak to jest, kiedy stare programy w końcu dostają zgodę na emeryturę.</p>
                 <a href="#contact" onClick={(e) => handleNavigate(e, 'contact')} className="inline-block px-12 py-5 bg-coffee-700 text-white font-sans text-xs font-bold uppercase tracking-[0.2em] hover:bg-coffee-600 transition-all shadow-lg hover:shadow-coffee-900/30 cursor-pointer rounded-full">
                   ZAREZERWUJ TĘ SESJĘ
