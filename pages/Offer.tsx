@@ -186,7 +186,7 @@ export const OfferDetail: React.FC = () => {
            </a>
 
            <div className="prose max-w-none">
-             <h2 className="font-display text-3xl md:text-4xl text-warm-100 mb-8">{offer.autonomousHeadline}</h2>
+             <h2 className="font-display text-3xl md:text-4xl text-warm-100 mb-8 font-light" style={{ backgroundClip: 'unset', WebkitBackgroundClip: 'unset' }}>{offer.autonomousHeadline}</h2>
              <p className="text-warm-300 text-lg leading-[30px] mb-[15px] font-light">
                {offer.fullDescription}
              </p>
@@ -210,8 +210,8 @@ export const OfferDetail: React.FC = () => {
                 )}
              </div>
 
-             <div className="text-center border-t border-warm-800 pt-0">
-                <p className="text-coffee-400 mb-8 italic font-serif text-xl font-normal">Jeśli masz dość życia na skróconej smyczy lęku albo ciągłego wewnętrznego prokuratora -
+             <div className="text-center pt-8" style={{ boxSizing: 'content-box' }}>
+                <p className="text-coffee-400 mb-8 font-serif text-xl font-normal" style={{ borderWidth: '0px', borderColor: 'rgba(0, 0, 0, 0)', borderStyle: 'none', borderImage: 'none' }}>Jeśli masz dość życia na skróconej smyczy lęku albo ciągłego wewnętrznego prokuratora -
                 zapraszam. Możemy wspólnie sprawdzić, jak to jest, kiedy stare programy w końcu dostają zgodę na emeryturę.</p>
                 <a href="#contact" onClick={(e) => handleNavigate(e, 'contact')} className="inline-block px-12 py-5 bg-coffee-700 text-white font-sans text-xs font-bold uppercase tracking-[0.2em] hover:bg-coffee-600 transition-all shadow-lg hover:shadow-coffee-900/30 cursor-pointer rounded-full">
                   ZAREZERWUJ TĘ SESJĘ
