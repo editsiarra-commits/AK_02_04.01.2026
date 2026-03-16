@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"piny.project_settings": {
+			"open-pages": [
+				"pinyfakepage.html"
+			],
+			"app-routes": {
+				"routes": [
+					"/",
+					"/#/",
+					"/#/offer/stress-anxiety"
+				],
+				"current_route": "/#/offer/stress-anxiety"
+			}
+		}
+	}
+}
