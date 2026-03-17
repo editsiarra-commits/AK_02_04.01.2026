@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Check, ArrowLeft } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
 interface PricingProps {
   id?: string;
@@ -7,6 +8,12 @@ interface PricingProps {
 
 const Pricing: React.FC<PricingProps> = ({ id }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
+
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate('/', { state: { scrollTo: 'contact' } });
+  };
 
   const pricingItems = [
     {
@@ -55,7 +62,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
     {
       id: 4,
       title: "Sesja integracji psychodelicznej",
-      subtitle: "/ Sesja przygotowująca do doświadczenia psychodelicznego",
+      subtitle: "/ Sesja przygotowująca",
       price: "600 zł",
       duration: "2–2,5 godziny",
       description: "To przestrzeń, w której wglądy stają się trwałą zmianą, a nie tylko chwilowym olśnieniem.",
@@ -90,169 +97,201 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
   };
 
   return (
-    <section id={id} className="relative py-12 md:py-16 bg-warm-950 scroll-mt-20 overflow-hidden">
-      {/* Intro Section (Slide 1 from PDF) */}
-      <div className="max-w-6xl mx-auto text-center mb-8 md:mb-12">
-        <h2 className="font-serif text-4xl md:text-5xl text-warm-100 mb-8">Cennik – Inwestycja w Twoją zmianę</h2>
-        
-        <div className="bg-white/50 backdrop-blur-sm rounded-[40px] p-8 md:p-10 border border-warm-800 shadow-sm text-left mx-4 sm:mx-12">
-          <p className="text-warm-300 text-lg font-light mb-6">
-            Przed dokonaniem jakiejkolwiek płatności zapraszam Cię na bezpłatną, 15-minutową konsultację telefoniczną.
-            W spokojnej przestrzeni, w której wspólnie:
+    <div className="bg-warm-900 text-warm-200 min-h-screen">
+      {/* Hero Section */}
+      <section className="relative py-24 md:py-32 border-b border-warm-800 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+            src="/assets/video4.mp4"
+          />
+          <div className="absolute inset-0 bg-warm-950/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 to-transparent"></div>
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center pt-8">
+          <p className="text-coffee-400 font-sans text-xl font-bold uppercase tracking-[0.3em] mb-4">
+            Inwestycja w Twoją Zmianę
           </p>
-          <ul className="space-y-3 mb-8">
-            <li className="flex items-start text-warm-300">
-              <Check size={20} className="text-coffee-400 mr-3 mt-0.5 shrink-0" /> 
-              <span>precyzyjnie nazwiemy to, co naprawdę chcecie zmienić / uzdrowić / rozwinąć</span>
-            </li>
-            <li className="flex items-start text-warm-300">
-              <Check size={20} className="text-coffee-400 mr-3 mt-0.5 shrink-0" /> 
-              <span>poczujemy, która ścieżka będzie dla Ciebie najbardziej precyzyjna i bezpieczna</span>
-            </li>
-            <li className="flex items-start text-warm-300">
-              <Check size={20} className="text-coffee-400 mr-3 mt-0.5 shrink-0" /> 
-              <span>ustalimy rytm i terminy, które będą Ci służyć.</span>
-            </li>
-          </ul>
-          <p className="text-warm-400 text-sm font-light leading-relaxed">
-            Płatność realizowana jest z góry – stanowi jednocześnie gwarancję Twojego miejsca w moim kalendarzu. 
-            W razie odwołania lub niewykorzystania sesji przez Ciebie – opłata nie podlega zwrotowi. 
-            Przełożenie terminu jest możliwe do 24 h przed spotkaniem. 
-            Potrzebujesz faktury (usługa terapeutyczna / superwizja)? Napisz lub zadzwoń przed opłatą – przygotuję ją bez problemu.
+          <h1 className="font-serif text-4xl md:text-6xl text-warm-100 mb-4">
+            Cennik
+          </h1>
+          <p className="text-2xl md:text-3xl text-warm-300 font-serif italic max-w-3xl mx-auto">
+            "To starannie zaprojektowane przestrzenie, w których możesz przestać walczyć ze sobą i zacząć żyć w zgodzie z tym, kim naprawdę jesteś."
           </p>
         </div>
-      </div>
+      </section>
 
-      {/* Full Width Horizontal Slider (Slides 2-6 from PDF) */}
-      <div className="w-full relative px-0 sm:px-8">
-        <div className="max-w-6xl mx-auto relative">
+      {/* Main Content */}
+      <div className="container mx-auto px-4 py-16 lg:py-24">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-8 pl-4 sm:pl-12">
+            <Link to="/" className="inline-flex items-center text-coffee-400 hover:text-coffee-300 transition-colors">
+              <ArrowLeft size={20} className="mr-2" />
+              <span>Powrót do strony głównej</span>
+            </Link>
+          </div>
           
-          {/* Navigation Buttons */}
-          <button 
-            onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 sm:-ml-12 z-10 p-4 rounded-full bg-white/80 backdrop-blur-sm border border-coffee-100 text-warm-300 hover:text-coffee-400 hover:border-coffee-300 hover:bg-white transition-all shadow-[0_4px_20px_rgb(0,0,0,0.03)] focus:outline-none group"
-            aria-label="Previous option"
-          >
-            <ChevronLeft size={20} className="group-hover:-translate-x-0.5 transition-transform" strokeWidth={1.5} />
-          </button>
-          
-          <button 
-            onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 -mr-2 sm:-mr-12 z-10 p-4 rounded-full bg-white/80 backdrop-blur-sm border border-coffee-100 text-warm-300 hover:text-coffee-400 hover:border-coffee-300 hover:bg-white transition-all shadow-[0_4px_20px_rgb(0,0,0,0.03)] focus:outline-none group"
-            aria-label="Next option"
-          >
-            <ChevronRight size={20} className="group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
-          </button>
+          <div className="bg-warm-950 rounded-[40px] p-8 md:p-10 border border-warm-800 text-left mx-0 sm:mx-12 mb-16">
+            <p className="text-warm-300 text-lg font-light mb-6">
+              Przed dokonaniem jakiejkolwiek płatności zapraszam Cię na bezpłatną, 15-minutową konsultację telefoniczną.
+              W spokojnej przestrzeni, w której wspólnie:
+            </p>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-start text-warm-300">
+                <Check size={20} className="text-coffee-400 mr-3 mt-0.5 shrink-0" /> 
+                <span>precyzyjnie nazwiemy to, co naprawdę chcecie zmienić / uzdrowić / rozwinąć</span>
+              </li>
+              <li className="flex items-start text-warm-300">
+                <Check size={20} className="text-coffee-400 mr-3 mt-0.5 shrink-0" /> 
+                <span>poczujemy, która ścieżka będzie dla Ciebie najbardziej precyzyjna i bezpieczna</span>
+              </li>
+              <li className="flex items-start text-warm-300">
+                <Check size={20} className="text-coffee-400 mr-3 mt-0.5 shrink-0" /> 
+                <span>ustalimy rytm i terminy, które będą Ci służyć.</span>
+              </li>
+            </ul>
+            <p className="text-warm-400 text-sm font-light leading-relaxed">
+              Płatność realizowana jest z góry – stanowi jednocześnie gwarancję Twojego miejsca w moim kalendarzu. 
+              W razie odwołania lub niewykorzystania sesji przez Ciebie – opłata nie podlega zwrotowi. 
+              Przełożenie terminu jest możliwe do 24 h przed spotkaniem. 
+              Potrzebujesz faktury (usługa terapeutyczna / superwizja)? Napisz lub zadzwoń przed opłatą – przygotuję ją bez problemu.
+            </p>
+          </div>
 
-          {/* Slider Container */}
-          <div className="overflow-hidden py-4 px-4 sm:px-0">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {pricingItems.map((item, index) => (
-                <div key={item.id} className="w-full shrink-0 px-2 sm:px-12 py-2 md:py-4">
-                  <div className="bg-warm-900/60 backdrop-blur-sm rounded-[40px] shadow-[0_10px_40px_rgb(0,0,0,0.03)] overflow-hidden border border-warm-800/40 flex flex-col md:flex-row h-full">
-                    
-                    {/* Left Column: Title & Price */}
-                    <div className="p-10 md:p-14 md:w-5/12 bg-coffee-50/60 flex flex-col justify-between relative overflow-hidden">
-                      {/* Decorative soft blob */}
-                      <div className="absolute -top-20 -left-20 w-64 h-64 bg-coffee-100/50 rounded-full blur-3xl"></div>
-                      
-                      <div className="relative z-10">
-                        <div className="text-coffee-300/70 font-sans text-xs uppercase tracking-[0.2em] mb-8">
-                          0{index + 1} — 0{pricingItems.length}
-                        </div>
+          {/* Full Width Horizontal Slider */}
+          <div className="w-full relative px-0 sm:px-0">
+            <div className="max-w-6xl mx-auto relative">
+              
+              {/* Navigation Buttons */}
+              <button 
+                onClick={prevSlide}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 sm:-ml-6 lg:-ml-12 z-10 p-4 rounded-full bg-warm-900 border border-warm-800 text-warm-300 hover:text-warm-100 hover:border-coffee-500 transition-all focus:outline-none group"
+                aria-label="Previous option"
+              >
+                <ChevronLeft size={20} className="group-hover:-translate-x-0.5 transition-transform" strokeWidth={1.5} />
+              </button>
+              
+              <button 
+                onClick={nextSlide}
+                className="absolute right-0 top-1/2 -translate-y-1/2 -mr-2 sm:-mr-6 lg:-mr-12 z-10 p-4 rounded-full bg-warm-900 border border-warm-800 text-warm-300 hover:text-warm-100 hover:border-coffee-500 transition-all focus:outline-none group"
+                aria-label="Next option"
+              >
+                <ChevronRight size={20} className="group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
+              </button>
+
+              {/* Slider Container */}
+              <div className="overflow-hidden py-4 mx-0 sm:mx-12">
+                <div 
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                >
+                  {pricingItems.map((item, index) => (
+                    <div key={item.id} className="w-full shrink-0 py-2 md:py-4">
+                      <div className="bg-warm-950 rounded-[40px] overflow-hidden border border-warm-800 flex flex-col md:flex-row h-full">
                         
-                        <h3 className="font-serif text-3xl md:text-4xl text-warm-100 leading-snug mb-4">
-                          {item.title}
-                        </h3>
-                        <p className="text-coffee-400 text-lg font-light tracking-wide italic">
-                          {item.subtitle}
-                        </p>
-                      </div>
-                      
-                      <div className="mt-14 mb-8 md:mb-0 relative z-10">
-                        <div className="text-5xl md:text-6xl font-serif text-warm-100 tracking-tight">
-                          {item.price}
+                        {/* Left Column: Title & Price */}
+                        <div className="p-10 md:p-14 md:w-5/12 bg-warm-900 flex flex-col justify-between relative overflow-hidden border-b md:border-b-0 md:border-r border-warm-800">
+                          
+                          <div className="relative z-10">
+                            <div className="text-coffee-400 font-sans text-xs uppercase tracking-[0.2em] mb-8">
+                              0{index + 1} — 0{pricingItems.length}
+                            </div>
+                            
+                            <h3 className="font-serif text-3xl md:text-4xl text-warm-100 leading-snug mb-4">
+                              {item.title}
+                            </h3>
+                            <p className="text-warm-400 text-lg font-light tracking-wide italic">
+                              {item.subtitle}
+                            </p>
+                          </div>
+                          
+                          <div className="mt-14 mb-8 md:mb-0 relative z-10">
+                            <div className="text-5xl md:text-6xl font-serif text-warm-100 tracking-tight">
+                              {item.price}
+                            </div>
+                            <div className="text-warm-500 mt-4 font-light text-sm tracking-widest uppercase">
+                              {item.duration}
+                            </div>
+                          </div>
+                          
+                          <div className="mt-12 hidden md:block relative z-10">
+                            <a href="#contact" onClick={handleContactClick} className="block w-full py-4 text-center bg-coffee-700 text-white font-sans hover:bg-coffee-600 transition-all duration-300 uppercase text-xs tracking-widest rounded-full">
+                              Zarezerwuj Termin
+                            </a>
+                          </div>
                         </div>
-                        <div className="text-warm-400 mt-4 font-light text-sm tracking-widest uppercase">
-                          {item.duration}
+
+                        {/* Right Column: Details */}
+                        <div className="p-10 md:p-14 md:w-7/12 flex flex-col justify-center bg-transparent">
+                          <p className="text-warm-200 text-lg font-light leading-relaxed mb-10">
+                            {item.description}
+                          </p>
+                          
+                          <div className="space-y-6">
+                            <h4 className="font-sans text-xs font-medium uppercase text-coffee-400 tracking-[0.2em]">
+                              {item.targetAudience}
+                            </h4>
+                            <ul className="space-y-5">
+                              {item.details.map((detail, i) => (
+                                <li key={i} className="flex items-start text-warm-300">
+                                  <div className="mt-2.5 mr-5 shrink-0 w-1.5 h-1.5 rounded-full bg-coffee-500/60"></div>
+                                  <span className="font-light leading-relaxed text-[15px]">{detail}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          
+                          <div className="mt-12 md:hidden">
+                            <a href="#contact" onClick={handleContactClick} className="block w-full py-4 text-center bg-coffee-700 text-white font-sans hover:bg-coffee-600 transition-all duration-300 uppercase text-xs tracking-widest rounded-full">
+                              Zarezerwuj Termin
+                            </a>
+                          </div>
                         </div>
-                      </div>
-                      
-                      <div className="mt-12 hidden md:block relative z-10">
-                        <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}} className="block w-full py-4 text-center border border-coffee-200/60 text-coffee-600 bg-white/50 hover:bg-white hover:border-coffee-300 transition-all duration-300 uppercase text-xs tracking-[0.2em] rounded-full shadow-sm">
-                          Zarezerwuj Termin
-                        </a>
+
                       </div>
                     </div>
-
-                    {/* Right Column: Details */}
-                    <div className="p-10 md:p-14 md:w-7/12 flex flex-col justify-center bg-transparent">
-                      <p className="text-warm-200 text-lg font-light leading-relaxed mb-10">
-                        {item.description}
-                      </p>
-                      
-                      <div className="space-y-6">
-                        <h4 className="font-sans text-xs font-medium uppercase text-coffee-400 tracking-[0.2em]">
-                          {item.targetAudience}
-                        </h4>
-                        <ul className="space-y-5">
-                          {item.details.map((detail, i) => (
-                            <li key={i} className="flex items-start text-warm-200">
-                              <div className="mt-2.5 mr-5 shrink-0 w-1.5 h-1.5 rounded-full bg-coffee-300/40"></div>
-                              <span className="font-light leading-relaxed text-[15px]">{detail}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      <div className="mt-12 md:hidden">
-                        <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}} className="block w-full py-4 text-center border border-coffee-200/60 text-coffee-600 bg-white hover:bg-coffee-50 hover:border-coffee-300 transition-all duration-300 uppercase text-xs tracking-[0.2em] rounded-full shadow-sm">
-                          Zarezerwuj Termin
-                        </a>
-                      </div>
-                    </div>
-
-                  </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              
+              {/* Pagination Indicators */}
+              <div className="flex justify-center space-x-3 mt-10">
+                {pricingItems.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentSlide(idx)}
+                    className={`h-1.5 rounded-full transition-all duration-500 ease-out ${
+                      currentSlide === idx ? 'bg-coffee-400 w-8' : 'bg-warm-800 w-2 hover:bg-coffee-500'
+                    }`}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
-          
-          {/* Pagination Indicators */}
-          <div className="flex justify-center space-x-3 mt-10">
-            {pricingItems.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrentSlide(idx)}
-                className={`h-1.5 rounded-full transition-all duration-500 ease-out ${
-                  currentSlide === idx ? 'bg-coffee-300 w-8' : 'bg-warm-800 w-2 hover:bg-coffee-200'
-                }`}
-                aria-label={`Go to slide ${idx + 1}`}
-              />
-            ))}
+
+          {/* Outro Section */}
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-24">
+            <h3 className="font-serif text-3xl md:text-4xl text-warm-100 mb-6">To nie są po prostu „sesje”.</h3>
+            <div className="text-warm-300 text-xl font-light leading-relaxed space-y-6">
+              <p>
+                To starannie zaprojektowane przestrzenie, w których możesz przestać walczyć ze sobą i zacząć żyć w zgodzie z tym, kim naprawdę jesteś.
+              </p>
+              <p>
+                Jeśli czujesz, że to może być Twój moment – napisz lub zadzwoń.
+              </p>
+              <p>
+                Pierwszy krok jest bezpłatny.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Outro Section (Slide 7 from PDF) */}
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-12 md:mt-16">
-        <h3 className="font-serif text-3xl md:text-4xl text-warm-100 mb-6">To nie są po prostu „sesje”.</h3>
-        <div className="text-warm-300 text-xl font-light leading-relaxed space-y-6">
-          <p>
-            To starannie zaprojektowane przestrzenie, w których możesz przestać walczyć ze sobą i zacząć żyć w zgodzie z tym, kim naprawdę jesteś.
-          </p>
-          <p>
-            Jeśli czujesz, że to może być Twój moment – napisz lub zadzwoń.
-          </p>
-          <p>
-            Pierwszy krok jest bezpłatny.
-          </p>
-        </div>
-      </div>
-    </section>
+    </div>
   );
 };
 

@@ -7,7 +7,6 @@ const About = lazy(() => import('./About'));
 const Contact = lazy(() => import('./Contact'));
 const FAQ = lazy(() => import('./FAQ'));
 const OfferSection = lazy(() => import('./Offer').then(module => ({ default: module.OfferSection })));
-const Pricing = lazy(() => import('./Pricing'));
 const Testimonials = lazy(() => import('./Testimonials'));
 
 const Home: React.FC = () => {
@@ -215,9 +214,6 @@ const Home: React.FC = () => {
 
         <LazyLoad id="contact" forceVisible={scrollToSection === 'contact'} className="scroll-mt-20">
           <Contact />
-        </LazyLoad>
-        <LazyLoad id="pricing" forceVisible={scrollToSection === 'pricing'} className="scroll-mt-20">
-          <Pricing id="pricing" />
         </LazyLoad>
 
         {/* Why Hypnotherapy Section */}

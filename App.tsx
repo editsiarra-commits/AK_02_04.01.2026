@@ -9,6 +9,7 @@ import Hipnoterapia from './pages/Hipnoterapia';
 import IntegracjaPsychodeliczna from './pages/IntegracjaPsychodeliczna';
 import SesjeOddechowe from './pages/SesjeOddechowe';
 import CAT from './pages/CAT';
+import Pricing from './pages/Pricing';
 
 
 // ScrollToTop component
@@ -34,7 +35,7 @@ const navItems: NavItem[] = [
       { label: 'CAT Cannabis Assisted Therapy', path: '/cat' }
     ]
   },
-  { label: 'Cennik', path: '#pricing' },
+  { label: 'Cennik', path: '/pricing' },
   { label: 'Kontakt', path: '#contact' },
 ];
 
@@ -53,6 +54,7 @@ const App: React.FC = () => {
             <Route path="/integracja-psychodeliczna" element={<IntegracjaPsychodeliczna />} />
             <Route path="/sesje-oddechowe" element={<SesjeOddechowe />} />
             <Route path="/cat" element={<CAT />} />
+            <Route path="/pricing" element={<Pricing />} />
             {/* Redirect legacy routes to home sections if needed, or handle via simple routing */}
             <Route path="*" element={<Home />} />
           </Routes>

@@ -122,15 +122,26 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                     </div>
                   </div>
                 ) : (
-                  <a
-                    href={item.path}
-                    onClick={(e) => handleNavClick(e, item.path)}
-                    className={`font-sans text-xs font-bold tracking-[0.15em] uppercase hover:text-coffee-400 transition-colors ${
-                      scrolled ? 'text-warm-200' : 'text-warm-100'
-                    }`}
-                  >
-                    {item.label}
-                  </a>
+                  item.path.startsWith('#') ? (
+                    <a
+                      href={item.path}
+                      onClick={(e) => handleNavClick(e, item.path)}
+                      className={`font-sans text-xs font-bold tracking-[0.15em] uppercase hover:text-coffee-400 transition-colors ${
+                        scrolled ? 'text-warm-200' : 'text-warm-100'
+                      }`}
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      className={`font-sans text-xs font-bold tracking-[0.15em] uppercase hover:text-coffee-400 transition-colors ${
+                        scrolled ? 'text-warm-200' : 'text-warm-100'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  )
                 )}
               </div>
             ))}
@@ -187,13 +198,23 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                      )}
                   </div>
                 ) : (
-                  <a
-                    href={item.path}
-                    onClick={(e) => handleNavClick(e, item.path)}
-                    className="block px-3 py-4 text-sm font-bold text-warm-100 uppercase tracking-widest border-b border-warm-800 hover:bg-warm-900"
-                  >
-                    {item.label}
-                  </a>
+                  item.path.startsWith('#') ? (
+                    <a
+                      href={item.path}
+                      onClick={(e) => handleNavClick(e, item.path)}
+                      className="block px-3 py-4 text-sm font-bold text-warm-100 uppercase tracking-widest border-b border-warm-800 hover:bg-warm-900"
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      onClick={() => setIsOpen(false)}
+                      className="block px-3 py-4 text-sm font-bold text-warm-100 uppercase tracking-widest border-b border-warm-800 hover:bg-warm-900"
+                    >
+                      {item.label}
+                    </Link>
+                  )
                 )}
               </div>
             ))}

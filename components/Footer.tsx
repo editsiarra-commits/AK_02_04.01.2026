@@ -1,6 +1,6 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const location = useLocation();
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
             <div className="flex flex-col space-y-3">
               <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-sm text-warm-300 hover:text-coffee-400 transition-colors hover:translate-x-1 transform duration-300">O Mnie</a>
               <a href="#offer" onClick={(e) => handleNavClick(e, 'offer')} className="text-sm text-warm-300 hover:text-coffee-400 transition-colors hover:translate-x-1 transform duration-300">Oferta</a>
-              <a href="#pricing" onClick={(e) => handleNavClick(e, 'pricing')} className="text-sm text-warm-300 hover:text-coffee-400 transition-colors hover:translate-x-1 transform duration-300">Cennik</a>
+              <Link to="/pricing" className="text-sm text-warm-300 hover:text-coffee-400 transition-colors hover:translate-x-1 transform duration-300">Cennik</Link>
               <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-sm text-warm-300 hover:text-coffee-400 transition-colors hover:translate-x-1 transform duration-300">Kontakt</a>
             </div>
             <div className="pt-6 flex space-x-6">
