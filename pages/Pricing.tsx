@@ -99,7 +99,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
   return (
     <div className="bg-warm-900 text-warm-200 min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 border-b border-warm-800 overflow-hidden">
+      <section className="relative py-16 md:py-20 border-b border-warm-800 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <video
             autoPlay
@@ -110,7 +110,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
             src="/assets/video4.mp4"
           />
           <div className="absolute inset-0 bg-warm-950/70"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 to-transparent"></div>
+          <div className="absolute right-0 bottom-0 bg-gradient-to-t from-warm-900 to-transparent"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center pt-8">
           <p className="text-coffee-400 font-sans text-xl font-bold uppercase tracking-[0.3em] mb-4">
@@ -119,15 +119,18 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
           <h1 className="font-serif text-4xl md:text-6xl text-warm-100 mb-4">
             Cennik
           </h1>
-          <p className="text-2xl md:text-3xl text-warm-300 font-serif italic max-w-3xl mx-auto">
-            "To starannie zaprojektowane przestrzenie, w których możesz przestać walczyć ze sobą i zacząć żyć w zgodzie z tym, kim naprawdę jesteś."
-          </p>
+          <div className="text-xl md:text-2xl text-warm-300 font-serif italic max-w-3xl mx-auto space-y-4">
+            <p>To nie są po prostu „sesje”.</p>
+            <p>To starannie zaprojektowane przestrzenie, w których możesz przestać walczyć ze sobą i zacząć żyć w zgodzie z tym, kim naprawdę jesteś.</p>
+            <p>Jeśli czujesz, że to może być Twój moment – napisz lub zadzwoń.</p>
+            <p className="text-[#e8573a]">Pierwszy krok jest bezpłatny.</p>
+          </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-16 lg:py-24">
-        <div className="max-w-6xl mx-auto">
+      <div className="container mx-auto px-4 py-0">
+        <div className="max-w-6xl mx-auto py-10">
           <div className="mb-8 pl-4 sm:pl-12">
             <Link to="/" className="inline-flex items-center text-coffee-400 hover:text-coffee-300 transition-colors">
               <ArrowLeft size={20} className="mr-2" />
@@ -135,7 +138,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
             </Link>
           </div>
           
-          <div className="bg-warm-950 rounded-[40px] p-8 md:p-10 border border-warm-800 text-left mx-0 sm:mx-12 mb-16">
+          <div className="bg-warm-950 rounded-[40px] p-8 md:p-10 border border-warm-800 text-left mx-8 sm:mx-16 md:mx-20 lg:mx-28">
             <p className="text-warm-300 text-lg font-light mb-6">
               Przed dokonaniem jakiejkolwiek płatności zapraszam Cię na bezpłatną, 15-minutową konsultację telefoniczną.
               W spokojnej przestrzeni, w której wspólnie:
@@ -169,29 +172,29 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
               {/* Navigation Buttons */}
               <button 
                 onClick={prevSlide}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 sm:-ml-6 lg:-ml-12 z-10 p-4 rounded-full bg-warm-900 border border-warm-800 text-warm-300 hover:text-warm-100 hover:border-coffee-500 transition-all focus:outline-none group"
+                className="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 sm:-ml-4 lg:-ml-8 z-20 p-4 rounded-full bg-warm-950/90 backdrop-blur-sm border border-warm-700 text-coffee-300 shadow-xl shadow-black/40 hover:bg-warm-900 hover:text-coffee-200 hover:border-coffee-500 hover:scale-105 transition-all focus:outline-none group"
                 aria-label="Previous option"
               >
-                <ChevronLeft size={20} className="group-hover:-translate-x-0.5 transition-transform" strokeWidth={1.5} />
+                <ChevronLeft size={24} className="group-hover:-translate-x-0.5 transition-transform" strokeWidth={2} />
               </button>
               
               <button 
                 onClick={nextSlide}
-                className="absolute right-0 top-1/2 -translate-y-1/2 -mr-2 sm:-mr-6 lg:-mr-12 z-10 p-4 rounded-full bg-warm-900 border border-warm-800 text-warm-300 hover:text-warm-100 hover:border-coffee-500 transition-all focus:outline-none group"
+                className="absolute right-0 top-1/2 -translate-y-1/2 -mr-2 sm:-mr-4 lg:-mr-8 z-20 p-4 rounded-full bg-warm-950/90 backdrop-blur-sm border border-warm-700 text-coffee-300 shadow-xl shadow-black/40 hover:bg-warm-900 hover:text-coffee-200 hover:border-coffee-500 hover:scale-105 transition-all focus:outline-none group"
                 aria-label="Next option"
               >
-                <ChevronRight size={20} className="group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
+                <ChevronRight size={24} className="group-hover:translate-x-0.5 transition-transform" strokeWidth={2} />
               </button>
 
               {/* Slider Container */}
-              <div className="overflow-hidden py-4 mx-0 sm:mx-12">
+              <div className="overflow-hidden -mx-4 sm:mx-0">
                 <div 
                   className="flex transition-transform duration-500 ease-in-out"
                   style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 >
                   {pricingItems.map((item, index) => (
-                    <div key={item.id} className="w-full shrink-0 py-2 md:py-4">
-                      <div className="bg-warm-950 rounded-[40px] overflow-hidden border border-warm-800 flex flex-col md:flex-row h-full">
+                    <div key={item.id} className="w-full shrink-0 pb-16 md:pb-20 pt-4 px-8 sm:px-16 md:px-20 lg:px-28">
+                      <div className="bg-warm-950 rounded-[40px] overflow-hidden border border-warm-800/80 flex flex-col md:flex-row h-full shadow-[0_20px_70px_-10px_rgba(0,0,0,0.5)] hover:border-warm-700 hover:shadow-[0_20px_70px_-10px_rgba(154,115,82,0.25)] transition-all duration-500">
                         
                         {/* Left Column: Title & Price */}
                         <div className="p-10 md:p-14 md:w-5/12 bg-warm-900 flex flex-col justify-between relative overflow-hidden border-b md:border-b-0 md:border-r border-warm-800">
@@ -259,13 +262,13 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
               </div>
               
               {/* Pagination Indicators */}
-              <div className="flex justify-center space-x-3 mt-10">
+              <div className="flex justify-center space-x-3 mt-6 mb-4">
                 {pricingItems.map((_, idx) => (
                   <button
                     key={idx}
                     onClick={() => setCurrentSlide(idx)}
-                    className={`h-1.5 rounded-full transition-all duration-500 ease-out ${
-                      currentSlide === idx ? 'bg-coffee-400 w-8' : 'bg-warm-800 w-2 hover:bg-coffee-500'
+                    className={`h-1.5 rounded-full transition-all duration-500 ease-out cursor-pointer ${
+                      currentSlide === idx ? 'bg-coffee-400 w-10 shadow-[0_0_8px_rgba(154,115,82,0.6)]' : 'bg-warm-700 w-3 hover:bg-coffee-500 hover:w-5'
                     }`}
                     aria-label={`Go to slide ${idx + 1}`}
                   />
@@ -274,21 +277,6 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
             </div>
           </div>
 
-          {/* Outro Section */}
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-24">
-            <h3 className="font-serif text-3xl md:text-4xl text-warm-100 mb-6">To nie są po prostu „sesje”.</h3>
-            <div className="text-warm-300 text-xl font-light leading-relaxed space-y-6">
-              <p>
-                To starannie zaprojektowane przestrzenie, w których możesz przestać walczyć ze sobą i zacząć żyć w zgodzie z tym, kim naprawdę jesteś.
-              </p>
-              <p>
-                Jeśli czujesz, że to może być Twój moment – napisz lub zadzwoń.
-              </p>
-              <p>
-                Pierwszy krok jest bezpłatny.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
