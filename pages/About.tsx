@@ -28,7 +28,7 @@ const credentials = [
   },
   {
     title: "Studia Psychologiczne",
-    org: "Akademia Humanistyczno- Ekonomiczna w Warszawie- w trakcie",
+    org: "Uniwersytet Vizja w Warszawie - w trakcie",
     desc: "   ",
     icon: FileCheck
   },
@@ -110,7 +110,7 @@ const About: React.FC<SectionProps> = ({ id }) => {
                     </div>
                     <div>
                         <h4 className="text-warm-100 font-serif text-xl mb-1">{cred.title}</h4>
-                        <p className="text-coffee-400 text-xs font-bold uppercase tracking-wider mb-2">{cred.org}</p>
+                        <p className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: "rgba(232, 87, 58, 1)" }}>{cred.org}</p>
                         <p className="text-warm-400 text-sm font-light leading-relaxed">{cred.desc}</p>
                     </div>
                 </div>

@@ -14,7 +14,7 @@ const offers: Record<string, OfferSubCategory> = {
     benefits: ['wewnętrznym dialogiem', 'obrazami mentalnymi', 'ciałem', 'emocjami'],
     image: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80',
     tileBackgroundImage: '/assets/TILES_1.jpg',
-    additionalInfo: 'tak, aby przestały działać przeciwko Tobie, a zaczęły wzmacniać Twoje poczucie spokoju, stabilności i sprawczości. Odzyskanie równowagi emocjonalnej wymaga uważności, czasu i odpowiednich narzędzi. To proces, który pozwala wrócić do siebie i funkcjonować w zgodzie z własnymi potrzebami - bez ciągłego napięcia i wewnętrznej walki',
+    additionalInfo: 'tak, aby przestały działać przeciwko Tobie, a zaczęły wzmacniać Twoje poczucie spokoju, stabilności i sprawczości. Odzyskanie równowagi emocjonalnej wymaga uważności, czasu i odpowiednich narzędzi. To proces, który pozwala wrócić do siebie i funkcjonować w zgodzie z własnymi potrzebami - bez ciągłego napięcia i wewnętrznej walki.',
     autonomousHeadline: 'Czujesz, że straciłaś/łeś grunt pod nogami?',
     benefitsHeadline: 'Podczas sesji indywidualnych pokażę Ci, jak świadomie pracować z:'
   },
@@ -26,7 +26,7 @@ const offers: Record<string, OfferSubCategory> = {
     benefits: ['ciało przestaje reagować paniką na dawne wyzwalacze', 'poczucie winy traci swoją miażdżącą siłę', 'wraca możliwość normalnego oddychania i myślenia w sytuacjach, które wcześniej paraliżowały'],
     image: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80',
     tileBackgroundImage: '/assets/TILES_2.jpg',
-    additionalInfo: 'Jeśli masz dość życia na skróconej smyczy lęku albo ciągłego wewnętrznego prokuratora zapraszam. Możemy wspólnie sprawdzić, jak to jest, kiedy stare programy w końcu dostają zgodę na emeryturę.',
+    additionalInfo: '',
     autonomousHeadline: 'Czujesz, że coś w środku ciągle trzyma Cię za gardło? ',
     benefitsHeadline: 'Najczęściej po kilku spotkaniach ludzie zauważają, że:'
   },
@@ -47,12 +47,12 @@ const offers: Record<string, OfferSubCategory> = {
     title: 'Wewnętrzna integracja',
     description: 'Czy zdarza Ci się mieć poczucie, że wewnętrznie jesteś rozdarty/a — jakby różne części Ciebie chciały czegoś innego, a żadna z nich nie potrafiła przejąć prowadzenia? Taki stan często objawia się napięciem, brakiem decyzji lub powtarzaniem zachowań, które są sprzeczne z Twoimi intencjami.',
     fullDescription: ' — jakby różne części Ciebie chciały czegoś innego, a żadna z nich nie potrafiła przejąć prowadzenia? Taki stan często objawia się napięciem, brakiem decyzji lub powtarzaniem zachowań, które są sprzeczne z Twoimi intencjami. To nie jest brak silnej woli to dysonans wewnętrzny który pojawia się wtedy, gdy różne potrzeby, przekonania lub impulsy działają jednocześnie, ale w przeciwnych kierunkach. W ujęciu hipnoterapeutycznym zakłada się, że każda z tych części ma swoją ważną, pozytywną intencję — problemem nie jest ona sama, lecz sposób jej realizacji, który wchodzi w konflikt z innymi aspektami Twojego funkcjonowania. Podczas pracy w stanie transu możliwe jest dotarcie do tych wewnętrznych mechanizmów i stworzenie przestrzeni do ich integracji. Celem jest wypracowanie nowych, spójnych rozwiązań, które pozwolą zaspokoić potrzeby różnych części podświadomości bez wzajemnego blokowania się. Jeśli towarzyszy Ci uporczywe poczucie wewnętrznego konfliktu i chcesz odzyskać jasność, spokój oraz poczucie kierunku, pomogę Ci przejść przez ten proces w bezpieczny i uporządkowany sposób.',
-    benefits: ['001', '002', '003', '004'],
+    benefits: ['lepsze rozumienie wewnętrznych części siebie i ich rzeczywistych intencji', 'zmniejszenie napięcia wynikającego z wewnętrznych sprzeczności', 'odzyskanie większej spójności, jasności i poczucia kierunku w codziennym życiu', '004'],
     image: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80',
     tileBackgroundImage: '/assets/TILES_4.jpg',
-    additionalInfo: 'Czasem wystarczy kilka sesji, żeby przestać się ze sobą szarpać i zacząć po prostu… być sobą.',
+    additionalInfo: 'Jeśli czujesz, że wewnętrznie coś ciągnie Cię w różne strony, zapraszam. Wspólnie możemy spokojnie dotrzeć do źródła tego napięcia i odzyskać więcej równowagi.',
     autonomousHeadline: 'Czy zdarza Ci się mieć poczucie, że wewnętrznie jesteś rozdarty/a?',
-    benefitsHeadline: 'Autonomiczny nagłówek dla korzyści związanych z Wewnętrzna integracja.'
+    benefitsHeadline: 'Celem tej pracy jest:'
   },
   'personal-development': {
     id: 'personal-development',
@@ -71,24 +71,24 @@ const offers: Record<string, OfferSubCategory> = {
     title: 'Powrót do równowagi po rozstaniu',
     description: 'Rozstanie boli - niezależnie od tego, kto podjął decyzję i jak bardzo „słuszna" wydawała się w danym momencie. Często długo potem nosimy w sobie smutek, żal, złość, poczucie straty albo pustki, która nie chce się zagoić.',
     fullDescription: 'Często długo potem nosimy w sobie smutek, żal, złość, poczucie straty albo pustki, która nie chce się zagoić. W hipnoterapii towarzyszę Ci w tym procesie w sposób łagodny i bezpieczny. Pracujemy z emocjami, które wciąż mocno trzymają, z myślami, które wracają w kółko, z przywiązaniami, które nie pozwalają puścić. Nie chodzi o to, żeby „zapomnieć" czy „szybko przejść dalej", tylko o to, żeby pozwolić sobie przeżyć to doświadczenie w pełni - i w końcu móc je odłożyć z szacunkiem. Po tej pracy zwykle pojawia się więcej spokoju wewnętrznego, lżejsze oddychanie i powoli rodząca się przestrzeń na nowe - na siebie i na relacje, które już nie będą musiały dźwigać ciężaru starego bólu.',
-    benefits: [' '],
+    benefits: ['więcej zgody na to, co trudne i niedomknięte','mniej napięcia wokół tego, co było', 'więcej wewnętrznego spokoju i gotowości na to, co nowe'],
     image: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80',
     tileBackgroundImage: '/assets/TILES_6.jpg',
     additionalInfo: ' ',
     autonomousHeadline: 'Rozstanie boli - niezależnie od tego, kto podjął decyzję i jak bardzo „słuszna" wydawała się w danym momencie',
-    benefitsHeadline: 'Jeśli czujesz, że wciąż jesteś „tam" - chętnie Ci w tym będę towarzyszyć.'
+    benefitsHeadline: 'W tym procesie stopniowo pojawia się:'
   },
   'relationships': {
     id: 'relationships',
     title: 'Regulacja wagi',
     description: 'Praca z wagą w hipnoterapii nie polega na walce z ciałem ani na narzucaniu sztywnych zasad. To proces, w którym skupiamy się na zmianie głębokich, nieuświadomionych schematów wpływających na sposób jedzenia, relację z jedzeniem, motywację i dbanie o siebie',
     fullDescription: 'To proces, w którym skupiamy się na zmianie głębokich, nieuświadomionych schematów wpływających na sposób jedzenia, relację z jedzeniem, motywację i dbanie o siebie. Podczas cyklu indywidualnych sesji wspólnie wypracowujemy rozwiązania dopasowane do Twojego organizmu, stylu życia i wewnętrznych potrzeb. Pracujemy nad budowaniem wspierających nawyków żywieniowych i ruchowych, wzmacnianiem motywacji oraz poczucia sprawczości — w zgodzie z Twoim systemem wartości i realnymi możliwościami.',
-    benefits: [' '],
+    benefits: ['większe zrozumienie mechanizmów, które wpływają na jedzenie i relację z ciałem','więcej sprawczości, motywacji i nawyków dopasowanych do Twoich realnych możliwości', 'bardziej naturalna troska o siebie, oparta na równowadze, a nie na przymusie. jeśli chcesz odzyskać wpływ na swoje wybory i relację z ciałem — możemy wspólnie poszukać drogi, która będzie naprawdę Twoja'],
     image: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80',
     tileBackgroundImage: '/assets/TILES_7.jpg',
     additionalInfo: ' ',
     autonomousHeadline: 'Praca z wagą w hipnoterapii nie polega na walce z ciałem ani na narzucaniu sztywnych zasad',
-    benefitsHeadline: 'Jedną z form tej pracy może być również cykl sesji określany jako „hipnotyczna opaska na żołądek". Polega on na pracy z podświadomością w sposób symboliczny, bez fizycznej ingerencji w ciało. Celem jest zmiana odczuwania sytości i potrzeb związanych z jedzeniem poprzez oddziaływanie na poziomie umysłu, a nie chirurgicznego zabiegu. Ta forma pracy nie wiąże się z obciążeniami ani skutkami ubocznymi charakterystycznymi dla interwencji medycznych.'
+    benefitsHeadline: 'W tym procesie stopniowo pojawia się:'
   },
   'psychedelic-therapy': {
     id: 'psychedelic-therapy',
@@ -116,24 +116,30 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ id }) => (
             <h2 className="font-display text-4xl md:text-4xl text-warm-100 tracking-wide py-0 -mt-[25px] -mb-[25px]">OTO W CZYM MOGĘ CI POMÓC:</h2>
         </div>
 
-       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 auto-rows-fr">
+       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
          {Object.values(offers).map((offer) => (
            <Link to={`/offer/${offer.id}`} key={offer.id} className="group relative flex flex-col h-full overflow-hidden bg-warm-800 rounded-2xl">
              <AnimatedTile offerId={offer.id} backgroundImage={offer.tileBackgroundImage} />
              
-             <div className="relative z-10 p-6 pt-10 flex flex-col justify-start text-center items-center flex-grow">
+             <div className="relative z-10 p-4 pt-6 flex flex-col justify-start text-center items-center flex-grow">
                  {/* Frame Effect */}
-                 <div className="absolute inset-3 border border-warm-950/10 group-hover:border-coffee-400/40 transition-colors duration-700 pointer-events-none rounded-xl"></div>
+                 <div className="absolute inset-2 border border-warm-950/10 group-hover:border-coffee-400/40 transition-colors duration-700 pointer-events-none rounded-xl"></div>
                  
                  <div className="transform transition-transform duration-500 group-hover:-translate-y-2 w-full flex flex-col items-center">
-                    <h3 className="font-display text-xl text-warm-100 mb-2 tracking-wide drop-shadow-lg leading-tight px-2">{offer.title}</h3>
+                    <h3 className="font-display text-lg mb-2 tracking-wide drop-shadow-lg leading-tight px-2" style={{ color: "rgba(232, 87, 58, 1)", fontWeight: 600 }}>{offer.title}</h3>
                     
                     {/* Animated Line */}
-                    <div className="w-0 h-px bg-coffee-400 mx-auto mb-4 transition-all duration-500 group-hover:w-12 opacity-80"></div>
+                    <div className="w-0 h-px bg-coffee-400 mx-auto mb-3 transition-all duration-500 group-hover:w-12 opacity-80"></div>
                     
-                    <p className="text-warm-300 font-sans text-xs font-light leading-relaxed max-w-[240px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0 delay-75">
+                    <p className="text-warm-300 font-sans text-xs font-light leading-relaxed max-w-[240px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0 delay-75 mb-4">
                         {offer.description}
                     </p>
+                 </div>
+                 
+                 <div className="mt-auto pt-2 pb-2">
+                    <span className="inline-flex items-center justify-center px-5 py-2 border border-warm-700/30 rounded-full text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-warm-300 group-hover:text-coffee-300 group-hover:border-coffee-400/40 transition-all duration-500 bg-warm-950/40 backdrop-blur-sm">
+                      Dowiedz się więcej
+                    </span>
                  </div>
              </div>
            </Link>
@@ -210,9 +216,8 @@ export const OfferDetail: React.FC = () => {
                 )}
              </div>
 
-             <div className="text-center pt-8" style={{ boxSizing: 'content-box' }}>
-                <p className="text-coffee-400 mb-8 font-serif text-xl font-normal" style={{ borderWidth: '0px', borderColor: 'rgba(0, 0, 0, 0)', borderStyle: 'none', borderImage: 'none' }}>Jeśli masz dość życia na skróconej smyczy lęku albo ciągłego wewnętrznego prokuratora -
-                zapraszam. Możemy wspólnie sprawdzić, jak to jest, kiedy stare programy w końcu dostają zgodę na emeryturę.</p>
+             <div className="text-center pt-0" style={{ boxSizing: 'content-box' }}>
+                <p className="text-coffee-400 mb-8 font-serif text-xl font-normal" style={{ borderWidth: '0px', borderColor: 'rgba(0, 0, 0, 0)', borderStyle: 'none', borderImage: 'none' }}></p>
                 <a href="#contact" onClick={(e) => handleNavigate(e, 'contact')} className="inline-block px-12 py-5 bg-coffee-700 text-white font-sans text-xs font-bold uppercase tracking-[0.2em] hover:bg-coffee-600 transition-all shadow-lg hover:shadow-coffee-900/30 cursor-pointer rounded-full">
                   ZAREZERWUJ TĘ SESJĘ
                 </a>

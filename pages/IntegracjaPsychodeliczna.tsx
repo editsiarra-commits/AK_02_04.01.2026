@@ -71,7 +71,7 @@ const IntegracjaPsychodeliczna: React.FC = () => {
               Jeśli rozpoznajesz się w którymkolwiek z tych punktów, integracja może być kluczowym etapem Twojego procesu.
             </p>
 
-            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Przygotowanie !</h2>
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Przygotowanie</h2>
             <p>
             Przygotowanie to moment zatrzymania i wsłuchania się w to, co naprawdę Cię woła.
 To praca z intencją, regulacją ciała i układu nerwowego, z lękami, oczekiwaniami i granicami — a także ze świadomym budowaniem set & setting, czyli wewnętrznych i zewnętrznych warunków, w jakich doświadczenie może się wydarzyć.
@@ -93,7 +93,7 @@ To praca z intencją, regulacją ciała i układu nerwowego, z lękami, oczekiwa
               Integracja sprawia, że to, co było intensywnym przeżyciem, może stać się żywym, wspierającym procesem zmiany, a nie tylko wspomnieniem „tripa".
             </p>
 
-            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Ważna informacja prawna !</h2>
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Ważna informacja prawna</h2>
             <p>
             Oferowana przeze mnie praca:
             </p>

@@ -48,7 +48,7 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
                  </div>
                  <div>
                    <h3 className="font-serif text-xl text-warm-200">Email</h3>
-                   <p className="text-warm-400">agnieszka@hypno-therapy.example</p>
+                   <p className="text-warm-400">agnieszka_kochanowska@wp.pl</p>
                  </div>
                </div>
 
@@ -58,8 +58,8 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
                  </div>
                  <div>
                    <h3 className="font-serif text-xl text-warm-200">Gabinet</h3>
-                   <p className="text-warm-400">ul. Spokojna 123, Lok. 4</p>
-                   <p className="text-warm-400">Warszawa, Polska</p>
+                   <p className="text-warm-400"></p>
+                   <p className="text-warm-400">Warszawa, Białystok, Online</p>
                  </div>
                </div>
             </div>
@@ -113,7 +113,6 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
                    >
                      <option>Zapytanie Ogólne</option>
                      <option>Umówienie Sesji</option>
-                     <option>Pytanie o Cennik</option>
                      <option>Inne</option>
                    </select>
                 </div>

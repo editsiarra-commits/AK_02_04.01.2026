@@ -89,7 +89,7 @@ Dlatego integralną częścią pracy jest osobna sesja integracyjna, podczas kt�
             </p> 
 
             <ul className="list-none space-y-2 pl-0 mt-4">
-              <li>* ok. 4-godzinna sesja oddechowa inspirowana oddychaniem holotropowym, połączona z body scanningiem i pracą z ciałem.</li>
+              <li>* ok. 5-godzinna sesja oddechowa inspirowana oddychaniem holotropowym, połączona z body scanningiem i pracą z ciałem.</li>
               <li>* 2-godzinna sesja integracyjna, odbywająca się po procesie oddechowym.</li>
             </ul>
 
