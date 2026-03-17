@@ -13,10 +13,27 @@
 				"routes": [
 					"/",
 					"/#/",
-					"/#/offer/stress-anxiety"
+					"/#/offer/stress-anxiety",
+					"/#/pricing"
 				],
-				"current_route": "/#/offer/stress-anxiety"
-			}
+				"current_route": "/#/pricing"
+			},
+			"urls": {
+				"pinyfakepage.html": {
+					"open-page-views": [
+						{
+							"w": 1300,
+							"h": 0
+						}
+					]
+				}
+			},
+			"tw-external-config": {
+				"external_source_url": "src/index.css"
+			},
+			"source-folders": null,
+			"preview-url": "http://127.0.0.1:3000",
+			"ai-project-brief": null
 		}
 	}
 }

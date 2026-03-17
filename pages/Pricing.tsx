@@ -214,8 +214,9 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                           </div>
                           
                           <div className="mt-14 mb-8 md:mb-0 relative z-10">
-                            <div className="text-5xl md:text-6xl font-serif text-warm-100 tracking-tight">
-                              {item.price}
+                            <div className="flex items-baseline font-serif tracking-tight">
+                              <span className="text-5xl md:text-6xl text-warm-100 mr-2">{item.price.split(' ')[0]}</span>
+                              <span className="text-3xl md:text-4xl text-black font-light">{item.price.split(' ')[1]}</span>
                             </div>
                             <div className="text-warm-500 mt-4 font-light text-sm tracking-widest uppercase">
                               {item.duration}
