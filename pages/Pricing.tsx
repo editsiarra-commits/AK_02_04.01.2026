@@ -22,8 +22,8 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
       subtitle: "Proces transformacyjny",
       price: "2000 zł",
       duration: "5 sesji",
-      description: "Ponad 7 godzin głębokiej, uważnej pracy w relacji. Pierwsze spotkanie – do 2 godzin – to czas, w którym naprawdę Cię poznaję: Twoją historię, zasoby, mechanizmy, marzenia i to, co dotychczas blokowało zmianę. Kolejne sesje trwają zazwyczaj 90 minut.",
-      targetAudience: "Ten pakiet tworzę dla osób, które mówią: „Chcę przestać łatać objawy – chcę realnej, trwałej zmiany”.",
+      description: "Ten pakiet tworzę dla osób, które mówią: „Chcę przestać łatać objawy – chcę realnej, trwałej zmiany.",
+      targetAudience: "Ponad 7 godzin głębokiej, uważnej pracy w relacji. Pierwsze spotkanie – do 2 godzin – to czas, w którym naprawdę Cię poznaję: Twoją historię, zasoby, mechanizmy, marzenia i to, co dotychczas blokowało zmianę. Kolejne sesje trwają zazwyczaj 90 minut.”.",
       details: [
         "Hipnoterapia osiąga najwyższą moc, gdy jest procesem – sekwencją spotkań, w której każdy krok buduje na poprzednim.",
         "Dzięki temu mogę zaprojektować drogę dokładnie pod Ciebie – zamiast gasić pojedyncze pożary, docieramy do źródła.",
@@ -109,7 +109,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
             className="w-full h-full object-cover"
             src="/assets/video4.mp4"
           />
-          <div className="absolute inset-0 bg-warm-950/70"></div>
+          <div className="absolute inset-0 bg-warm-950/85"></div>
           <div className="absolute right-0 bottom-0 bg-gradient-to-t from-warm-900 to-transparent"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center pt-8">
@@ -121,7 +121,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
           </h1>
           <div className="text-xl md:text-2xl text-warm-300 font-serif italic max-w-3xl mx-auto space-y-4">
             <p>To nie są po prostu „sesje”.</p>
-            <p>To starannie zaprojektowane przestrzenie, w których możesz przestać walczyć ze sobą i zacząć żyć w zgodzie z tym, kim naprawdę jesteś.</p>
+            <p className="text-[#32303b]">To starannie zaprojektowane przestrzenie, w których możesz przestać walczyć ze sobą i zacząć żyć w zgodzie z tym, kim naprawdę jesteś.</p>
             <p>Jeśli czujesz, że to może być Twój moment – napisz lub zadzwoń.</p>
             <p className="text-[#e8573a]">Pierwszy krok jest bezpłatny.</p>
           </div>
@@ -138,7 +138,8 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
             </Link>
           </div>
           
-          <div className="bg-warm-950 rounded-[40px] p-8 md:p-10 border border-warm-800 text-left mx-8 sm:mx-16 md:mx-20 lg:mx-28">
+
+          <div className="text-left mx-8 sm:mx-16 md:mx-20 lg:mx-28 mb-10">
             <p className="text-warm-300 text-lg font-light mb-6">
               Przed dokonaniem jakiejkolwiek płatności zapraszam Cię na bezpłatną, 15-minutową konsultację telefoniczną.
               W spokojnej przestrzeni, w której wspólnie:
@@ -193,7 +194,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                   style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 >
                   {pricingItems.map((item, index) => (
-                    <div key={item.id} className="w-full shrink-0 pb-16 md:pb-20 pt-4 px-8 sm:px-16 md:px-20 lg:px-28">
+                    <div key={item.id} className="w-full shrink-0 pb-16 md:pb-20 pt-[50px] px-8 sm:px-16 md:px-20 lg:px-28">
                       <div className="bg-warm-950 rounded-[40px] overflow-hidden border border-warm-800/80 flex flex-col md:flex-row h-full shadow-[0_20px_70px_-10px_rgba(0,0,0,0.5)] hover:border-warm-700 hover:shadow-[0_20px_70px_-10px_rgba(154,115,82,0.25)] transition-all duration-500">
                         
                         {/* Left Column: Title & Price */}
@@ -204,10 +205,10 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                               0{index + 1} — 0{pricingItems.length}
                             </div>
                             
-                            <h3 className="font-serif text-3xl md:text-4xl text-warm-100 leading-snug mb-4">
+                            <h3 className="font-serif text-3xl md:text-4xl text-coffee-600 leading-snug mb-4 font-medium">
                               {item.title}
                             </h3>
-                            <p className="text-warm-400 text-lg font-light tracking-wide italic">
+                            <p className="text-warm-400 text-lg font-light tracking-wide">
                               {item.subtitle}
                             </p>
                           </div>
@@ -222,7 +223,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                           </div>
                           
                           <div className="mt-12 hidden md:block relative z-10">
-                            <a href="#contact" onClick={handleContactClick} className="block w-full py-4 text-center bg-coffee-700 text-white font-sans hover:bg-coffee-600 transition-all duration-300 uppercase text-xs tracking-widest rounded-full">
+                            <a href="#contact" onClick={handleContactClick} className="block w-full py-4 text-center bg-coffee-600 text-white font-sans hover:bg-coffee-500 transition-all duration-300 uppercase text-xs tracking-widest rounded-full">
                               Zarezerwuj Termin
                             </a>
                           </div>
@@ -235,7 +236,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                           </p>
                           
                           <div className="space-y-6">
-                            <h4 className="font-sans text-xs font-medium uppercase text-coffee-400 tracking-[0.2em]">
+                            <h4 className="font-sans text-sm font-light transition-all text-coffee-400 tracking-[0.2em] text-left tracking-normal">
                               {item.targetAudience}
                             </h4>
                             <ul className="space-y-5">
@@ -249,7 +250,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                           </div>
                           
                           <div className="mt-12 md:hidden">
-                            <a href="#contact" onClick={handleContactClick} className="block w-full py-4 text-center bg-coffee-700 text-white font-sans hover:bg-coffee-600 transition-all duration-300 uppercase text-xs tracking-widest rounded-full">
+                            <a href="#contact" onClick={handleContactClick} className="block w-full py-4 text-center bg-coffee-600 text-white font-sans hover:bg-coffee-500 transition-all duration-300 uppercase text-xs tracking-widest rounded-full">
                               Zarezerwuj Termin
                             </a>
                           </div>
