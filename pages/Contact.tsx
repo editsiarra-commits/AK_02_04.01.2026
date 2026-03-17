@@ -1,20 +1,34 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Check } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Mail, Phone, MapPin, Send, Check, AlertCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 interface SectionProps {
   id?: string;
 }
 
 const Contact: React.FC<SectionProps> = ({ id }) => {
-  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus('submitting');
-    // Simulate form submission
-    setTimeout(() => {
-      setFormStatus('success');
-    }, 1500);
+    
+    if (formRef.current) {
+      emailjs.sendForm(
+        'YOUR_SERVICE_ID', // Replace with your actual Service ID from EmailJS
+        'YOUR_TEMPLATE_ID', // Replace with your actual Template ID from EmailJS
+        formRef.current,
+        'YOUR_PUBLIC_KEY' // Replace with your actual Public Key from EmailJS
+      )
+      .then((result) => {
+          console.log('Email sent successfully:', result.text);
+          setFormStatus('success');
+      }, (error) => {
+          console.error('Failed to send email:', error.text);
+          setFormStatus('error');
+      });
+    }
   };
 
   return (
@@ -67,7 +81,7 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
 
           <div className="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-warm-800">
             {formStatus === 'success' ? (
-              <div className="h-full flex flex-col items-center justify-center text-center space-y-6">
+              <div className="h-full flex flex-col items-center justify-center text-center space-y-6 py-8">
                 <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center text-green-600 border border-green-200">
                   <Check size={40} />
                 </div>
@@ -80,24 +94,40 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
                   Wyślij kolejną wiadomość
                 </button>
               </div>
+            ) : formStatus === 'error' ? (
+              <div className="h-full flex flex-col items-center justify-center text-center space-y-6 py-8">
+                <div className="w-20 h-20 bg-red-100/10 rounded-full flex items-center justify-center text-red-500 border border-red-500/20">
+                  <AlertCircle size={40} />
+                </div>
+                <h3 className="font-serif text-3xl text-warm-100">Błąd Wysyłania</h3>
+                <p className="text-warm-400">Przepraszamy, nie udało się wysłać wiadomości. Spróbuj ponownie później lub skontaktuj się bezpośrednio przez email.</p>
+                <button 
+                  onClick={() => setFormStatus('idle')}
+                  className="mt-6 text-coffee-400 hover:text-coffee-300 underline"
+                >
+                  Spróbuj ponownie
+                </button>
+              </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-xs uppercase tracking-wider text-warm-400 mb-2">Imię</label>
+                    <label htmlFor="user_name" className="block text-xs uppercase tracking-wider text-warm-400 mb-2">Imię</label>
                     <input 
                       type="text" 
-                      id="name" 
+                      id="user_name" 
+                      name="user_name"
                       required
                       className="w-full px-4 py-3 bg-warm-900 border border-warm-800 rounded-xl text-warm-200 focus:outline-none focus:ring-1 focus:ring-coffee-400 focus:border-coffee-400 transition-all placeholder-warm-500"
                       placeholder="Twoje imię"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-xs uppercase tracking-wider text-warm-400 mb-2">Email</label>
+                    <label htmlFor="user_email" className="block text-xs uppercase tracking-wider text-warm-400 mb-2">Email</label>
                     <input 
                       type="email" 
-                      id="email" 
+                      id="user_email" 
+                      name="user_email"
                       required
                       className="w-full px-4 py-3 bg-warm-900 border border-warm-800 rounded-xl text-warm-200 focus:outline-none focus:ring-1 focus:ring-coffee-400 focus:border-coffee-400 transition-all placeholder-warm-500"
                       placeholder="twoj@email.com"
@@ -109,11 +139,12 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
                    <label htmlFor="subject" className="block text-xs uppercase tracking-wider text-warm-400 mb-2">Temat</label>
                    <select 
                      id="subject"
+                     name="subject"
                      className="w-full px-4 py-3 bg-warm-900 border border-warm-800 rounded-xl text-warm-200 focus:outline-none focus:ring-1 focus:ring-coffee-400 focus:border-coffee-400 transition-all"
                    >
-                     <option>Zapytanie Ogólne</option>
-                     <option>Umówienie Sesji</option>
-                     <option>Inne</option>
+                     <option value="Zapytanie Ogólne">Zapytanie Ogólne</option>
+                     <option value="Umówienie Sesji">Umówienie Sesji</option>
+                     <option value="Inne">Inne</option>
                    </select>
                 </div>
 
@@ -121,6 +152,7 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
                   <label htmlFor="message" className="block text-xs uppercase tracking-wider text-warm-400 mb-2">Wiadomość</label>
                   <textarea 
                     id="message" 
+                    name="message"
                     rows={4}
                     required
                     className="w-full px-4 py-3 bg-warm-900 border border-warm-800 rounded-xl text-warm-200 focus:outline-none focus:ring-1 focus:ring-coffee-400 focus:border-coffee-400 transition-all placeholder-warm-500"

@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.1.18",
+    "firebase": "^12.10.0",
     "lucide-react": "^0.562.0",
     "opencode-antigravity-auth": "^1.2.7",
     "react": "^19.2.3",

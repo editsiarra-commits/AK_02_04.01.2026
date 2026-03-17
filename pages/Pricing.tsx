@@ -110,7 +110,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
             src="/assets/video4.mp4"
           />
           <div className="absolute inset-0 bg-warm-950/85"></div>
-          <div className="absolute right-0 bottom-0 bg-gradient-to-t from-warm-900 to-transparent"></div>
+          <div className="absolute right-0 bottom-0 bg-linear-to-t from-warm-900 to-transparent"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center pt-8">
           <p className="text-coffee-400 font-sans text-xl font-bold uppercase tracking-[0.3em] mb-4">
@@ -232,12 +232,12 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
 
                         {/* Right Column: Details */}
                         <div className="p-10 md:p-14 md:w-7/12 flex flex-col justify-center bg-transparent">
-                          <p className="text-warm-200 text-lg font-light leading-relaxed mb-10">
+                          <p className="text-warm-300 text-lg font-light leading-relaxed mb-[25px]">
                             {item.description}
                           </p>
                           
                           <div className="space-y-6">
-                            <h4 className="font-sans text-sm font-light transition-all text-coffee-400 tracking-[0.2em] text-left tracking-normal">
+                            <h4 className="font-sans text-[15px] font-normal transition-all text-coffee-400 text-left">
                               {item.targetAudience}
                             </h4>
                             <ul className="space-y-5">

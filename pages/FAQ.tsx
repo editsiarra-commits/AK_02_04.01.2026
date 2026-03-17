@@ -64,7 +64,7 @@ const FAQ: React.FC<FAQProps> = ({ id }) => {
                 }`}>
                   {faq.question}
                 </span>
-                <div className={`flex-shrink-0 transition-all duration-300 ${
+                <div className={`shrink-0 transition-all duration-300 ${
                    openIndex === index ? 'text-coffee-400 rotate-180' : 'text-warm-500'
                 }`}>
                   <ChevronDown size={20} />

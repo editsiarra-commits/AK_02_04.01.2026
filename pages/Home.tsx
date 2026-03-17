@@ -219,8 +219,8 @@ const Home: React.FC = () => {
         {/* Why Hypnotherapy Section */}
         <section className="py-24 bg-warm-950 relative overflow-hidden border-t border-warm-800">
           {/* Decorative background elements */}
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-coffee-400 to-transparent opacity-20"></div>
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-coffee-900/10 to-transparent pointer-events-none"></div>
+          <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-coffee-400 to-transparent opacity-20"></div>
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-coffee-900/10 to-transparent pointer-events-none"></div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">

@@ -76,7 +76,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                 </a>
             </div>
 
-            <div className="flex-shrink-0 flex items-center">
+            <div className="shrink-0 flex items-center">
               <Link 
                 to="/" 
                 onClick={handleLogoClick}
@@ -161,7 +161,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-warm-950 shadow-xl h-screen overflow-y-auto pb-20 border-t border-warm-800 flex flex-col">
-          <div className="px-4 pt-4 pb-3 space-y-1 flex-grow">
+          <div className="px-4 pt-4 pb-3 space-y-1 grow">
             {navItems.map((item) => (
               <div key={item.label}>
                 {item.children ? (
@@ -170,7 +170,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                         <a 
                            href={item.path}
                            onClick={(e) => handleNavClick(e, item.path)}
-                           className="flex-grow py-4 text-sm font-bold text-warm-100 uppercase tracking-widest"
+                           className="grow py-4 text-sm font-bold text-warm-100 uppercase tracking-widest"
                         >
                            {item.label}
                         </a>

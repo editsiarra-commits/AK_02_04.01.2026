@@ -121,7 +121,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ id }) => (
            <Link to={`/offer/${offer.id}`} key={offer.id} className="group relative flex flex-col h-full overflow-hidden bg-warm-800 rounded-2xl">
              <AnimatedTile offerId={offer.id} backgroundImage={offer.tileBackgroundImage} />
              
-             <div className="relative z-10 p-4 pt-6 flex flex-col justify-start text-center items-center flex-grow">
+             <div className="relative z-10 p-4 pt-6 flex flex-col justify-start text-center items-center grow">
                  {/* Frame Effect */}
                  <div className="absolute inset-2 border border-warm-950/10 group-hover:border-coffee-400/40 transition-colors duration-700 pointer-events-none rounded-xl"></div>
                  
@@ -202,7 +202,7 @@ export const OfferDetail: React.FC = () => {
                <ul className="space-y-4">
                  {offer.benefits.filter(b => b.trim() !== '').map((benefit, index) => (
                    <li key={index} className="flex items-start">
-                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-coffee-900 flex items-center justify-center mt-1 mr-4 border border-coffee-800">
+                     <div className="shrink-0 w-6 h-6 rounded-full bg-coffee-900 flex items-center justify-center mt-1 mr-4 border border-coffee-800">
                        <Check size={12} className="text-coffee-400" />
                      </div>
                      <span className="text-warm-200 font-semibold text-lg">{benefit}</span>

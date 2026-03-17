@@ -51,9 +51,6 @@ const About: React.FC<SectionProps> = ({ id }) => {
         .animate-scroll {
           animation: scroll 30s linear infinite;
         }
-        .animate-scroll:hover {
-          animation-play-state: paused;
-        }
       `}</style>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -64,7 +61,7 @@ const About: React.FC<SectionProps> = ({ id }) => {
 
         <div className="flex flex-col md:flex-row gap-16 items-start mb-20">
            <div className="w-full md:w-5/12">
-              <div className="aspect-[3/4] bg-warm-800 overflow-hidden shadow-2xl relative group sticky top-24 rounded-2xl">
+              <div className="aspect-3/4 bg-warm-800 overflow-hidden shadow-2xl group sticky top-24 rounded-2xl">
                 <div className="absolute inset-0 border border-warm-700 z-10 m-4 transition-all duration-500 group-hover:m-0 rounded-xl"></div>
                 <img
                   src="/assets/aboutme.jpg"
@@ -97,15 +94,15 @@ const About: React.FC<SectionProps> = ({ id }) => {
         {/* Dedicated Credentials Section */}
         <div className="mb-20">
            <div className="flex items-center space-x-4 mb-10">
-              <div className="h-px bg-warm-800 flex-grow"></div>
+              <div className="h-px bg-warm-800 grow"></div>
               <h3 className="font-serif text-2xl text-warm-200 uppercase tracking-widest text-center px-4">Kwalifikacje i Edukacja</h3>
-              <div className="h-px bg-warm-800 flex-grow"></div>
+              <div className="h-px bg-warm-800 grow"></div>
            </div>
            
            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {credentials.map((cred, index) => (
                 <div key={index} className="bg-white p-6 border border-warm-800 rounded-xl hover:border-coffee-400 transition-colors flex items-start space-x-4 group shadow-sm hover:shadow-lg">
-                    <div className="flex-shrink-0 bg-coffee-900 p-3 rounded-xl text-coffee-500 group-hover:text-coffee-400 border border-coffee-800 group-hover:border-coffee-400 transition-colors">
+                    <div className="shrink-0 bg-coffee-900 p-3 rounded-xl text-coffee-500 group-hover:text-coffee-400 border border-coffee-800 group-hover:border-coffee-400 transition-colors">
                         <cred.icon size={24} strokeWidth={1.5} />
                     </div>
                     <div>
@@ -123,12 +120,12 @@ const About: React.FC<SectionProps> = ({ id }) => {
            <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-coffee-500 mb-10">       </p>
            <div className="relative w-full overflow-hidden group/slider">
               {/* Fade edges */}
-              <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-warm-950 to-transparent z-10 pointer-events-none"></div>
-              <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-warm-950 to-transparent z-10 pointer-events-none"></div>
+             <div className="absolute top-0 left-0 h-full w-24 bg-linear-to-r from-warm-950 to-transparent z-10 pointer-events-none"></div>
+             <div className="absolute top-0 right-0 h-full w-24 bg-linear-to-l from-warm-950 to-transparent z-10 pointer-events-none"></div>
               
               <div className="flex animate-scroll w-max">
                  {[...logos, ...logos, ...logos].map((logo, index) => (
-                    <div key={index} className="mx-6 md:mx-10 w-48 h-24 flex items-center justify-center opacity-40 hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                    <div key={index} className="mx-6 md:mx-10 w-48 h-24 flex items-center justify-center opacity-40 transition-opacity duration-300">
                        <img src={logo.src} alt={logo.alt} className="max-h-full max-w-full object-contain"/>
                     </div>
                  ))}
