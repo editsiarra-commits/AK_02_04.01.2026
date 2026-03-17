@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     question: "Ile sesji będę potrzebować?",
-    answer: "To zależy od osoby i problemu. Niektóre nawyki, jak palenie, często można rozwiązać podczas jednej sesji. Głębsze problemy, takie jak lęk, trauma czy budowanie pewności siebie, zazwyczaj wymagają od 3 do 6 sesji dla trwałej, wzmocnionej zmiany."
+    answer: "Liczba sesji zależy od rodzaju problemu, jego głębokości oraz Twojej indywidualnej historii. Czasem już jedno spotkanie pozwala coś ważnego odblokować lub spojrzeć na problem z nowej perspektywy, ale w większości przypadków trwała zmiana wymaga kilku sesji. Głębsza praca, dotycząca np. lęku, traumy, relacji czy budowania pewności siebie, zazwyczaj odbywa się w procesie."
   },
   {
     question: "Czy hipnoterapia online jest tak samo skuteczna jak osobista?",
