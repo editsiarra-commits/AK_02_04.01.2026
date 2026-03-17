@@ -92,10 +92,10 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
   return (
     <section id={id} className="relative py-12 md:py-16 bg-warm-950 scroll-mt-20 overflow-hidden">
       {/* Intro Section (Slide 1 from PDF) */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8 md:mb-12">
+      <div className="max-w-6xl mx-auto text-center mb-8 md:mb-12">
         <h2 className="font-serif text-4xl md:text-5xl text-warm-100 mb-8">Cennik – Inwestycja w Twoją zmianę</h2>
         
-        <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-warm-800 shadow-sm text-left">
+        <div className="bg-white/50 backdrop-blur-sm rounded-[40px] p-8 md:p-10 border border-warm-800 shadow-sm text-left mx-4 sm:mx-12">
           <p className="text-warm-300 text-lg font-light mb-6">
             Przed dokonaniem jakiejkolwiek płatności zapraszam Cię na bezpłatną, 15-minutową konsultację telefoniczną.
             W spokojnej przestrzeni, w której wspólnie:
@@ -124,13 +124,13 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
       </div>
 
       {/* Full Width Horizontal Slider (Slides 2-6 from PDF) */}
-      <div className="w-full relative px-4 sm:px-8">
+      <div className="w-full relative px-0 sm:px-8">
         <div className="max-w-6xl mx-auto relative">
           
           {/* Navigation Buttons */}
           <button 
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 sm:-ml-12 z-10 p-4 rounded-full bg-white/80 backdrop-blur-sm border border-coffee-100 text-warm-300 hover:text-coffee-400 hover:border-coffee-300 hover:bg-white transition-all shadow-[0_4px_20px_rgb(0,0,0,0.03)] focus:outline-none group"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 sm:-ml-12 z-10 p-4 rounded-full bg-white/80 backdrop-blur-sm border border-coffee-100 text-warm-300 hover:text-coffee-400 hover:border-coffee-300 hover:bg-white transition-all shadow-[0_4px_20px_rgb(0,0,0,0.03)] focus:outline-none group"
             aria-label="Previous option"
           >
             <ChevronLeft size={20} className="group-hover:-translate-x-0.5 transition-transform" strokeWidth={1.5} />
@@ -138,20 +138,20 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
           
           <button 
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 sm:-mr-12 z-10 p-4 rounded-full bg-white/80 backdrop-blur-sm border border-coffee-100 text-warm-300 hover:text-coffee-400 hover:border-coffee-300 hover:bg-white transition-all shadow-[0_4px_20px_rgb(0,0,0,0.03)] focus:outline-none group"
+            className="absolute right-0 top-1/2 -translate-y-1/2 -mr-2 sm:-mr-12 z-10 p-4 rounded-full bg-white/80 backdrop-blur-sm border border-coffee-100 text-warm-300 hover:text-coffee-400 hover:border-coffee-300 hover:bg-white transition-all shadow-[0_4px_20px_rgb(0,0,0,0.03)] focus:outline-none group"
             aria-label="Next option"
           >
             <ChevronRight size={20} className="group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
           </button>
 
           {/* Slider Container */}
-          <div className="overflow-hidden px-2 py-4">
+          <div className="overflow-hidden py-4 px-4 sm:px-0">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {pricingItems.map((item, index) => (
-                <div key={item.id} className="w-full shrink-0 px-2 sm:px-4 py-2 md:py-4">
+                <div key={item.id} className="w-full shrink-0 px-2 sm:px-12 py-2 md:py-4">
                   <div className="bg-warm-900/60 backdrop-blur-sm rounded-[40px] shadow-[0_10px_40px_rgb(0,0,0,0.03)] overflow-hidden border border-warm-800/40 flex flex-col md:flex-row h-full">
                     
                     {/* Left Column: Title & Price */}
@@ -195,7 +195,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                       </p>
                       
                       <div className="space-y-6">
-                        <h4 className="font-sans text-xs font-medium uppercase text-warm-300 tracking-[0.2em]">
+                        <h4 className="font-sans text-xs font-medium uppercase text-coffee-400 tracking-[0.2em]">
                           {item.targetAudience}
                         </h4>
                         <ul className="space-y-5">
