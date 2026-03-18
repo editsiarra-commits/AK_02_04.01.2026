@@ -25,9 +25,9 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
       description: "Ten pakiet tworzę dla osób, które mówią: „Chcę przestać łatać objawy – chcę realnej, trwałej zmiany.",
       targetAudience: "Ponad 7 godzin głębokiej, uważnej pracy w relacji. Pierwsze spotkanie – do 2 godzin – to czas, w którym naprawdę Cię poznaję: Twoją historię, zasoby, mechanizmy, marzenia i to, co dotychczas blokowało zmianę. Kolejne sesje trwają zazwyczaj 90 minut.”.",
       details: [
-        "Hipnoterapia osiąga najwyższą moc, gdy jest procesem – sekwencją spotkań, w której każdy krok buduje na poprzednim.",
-        "Dzięki temu mogę zaprojektować drogę dokładnie pod Ciebie – zamiast gasić pojedyncze pożary, docieramy do źródła.",
-        "To również najbardziej ekonomiczna i etyczna forma współpracy – zarówno dla Ciebie, jak i dla jakości efektów."
+        "hipnoterapia osiąga najwyższą moc, gdy jest procesem – sekwencją spotkań, w której każdy krok buduje na poprzednim.",
+        "dzięki temu mogę zaprojektować drogę dokładnie pod Ciebie – zamiast gasić pojedyncze pożary, docieramy do źródła.",
+        "to również najbardziej ekonomiczna i etyczna forma współpracy – zarówno dla Ciebie, jak i dla jakości efektów."
       ]
     },
     {
@@ -54,9 +54,9 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
       description: "Uporządkowana, bezpieczna podróż w głąb: przygotowanie → doświadczenie → integracja. Proces realizowany zgodnie z najwyższymi standardami bezpieczeństwa i etyki. Dla osób gotowych na głęboką, świadomą zmianę – w kontrolowanych, profesjonalnych ramach.",
       targetAudience: "W pakiecie:",
       details: [
-        "Sesja przygotowująca – ok. 2 h (intencja, granice, zasoby bezpieczeństwa, plan wsparcia)",
-        "Sesja psychodeliczna – Mindfulness-Based Psychedelic Therapy z wykorzystaniem medycznej marihuany – ok. 5 h (głęboka, prowadzona, w pełni legalna i nadzorowana)",
-        "Sesja integracyjna – ok. 2 h (przekładanie wglądów na codzienne życie, nowe decyzje, stabilne osadzenie)"
+        "sesja przygotowująca – ok. 2 h (intencja, granice, zasoby bezpieczeństwa, plan wsparcia)",
+        "sesja psychodeliczna – Mindfulness-Based Psychedelic Therapy z wykorzystaniem medycznej marihuany – ok. 5 h (głęboka, prowadzona, w pełni legalna i nadzorowana)",
+        "sesja integracyjna – ok. 2 h (przekładanie wglądów na codzienne życie, nowe decyzje, stabilne osadzenie)"
       ]
     },
     {
