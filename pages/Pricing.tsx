@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Check, ArrowLeft } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -26,13 +26,38 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
   // Keep track of which card is flipped. We'll store a set of flipped card IDs.
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
 
-  const toggleFlip = (id: number) => {
+  useEffect(() => {
+    // Handler to close flipped cards when clicking outside
+    const handleGlobalClick = (e: MouseEvent) => {
+      // Check if the click was inside the slider container
+      const target = e.target as HTMLElement;
+      if (!target.closest('.slider-container')) {
+        setFlippedCards(new Set());
+      }
+    };
+
+    // Add event listener to document
+    document.addEventListener('click', handleGlobalClick);
+    
+    // Cleanup listener on unmount
+    return () => {
+      document.removeEventListener('click', handleGlobalClick);
+    };
+  }, []);
+
+  const toggleFlip = (id: number, e: React.MouseEvent) => {
+    // Prevent the click from bubbling up to document
+    e.stopPropagation();
+    
     setFlippedCards(prev => {
       const next = new Set(prev);
       if (next.has(id)) {
         next.delete(id);
       } else {
-        next.add(id);
+        // Option A: Flip only one card at a time (clearing others)
+        const single = new Set<number>();
+        single.add(id);
+        return single;
       }
       return next;
     });
@@ -170,7 +195,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
         </div>
           
         {/* Full Width Horizontal Slider */}
-        <div className="w-full relative mt-8 sm:mt-0">
+        <div className="w-full relative mt-8 sm:mt-0 slider-container">
           <div className="max-w-[1800px] mx-auto relative px-4 sm:px-12 xl:px-20">
               
               {/* Navigation Buttons */}
@@ -193,22 +218,22 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
               {/* Slider Container */}
               <div className="overflow-hidden w-full">
                 <div 
-                  className="flex transition-transform duration-500 ease-in-out items-stretch"
+                  className="flex transition-transform duration-500 ease-in-out"
                   style={{ transform: `translateX(calc(-${currentSlide} * 100% / ${itemsPerPage}))` }}
                 >
                   {pricingItems.map((item, index) => {
                     const isFlipped = flippedCards.has(item.id);
                     return (
-                    <div key={item.id} className="w-full md:w-1/2 xl:w-1/3 shrink-0 pb-16 md:pb-20 pt-4 sm:pt-[50px] px-8 sm:px-10 lg:px-12 perspective-[1500px]">
+                    <div key={item.id} className="w-full md:w-1/2 xl:w-1/3 shrink-0 pb-16 md:pb-20 pt-4 sm:pt-[50px] px-8 sm:px-10 lg:px-12 perspective-[1500px] flex pricing-card-container">
                       {/* Flippable Inner Container */}
                       <div 
-                        className="w-full relative transition-all duration-700 preserve-3d cursor-pointer group grid"
+                        className="w-full relative transition-all duration-700 preserve-3d cursor-pointer group grid h-full"
                         style={{ 
                           WebkitTransformStyle: 'preserve-3d',
                           transformStyle: 'preserve-3d',
                           transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
                         }}
-                        onClick={() => toggleFlip(item.id)}
+                        onClick={(e) => toggleFlip(item.id, e)}
                       >
                         
                         {/* -------------------- FRONT FACE -------------------- */}
@@ -218,20 +243,11 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                             WebkitBackfaceVisibility: 'hidden',
                             backfaceVisibility: 'hidden',
                             transform: 'rotateY(0deg)',
-                            paddingTop: '10px',
-                            paddingBottom: '10px',
-                            marginTop: '50px',
-                            marginBottom: '50px',
                             cursor: 'default'
                           }}
                         >
-                          <div className="p-8 sm:p-10 md:p-14 h-full flex flex-col relative gap-6 sm:gap-8">
-                            {/* Flip indicator icon */}
-                            <div className="absolute top-8 right-8 sm:top-10 sm:right-10 text-warm-500/50 group-hover:text-coffee-400 transition-colors duration-300 z-[100] cursor-pointer" onClick={(e) => { e.stopPropagation(); toggleFlip(item.id); }}>
-                              <svg width="20" height="20" className="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                            </div>
-
-                            <div className="relative z-10 pt-4 sm:pt-8">
+                          <div className="p-8 sm:p-10 md:p-12 h-full flex flex-col relative gap-6 sm:gap-8">
+                            <div className="relative z-10 pt-2 sm:pt-4">
                               <div className="text-coffee-400 font-sans text-[10px] sm:text-xs uppercase tracking-[0.2em] mb-4 sm:mb-6">
                                 0{index + 1} — 0{pricingItems.length}
                               </div>
@@ -254,7 +270,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                               </div>
                             </div>
                             
-                            <div className="mt-auto pt-8 sm:pt-12 relative z-10 w-full flex justify-center sm:justify-start">
+                            <div className="mt-auto pt-6 sm:pt-8 relative z-10 w-full flex justify-center sm:justify-start">
                               <button 
                                 onClick={(e) => { e.stopPropagation(); handleContactClick(e); }} 
                                 className="block w-full sm:w-2/3 md:w-3/4 lg:w-2/3 py-3 sm:py-4 text-center bg-coffee-600 text-white font-sans hover:bg-coffee-500 transition-all duration-300 uppercase text-[10px] sm:text-sm tracking-widest rounded-full cursor-pointer"
@@ -272,21 +288,12 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                             WebkitBackfaceVisibility: 'hidden',
                             backfaceVisibility: 'hidden',
                             transform: 'rotateY(180deg)',
-                            paddingTop: '10px',
-                            paddingBottom: '10px',
-                            marginTop: '50px',
-                            marginBottom: '50px',
                             cursor: 'default'
                           }}
                         >
-                          <div className="p-8 sm:p-10 md:p-14 h-full flex flex-col relative gap-6 sm:gap-8">
-                            {/* Flip indicator icon (back) */}
-                            <div className="absolute top-8 right-8 sm:top-10 sm:right-10 text-warm-500/50 group-hover:text-coffee-400 transition-colors duration-300 z-[100] cursor-pointer" onClick={(e) => { e.stopPropagation(); toggleFlip(item.id); }}>
-                              <svg width="20" height="20" className="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                            </div>
-
-                            <div className="pt-4 sm:pt-8">
-                              <p className="text-warm-300 text-[13px] sm:text-base md:text-lg font-light leading-relaxed pr-8 sm:pr-12">
+                          <div className="p-8 sm:p-10 md:p-12 h-full flex flex-col relative gap-6 sm:gap-8">
+                            <div className="pt-2 sm:pt-4">
+                              <p className="text-warm-300 text-[13px] sm:text-base md:text-lg font-light leading-[22px] pr-8 sm:pr-12">
                                 {item.description}
                               </p>
                             </div>
@@ -299,13 +306,13 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                                 {item.details.map((detail, i) => (
                                   <li key={i} className="flex items-start text-warm-300">
                                     <div className="mt-1.5 sm:mt-2 mr-3 sm:mr-4 shrink-0 w-1.5 h-1.5 rounded-full bg-coffee-500/60"></div>
-                                    <span className="font-light leading-relaxed text-[12px] sm:text-[14px] md:text-[15px]">{detail}</span>
+                                    <span className="font-light leading-[20px] text-[12px] sm:text-[14px] md:text-[15px]">{detail}</span>
                                   </li>
                                 ))}
                               </ul>
                             </div>
                             
-                            <div className="mt-auto pt-8 sm:pt-12 w-full flex justify-center sm:justify-start">
+                            <div className="mt-auto pt-6 sm:pt-8 w-full flex justify-center sm:justify-start">
                               <button 
                                 onClick={(e) => { e.stopPropagation(); handleContactClick(e); }} 
                                 className="block w-full sm:w-2/3 md:w-3/4 lg:w-2/3 py-3 sm:py-4 text-center border border-coffee-600 text-coffee-400 font-sans hover:bg-coffee-900/30 transition-all duration-300 uppercase text-[10px] sm:text-sm tracking-widest rounded-full cursor-pointer"

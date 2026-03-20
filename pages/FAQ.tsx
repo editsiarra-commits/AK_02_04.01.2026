@@ -72,7 +72,7 @@ const FAQ: React.FC<FAQProps> = ({ id }) => {
               </button>
               <div 
                 className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                  openIndex === index ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+                  openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
                 <div className="px-6 pb-6 text-warm-400 font-light leading-relaxed border-t border-warm-800/50 pt-4 mt-2 mx-6">
