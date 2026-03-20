@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-3 text-warm-300 group">
                 <MapPin size={16} className="text-coffee-400" />
-                <span className="text-sm font-light">Bialystok, Warszawa, Online</span>
+                <span className="text-sm font-light">Białystok, Warszawa, Online</span>
               </div>
             </div>
           </div>

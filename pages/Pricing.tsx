@@ -293,20 +293,20 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                         >
                           <div className="p-8 sm:p-10 md:p-12 h-full flex flex-col relative gap-6 sm:gap-8">
                             <div className="pt-2 sm:pt-4">
-                              <p className="text-warm-300 text-[13px] sm:text-base md:text-lg font-light leading-[22px] pr-8 sm:pr-12">
+                              <p className="text-warm-300 text-[13px] sm:text-base font-extralight leading-[18px] tracking-[0.5px] pr-8 sm:pr-12">
                                 {item.description}
                               </p>
                             </div>
                             
                             <div className="space-y-4 sm:space-y-6">
-                              <h4 className="font-sans text-[12px] sm:text-[14px] md:text-[15px] font-normal transition-all text-coffee-400 text-left leading-snug">
+                              <h4 className="font-sans text-[12px] sm:text-[14px] md:text-[15px] font-normal transition-all text-coffee-400 text-left leading-[18px]">
                                 {item.targetAudience}
                               </h4>
                               <ul className="space-y-3 sm:space-y-4">
                                 {item.details.map((detail, i) => (
                                   <li key={i} className="flex items-start text-warm-300">
                                     <div className="mt-1.5 sm:mt-2 mr-3 sm:mr-4 shrink-0 w-1.5 h-1.5 rounded-full bg-coffee-500/60"></div>
-                                    <span className="font-light leading-[20px] text-[12px] sm:text-[14px] md:text-[15px]">{detail}</span>
+                                    <span className="font-light leading-[18px] text-[12px] sm:text-[14px] md:text-[15px]">{detail}</span>
                                   </li>
                                 ))}
                               </ul>

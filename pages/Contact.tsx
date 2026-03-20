@@ -86,7 +86,7 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
                  <div>
                    <h3 className="font-serif text-xl text-warm-200">Gabinet</h3>
                    <p className="text-warm-400"></p>
-                   <p className="text-warm-400">Warszawa, Białystok, Online</p>
+                   <p className="text-warm-400">Białystok, Warszawa, Online</p>
                  </div>
                </div>
             </div>
