@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Check, ArrowLeft } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -8,7 +8,20 @@ interface PricingProps {
 
 const Pricing: React.FC<PricingProps> = ({ id }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(1);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1280) setItemsPerPage(3);
+      else if (window.innerWidth >= 768) setItemsPerPage(2);
+      else setItemsPerPage(1);
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Keep track of which card is flipped. We'll store a set of flipped card IDs.
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
@@ -103,12 +116,14 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
     }
   ];
 
+  const maxSlide = Math.max(0, pricingItems.length - itemsPerPage);
+
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % pricingItems.length);
+    setCurrentSlide((prev) => prev >= maxSlide ? 0 : prev + 1);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + pricingItems.length) % pricingItems.length);
+    setCurrentSlide((prev) => prev <= 0 ? maxSlide : prev - 1);
   };
 
   return (
@@ -144,23 +159,24 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
       </section>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-0">
-        <div className="max-w-6xl mx-auto py-10">
+      <div className="py-10">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="mb-8 pl-4 sm:pl-12">
             <Link to="/" className="inline-flex items-center text-coffee-400 hover:text-coffee-300 transition-colors">
               <ArrowLeft size={20} className="mr-2" />
               <span>Powrót do strony głównej</span>
             </Link>
           </div>
+        </div>
           
-          {/* Full Width Horizontal Slider */}
-          <div className="w-full relative px-0 sm:px-0 mt-8 sm:mt-0">
-            <div className="max-w-6xl mx-auto relative">
+        {/* Full Width Horizontal Slider */}
+        <div className="w-full relative mt-8 sm:mt-0">
+          <div className="max-w-[1800px] mx-auto relative px-4 sm:px-12 xl:px-20">
               
               {/* Navigation Buttons */}
               <button 
                 onClick={prevSlide}
-                className="absolute left-2 sm:left-0 top-[40%] sm:top-1/2 -translate-y-1/2 sm:-ml-4 lg:-ml-8 z-20 p-3 sm:p-4 rounded-full bg-warm-950/90 backdrop-blur-sm border border-warm-700 text-coffee-300 shadow-xl shadow-black/40 hover:bg-warm-900 hover:text-coffee-200 hover:border-coffee-500 hover:scale-105 transition-all focus:outline-none group"
+                className="absolute left-0 sm:left-4 top-[40%] sm:top-1/2 -translate-y-1/2 z-20 p-3 sm:p-4 rounded-full bg-warm-950/90 backdrop-blur-sm border border-warm-700 text-coffee-300 shadow-xl shadow-black/40 hover:bg-warm-900 hover:text-coffee-200 hover:border-coffee-500 hover:scale-105 transition-all focus:outline-none group"
                 aria-label="Previous option"
               >
                 <ChevronLeft size={20} className="sm:w-6 sm:h-6 group-hover:-translate-x-0.5 transition-transform" strokeWidth={2} />
@@ -168,7 +184,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
               
               <button 
                 onClick={nextSlide}
-                className="absolute right-2 sm:right-0 top-[40%] sm:top-1/2 -translate-y-1/2 sm:-mr-4 lg:-mr-8 z-20 p-3 sm:p-4 rounded-full bg-warm-950/90 backdrop-blur-sm border border-warm-700 text-coffee-300 shadow-xl shadow-black/40 hover:bg-warm-900 hover:text-coffee-200 hover:border-coffee-500 hover:scale-105 transition-all focus:outline-none group"
+                className="absolute right-0 sm:right-4 top-[40%] sm:top-1/2 -translate-y-1/2 z-20 p-3 sm:p-4 rounded-full bg-warm-950/90 backdrop-blur-sm border border-warm-700 text-coffee-300 shadow-xl shadow-black/40 hover:bg-warm-900 hover:text-coffee-200 hover:border-coffee-500 hover:scale-105 transition-all focus:outline-none group"
                 aria-label="Next option"
               >
                 <ChevronRight size={20} className="sm:w-6 sm:h-6 group-hover:translate-x-0.5 transition-transform" strokeWidth={2} />
@@ -177,13 +193,13 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
               {/* Slider Container */}
               <div className="overflow-hidden w-full">
                 <div 
-                  className="flex transition-transform duration-500 ease-in-out"
-                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                  className="flex transition-transform duration-500 ease-in-out items-stretch"
+                  style={{ transform: `translateX(calc(-${currentSlide} * 100% / ${itemsPerPage}))` }}
                 >
                   {pricingItems.map((item, index) => {
                     const isFlipped = flippedCards.has(item.id);
                     return (
-                    <div key={item.id} className="w-full shrink-0 pb-16 md:pb-20 pt-4 sm:pt-[50px] px-8 sm:px-16 md:px-20 lg:px-28 perspective-[1500px]">
+                    <div key={item.id} className="w-full md:w-1/2 xl:w-1/3 shrink-0 pb-16 md:pb-20 pt-4 sm:pt-[50px] px-8 sm:px-10 lg:px-12 perspective-[1500px]">
                       {/* Flippable Inner Container */}
                       <div 
                         className="w-full relative transition-all duration-700 preserve-3d cursor-pointer group grid"
@@ -220,7 +236,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                                 0{index + 1} — 0{pricingItems.length}
                               </div>
                               
-                            <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl text-coffee-600 leading-tight sm:leading-snug mb-2 font-medium pr-8 sm:pr-12">
+                            <h3 className="font-serif text-3xl sm:text-4xl lg:text-3xl xl:text-4xl text-coffee-600 leading-tight sm:leading-snug mb-2 font-medium pr-8 sm:pr-12">
                               {item.title}
                             </h3>
                               <p className="text-warm-400 text-sm sm:text-lg md:text-xl font-light tracking-wide">
@@ -230,8 +246,8 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                             
                             <div className="relative z-10">
                               <div className="flex items-baseline font-serif tracking-tight">
-                                <span className="text-5xl sm:text-6xl md:text-7xl text-warm-100 mr-2 sm:mr-3">{item.price.split(' ')[0]}</span>
-                                <span className="text-3xl sm:text-4xl md:text-5xl text-black font-light">{item.price.split(' ')[1]}</span>
+                                <span className="text-5xl sm:text-6xl lg:text-5xl xl:text-6xl text-warm-100 mr-2 sm:mr-3">{item.price.split(' ')[0]}</span>
+                                <span className="text-3xl sm:text-4xl lg:text-3xl xl:text-4xl text-black font-light">{item.price.split(' ')[1]}</span>
                               </div>
                               <div className="text-warm-500 mt-2 sm:mt-4 font-light text-xs sm:text-sm md:text-base tracking-widest uppercase">
                                 {item.duration}
@@ -241,7 +257,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                             <div className="mt-auto pt-8 sm:pt-12 relative z-10 w-full flex justify-center sm:justify-start">
                               <button 
                                 onClick={(e) => { e.stopPropagation(); handleContactClick(e); }} 
-                                className="block w-full sm:w-2/3 md:w-1/2 py-3 sm:py-4 text-center bg-coffee-600 text-white font-sans hover:bg-coffee-500 transition-all duration-300 uppercase text-[10px] sm:text-sm tracking-widest rounded-full cursor-pointer"
+                                className="block w-full sm:w-2/3 md:w-3/4 lg:w-2/3 py-3 sm:py-4 text-center bg-coffee-600 text-white font-sans hover:bg-coffee-500 transition-all duration-300 uppercase text-[10px] sm:text-sm tracking-widest rounded-full cursor-pointer"
                               >
                                 Zarezerwuj Termin
                               </button>
@@ -292,7 +308,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                             <div className="mt-auto pt-8 sm:pt-12 w-full flex justify-center sm:justify-start">
                               <button 
                                 onClick={(e) => { e.stopPropagation(); handleContactClick(e); }} 
-                                className="block w-full sm:w-2/3 md:w-1/2 py-3 sm:py-4 text-center border border-coffee-600 text-coffee-400 font-sans hover:bg-coffee-900/30 transition-all duration-300 uppercase text-[10px] sm:text-sm tracking-widest rounded-full cursor-pointer"
+                                className="block w-full sm:w-2/3 md:w-3/4 lg:w-2/3 py-3 sm:py-4 text-center border border-coffee-600 text-coffee-400 font-sans hover:bg-coffee-900/30 transition-all duration-300 uppercase text-[10px] sm:text-sm tracking-widest rounded-full cursor-pointer"
                               >
                                 Zarezerwuj Termin
                               </button>
@@ -308,7 +324,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
               
               {/* Pagination Indicators */}
               <div className="flex justify-center space-x-3 mt-6 mb-4">
-                {pricingItems.map((_, idx) => (
+                {Array.from({ length: maxSlide + 1 }).map((_, idx) => (
                   <button
                     key={idx}
                     onClick={() => setCurrentSlide(idx)}
@@ -322,7 +338,8 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
             </div>
           </div>
 
-          <div className="text-left mx-8 sm:mx-16 md:mx-20 lg:mx-28 mb-10">
+        <div className="container mx-auto px-4 max-w-6xl mt-12">
+          <div className="text-left mx-4 sm:mx-12 lg:mx-16 mb-10">
             <p className="text-warm-300 text-lg font-light mb-6">
               Przed dokonaniem jakiejkolwiek płatności zapraszam Cię na bezpłatną, 15-minutową konsultację telefoniczną.
               W spokojnej przestrzeni, w której wspólnie:
@@ -348,8 +365,8 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
               Potrzebujesz faktury (usługa terapeutyczna / superwizja)? Napisz lub zadzwoń przed opłatą – przygotuję ją bez problemu.
             </p>
           </div>
-
         </div>
+
       </div>
     </div>
   );

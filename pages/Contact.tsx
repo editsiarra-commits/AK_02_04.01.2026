@@ -15,17 +15,30 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
     setFormStatus('submitting');
     
     if (formRef.current) {
-      emailjs.sendForm(
-        'YOUR_SERVICE_ID', // Replace with your actual Service ID from EmailJS
-        'YOUR_TEMPLATE_ID', // Replace with your actual Template ID from EmailJS
-        formRef.current,
-        'YOUR_PUBLIC_KEY' // Replace with your actual Public Key from EmailJS
+      // In EmailJS v4, we use the specific template parameters instead of sending the form directly
+      // This is because the form inputs must match the exact variables in the EmailJS template
+      const formData = new FormData(formRef.current);
+      const templateParams: Record<string, unknown> = {
+        user_name: formData.get('user_name'),
+        user_email: formData.get('user_email'),
+        subject: formData.get('subject'),
+        message: formData.get('message'),
+        // Add specific recipient mappings if needed by your template
+        reply_to: formData.get('user_email'),
+        to_name: "Agnieszka" // Or whoever is receiving it
+      };
+
+      emailjs.send(
+        'service_ysjbvlk',
+        'template_xt849sr',
+        templateParams,
+        'URUpNfhAJLR9oGvKc'
       )
       .then((result) => {
           console.log('Email sent successfully:', result.text);
           setFormStatus('success');
       }, (error) => {
-          console.error('Failed to send email:', error.text);
+          console.error('Failed to send email:', error);
           setFormStatus('error');
       });
     }
