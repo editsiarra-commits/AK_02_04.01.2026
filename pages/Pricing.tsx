@@ -272,10 +272,10 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                             
                             <div className="mt-auto pt-6 sm:pt-8 relative z-10 w-full flex justify-center sm:justify-start">
                               <button 
-                                onClick={(e) => { e.stopPropagation(); handleContactClick(e); }} 
+                                onClick={(e) => { e.stopPropagation(); toggleFlip(item.id, e); }} 
                                 className="block w-full sm:w-2/3 md:w-3/4 lg:w-2/3 py-3 sm:py-4 text-center bg-coffee-600 text-white font-sans hover:bg-coffee-500 transition-all duration-300 uppercase text-[10px] sm:text-sm tracking-widest rounded-full cursor-pointer"
                               >
-                                Zarezerwuj Termin
+                                DOWIEDZ SIĘ WIĘCEJ
                               </button>
                             </div>
                           </div>
