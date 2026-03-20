@@ -175,7 +175,7 @@ export const OfferDetail: React.FC = () => {
        {/* Hero for Detail */}
        <div className="h-[30vh] relative overflow-hidden">
          <AnimatedTile offerId={offer.id} backgroundImage={offer.tileBackgroundImage}>
-             <div className="absolute inset-0 bg-warm-950/60 flex items-center justify-center">
+             <div className="absolute inset-0 bg-warm-950/75 flex items-center justify-center">
                 <div className="text-center px-4 max-w-4xl z-10">
                   <span className="block text-coffee-400 uppercase tracking-widest text-sm mb-4 font-bold">Szczegóły Usługi</span>
                   <h1 className="font-display text-4xl md:text-5xl text-warm-100 tracking-wide mb-2">{offer.title}</h1>

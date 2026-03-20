@@ -15,7 +15,7 @@ const AnimatedTile: React.FC<AnimatedTileProps> = ({ children, backgroundImage }
              className="absolute inset-0 w-full h-full bg-cover bg-center opacity-70 group-hover:opacity-90 transition-opacity duration-700 bg-no-repeat"
              style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover' }}
            >
-                <div className="absolute inset-0 bg-warm-950/55 group-hover:bg-warm-950/65 transition-colors duration-700 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-warm-950/75 group-hover:bg-warm-950/75 transition-colors duration-700 pointer-events-none"></div>
            </div>
         )}
         {children}
