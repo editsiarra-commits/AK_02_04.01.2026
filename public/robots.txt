@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Po wdrożeniu podmień domenę na produkcyjną (pełny URL do pliku sitemap):
+# Sitemap: https://agnieszkakochanowska.pl/sitemap.xml

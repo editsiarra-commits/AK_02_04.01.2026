@@ -5,7 +5,7 @@ import { OfferSubCategory } from '../types';
 import AnimatedTile from '../components/AnimatedTile';
 
 // Data for offers
-const offers: Record<string, OfferSubCategory> = {
+export const offers: Record<string, OfferSubCategory> = {
   'stress-anxiety': {
     id: 'stress-anxiety',
     title: 'Pomoc w odzyskaniu równowagi emocjonalnej',
@@ -131,7 +131,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ id }) => (
                     {/* Animated Line */}
                     <div className="w-0 h-px bg-coffee-400 mx-auto mb-3 transition-all duration-500 group-hover:w-12 opacity-80"></div>
                     
-                    <p className="text-warm-300 font-sans text-xs font-medium leading-relaxed max-w-[240px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0 delay-75 mb-4">
+                    <p className="text-white font-sans text-xs font-medium leading-relaxed max-w-[240px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0 delay-75 mb-4">
                         {offer.description}
                     </p>
                  </div>

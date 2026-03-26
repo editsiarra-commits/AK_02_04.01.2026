@@ -55,6 +55,11 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
                <p className="text-warm-400 leading-relaxed text-lg font-light">
                  Gotowy, by rozpocząć swoją podróż? Masz pytania dotyczące procesu? Jestem tutaj, aby pomóc. Skontaktuj się za pomocą formularza lub poniższych danych.
                </p>
+               <p className="text-warm-500 text-sm leading-relaxed mt-4 max-w-xl">
+                 Prowadzę praktykę w <strong className="text-warm-400 font-medium">Białymstoku</strong> i{' '}
+                 <strong className="text-warm-400 font-medium">Warszawie</strong>; możliwe są także sesje{' '}
+                 <strong className="text-warm-400 font-medium">online</strong> (hipnoterapia, integracja psychodeliczna, sesje oddechowe, praca w nurcie CAT).
+               </p>
             </div>
 
             <div className="space-y-8 pt-6">
@@ -85,8 +90,7 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
                  </div>
                  <div>
                    <h3 className="font-serif text-xl text-warm-200">Gabinet</h3>
-                   <p className="text-warm-400"></p>
-                   <p className="text-warm-400">Białystok, Warszawa, Online</p>
+                   <p className="text-warm-400">Stacjonarnie: Białystok i Warszawa · online: cała Polska</p>
                  </div>
                </div>
             </div>

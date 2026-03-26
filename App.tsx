@@ -10,7 +10,7 @@ import IntegracjaPsychodeliczna from './pages/IntegracjaPsychodeliczna';
 import SesjeOddechowe from './pages/SesjeOddechowe';
 import CAT from './pages/CAT';
 import Pricing from './pages/Pricing';
-
+import Seo from './components/Seo';
 
 // ScrollToTop component
 const ScrollToTop = () => {
@@ -43,6 +43,7 @@ const App: React.FC = () => {
   return (
     <HashRouter>
       <ScrollToTop />
+      <Seo />
       <div className="flex flex-col min-h-screen bg-warm-900 font-sans text-warm-200 selection:bg-coffee-600 selection:text-white">
         <Navbar navItems={navItems} />
         
