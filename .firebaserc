@@ -1,5 +1,5 @@
 {
-  "projects": {},
-  "targets": {},
-  "etags": {}
+  "projects": {
+    "default": "hypnotherapy-61309594-7580e"
+  }
 }
