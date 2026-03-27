@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -41,7 +41,7 @@ const navItems: NavItem[] = [
 
 const App: React.FC = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <Seo />
       <div className="flex flex-col min-h-dvh w-full overflow-x-hidden bg-warm-900 font-sans text-warm-200 selection:bg-coffee-600 selection:text-white">
@@ -63,7 +63,7 @@ const App: React.FC = () => {
         
         <Footer />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 

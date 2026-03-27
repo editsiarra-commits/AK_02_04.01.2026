@@ -28,7 +28,7 @@ function setCanonical(href: string) {
 
 function buildJsonLd(siteUrl: string): object {
   const base = siteUrl || (typeof window !== 'undefined' ? window.location.origin : '');
-  const url = base ? `${base}/#/` : '';
+  const url = base ? `${base}/` : '';
   return {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',

@@ -14,10 +14,10 @@ export function getSiteUrl(): string {
   return '';
 }
 
-/** Dla HashRouter: pełny adres kanoniczny strony */
+/** Pełny adres kanoniczny strony */
 export function getCanonicalUrl(pathname: string): string {
   const base = getSiteUrl();
   if (!base) return '';
-  const path = pathname === '/' ? '/#/' : `/#${pathname}`;
+  const path = pathname === '/' ? '/' : pathname;
   return `${base}${path}`;
 }
