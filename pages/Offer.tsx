@@ -126,7 +126,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ id }) => (
                  <div className="absolute inset-2 border border-warm-950/10 group-hover:border-coffee-400/40 transition-colors duration-700 pointer-events-none rounded-xl"></div>
                  
                  <div className="transform transition-transform duration-500 group-hover:-translate-y-2 w-full flex flex-col items-center">
-                    <h3 className="font-display text-[26px] text-white mb-2 tracking-wide drop-shadow-lg leading-tight px-2" style={{ fontWeight: 600 }}>{offer.title}</h3>
+                    <h3 className="font-display text-[26px] text-white mb-2 tracking-wide drop-shadow-lg leading-tight px-2 font-semibold">{offer.title}</h3>
                     
                     {/* Animated Line */}
                     <div className="w-0 h-px bg-coffee-400 mx-auto mb-3 transition-all duration-500 group-hover:w-12 opacity-80"></div>
@@ -192,7 +192,7 @@ export const OfferDetail: React.FC = () => {
            </a>
 
            <div className="prose max-w-none">
-             <h2 className="font-display text-3xl md:text-4xl text-warm-100 mb-8 font-light" style={{ backgroundClip: 'unset', WebkitBackgroundClip: 'unset' }}>{offer.autonomousHeadline}</h2>
+             <h2 className="font-display text-3xl md:text-4xl text-warm-100 mb-8 font-light [background-clip:unset] [-webkit-background-clip:unset]">{offer.autonomousHeadline}</h2>
              <p className="text-warm-300 text-lg leading-[30px] mb-[15px] font-light">
                {offer.fullDescription}
              </p>
@@ -216,8 +216,8 @@ export const OfferDetail: React.FC = () => {
                 )}
              </div>
 
-             <div className="text-center pt-0" style={{ boxSizing: 'content-box' }}>
-                <p className="text-coffee-400 mb-8 font-serif text-xl font-normal" style={{ borderWidth: '0px', borderColor: 'rgba(0, 0, 0, 0)', borderStyle: 'none', borderImage: 'none' }}></p>
+             <div className="text-center pt-0 box-content">
+                <p className="text-coffee-400 mb-8 font-serif text-xl font-normal border-0 border-transparent border-none [border-image:none]"></p>
                 <a href="#contact" onClick={(e) => handleNavigate(e, 'contact')} className="inline-block px-12 py-5 bg-coffee-700 text-white font-sans text-xs font-bold uppercase tracking-[0.2em] hover:bg-coffee-600 transition-all shadow-lg hover:shadow-coffee-900/30 cursor-pointer rounded-full">
                   ZAREZERWUJ TĘ SESJĘ
                 </a>

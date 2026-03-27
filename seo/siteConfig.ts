@@ -1,3 +1,5 @@
+/// <reference types="vite/client" />
+
 /** Bazowy URL produkcyjny (bez końcowego /). Ustaw w .env: VITE_SITE_URL=https://twoja-domena.pl */
 export const SITE_NAME = 'Agnieszka Kochanowska';
 
