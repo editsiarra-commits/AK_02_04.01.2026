@@ -111,12 +111,12 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="relative h-dvh w-full overflow-hidden">
         {/* Video Background */}
-        <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-0 left-0 w-full h-full bg-warm-950">
           <video
             ref={videoRef}
-            className="w-full h-full object-cover opacity-80"
+            className="w-full h-full object-cover opacity-80 bg-warm-950"
             autoPlay
             loop
             muted

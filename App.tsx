@@ -44,7 +44,7 @@ const App: React.FC = () => {
     <HashRouter>
       <ScrollToTop />
       <Seo />
-      <div className="flex flex-col min-h-screen bg-warm-900 font-sans text-warm-200 selection:bg-coffee-600 selection:text-white">
+      <div className="flex flex-col min-h-dvh w-full overflow-x-hidden bg-warm-900 font-sans text-warm-200 selection:bg-coffee-600 selection:text-white">
         <Navbar navItems={navItems} />
         
         <main className="grow">

@@ -161,7 +161,7 @@ export const OfferDetail: React.FC = () => {
 
   if (!offer) {
     return (
-        <div className="min-h-screen flex items-center justify-center bg-warm-900">
+        <div className="min-h-dvh flex items-center justify-center bg-warm-900">
             <div className="text-center">
                 <h2 className="text-2xl font-display text-warm-100">Oferta nie znaleziona</h2>
                 <a href="#offer" onClick={(e) => handleNavigate(e, 'offer')} className="text-coffee-400 underline mt-4 block cursor-pointer">Powrót do Ofert</a>
@@ -171,7 +171,7 @@ export const OfferDetail: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-warm-900 pb-20">
+    <div className="min-h-dvh bg-warm-900 pb-20">
        {/* Hero for Detail */}
        <div className="h-[30vh] relative overflow-hidden">
          <AnimatedTile offerId={offer.id} backgroundImage={offer.tileBackgroundImage}>

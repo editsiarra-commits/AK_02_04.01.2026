@@ -152,7 +152,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
   };
 
   return (
-    <div className="bg-warm-900 text-warm-200 min-h-screen">
+    <div className="bg-warm-900 text-warm-200 min-h-dvh">
       {/* Hero Section */}
       <section className="relative py-16 md:py-20 border-b border-warm-800 overflow-hidden">
         <div className="absolute inset-0 z-0">

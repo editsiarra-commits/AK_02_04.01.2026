@@ -68,10 +68,10 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
           <div className="flex items-center">
             {/* Social Icons (Desktop) */}
             <div className="hidden lg:flex items-center space-x-5 mr-8 pr-8 border-r border-warm-800/40">
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-warm-400 hover:text-coffee-400 transition-colors duration-300 transform hover:scale-110">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-warm-400 hover:text-coffee-400 transition-colors duration-300 transform hover:scale-110">
                     <Instagram size={18} strokeWidth={1.5} />
                 </a>
-                <a href="https://facebook.com" target="_blank" rel="noreferrer" className="text-warm-400 hover:text-coffee-400 transition-colors duration-300 transform hover:scale-110">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-warm-400 hover:text-coffee-400 transition-colors duration-300 transform hover:scale-110">
                     <Facebook size={18} strokeWidth={1.5} />
                 </a>
             </div>
@@ -102,7 +102,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                     >
                       <span>{item.label}</span>
                     </a>
-                    <button className="ml-1 text-warm-200 hover:text-coffee-400">
+                    <button aria-label="Rozwiń podmenu" className="ml-1 text-warm-200 hover:text-coffee-400">
                          <ChevronDown size={14} />
                     </button>
                     
@@ -160,8 +160,8 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-warm-950 shadow-xl h-screen overflow-y-auto pb-20 border-t border-warm-800 flex flex-col">
-          <div className="px-4 pt-4 pb-3 space-y-1 grow">
+        <div className="md:hidden bg-warm-950 shadow-xl h-dvh overflow-y-auto pb-[calc(env(safe-area-inset-bottom)+2rem)] border-t border-warm-800 flex flex-col">
+          <div className="px-4 pt-4 pb-8 space-y-1 grow">
             {navItems.map((item) => (
               <div key={item.label}>
                 {item.children ? (
@@ -175,6 +175,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                            {item.label}
                         </a>
                         <button 
+                            aria-label="Rozwiń podmenu"
                             onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
                             className="p-4 text-warm-400"
                         >
@@ -224,10 +225,10 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
           <div className="px-8 py-8 border-t border-warm-800 bg-warm-900/50">
              <p className="text-center text-xs text-warm-500 uppercase tracking-widest mb-4">Obserwuj Mnie</p>
              <div className="flex justify-center space-x-8">
-                <a href="https://instagram.com" className="text-warm-300 hover:text-coffee-400 transition-colors">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-warm-300 hover:text-coffee-400 transition-colors">
                     <Instagram size={24} strokeWidth={1.5} />
                 </a>
-                <a href="https://facebook.com" className="text-warm-300 hover:text-coffee-400 transition-colors">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-warm-300 hover:text-coffee-400 transition-colors">
                     <Facebook size={24} strokeWidth={1.5} />
                 </a>
              </div>
