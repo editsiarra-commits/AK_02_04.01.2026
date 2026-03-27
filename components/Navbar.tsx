@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, ChevronDown, Instagram, Facebook } from 'lucide-react';
+import { Menu, X, ChevronDown, Instagram, Facebook, Linkedin } from 'lucide-react';
 import { NavItem } from '../types';
 
 interface NavbarProps {
@@ -73,6 +73,9 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                 </a>
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-warm-400 hover:text-coffee-400 transition-colors duration-300 transform hover:scale-110">
                     <Facebook size={18} strokeWidth={1.5} />
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-warm-400 hover:text-coffee-400 transition-colors duration-300 transform hover:scale-110">
+                    <Linkedin size={18} strokeWidth={1.5} />
                 </a>
             </div>
 
@@ -230,6 +233,9 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                 </a>
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-warm-300 hover:text-coffee-400 transition-colors">
                     <Facebook size={24} strokeWidth={1.5} />
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-warm-300 hover:text-coffee-400 transition-colors">
+                    <Linkedin size={24} strokeWidth={1.5} />
                 </a>
              </div>
           </div>

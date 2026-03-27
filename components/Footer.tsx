@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Footer: React.FC = () => {
@@ -58,8 +58,9 @@ const Footer: React.FC = () => {
               <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-sm text-warm-300 hover:text-coffee-400 transition-colors hover:translate-x-1 transform duration-300">Kontakt</a>
             </div>
             <div className="pt-6 flex space-x-6">
-              <a href="#" className="text-warm-400 hover:text-coffee-400 transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="text-warm-400 hover:text-coffee-400 transition-colors"><Facebook size={20} /></a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-warm-400 hover:text-coffee-400 transition-colors"><Instagram size={20} /></a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-warm-400 hover:text-coffee-400 transition-colors"><Facebook size={20} /></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-warm-400 hover:text-coffee-400 transition-colors"><Linkedin size={20} /></a>
             </div>
           </div>
           
