@@ -56,7 +56,7 @@ const FAQ: React.FC<FAQProps> = ({ id }) => {
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full flex justify-between items-center p-6 text-left focus:outline-none"
-                aria-expanded={openIndex === index}
+                {...{ 'aria-expanded': openIndex === index }}
               >
                 <span className={`font-serif text-lg md:text-xl transition-colors pr-4 ${openIndex === index ? 'text-warm-100' : 'text-warm-200'
                   }`}>
