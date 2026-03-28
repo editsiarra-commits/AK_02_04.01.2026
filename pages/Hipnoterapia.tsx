@@ -24,7 +24,7 @@ const Hipnoterapia: React.FC = () => {
             src="/assets/video4.mp4"
           />
           <div className="absolute inset-0 bg-warm-950/70"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 to-transparent"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-warm-900 to-transparent"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <p className="text-coffee-400 font-sans text-xl font-bold uppercase tracking-[0.3em] mb-4">
