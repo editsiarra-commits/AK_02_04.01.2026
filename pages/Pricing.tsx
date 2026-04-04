@@ -119,17 +119,21 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
 
     {
       id: 5,
-      title: "Oddychanie holotropowe",
+      title: "Pogłębiona sesja oddechowa z integracją",
       subtitle: "+ integracja",
       price: "1500 zł",
       duration: "Do 5 godzin + sesja integracyjna",
-      description: "Dla osób, które pragną doświadczeniowej, somatycznej pracy – bez substancji, a z ogromną mocą.",
-      targetAudience: "Pakiet zapewnia pełne zamknięcie pętli:",
+      description: "Dla osób, które pragną głębokiej, doświadczeniowej i somatycznej pracy — bez substancji, a z ogromnym potencjałem transformacji. To proces pozwalający dotrzeć do głębiej zapisanych napięć, emocji i wzorców oraz przełożyć to doświadczenie na realną zmianę w codziennym życiu.",
+      targetAudience: "Pakiet zapewnia pełne domknięcie procesu:",
       details: [
-        "intensywny wgląd i uwolnienie w ciele",
+        "intensywne wglądy i uwolnienie na poziomie ciała i emocji",
         "spokojne, świadome osadzenie tego, co się ujawniło",
-        "przełożenie zmiany na codzienne życie"
+        "przełożenie doświadczenia na konkretne zmiany w codziennym życiu"
       ]
+
+
+
+
     },
 
     {
@@ -367,18 +371,18 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
               </li>
               <li className="flex items-start text-warm-300">
                 <Check size={20} className="text-coffee-400 mr-3 mt-0.5 shrink-0" />
-                <span>poczujemy, która ścieżka będzie dla Ciebie najbardziej precyzyjna i bezpieczna</span>
+                <span>określimy która ścieżka będzie dla Ciebie najbardziej precyzyjna i bezpieczna</span>
               </li>
               <li className="flex items-start text-warm-300">
                 <Check size={20} className="text-coffee-400 mr-3 mt-0.5 shrink-0" />
-                <span>ustalimy rytm i terminy, które będą Ci służyć.</span>
+                <span>ustalimy rytm i terminy, które bedą Ci pasować</span>
               </li>
             </ul>
             <p className="text-warm-400 text-sm font-light leading-relaxed">
               Płatność realizowana jest z góry – stanowi jednocześnie gwarancję Twojego miejsca w moim kalendarzu.
               W razie odwołania lub niewykorzystania sesji przez Ciebie – opłata nie podlega zwrotowi.
               Przełożenie terminu jest możliwe do 24 h przed spotkaniem.
-              Potrzebujesz faktury (usługa terapeutyczna / superwizja)? Napisz lub zadzwoń przed opłatą – przygotuję ją bez problemu.
+              Potrzebujesz faktury usługa terapeutyczna / superwizja? Napisz lub zadzwoń przed opłatą – przygotuję ją bez problemu.
             </p>
           </div>
         </div>
