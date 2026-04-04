@@ -65,7 +65,7 @@ const About: React.FC<SectionProps> = ({ id }) => {
                 <div className="absolute inset-0 border border-warm-700 z-10 m-4 transition-all duration-500 group-hover:m-0 rounded-xl"></div>
                 <img
                   src="/assets/aboutme.jpg"
-                  alt="Agnieszka Kochanowska"
+                  alt="Agnieszka Kochanowska - Certyfikowana Hipnoterapeutka Białystok Warszawa"
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 opacity-100"
                 />
               </div>

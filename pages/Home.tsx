@@ -222,8 +222,8 @@ const Home: React.FC = () => {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <span className="text-coffee-400 font-sans text-xs font-bold uppercase tracking-[0.3em] mb-3 block">Zrozumienie Metody</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-warm-100 mb-6">Dlaczego Hipnoterapia?</h2>
+              <span className="text-coffee-400 font-sans text-xs font-bold uppercase tracking-[0.3em] mb-3 block">Białystok — Warszawa — Online</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-warm-100 mb-6">Hipnoterapia i Wsparcie Transformacji</h2>
               <p className="text-warm-300 max-w-2xl mx-auto text-lg font-light leading-relaxed">
                 Naukowo udowodniona ścieżka do przeprogramowania podświadomych wzorców i odblokowania Twojego prawdziwego potencjału.
               </p>

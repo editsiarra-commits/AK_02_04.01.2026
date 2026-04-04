@@ -119,7 +119,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ id }) => (
        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
          {Object.values(offers).map((offer) => (
            <Link to={`/offer/${offer.id}`} key={offer.id} className="group relative flex flex-col h-full overflow-hidden bg-warm-800 rounded-2xl">
-             <AnimatedTile offerId={offer.id} backgroundImage={offer.tileBackgroundImage} />
+             <AnimatedTile offerId={offer.id} backgroundImage={offer.tileBackgroundImage} alt={`Sesja: ${offer.title}`} />
              
              <div className="relative z-10 p-4 pt-6 flex flex-col justify-start text-center items-center grow">
                  {/* Frame Effect */}
@@ -174,7 +174,7 @@ export const OfferDetail: React.FC = () => {
     <div className="min-h-dvh bg-warm-900 pb-20">
        {/* Hero for Detail */}
        <div className="h-[30vh] relative overflow-hidden">
-         <AnimatedTile offerId={offer.id} backgroundImage={offer.tileBackgroundImage}>
+         <AnimatedTile offerId={offer.id} backgroundImage={offer.tileBackgroundImage} alt={`Tło sekcji ${offer.title}`}>
              <div className="absolute inset-0 bg-warm-950/75 flex items-center justify-center">
                 <div className="text-center px-4 max-w-4xl z-10">
                   <span className="block text-coffee-400 uppercase tracking-widest text-sm mb-4 font-bold">Szczegóły Usługi</span>

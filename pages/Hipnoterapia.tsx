@@ -30,8 +30,8 @@ const Hipnoterapia: React.FC = () => {
           <p className="text-coffee-400 font-sans text-xl font-bold uppercase tracking-[0.3em] mb-4">
             Odzyskaj Spokój i Moc
           </p>
-          <h1 className="font-serif text-4xl md:text-6xl text-warm-100 mb-4">
-            Hipnoterapia
+          <h1 className="font-serif text-4xl md:text-6xl text-warm-100 mb-4 uppercase tracking-wider">
+            Hipnoterapia <br /> <span className="text-2xl md:text-3xl text-coffee-400 block mt-2 opacity-90">Białystok — Warszawa — Online</span>
           </h1>
           <p className="text-2xl md:text-3xl text-warm-300 font-serif italic max-w-3xl mx-auto">
             "Dopóki MY nie uczynimy nieświadomego świadomym, będzie ono kierowało naszym życiem, a my będziemy nazywać to losem."
