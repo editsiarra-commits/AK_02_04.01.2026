@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Podmień https://TWOJA-DOMENA.pl na adres produkcyjny (zgodny z VITE_SITE_URL w .env). -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://agnieszkakochanowska.pl/</loc></url>
-  <url><loc>https://agnieszkakochanowska.pl/hipnoterapia</loc></url>
-  <url><loc>https://agnieszkakochanowska.pl/integracja-psychodeliczna</loc></url>
-  <url><loc>https://agnieszkakochanowska.pl/sesje-oddechowe</loc></url>
-  <url><loc>https://agnieszkakochanowska.pl/cat</loc></url>
-  <url><loc>https://agnieszkakochanowska.pl/pricing</loc></url>
-  <url><loc>https://agnieszkakochanowska.pl/offer/stress-anxiety</loc></url>
-  <url><loc>https://agnieszkakochanowska.pl/offer/smoking-cessation</loc></url>
-  <url><loc>https://agnieszkakochanowska.pl/offer/regression</loc></url>
-  <url><loc>https://agnieszkakochanowska.pl/offer/confidence</loc></url>
-  <url><loc>https://agnieszkakochanowska.pl/offer/personal-development</loc></url>
-  <url><loc>https://agnieszkakochanowska.pl/offer/procrastination</loc></url>
-  <url><loc>https://agnieszkakochanowska.pl/offer/relationships</loc></url>
-  <url><loc>https://agnieszkakochanowska.pl/offer/psychedelic-therapy</loc></url>
+  <url><loc>https://www.agnieszkakochanowska.pl/</loc></url>
+  <url><loc>https://www.agnieszkakochanowska.pl/hipnoterapia</loc></url>
+  <url><loc>https://www.agnieszkakochanowska.pl/integracja-psychodeliczna</loc></url>
+  <url><loc>https://www.agnieszkakochanowska.pl/sesje-oddechowe</loc></url>
+  <url><loc>https://www.agnieszkakochanowska.pl/cat</loc></url>
+  <url><loc>https://www.agnieszkakochanowska.pl/pricing</loc></url>
+  <url><loc>https://www.agnieszkakochanowska.pl/offer/stress-anxiety</loc></url>
+  <url><loc>https://www.agnieszkakochanowska.pl/offer/smoking-cessation</loc></url>
+  <url><loc>https://www.agnieszkakochanowska.pl/offer/regression</loc></url>
+  <url><loc>https://www.agnieszkakochanowska.pl/offer/confidence</loc></url>
+  <url><loc>https://www.agnieszkakochanowska.pl/offer/personal-development</loc></url>
+  <url><loc>https://www.agnieszkakochanowska.pl/offer/procrastination</loc></url>
+  <url><loc>https://www.agnieszkakochanowska.pl/offer/relationships</loc></url>
+  <url><loc>https://www.agnieszkakochanowska.pl/offer/psychedelic-therapy</loc></url>
 </urlset>
