@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Podmień https://TWOJA-DOMENA.pl na adres produkcyjny (zgodny z VITE_SITE_URL w .env). -->
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.agnieszkakochanowska.pl/</loc></url>
   <url><loc>https://www.agnieszkakochanowska.pl/hipnoterapia</loc></url>
