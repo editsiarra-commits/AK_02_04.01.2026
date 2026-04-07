@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 .mcp.json
 .tmp_config/
+\n# Local processing files and reports\nSEO Assistant.pdf\nleakscope-report-*.json\nparse_pdf.*\nseo_assistant_dump.txt
