@@ -24,4 +24,13 @@ dist-ssr
 *.sw?
 .mcp.json
 .tmp_config/
-\n# Local processing files and reports\nSEO Assistant.pdf\nleakscope-report-*.json\nparse_pdf.*\nseo_assistant_dump.txt
+
+
+# Local processing files and reports
+SEO Assistant.pdf
+leakscope-report-*.json
+parse_pdf.*
+seo_assistant_dump.txt
+
+# Firebase
+.firebase/
