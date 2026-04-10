@@ -251,7 +251,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
 
                         {/* -------------------- FRONT FACE -------------------- */}
                         <div
-                          className="row-start-1 col-start-1 bg-warm-900 rounded-[32px] sm:rounded-[40px] overflow-hidden border border-warm-800 shadow-[0_20px_70px_-10px_rgba(0,0,0,0.5)] hover:border-warm-700 hover:shadow-[0_20px_70px_-10px_rgba(154,115,82,0.25)] transition-all duration-500 backface-hidden flex flex-col z-20"
+                          className="row-start-1 col-start-1 bg-warm-900 rounded-[32px] sm:rounded-[40px] overflow-hidden border border-warm-800 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)] hover:border-warm-700 hover:shadow-[0_20px_70px_-10px_rgba(154,115,82,0.25)] transition-all duration-500 backface-hidden flex flex-col z-20"
                           style={{
                             WebkitBackfaceVisibility: 'hidden',
                             backfaceVisibility: 'hidden',
@@ -296,7 +296,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
 
                         {/* -------------------- BACK FACE -------------------- */}
                         <div
-                          className="row-start-1 col-start-1 bg-warm-950 rounded-[32px] sm:rounded-[40px] overflow-hidden border border-warm-800 shadow-[0_20px_70px_-10px_rgba(0,0,0,0.5)] hover:border-warm-700 transition-colors duration-500 backface-hidden z-10 flex flex-col"
+                          className="row-start-1 col-start-1 bg-warm-950 rounded-[32px] sm:rounded-[40px] overflow-hidden border border-warm-800 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)] hover:border-warm-700 transition-colors duration-500 backface-hidden z-10 flex flex-col"
                           style={{
                             WebkitBackfaceVisibility: 'hidden',
                             backfaceVisibility: 'hidden',
