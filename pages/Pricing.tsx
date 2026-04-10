@@ -260,7 +260,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                           }}
                         >
                           <div className="p-6 sm:p-8 md:p-8 h-full flex flex-col relative gap-6 sm:gap-8">
-                            <div className="relative z-10 pt-2 sm:pt-4 flex-grow">
+                            <div className="relative z-10 pt-4 sm:pt-6 flex-grow">
                               <div className="text-coffee-400 font-sans text-[10px] sm:text-xs uppercase tracking-[0.2em] mb-4 sm:mb-6">
                                 0{index + 1} — 0{pricingItems.length}
                               </div>
@@ -305,7 +305,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                           }}
                         >
                           <div className="p-6 sm:p-8 md:p-8 h-full flex flex-col relative gap-4 sm:gap-6">
-                            <div className="pt-0">
+                            <div className="pt-4 sm:pt-6">
                               <p className="text-warm-300 text-[12px] sm:text-[14px] md:text-[15px] font-extralight leading-[18px] tracking-[0.5px] pr-6 sm:pr-10">
                                 {item.description}
                               </p>
