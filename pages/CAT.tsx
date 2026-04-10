@@ -13,7 +13,7 @@ const CAT: React.FC = () => {
   return (
     <div className="bg-warm-900 text-warm-200">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 border-b border-warm-800 overflow-hidden">
+      <section className="relative pt-24 pb-4 md:pt-32 md:pb-6 border-b border-warm-800 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <video
             autoPlay
@@ -33,6 +33,9 @@ const CAT: React.FC = () => {
           <h1 className="font-serif text-4xl md:text-6xl text-warm-100 mb-2">
             Terapia wspomagana konopiami
           </h1>
+          <h2 className="text-xl md:text-2xl text-coffee-400 block mt-1 opacity-90 font-serif font-light tracking-wider mb-4">
+            Białystok — Warszawa
+          </h2>
           <p className="text-2xl md:text-3xl text-warm-300 font-serif italic max-w-3xl mx-auto">
           Cannabis Assisted Therapy - CAT
           </p>
@@ -40,9 +43,9 @@ const CAT: React.FC = () => {
       </section>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-16 lg:py-24">
+      <div className="container mx-auto px-4 pt-4 pb-16 lg:pt-4 lg:pb-24">
         <div className="max-w-3xl mx-auto">
-        <div className="mb-8">
+        <div className="mb-6">
             <Link to="/" className="inline-flex items-center text-coffee-400 hover:text-coffee-300 transition-colors">
               <ArrowLeft size={20} className="mr-2" />
               <span>Powrót do strony głównej</span>

@@ -173,7 +173,7 @@ const Home: React.FC = () => {
           </div>
 
           <div
-            className="flex flex-col sm:flex-row gap-6 animate-fade-in-up [animation-delay:0.6s] [animation-fill-mode:both]"
+            className="flex flex-col sm:flex-row gap-16 animate-fade-in-up [animation-delay:0.6s] [animation-fill-mode:both]"
           >
             <button
               onClick={scrollToAbout}
