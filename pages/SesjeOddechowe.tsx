@@ -27,7 +27,7 @@ const SesjeOddechowe: React.FC = () => {
           <div className="absolute inset-0 bg-linear-to-t from-warm-900 to-transparent"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <p className="text-coffee-400 font-sans text-xs font-bold uppercase tracking-[0.3em] mb-2">
+          <p className="text-coffee-400 font-sans text-xl font-bold uppercase tracking-[0.3em] mb-2">
             Powrót do Siebie przez Oddech
           </p>
           <h1 className="font-serif text-4xl md:text-6xl text-warm-100 mb-2">
