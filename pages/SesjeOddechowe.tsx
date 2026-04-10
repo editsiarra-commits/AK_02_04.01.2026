@@ -33,6 +33,9 @@ const SesjeOddechowe: React.FC = () => {
           <h1 className="font-serif text-4xl md:text-6xl text-warm-100 mb-2">
             Sesje Oddechowe
           </h1>
+          <h2 className="text-xl md:text-2xl text-coffee-400 block mt-1 opacity-90 font-serif font-light tracking-wider mb-4">
+            Białystok — Warszawa — Online
+          </h2>
           <p className="text-2xl md:text-3xl text-warm-300 font-serif italic max-w-3xl mx-auto">
           „Oddech jest mostem między ciałem, a umysłem" - Thích Nhất Hạnh
           </p>
