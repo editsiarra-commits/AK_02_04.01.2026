@@ -259,7 +259,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                             cursor: 'default'
                           }}
                         >
-                          <div className="p-8 sm:p-10 md:p-12 h-full flex flex-col relative gap-6 sm:gap-8">
+                          <div className="p-6 sm:p-8 md:p-8 h-full flex flex-col relative gap-6 sm:gap-8">
                             <div className="relative z-10 pt-2 sm:pt-4">
                               <div className="text-coffee-400 font-sans text-[10px] sm:text-xs uppercase tracking-[0.2em] mb-4 sm:mb-6">
                                 0{index + 1} — 0{pricingItems.length}
@@ -304,28 +304,28 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
                             cursor: 'default'
                           }}
                         >
-                          <div className="p-8 sm:p-10 md:p-12 h-full flex flex-col relative gap-6 sm:gap-8">
-                            <div className="pt-2 sm:pt-4">
-                              <p className="text-warm-300 text-[13px] sm:text-base font-extralight leading-[18px] tracking-[0.5px] pr-8 sm:pr-12">
+                          <div className="p-6 sm:p-8 md:p-8 h-full flex flex-col relative gap-4 sm:gap-6">
+                            <div className="pt-0">
+                              <p className="text-warm-300 text-[12px] sm:text-[14px] md:text-[15px] font-extralight leading-[18px] tracking-[0.5px] pr-6 sm:pr-10">
                                 {item.description}
                               </p>
                             </div>
 
-                            <div className="space-y-4 sm:space-y-6">
+                            <div className="space-y-3 sm:space-y-4">
                               <h4 className="font-sans text-[12px] sm:text-[14px] md:text-[15px] font-normal transition-all text-coffee-400 text-left leading-[18px]">
                                 {item.targetAudience}
                               </h4>
-                              <ul className="space-y-3 sm:space-y-4">
+                              <ul className="space-y-2 sm:space-y-3">
                                 {item.details.map((detail, i) => (
                                   <li key={i} className="flex items-start text-warm-300">
-                                    <div className="mt-1.5 sm:mt-2 mr-3 sm:mr-4 shrink-0 w-1.5 h-1.5 rounded-full bg-coffee-500/60"></div>
+                                    <div className="mt-1 sm:mt-1.5 mr-3 sm:mr-4 shrink-0 w-1.5 h-1.5 rounded-full bg-coffee-500/60"></div>
                                     <span className="font-light leading-[18px] text-[12px] sm:text-[14px] md:text-[15px]">{detail}</span>
                                   </li>
                                 ))}
                               </ul>
                             </div>
 
-                            <div className="mt-auto pt-6 sm:pt-8 w-full flex justify-center sm:justify-start">
+                            <div className="mt-auto pt-4 sm:pt-6 w-full flex justify-center sm:justify-start">
                               <button
                                 onClick={(e) => { e.stopPropagation(); handleContactClick(e); }}
                                 className="block w-full sm:w-2/3 md:w-3/4 lg:w-2/3 py-3 sm:py-4 text-center border border-coffee-600 text-coffee-400 font-sans hover:bg-coffee-900/30 transition-all duration-300 uppercase text-[10px] sm:text-sm tracking-widest rounded-full cursor-pointer"
