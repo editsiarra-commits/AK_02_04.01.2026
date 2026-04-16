@@ -131,21 +131,24 @@ const Home: React.FC = () => {
 
         {/* Content */}
         <div className="relative z-10 h-full flex flex-col justify-end items-center text-center px-4 max-w-4xl mx-auto pb-10">
-
+ {/*
           <span className="text-coffee-400 uppercase tracking-[0.3em] mb-6 text-sm md:text-base animate-fade-in-up font-medium [animation-fill-mode:both]">
             Certyfikowana Hipnoterapeutka
           </span>
+          */}
           <h1
             className="font-serif text-5xl md:text-7xl text-warm-100 mb-8 leading-tight drop-shadow-2xl animate-fade-in-up [animation-delay:0.2s] [animation-fill-mode:both]"
           >
             Przestrzeń Integracji  <br /> Świadomości <br /> i Rozwoju
           </h1>
+         
+         {/*
           <p
             className="font-sans text-warm-300 text-lg md:text-xl max-w-2xl mb-4 font-light leading-relaxed tracking-wide animate-fade-in-up [animation-delay:0.4s] [animation-fill-mode:both]"
           >
             Zapraszam Cię do spotkania z Tym, co w Tobie jest źródłem Mocy <br />  <br />
           </p>
-
+          
           {/* Video Controls - Moved after text */}
           <div className="mb-8 flex space-x-2 animate-fade-in-up [animation-delay:0.5s] [animation-fill-mode:both]">
             <button
