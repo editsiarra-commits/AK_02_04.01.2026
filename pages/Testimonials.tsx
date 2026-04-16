@@ -9,6 +9,9 @@ interface Testimonial {
   image: string;
 }
 
+/** Czas wyświetlania jednej opinii w karuzeli (ms). */
+const SLIDE_INTERVAL_MS = 5000;
+
 const testimonials: Testimonial[] = [
   {
     id: 1,
@@ -74,7 +77,7 @@ const Testimonials: React.FC<{ id?: string }> = ({ id }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, SLIDE_INTERVAL_MS);
     return () => clearInterval(interval);
   }, []);
 
@@ -85,7 +88,7 @@ const Testimonials: React.FC<{ id?: string }> = ({ id }) => {
       <div className="pointer-events-none absolute -left-20 top-24 h-72 w-72 rounded-full bg-coffee-600/15 blur-[80px]" />
       <div className="pointer-events-none absolute -right-16 bottom-20 h-64 w-64 rounded-full bg-warm-800/40 blur-[70px]" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10 text-center md:mb-12">
           <p className="mb-2 font-sans text-xs font-bold uppercase tracking-[0.35em] text-coffee-400">
             Opinie · {testimonials.length} historii
@@ -96,8 +99,7 @@ const Testimonials: React.FC<{ id?: string }> = ({ id }) => {
           </p>
         </div>
 
-        <div className="mx-auto max-w-4xl">
-          <div className="relative overflow-hidden rounded-3xl border border-warm-800/90 bg-gradient-to-br from-warm-900/90 via-warm-950/95 to-warm-950 p-6 shadow-2xl shadow-black/25 md:p-9 lg:p-10">
+        <div className="relative overflow-hidden rounded-3xl border border-warm-800/90 bg-gradient-to-br from-warm-900/90 via-warm-950/95 to-warm-950 p-6 shadow-2xl shadow-black/25 md:p-9 lg:p-10">
               <div className="pointer-events-none absolute -right-8 -top-12 font-serif text-[10rem] leading-none text-coffee-400/[0.07] select-none md:text-[12rem]">
                 "
               </div>
@@ -151,7 +153,6 @@ const Testimonials: React.FC<{ id?: string }> = ({ id }) => {
                   />
                 ))}
               </div>
-            </div>
         </div>
       </div>
     </section>
