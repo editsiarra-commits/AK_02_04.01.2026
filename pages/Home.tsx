@@ -126,7 +126,7 @@ const Home: React.FC = () => {
             Twoja przeglądarka nie obsługuje znacznika wideo.
           </video>
           {/* Overlay - Light frosted glass effect */}
-          <div className="absolute inset-0 bg-warm-950/50 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-warm-950/10 backdrop-blur-[0px]"></div>
         </div>
 
         {/* Content */}

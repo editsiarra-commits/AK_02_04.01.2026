@@ -21,9 +21,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     plugins: [
-      liveDesigner({
-        //...
-      }),
+      liveDesigner(),
       tailwindcss(),
       react()
     ],
