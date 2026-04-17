@@ -126,7 +126,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ id }) => (
                  <div className="absolute inset-2 border border-warm-950/10 group-hover:border-coffee-400/40 transition-colors duration-700 pointer-events-none rounded-xl"></div>
                  
                  <div className="transform transition-transform duration-500 group-hover:-translate-y-2 w-full flex flex-col items-center">
-                    <h3 className="font-display text-[26px] text-white mb-2 tracking-wide drop-shadow-lg leading-tight px-2 font-semibold">{offer.title}</h3>
+                    <h3 className="font-display text-[26px] text-white mb-2 tracking-wide drop-shadow-lg leading-tight px-2 font-normal">{offer.title}</h3>
                     
                     {/* Animated Line */}
                     <div className="w-0 h-px bg-coffee-400 mx-auto mb-3 transition-all duration-500 group-hover:w-12 opacity-80"></div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
 import { Quote } from 'lucide-react';
 
 interface Testimonial {
@@ -71,8 +71,66 @@ const testimonials: Testimonial[] = [
   }
 ];
 
+function TestimonialSlideBody({ testimonial }: { testimonial: Testimonial }) {
+  return (
+    <div className="flex min-h-0 flex-1 flex-col">
+      <div className="mb-3 flex items-start gap-4 md:mb-4">
+        <div className="text-coffee-400 opacity-90">
+          <Quote size={36} className="fill-current opacity-40 md:h-10 md:w-10" />
+        </div>
+        <div className="min-w-0 flex-1 pt-0.5">
+          <blockquote className="text-left">
+            <p className="font-serif text-[0.99rem] font-light italic leading-relaxed text-warm-100 md:text-[1.2375rem] md:leading-relaxed">
+              <span className="text-coffee-400/80">"</span>
+              {testimonial.content}
+              <span className="text-coffee-400/80">"</span>
+            </p>
+          </blockquote>
+        </div>
+      </div>
+
+      <div className="mt-auto flex flex-col items-center gap-3 border-t border-warm-800/70 pt-4 text-center md:gap-4">
+        <div className="h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-coffee-400 shadow-md md:h-16 md:w-16">
+          <img src={testimonial.image} alt={testimonial.name} className="h-full w-full object-cover" />
+        </div>
+        <div className="min-w-0 max-w-full">
+          <h4 className="font-sans text-base font-medium uppercase tracking-widest text-warm-100 md:text-lg">
+            {testimonial.name}
+          </h4>
+          <p className="mt-0.5 font-sans text-[11px] font-bold uppercase tracking-wide text-coffee-400 md:text-xs">
+            {testimonial.role}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const Testimonials: React.FC<{ id?: string }> = ({ id }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [contentMinHeight, setContentMinHeight] = useState(0);
+  const measureRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const recalcMaxHeight = useCallback(() => {
+    const root = measureRef.current;
+    if (!root) return;
+    const slots = root.querySelectorAll<HTMLElement>('[data-measure-slot]');
+    let max = 0;
+    slots.forEach((slot) => {
+      max = Math.max(max, slot.offsetHeight);
+    });
+    if (max > 0) setContentMinHeight(max);
+  }, []);
+
+  useLayoutEffect(() => {
+    recalcMaxHeight();
+    const card = cardRef.current;
+    if (!card || typeof ResizeObserver === 'undefined') return;
+    const ro = new ResizeObserver(() => recalcMaxHeight());
+    ro.observe(card);
+    return () => ro.disconnect();
+  }, [recalcMaxHeight]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -99,60 +157,49 @@ const Testimonials: React.FC<{ id?: string }> = ({ id }) => {
           </p>
         </div>
 
-        <div className="relative overflow-hidden rounded-3xl border border-warm-800/90 bg-gradient-to-br from-warm-900/90 via-warm-950/95 to-warm-950 p-6 shadow-2xl shadow-black/25 md:p-9 lg:p-10">
-              <div className="pointer-events-none absolute -right-8 -top-12 font-serif text-[10rem] leading-none text-coffee-400/[0.07] select-none md:text-[12rem]">
-                "
-              </div>
-              <div className="pointer-events-none absolute bottom-0 right-0 h-40 w-40 rounded-tl-[100%] bg-coffee-500/10" />
+        <div
+          ref={cardRef}
+          className="relative overflow-hidden rounded-3xl border border-warm-800/90 bg-gradient-to-br from-warm-900/90 via-warm-950/95 to-warm-950 p-6 shadow-2xl shadow-black/25 md:p-9 lg:p-10"
+        >
+          <div className="pointer-events-none absolute -right-8 -top-12 font-serif text-[10rem] leading-none text-coffee-400/[0.07] select-none md:text-[12rem]">
+            "
+          </div>
+          <div className="pointer-events-none absolute bottom-0 right-0 h-40 w-40 rounded-tl-[100%] bg-coffee-500/10" />
 
-              <div key={currentIndex} className="relative flex flex-col">
-                <div className="mb-3 flex items-start gap-4 md:mb-4">
-                  <div className="text-coffee-400 opacity-90">
-                    <Quote size={36} className="fill-current opacity-40 md:h-10 md:w-10" />
-                  </div>
-                  <div className="min-w-0 flex-1 pt-0.5">
-                    <blockquote className="text-left">
-                      <p className="font-serif text-[0.99rem] font-light italic leading-relaxed text-warm-100 md:text-[1.2375rem] md:leading-relaxed">
-                        <span className="text-coffee-400/80">"</span>
-                        {activeTestimonial.content}
-                        <span className="text-coffee-400/80">"</span>
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap items-center gap-4 border-t border-warm-800/70 pt-4 md:gap-5">
-                  <div className="h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-coffee-400 shadow-md md:h-16 md:w-16">
-                    <img
-                      src={activeTestimonial.image}
-                      alt={activeTestimonial.name}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div className="min-w-0">
-                    <h4 className="font-sans text-base font-medium uppercase tracking-widest text-warm-100 md:text-lg">
-                      {activeTestimonial.name}
-                    </h4>
-                    <p className="mt-0.5 font-sans text-[11px] font-bold uppercase tracking-wide text-coffee-400 md:text-xs">
-                      {activeTestimonial.role}
-                    </p>
-                  </div>
-                </div>
+          <div
+            ref={measureRef}
+            className="pointer-events-none absolute left-0 top-0 -z-10 w-full opacity-0"
+            aria-hidden
+          >
+            {testimonials.map((t) => (
+              <div key={t.id} data-measure-slot className="w-full">
+                <TestimonialSlideBody testimonial={t} />
               </div>
+            ))}
+          </div>
 
-              <div className="relative mt-5 flex justify-center gap-2 border-t border-warm-800/60 pt-4 md:mt-6 md:pt-5">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    type="button"
-                    onClick={() => setCurrentIndex(index)}
-                    className={`h-1 rounded-full transition-all duration-500 ${
-                      index === currentIndex ? 'w-8 bg-coffee-400' : 'w-2 bg-warm-800 hover:bg-warm-700'
-                    }`}
-                    aria-label={`Przejdź do opinii ${index + 1}`}
-                  />
-                ))}
-              </div>
+          <div
+            className="relative z-10 flex flex-col"
+            style={contentMinHeight > 0 ? { minHeight: contentMinHeight } : undefined}
+          >
+            <div key={currentIndex} className="flex min-h-0 flex-1 flex-col">
+              <TestimonialSlideBody testimonial={activeTestimonial} />
+            </div>
+          </div>
+
+          <div className="relative z-10 mt-5 flex justify-center gap-2 border-t border-warm-800/60 pt-4 md:mt-6 md:pt-5">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                onClick={() => setCurrentIndex(index)}
+                className={`h-1 rounded-full transition-all duration-500 ${
+                  index === currentIndex ? 'w-8 bg-coffee-400' : 'w-2 bg-warm-800 hover:bg-warm-700'
+                }`}
+                aria-label={`Przejdź do opinii ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
