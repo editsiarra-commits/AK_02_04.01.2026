@@ -110,7 +110,6 @@ const Testimonials: React.FC<{ id?: string }> = ({ id }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [contentMinHeight, setContentMinHeight] = useState(0);
   const measureRef = useRef<HTMLDivElement>(null);
-  const cardRef = useRef<HTMLDivElement>(null);
 
   const recalcMaxHeight = useCallback(() => {
     const root = measureRef.current;
@@ -125,10 +124,14 @@ const Testimonials: React.FC<{ id?: string }> = ({ id }) => {
 
   useLayoutEffect(() => {
     recalcMaxHeight();
-    const card = cardRef.current;
-    if (!card || typeof ResizeObserver === 'undefined') return;
+    const measure = measureRef.current;
+    if (!measure || typeof ResizeObserver === 'undefined') return;
+    // Observe the measurement layer (not the card): hidden slots live in an absolutely
+    // positioned subtree, so the card's box does not resize when images load — we must
+    // react when any measured slide changes height.
     const ro = new ResizeObserver(() => recalcMaxHeight());
-    ro.observe(card);
+    ro.observe(measure);
+    void document.fonts?.ready?.then(() => recalcMaxHeight());
     return () => ro.disconnect();
   }, [recalcMaxHeight]);
 
@@ -157,10 +160,7 @@ const Testimonials: React.FC<{ id?: string }> = ({ id }) => {
           </p>
         </div>
 
-        <div
-          ref={cardRef}
-          className="relative overflow-hidden rounded-3xl border border-warm-800/90 bg-gradient-to-br from-warm-900/90 via-warm-950/95 to-warm-950 p-6 shadow-2xl shadow-black/25 md:p-9 lg:p-10"
-        >
+        <div className="relative overflow-hidden rounded-3xl border border-warm-800/90 bg-gradient-to-br from-warm-900/90 via-warm-950/95 to-warm-950 p-6 shadow-2xl shadow-black/25 md:p-9 lg:p-10">
           <div className="pointer-events-none absolute -right-8 -top-12 font-serif text-[10rem] leading-none text-coffee-400/[0.07] select-none md:text-[12rem]">
             "
           </div>
@@ -168,7 +168,7 @@ const Testimonials: React.FC<{ id?: string }> = ({ id }) => {
 
           <div
             ref={measureRef}
-            className="pointer-events-none absolute left-0 top-0 -z-10 w-full opacity-0"
+            className="pointer-events-none absolute left-0 top-0 -z-10 w-full px-6 md:px-9 lg:px-10 opacity-0"
             aria-hidden
           >
             {testimonials.map((t) => (
