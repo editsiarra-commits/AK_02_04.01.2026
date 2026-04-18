@@ -44,6 +44,12 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
     }
   };
 
+  // Top-bar text color: white (#f3f3f3) over hero, orange (coffee-500) over solid bg after scroll.
+  // Hover always goes to dark grey for a subtle, readable accent on both backgrounds.
+  const topBarText = scrolled
+    ? 'text-coffee-500 hover:text-[#2a2a2a]'
+    : 'text-[#f3f3f3] hover:text-[#2a2a2a]';
+
   const handleLogoClick = (e: React.MouseEvent) => {
     if (location.pathname === '/') {
       e.preventDefault();
@@ -68,13 +74,13 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
           <div className="flex items-center">
             {/* Social Icons (Desktop) */}
             <div className="hidden lg:flex items-center space-x-5 mr-8 pr-8 border-r border-warm-800/40">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-warm-400 hover:text-coffee-400 transition-colors duration-300 transform hover:scale-110">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={`${topBarText} transition-colors duration-300 transform hover:scale-110`}>
                     <Instagram size={18} strokeWidth={1.5} />
                 </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-warm-400 hover:text-coffee-400 transition-colors duration-300 transform hover:scale-110">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={`${topBarText} transition-colors duration-300 transform hover:scale-110`}>
                     <Facebook size={18} strokeWidth={1.5} />
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-warm-400 hover:text-coffee-400 transition-colors duration-300 transform hover:scale-110">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className={`${topBarText} transition-colors duration-300 transform hover:scale-110`}>
                     <Linkedin size={18} strokeWidth={1.5} />
                 </a>
             </div>
@@ -83,7 +89,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
               <Link 
                 to="/" 
                 onClick={handleLogoClick}
-                className="font-serif text-xl md:text-xl font-semibold tracking-wider text-warm-100 hover:text-coffee-400 transition-colors cursor-pointer"
+                className={`font-serif text-xl md:text-xl font-semibold tracking-wider transition-colors cursor-pointer ${topBarText}`}
               >
                 AGNIESZKA KOCHANOWSKA
               </Link>
@@ -99,13 +105,11 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                     <a
                       href={item.path}
                       onClick={(e) => handleNavClick(e, item.path)}
-                      className={`flex items-center space-x-1 font-sans text-xs font-bold tracking-[0.15em] uppercase hover:text-coffee-400 transition-colors ${
-                         scrolled ? 'text-warm-200' : 'text-warm-100'
-                      }`}
+                      className={`flex items-center space-x-1 font-sans text-xs font-bold tracking-[0.15em] uppercase transition-colors ${topBarText}`}
                     >
                       <span>{item.label}</span>
                     </a>
-                    <button aria-label="Rozwiń podmenu" className="ml-1 text-warm-200 hover:text-coffee-400">
+                    <button aria-label="Rozwiń podmenu" className={`ml-1 transition-colors ${topBarText}`}>
                          <ChevronDown size={14} />
                     </button>
                     
@@ -116,7 +120,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                           <Link
                             key={child.path}
                             to={child.path}
-                            className="block px-6 py-3 text-xs uppercase tracking-wider text-warm-300 hover:bg-warm-900 hover:text-coffee-400 transition-colors border-b border-warm-800/50 last:border-0 font-medium"
+                            className="block px-6 py-3 text-xs uppercase tracking-wider text-coffee-500 hover:bg-warm-900 hover:text-[#2a2a2a] transition-colors border-b border-warm-800/50 last:border-0 font-medium"
                           >
                             {child.label}
                           </Link>
@@ -129,18 +133,14 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                     <a
                       href={item.path}
                       onClick={(e) => handleNavClick(e, item.path)}
-                      className={`font-sans text-xs font-bold tracking-[0.15em] uppercase hover:text-coffee-400 transition-colors ${
-                        scrolled ? 'text-warm-200' : 'text-warm-100'
-                      }`}
+                      className={`font-sans text-xs font-bold tracking-[0.15em] uppercase transition-colors ${topBarText}`}
                     >
                       {item.label}
                     </a>
                   ) : (
                     <Link
                       to={item.path}
-                      className={`font-sans text-xs font-bold tracking-[0.15em] uppercase hover:text-coffee-400 transition-colors ${
-                        scrolled ? 'text-warm-200' : 'text-warm-100'
-                      }`}
+                      className={`font-sans text-xs font-bold tracking-[0.15em] uppercase transition-colors ${topBarText}`}
                     >
                       {item.label}
                     </Link>
@@ -153,7 +153,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-warm-100 hover:text-coffee-400"
+              className={`p-2 rounded-md transition-colors ${topBarText}`}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -173,14 +173,14 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                         <a 
                            href={item.path}
                            onClick={(e) => handleNavClick(e, item.path)}
-                           className="grow py-4 text-sm font-bold text-warm-100 uppercase tracking-widest"
+                           className="grow py-4 text-sm font-bold text-[#f3f3f3] uppercase tracking-widest"
                         >
                            {item.label}
                         </a>
                         <button 
                             aria-label="Rozwiń podmenu"
                             onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
-                            className="p-4 text-warm-400"
+                            className="p-4 text-[#f3f3f3]"
                         >
                             <ChevronDown size={16} className={`transform transition-transform ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
                         </button>
@@ -192,7 +192,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                            <Link
                              key={child.path}
                              to={child.path}
-                             className="block px-8 py-3 text-xs uppercase tracking-wider text-warm-300 hover:text-coffee-400"
+                             className="block px-8 py-3 text-xs uppercase tracking-wider text-coffee-500 hover:text-[#2a2a2a]"
                              onClick={() => setIsOpen(false)}
                            >
                              {child.label}
@@ -206,7 +206,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                     <a
                       href={item.path}
                       onClick={(e) => handleNavClick(e, item.path)}
-                      className="block px-3 py-4 text-sm font-bold text-warm-100 uppercase tracking-widest border-b border-warm-800 hover:bg-warm-900"
+                      className="block px-3 py-4 text-sm font-bold text-[#f3f3f3] uppercase tracking-widest border-b border-warm-800 hover:bg-warm-900"
                     >
                       {item.label}
                     </a>
@@ -214,7 +214,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                     <Link
                       to={item.path}
                       onClick={() => setIsOpen(false)}
-                      className="block px-3 py-4 text-sm font-bold text-warm-100 uppercase tracking-widest border-b border-warm-800 hover:bg-warm-900"
+                      className="block px-3 py-4 text-sm font-bold text-[#f3f3f3] uppercase tracking-widest border-b border-warm-800 hover:bg-warm-900"
                     >
                       {item.label}
                     </Link>
@@ -226,15 +226,15 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
           
           {/* Mobile Socials */}
           <div className="px-8 py-8 border-t border-warm-800 bg-warm-900/50">
-             <p className="text-center text-xs text-warm-500 uppercase tracking-widest mb-4">Obserwuj Mnie</p>
+             <p className="text-center text-xs text-[#f3f3f3] uppercase tracking-widest mb-4">Obserwuj Mnie</p>
              <div className="flex justify-center space-x-8">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-warm-300 hover:text-coffee-400 transition-colors">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-[#f3f3f3] hover:text-coffee-400 transition-colors">
                     <Instagram size={24} strokeWidth={1.5} />
                 </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-warm-300 hover:text-coffee-400 transition-colors">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-[#f3f3f3] hover:text-coffee-400 transition-colors">
                     <Facebook size={24} strokeWidth={1.5} />
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-warm-300 hover:text-coffee-400 transition-colors">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-[#f3f3f3] hover:text-coffee-400 transition-colors">
                     <Linkedin size={24} strokeWidth={1.5} />
                 </a>
              </div>

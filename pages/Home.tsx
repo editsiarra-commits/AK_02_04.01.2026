@@ -116,9 +116,9 @@ const Home: React.FC = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-warm-950">
           <video
             ref={videoRef}
-            className="w-full h-full object-cover opacity-80 bg-warm-950"
+            className="w-full h-full object-cover opacity-100 bg-warm-950"
             autoPlay
-            loop
+            
             muted
             playsInline
           >
@@ -126,7 +126,7 @@ const Home: React.FC = () => {
             Twoja przeglądarka nie obsługuje znacznika wideo.
           </video>
           {/* Overlay - Light frosted glass effect */}
-          <div className="absolute inset-0 bg-warm-950/10 backdrop-blur-[0px]"></div>
+          <div className="absolute inset-0 bg-warm-950/10 backdrop-blur-[1px]"></div>
         </div>
 
         {/* Content */}
@@ -137,7 +137,7 @@ const Home: React.FC = () => {
           </span>
           */}
           <h1
-            className="font-serif text-5xl md:text-7xl text-warm-100 mb-8 leading-tight drop-shadow-2xl animate-fade-in-up [animation-delay:0.2s] [animation-fill-mode:both]"
+            className="font-serif text-5xl md:text-7xl text-[#f3f3f3] mb-8 leading-tight drop-shadow-2xl animate-fade-in-up [animation-delay:0.2s] [animation-fill-mode:both]"
           >
             Przestrzeń Integracji  <br /> Świadomości <br /> i Rozwoju
           </h1>
@@ -153,7 +153,7 @@ const Home: React.FC = () => {
           <div className="mb-8 flex space-x-2 animate-fade-in-up [animation-delay:0.5s] [animation-fill-mode:both]">
             <button
               onClick={togglePlay}
-              className="group p-2 rounded-full bg-warm-900/40 border border-warm-300/20 backdrop-blur-md text-warm-200 hover:bg-coffee-600 hover:border-coffee-500 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-coffee-900/50 focus:outline-none focus:ring-2 focus:ring-coffee-400"
+              className="group p-2 rounded-full bg-warm-900/40 border border-warm-300/20 backdrop-blur-md text-[#f3f3f3] hover:bg-coffee-600 hover:border-coffee-500 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-coffee-900/50 focus:outline-none focus:ring-2 focus:ring-coffee-400"
               aria-label={isPlaying ? "Zatrzymaj wideo" : "Odtwórz wideo"}
             >
               {isPlaying ? (
@@ -164,7 +164,7 @@ const Home: React.FC = () => {
             </button>
             <button
               onClick={toggleMute}
-              className="group p-2 rounded-full bg-warm-900/40 border border-warm-300/20 backdrop-blur-md text-warm-200 hover:bg-coffee-600 hover:border-coffee-500 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-coffee-900/50 focus:outline-none focus:ring-2 focus:ring-coffee-400"
+              className="group p-2 rounded-full bg-warm-900/40 border border-warm-300/20 backdrop-blur-md text-[#f3f3f3] hover:bg-coffee-600 hover:border-coffee-500 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-coffee-900/50 focus:outline-none focus:ring-2 focus:ring-coffee-400"
               aria-label={isMuted ? "Włącz dźwięk" : "Wycisz"}
             >
               {isMuted ? (
@@ -180,7 +180,7 @@ const Home: React.FC = () => {
           >
             <button
               onClick={scrollToAbout}
-              className="px-10 py-4 bg-transparent border border-warm-200 text-warm-100 font-sans text-xs uppercase tracking-widest hover:bg-warm-200 hover:text-warm-900 transition-all duration-300 rounded-[30px]"
+              className="px-10 py-4 bg-transparent border border-[#f3f3f3] text-[#f3f3f3] font-sans text-xs uppercase tracking-widest hover:bg-[#f3f3f3] hover:text-warm-900 transition-all duration-300 rounded-[30px]"
             >
               Dowiedz się Więcej
             </button>
@@ -189,13 +189,13 @@ const Home: React.FC = () => {
               onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) }}
               className="px-10 py-4 bg-coffee-700 text-white font-sans text-xs uppercase tracking-widest hover:bg-coffee-600 transition-all duration-300 shadow-2xl shadow-coffee-900/20 rounded-full"
             >
-              ZAREZERWUJ TĘ SESJĘ
+              ZAREZERWUJ SESJĘ
             </a>
           </div>
 
           <button
             onClick={scrollToAbout}
-            className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-warm-400 hover:text-warm-100 transition-colors animate-bounce [animation-delay:1s]"
+            className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-[#f3f3f3] hover:text-white transition-colors animate-bounce [animation-delay:1s]"
             title="Przewiń w dół"
             aria-label="Przewiń w dół"
           >

@@ -10,14 +10,13 @@ export default defineConfig(({ mode }) => {
   return {
     server: {
       port: 3000,
-      host: '127.0.0.1',
+      // Listen on all interfaces; let Vite infer HMR hostname from the request URL.
+      // Fixed 127.0.0.1 + hmr.host breaks hot reload when the embedded browser opens
+      // http://localhost:3000 (localhost vs 127.0.0.1 WebSocket mismatch).
+      host: true,
       strictPort: false,
       watch: {
         usePolling: true,
-      },
-      hmr: {
-        host: '127.0.0.1',
-        protocol: 'ws',
       },
     },
     plugins: [
