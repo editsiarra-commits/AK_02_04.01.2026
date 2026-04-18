@@ -48,7 +48,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
   // Hover always goes to dark grey for a subtle, readable accent on both backgrounds.
   const topBarText = scrolled
     ? 'text-coffee-500 hover:text-[#2a2a2a]'
-    : 'text-[#f3f3f3] hover:text-[#2a2a2a]';
+    : 'text-[#f3f3f3] hover:text-coffee-500';
 
   const handleLogoClick = (e: React.MouseEvent) => {
     if (location.pathname === '/') {
