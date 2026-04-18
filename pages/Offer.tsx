@@ -173,15 +173,23 @@ export const OfferDetail: React.FC = () => {
   return (
     <div className="min-h-dvh bg-warm-900 pb-20">
        {/* Hero for Detail */}
-       <div className="h-[30vh] relative overflow-hidden">
-         <AnimatedTile offerId={offer.id} backgroundImage={offer.tileBackgroundImage} alt={`Tło sekcji ${offer.title}`}>
-             <div className="absolute inset-0 bg-warm-950/75 flex items-center justify-center">
-                <div className="text-center px-4 max-w-4xl z-10">
-                  <span className="block text-coffee-400 uppercase tracking-widest text-sm mb-4 font-bold">Szczegóły Usługi</span>
-                  <h1 className="font-display text-4xl md:text-5xl text-warm-100 tracking-wide mb-2">{offer.title}</h1>
-                </div>
-             </div>
-         </AnimatedTile>
+       <div className="h-[30vh] relative overflow-hidden bg-warm-950">
+         <video
+           className="absolute inset-0 w-full h-full object-cover"
+           autoPlay
+           loop
+           muted
+           playsInline
+           aria-hidden="true"
+         >
+           <source src="/assets/video4.mp4" type="video/mp4" />
+         </video>
+         <div className="absolute inset-0 bg-warm-950/75 flex items-center justify-center">
+            <div className="text-center px-4 max-w-4xl z-10">
+              <span className="block text-coffee-400 uppercase tracking-widest text-sm mb-4 font-bold">Szczegóły Usługi</span>
+              <h1 className="font-display text-4xl md:text-5xl text-warm-100 tracking-wide mb-2">{offer.title}</h1>
+            </div>
+         </div>
        </div>
 
        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">
