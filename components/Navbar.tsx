@@ -115,7 +115,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                     
                     {/* Dropdown Menu */}
                     <div className="absolute top-full left-0 w-64 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
-                      <div className="bg-warm-950 rounded-xl shadow-xl overflow-hidden py-2 border border-warm-800">
+                      <div className="bg-warm-950/90 backdrop-blur-md rounded-xl shadow-xl overflow-hidden py-2 border border-warm-800">
                         {item.children.map((child) => (
                           <Link
                             key={child.path}
