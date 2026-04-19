@@ -27,6 +27,17 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
     setActiveDropdown(null);
   }, [location]);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const handleNavClick = (e: React.MouseEvent, path: string) => {
     if (path.startsWith('#')) {
       e.preventDefault();
@@ -162,51 +173,74 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-warm-950 shadow-xl h-dvh overflow-y-auto pb-[calc(env(safe-area-inset-bottom)+2rem)] border-t border-warm-800 flex flex-col">
-          <div className="px-4 pt-4 pb-8 space-y-1 grow">
-            {navItems.map((item) => (
-              <div key={item.label}>
+      <div 
+        className={`md:hidden fixed inset-0 z-40 bg-warm-950/98 backdrop-blur-5xl transition-all duration-300 ease-in-out flex flex-col ${
+          isOpen ? 'opacity-100 visible pointer-events-auto' : 'opacity-0 invisible pointer-events-none'
+        }`}
+        style={{ height: '100dvh' }}
+      >
+        <div className="flex-1 overflow-y-auto pt-24 px-6 pb-[calc(env(safe-area-inset-bottom)+2rem)] flex flex-col">
+          <div className="space-y-2 flex-1 flex flex-col justify-center">
+            {navItems.map((item, index) => (
+              <div 
+                key={item.label}
+                className={`transform transition-all duration-500 delay-${index * 100} ${
+                  isOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                }`}
+              >
                 {item.children ? (
                   <div className="space-y-1">
-                     <div className="flex justify-between items-center border-b border-warm-800">
+                     <div 
+                        className="flex justify-between items-center py-4 border-b border-warm-800/20"
+                        onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
+                     >
                         <a 
                            href={item.path}
-                           onClick={(e) => handleNavClick(e, item.path)}
-                           className="grow py-4 text-sm font-bold text-[#f3f3f3] uppercase tracking-widest"
+                           onClick={(e) => {
+                             if (activeDropdown !== item.label) {
+                                e.preventDefault();
+                                setActiveDropdown(item.label);
+                             } else {
+                                handleNavClick(e, item.path);
+                             }
+                           }}
+                           className="grow text-2xl font-bold text-[#2a2a2a] uppercase tracking-widest hover:text-coffee-500 transition-colors"
                         >
                            {item.label}
                         </a>
                         <button 
                             aria-label="Rozwiń podmenu"
-                            onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
-                            className="p-4 text-[#f3f3f3]"
+                            className="p-2 text-[#2a2a2a]"
                         >
-                            <ChevronDown size={16} className={`transform transition-transform ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
+                            <ChevronDown size={24} className={`transform transition-transform duration-300 ${activeDropdown === item.label ? 'rotate-180 text-coffee-500' : ''}`} />
                         </button>
                      </div>
                      
-                     {activeDropdown === item.label && (
-                       <div className="bg-warm-900/50 py-2 rounded-lg">
+                     <div 
+                        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                           activeDropdown === item.label ? 'max-h-64 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                        }`}
+                     >
+                       <div className="pl-6 py-2 flex flex-col space-y-4 border-l-2 border-coffee-500/30 ml-2">
                          {item.children.map(child => (
                            <Link
                              key={child.path}
                              to={child.path}
-                             className="block px-8 py-3 text-xs uppercase tracking-wider text-coffee-500 hover:text-[#2a2a2a]"
+                             className="text-lg tracking-wider text-warm-300 hover:text-coffee-500 transition-colors"
                              onClick={() => setIsOpen(false)}
                            >
                              {child.label}
                            </Link>
                          ))}
                        </div>
-                     )}
+                     </div>
                   </div>
                 ) : (
                   item.path.startsWith('#') ? (
                     <a
                       href={item.path}
                       onClick={(e) => handleNavClick(e, item.path)}
-                      className="block px-3 py-4 text-sm font-bold text-[#f3f3f3] uppercase tracking-widest border-b border-warm-800 hover:bg-warm-900"
+                      className="block py-4 text-2xl font-bold text-[#2a2a2a] uppercase tracking-widest border-b border-warm-800/20 hover:text-coffee-500 transition-colors"
                     >
                       {item.label}
                     </a>
@@ -214,7 +248,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                     <Link
                       to={item.path}
                       onClick={() => setIsOpen(false)}
-                      className="block px-3 py-4 text-sm font-bold text-[#f3f3f3] uppercase tracking-widest border-b border-warm-800 hover:bg-warm-900"
+                      className="block py-4 text-2xl font-bold text-[#2a2a2a] uppercase tracking-widest border-b border-warm-800/20 hover:text-coffee-500 transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -225,22 +259,26 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
           </div>
           
           {/* Mobile Socials */}
-          <div className="px-8 py-8 border-t border-warm-800 bg-warm-900/50">
-             <p className="text-center text-xs text-[#f3f3f3] uppercase tracking-widest mb-4">Obserwuj Mnie</p>
+          <div 
+            className={`mt-12 pt-8 border-t border-warm-800/20 transform transition-all duration-500 delay-300 ${
+              isOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+            }`}
+          >
+             <p className="text-center text-sm font-medium text-warm-300 uppercase tracking-widest mb-6">Obserwuj Mnie</p>
              <div className="flex justify-center space-x-8">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-[#f3f3f3] hover:text-coffee-400 transition-colors">
-                    <Instagram size={24} strokeWidth={1.5} />
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-[#2a2a2a] hover:text-coffee-500 transition-colors p-2">
+                    <Instagram size={28} strokeWidth={1.5} />
                 </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-[#f3f3f3] hover:text-coffee-400 transition-colors">
-                    <Facebook size={24} strokeWidth={1.5} />
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-[#2a2a2a] hover:text-coffee-500 transition-colors p-2">
+                    <Facebook size={28} strokeWidth={1.5} />
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-[#f3f3f3] hover:text-coffee-400 transition-colors">
-                    <Linkedin size={24} strokeWidth={1.5} />
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-[#2a2a2a] hover:text-coffee-500 transition-colors p-2">
+                    <Linkedin size={28} strokeWidth={1.5} />
                 </a>
              </div>
           </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 };

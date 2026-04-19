@@ -51,6 +51,10 @@ export default {
             },
             animation: {
                 'fade-in-up': 'fadeInUp 1s ease-out forwards',
+            },
+            blur: {
+                '4xl': '72px',
+                '5xl': '100px',
             }
         }
     },
