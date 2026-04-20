@@ -1,4 +1,4 @@
-import { offers } from '../pages/Offer';
+import { offers } from '../data/offers';
 import { SITE_NAME } from './siteConfig';
 
 export interface PageMeta {

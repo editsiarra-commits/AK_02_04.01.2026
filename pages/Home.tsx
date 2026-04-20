@@ -118,9 +118,10 @@ const Home: React.FC = () => {
             ref={videoRef}
             className="w-full h-full object-cover opacity-100 bg-warm-950"
             autoPlay
-            
             muted
+            loop
             playsInline
+            preload="metadata"
           >
             <source src="/assets/Video_background_00.mp4" type="video/mp4" />
             Twoja przeglądarka nie obsługuje znacznika wideo.

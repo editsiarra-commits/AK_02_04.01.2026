@@ -1,6 +1,21 @@
 @import "tailwindcss";
 @config "../tailwind.config.ts";
 
+/* Metric-matched fallback font for Urbanist.
+   Minimizes Cumulative Layout Shift (CLS) during the web-font swap on slow mobile networks. */
+@font-face {
+  font-family: "Urbanist Fallback";
+  src: local("Arial");
+  ascent-override: 95%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+  size-adjust: 100%;
+}
+
+html {
+  font-family: "Urbanist", "Urbanist Fallback", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
 /* Custom scrollbar for light theme */
 ::-webkit-scrollbar {
   width: 10px;

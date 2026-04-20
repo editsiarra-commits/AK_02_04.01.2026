@@ -1,18 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import { OfferDetail } from './pages/Offer';
-import { NavItem } from './types';
-import Hipnoterapia from './pages/Hipnoterapia';
-import IntegracjaPsychodeliczna from './pages/IntegracjaPsychodeliczna';
-import SesjeOddechowe from './pages/SesjeOddechowe';
-import CAT from './pages/CAT';
-import Pricing from './pages/Pricing';
 import Seo from './components/Seo';
+import { NavItem } from './types';
 
-// ScrollToTop component
+const Home = lazy(() => import('./pages/Home'));
+const OfferDetail = lazy(() => import('./pages/Offer').then(m => ({ default: m.OfferDetail })));
+const Hipnoterapia = lazy(() => import('./pages/Hipnoterapia'));
+const IntegracjaPsychodeliczna = lazy(() => import('./pages/IntegracjaPsychodeliczna'));
+const SesjeOddechowe = lazy(() => import('./pages/SesjeOddechowe'));
+const CAT = lazy(() => import('./pages/CAT'));
+const Pricing = lazy(() => import('./pages/Pricing'));
+
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -39,6 +39,12 @@ const navItems: NavItem[] = [
   { label: 'Kontakt', path: '#contact' },
 ];
 
+const RouteFallback: React.FC = () => (
+  <div className="flex items-center justify-center min-h-[60vh] w-full">
+    <div className="h-10 w-10 rounded-full border-2 border-coffee-500/30 border-t-coffee-500 animate-spin" aria-label="Ładowanie..." />
+  </div>
+);
+
 const App: React.FC = () => {
   return (
     <BrowserRouter>
@@ -48,17 +54,18 @@ const App: React.FC = () => {
         <Navbar navItems={navItems} />
         
         <main className="grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/offer/:id" element={<OfferDetail />} />
-            <Route path="/hipnoterapia" element={<Hipnoterapia />} />
-            <Route path="/integracja-psychodeliczna" element={<IntegracjaPsychodeliczna />} />
-            <Route path="/sesje-oddechowe" element={<SesjeOddechowe />} />
-            <Route path="/cat" element={<CAT />} />
-            <Route path="/pricing" element={<Pricing />} />
-            {/* Redirect legacy routes to home sections if needed, or handle via simple routing */}
-            <Route path="*" element={<Home />} />
-          </Routes>
+          <Suspense fallback={<RouteFallback />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/offer/:id" element={<OfferDetail />} />
+              <Route path="/hipnoterapia" element={<Hipnoterapia />} />
+              <Route path="/integracja-psychodeliczna" element={<IntegracjaPsychodeliczna />} />
+              <Route path="/sesje-oddechowe" element={<SesjeOddechowe />} />
+              <Route path="/cat" element={<CAT />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="*" element={<Home />} />
+            </Routes>
+          </Suspense>
         </main>
         
         <Footer />
