@@ -18,56 +18,56 @@ const testimonials: Testimonial[] = [
     name: "Elena R.",
     role: "Dyrektor Marketingu",
     content: "Byłam sceptyczna wobec hipnoterapii, ale ciepłe podejście Agnieszki natychmiast mnie uspokoiło. Po zaledwie trzech sesjach mój lęk przed wystąpieniami publicznymi całkowicie zniknął.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+    image: "/assets/testimonials/osoba1.jpg"
   },
   {
     id: 2,
     name: "Marek T.",
     role: "Przedsiębiorca",
     content: "Sesja regresji do poprzednich wcieleń była otwierającym oczy doświadczeniem. Pomogła mi zrozumieć wzorce w moim życiu, których wcześniej nie potrafiłem wyjaśnić. Agnieszka to prawdziwa profesjonalistka.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80"
+    image: "/assets/testimonials/osoba2.jpg"
   },
   {
     id: 3,
     name: "Sara Jankowska",
     role: "Artystka",
     content: "Palenie było dla mnie podporą kreatywności, a przynajmniej tak mi się wydawało. Agnieszka pomogła mi zmienić to przekonanie. Nie tknęłam papierosa od 6 miesięcy, a moja sztuka nigdy nie była lepsza.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=988&q=80"
+    image: "/assets/testimonials/osoba3.jpg"
   },
   {
     id: 4,
     name: "Dawid C.",
     role: "Programista",
     content: "Przez lata zmagałem się z bezsennością. Techniki relaksacyjne i nagrania audio, które otrzymałem, zmieniły wszystko. W końcu przesypiam całe noce.",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80"
+    image: "/assets/testimonials/osoba4.jpg"
   },
   {
     id: 5,
     name: "Ewa W.",
     role: "Nauczycielka",
     content: "Znalezienie równowagi w moim chaotycznym życiu wydawało się niemożliwe. Dzięki naszym sesjom odnalazłam spokojne centrum, do którego mogę wrócić, kiedy tylko potrzebuję. Gorąco polecam.",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1064&q=80"
+    image: "/assets/testimonials/osoba5.jpg"
   },
   {
     id: 6,
     name: "Kasia S.",
     role: "Studentka",
     content: "Przez długi czas bałam się wychodzić sama z domu, bo od razu miałam mega stres. Czułam się przez to strasznie ograniczona. Dzięki sesjom hipnozy zaczęłam lepiej rozumieć, co się ze mną dzieje, i powoli odzyskiwać odwagę. Nadal jestem w procesie, ale już widzę dużą zmianę.",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80"
+    image: "/assets/testimonials/osoba6.jpg"
   },
   {
     id: 7,
     name: "Damian O.",
     role: "Twórca internetowy",
     content: "Do Agnieszki trafiłem, kiedy byłem już mocno przeciążony. Źle spałem, byłem cały czas spięty i coraz bardziej zmęczony wszystkim. Dzięki tej pracy zacząłem lepiej rozumieć, co się ze mną dzieje, a pogłębiona praca z oddechem dużo mi pokazała i dała dużą ulgę. Po wizytach u Agnieszki naprawdę czuję się lepiej. Cieszę się, że właśnie do niej trafiłem.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80"
+    image: "/assets/testimonials/osoba7.jpg"
   },
   {
     id: 8,
     name: "Marta M.",
     role: "Dyrektor Marketingu",
     content: "Przyszłam do Agnieszki po rozstaniu, z którym pozornie sobie radziłam, ale dalej w tym tkwiłam. Hipnozy pomogły mi przejść przez ten ból i wrócić do siebie. Dzisiaj czuję, że buduję swoje życie od nowa.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1064&q=80"
+    image: "/assets/testimonials/osoba8.jpg"
   }
 ];
 

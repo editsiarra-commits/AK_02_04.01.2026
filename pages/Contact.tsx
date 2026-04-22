@@ -69,7 +69,7 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
                  </div>
                  <div>
                    <h3 className="font-serif text-xl text-warm-200">Telefon</h3>
-                   <p className="text-warm-400">+48 537 537 277</p>
+                   <a href="tel:+48537537277" className="block text-warm-400 hover:text-coffee-400 transition-colors">+48 537 537 277</a>
                    <p className="text-warm-500 text-sm mt-1">Pon-Pt, 9:00 - 18:00</p>
                  </div>
                </div>
@@ -80,7 +80,7 @@ const Contact: React.FC<SectionProps> = ({ id }) => {
                  </div>
                  <div>
                    <h3 className="font-serif text-xl text-warm-200">Email</h3>
-                   <p className="text-warm-400">agnieszka_kochanowska@wp.pl</p>
+                   <a href="mailto:agnieszka_kochanowska@wp.pl" className="block text-warm-400 hover:text-coffee-400 transition-colors">agnieszka_kochanowska@wp.pl</a>
                  </div>
                </div>
 

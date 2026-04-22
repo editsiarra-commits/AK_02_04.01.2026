@@ -56,16 +56,6 @@ const Home: React.FC = () => {
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
-      // Attempt to play the video
-      video.play().then(() => {
-        // Autoplay started
-        setIsPlaying(true);
-      }).catch(error => {
-        // Autoplay was prevented.
-        console.error("Autoplay was prevented: ", error);
-        setIsPlaying(false);
-      });
-
       const handlePlay = () => setIsPlaying(true);
       const handlePause = () => setIsPlaying(false);
 
@@ -121,7 +111,8 @@ const Home: React.FC = () => {
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
+            poster="/assets/video_poster.jpg"
           >
             <source src="/assets/Video_background_00.mp4" type="video/mp4" />
             Twoja przeglądarka nie obsługuje znacznika wideo.
