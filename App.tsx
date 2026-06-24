@@ -12,6 +12,7 @@ const IntegracjaPsychodeliczna = lazy(() => import('./pages/IntegracjaPsychodeli
 const SesjeOddechowe = lazy(() => import('./pages/SesjeOddechowe'));
 const CAT = lazy(() => import('./pages/CAT'));
 const Pricing = lazy(() => import('./pages/Pricing'));
+const PrzydatnaWiedza = lazy(() => import('./pages/PrzydatnaWiedza'));
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -35,6 +36,7 @@ const navItems: NavItem[] = [
       { label: 'CAT Cannabis Assisted Therapy', path: '/cat' }
     ]
   },
+  { label: 'Przydatna Wiedza', path: '/przydatna-wiedza' },
   { label: 'Cennik', path: '/pricing' },
   { label: 'Kontakt', path: '#contact' },
 ];
@@ -63,6 +65,7 @@ const App: React.FC = () => {
               <Route path="/sesje-oddechowe" element={<SesjeOddechowe />} />
               <Route path="/cat" element={<CAT />} />
               <Route path="/pricing" element={<Pricing />} />
+              <Route path="/przydatna-wiedza" element={<PrzydatnaWiedza />} />
               <Route path="*" element={<Home />} />
             </Routes>
           </Suspense>

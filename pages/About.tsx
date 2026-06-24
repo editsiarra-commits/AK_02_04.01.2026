@@ -14,6 +14,14 @@ const logos = [
 ];
 
 const credentials = [
+  
+  {
+    title: "Tripsitting & Integracja Psychodeliczna",
+    org: "Psychedelic Guide Training - Lucid States Development Piotr Matejuk",
+    desc: "Prowadzę sesje przygotowania i integracji doświadczeń psychodelicznych oraz doświadczeń w poszerzonych stanach świadomości",
+    icon: Globe
+  },
+  
   {
     title: "Certyfikowana i Rekomendowana Hipnoterapeutka",
     org: "przez Profesjonalną Szkołę Hipnoterapii w Warszawie",
@@ -23,21 +31,16 @@ const credentials = [
   {
     title: "Facilitator Certification Program",
     org: "Grof Transpersonal Training",
-    desc: 'Od 2024 r uczestniczę w programie „Facilitator Certification Program\u201D, gdzie doskonalę swoje umiejętności terapeutyczne w nurcie transpersonalnym i przygotowuję się do uzyskania certyfikacji facylitatora GTT',
+    desc: 'Od 2024 r uczestniczę w programie „Facilitator Certification Program", gdzie doskonalę swoje umiejętności terapeutyczne w nurcie transpersonalnym i przygotowuję się do uzyskania certyfikacji facylitatora GTT',
     icon: Award
   },
   {
     title: "Studia Psychologiczne",
     org: "Uniwersytet Vizja w Warszawie - w trakcie",
-    desc: "   ",
+    desc: "Studia Psychologiczne: specjalność - Neuropsychologia   ",
     icon: FileCheck
   },
-  {
-    title: "Tripsitting & Integracja Psychodeliczna",
-    org: "Psychedelic Guide Training - Lucid States Development Piotr Matejuk",
-    desc: "Prowadzę sesje terapii psychodelicznej wspieranej medyczną marihuaną oraz sesje integracji psychodelicznej Metodą Mindfulness Based Psychodelic Therapy",
-    icon: Globe
-  }
+  
 ];
 
 const About: React.FC<SectionProps> = ({ id }) => {
@@ -73,19 +76,19 @@ const About: React.FC<SectionProps> = ({ id }) => {
            <div className="w-full md:w-7/12 space-y-8">
               <h3 className="font-serif text-3xl text-coffee-400 italic">Moja Podróż</h3>
               <p className="flex text-warm-300 leading-relaxed font-light text-lg">
-                Zawsze fascynowała mnie potęga ludzkiego umysłu. Moja przygoda z hipnoterapią rozpoczęła się ponad 6 lat temu, kiedy byłam świadkiem głębokich zmian, jakie może ona przynieść w życiu ludzi — zmian, na które tradycyjne terapie często potrzebowały lat.
+              Moja przygoda z hipnoterapią rozpoczęła się ponad 6 lat temu, kiedy zaczęłam obserwować, jak praca z podświadomością otwiera ludziom drogę do uwalniania starych blokad, głębokiego kontaktu ze sobą i odzyskiwania wewnętrznego spokoju.
               </p>
               <p className="text-warm-300 leading-relaxed font-light text-lg">
-                Po intensywnym szkoleniu i certyfikacji w zaawansowanych technikach hipnoterapii, otworzyłam swoją praktykę z prostą misją: by wzmacniać innych w procesie samouzdrawiania. Wierzę, że każdy człowiek posiada klucz do własnego dobrostanu w swojej podświadomości.
+              Po intensywnym szkoleniu i certyfikacji w zaawansowanych technikach, otworzyłam swoją praktykę z prostą misją: dawać klientom sprawdzone narzędzia do świadomego rozwoju i odzyskiwania życiowej sprawczości. Wierzę, że każdy z nas nosi w sobie potencjał do przełamywania schematów i budowania trwałego dobrostanu.
               </p>
 
               <p className="text-warm-300 leading-relaxed font-light text-lg">
-              Jestem Hipnoterapeutką w nurcie integratywnym. Moją pracę opieram na holistycznym podejściu, łączę różne narzędzia terapeutyczne: pracę z oddechem, ciałem, techniki wizualizacyjne oraz hipnozę terapeutyczną i rozwojową, która doskonale sprawdza się zarówno podczas sesji przygotowujących do podróży psychodelicznych, jak i podczas integracji.
+              Jako hipnoterapeutka w nurcie integratywnym oraz studentka psychologii, opieram się na holistycznym podejściu. Łączę najskuteczniejsze metody pracy rozwojowej: pracę z oddechem, ciałem, techniki wizualizacyjne oraz hipnozę transformacyjną. Pracuję również z osobami przygotowującymi się do doświadczeń w poszerzonych stanach świadomości oraz pomagam zintegrować te doświadczenia, przekładając je na realne zmiany w codziennym życiu.
               </p>
               
               <div className="py-8">
-                <blockquote className="border-l-2 border-coffee-400 pl-8 italic text-warm-100 text-xl font-serif leading-relaxed">
-                  "Przestrzeń świadomej przemiany. Hipnoterapia, oddech, integracja doświadczeń."
+                <blockquote className="border-l-2 border-coffee-400 pl-8 text-warm-80 text-xl font-serif leading-relaxed">
+                Sesje mają charakter rozwojowy i edukacyjny. Nie stanowią diagnozy psychologicznej, psychoterapii ani leczenia medycznego.
                 </blockquote>
               </div>
            </div>

@@ -106,7 +106,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
       title: "Sesja integracji psychodelicznej",
       subtitle: "/ Sesja przygotowująca",
       price: "600 zł",
-      duration: "2–2,5 godziny",
+      duration: "2-2,5 godziny",
       description: "To przestrzeń, w której wglądy stają się trwałą zmianą, a nie tylko chwilowym olśnieniem.",
       targetAudience: "Dla Ciebie, jeśli:",
       details: [
@@ -128,7 +128,8 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
       details: [
         "intensywne wglądy i uwolnienie na poziomie ciała i emocji",
         "spokojne, świadome osadzenie tego, co się ujawniło",
-        "przełożenie doświadczenia na konkretne zmiany w codziennym życiu"
+        "przełożenie doświadczenia na konkretne zmiany w codziennym życiu",
+        "to ważna część pracy dla osób, które czują, że sama rozmowa to za mało, a ciało wciąż przechowuje to, co domaga się uwagi"
       ]
 
 
