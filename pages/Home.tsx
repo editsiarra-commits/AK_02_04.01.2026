@@ -2,6 +2,7 @@ import { Brain, ChevronDown, Pause, Play, ShieldCheck, Sparkles, Volume2, Volume
 import React, { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import LazyLoad from '../components/LazyLoad';
+import MeditationBanner from '../components/MeditationBanner';
 
 const About = lazy(() => import('./About'));
 const Contact = lazy(() => import('./Contact'));
@@ -128,6 +129,7 @@ const Home: React.FC = () => {
             Certyfikowana Hipnoterapeutka
           </span>
           */}
+          <MeditationBanner />
           <h1
             className="font-serif text-5xl md:text-7xl text-[#f3f3f3] mb-8 leading-tight drop-shadow-2xl animate-fade-in-up [animation-delay:0.2s] [animation-fill-mode:both]"
           >

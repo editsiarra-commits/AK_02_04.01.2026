@@ -31,6 +31,19 @@ html {
   background: #9895a8;
 }
 
+/* Waveform animation for meditation banner */
+@keyframes waveform-pulse {
+  0%, 100% { transform: scaleY(0.25); opacity: 0.55; }
+  50% { transform: scaleY(1); opacity: 1; }
+}
+.waveform-bar {
+  transform-origin: center;
+  animation: waveform-pulse 1.4s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .waveform-bar { animation: none; transform: scaleY(0.6); }
+}
+
 /* Pricing Flip Card Utilities */
 .preserve-3d {
   transform-style: preserve-3d;
