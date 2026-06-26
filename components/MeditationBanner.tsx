@@ -13,13 +13,13 @@ const WAVEFORM_BARS = [
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
 const Waveform: React.FC<{ className?: string }> = ({ className = '' }) => (
-  <div className={`flex items-end gap-[3px] h-6 ${className}`} aria-hidden="true">
+  <div className={`flex items-end gap-[2px] h-6 ${className}`} aria-hidden="true">
     {WAVEFORM_BARS.map((peak, i) => (
       <span
         key={i}
         className="waveform-bar w-[5px] rounded-full bg-coffee-400"
         style={{
-          height: `${peak * 100}%`,
+          height: `${peak * 160}%`,
           animationDelay: `${(i % 10) * 0.11}s`,
         }}
       />
