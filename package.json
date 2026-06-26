@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && firebase deploy --only hosting"
+    "deploy": "npm run build && firebase deploy --only hosting",
+    "export:signups": "node scripts/export-signups.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -28,6 +29,7 @@
     "@pinegrow/piny-vite": "^1.0.10",
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "5.0.0",
+    "firebase-admin": "^14.1.0",
     "firebase-tools": "^15.5.1",
     "rollup-plugin-visualizer": "^7.0.1",
     "typescript": "~5.8.2",

@@ -34,3 +34,7 @@ seo_assistant_dump.txt
 
 # Firebase
 .firebase/
+service-account.json
+
+# Newsletter export (zawiera dane osobowe – nie commitować)
+signups-export-*.csv
