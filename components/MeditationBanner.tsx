@@ -58,8 +58,8 @@ const MeditationBanner: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-xl mx-auto mb-8 animate-fade-in-up [animation-delay:0.1s] [animation-fill-mode:both]">
-      <div className="rounded-2xl border border-warm-300/15 bg-warm-50/30 backdrop-blur-md shadow-xl shadow-warm-50/20 overflow-hidden">
+    <div className="w-full max-w-xl mx-auto mb-8 -translate-y-[200px] animate-fade-in-up [animation-delay:0.1s] [animation-fill-mode:both]">
+      <div className="rounded-4xl border border-warm-300/15 bg-warm-50/30 backdrop-blur-md shadow-xl shadow-warm-50/20 overflow-hidden">
         {/* Collapsed bar */}
         <button
           type="button"
