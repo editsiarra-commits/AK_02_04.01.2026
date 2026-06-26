@@ -17,7 +17,7 @@ const Waveform: React.FC<{ className?: string }> = ({ className = '' }) => (
     {WAVEFORM_BARS.map((peak, i) => (
       <span
         key={i}
-        className="waveform-bar w-[3px] rounded-full bg-coffee-400"
+        className="waveform-bar w-[5px] rounded-full bg-coffee-400"
         style={{
           height: `${peak * 100}%`,
           animationDelay: `${(i % 10) * 0.11}s`,
@@ -73,13 +73,13 @@ const MeditationBanner: React.FC = () => {
           <Waveform className="shrink-0 hidden sm:flex" />
           <span className="flex-1 min-w-0">
             <span className="block text-[#f3f3f3] text-sm font-medium tracking-wide truncate">
-              Darmowa medytacja MP3
+              Darmowa medytacja audio
             </span>
-            <span className="block text-warm-400 text-xs font-light truncate">
+            <span className="block text-[#f3f3f3] text-xs font-light truncate">
               Pobierz nagranie na telefon lub komputer
             </span>
           </span>
-          <span className="shrink-0 inline-flex items-center gap-2 text-coffee-400 text-xs uppercase tracking-widest font-semibold">
+          <span className="shrink-0 inline-flex items-center gap-2 text-[#f3f3f3] text-xs uppercase tracking-widest font-semibold">
             {expanded ? <X size={16} /> : <Download size={16} />}
             <span className="hidden sm:inline">{expanded ? 'Zamknij' : 'Pobierz'}</span>
           </span>
