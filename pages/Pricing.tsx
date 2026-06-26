@@ -146,9 +146,9 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
       description: "Uporządkowana, bezpieczna podróż w głąb: przygotowanie → doświadczenie → integracja. Proces realizowany zgodnie z najwyższymi standardami bezpieczeństwa i etyki. Dla osób gotowych na głęboką, świadomą zmianę – w kontrolowanych, profesjonalnych ramach.",
       targetAudience: "W pakiecie:",
       details: [
-        "sesja przygotowująca – ok. 2 h (intencja, granice, zasoby bezpieczeństwa, plan wsparcia)",
-        "sesja psychodeliczna – Mindfulness-Based Psychedelic Therapy z wykorzystaniem medycznej marihuany – ok. 5 h (głęboka, prowadzona, w pełni legalna i nadzorowana)",
-        "sesja integracyjna – ok. 2 h (przekładanie wglądów na codzienne życie, nowe decyzje, stabilne osadzenie)"
+        "sesja przygotowująca - ok. 2 h (intencja, granice, zasoby bezpieczeństwa, plan wsparcia)",
+        "sesja psychodeliczna - Mindfulness-Based Psychedelic Therapy z wykorzystaniem medycznej marihuany - ok. 5 h (głęboka, prowadzona, w pełni legalna i nadzorowana)",
+        "sesja integracyjna - ok. 2 h (przekładanie wglądów na codzienne życie, nowe decyzje, stabilne osadzenie)"
       ]
     },
 
