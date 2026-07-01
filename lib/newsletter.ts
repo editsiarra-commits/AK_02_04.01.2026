@@ -9,9 +9,19 @@ export interface NewsletterSignup {
   email: string;
   phone?: string;
   consent: boolean;
+  /** Zgoda na wykorzystanie danych do celów terapeutycznych (ścieżka QR). */
+  therapeuticConsent?: boolean;
+  /** Źródło zapisu, np. 'meditation_banner' lub 'qr'. */
+  source?: string;
 }
 
-export async function subscribeToNewsletter({ email, phone, consent }: NewsletterSignup): Promise<void> {
+export async function subscribeToNewsletter({
+  email,
+  phone,
+  consent,
+  therapeuticConsent,
+  source = 'meditation_banner',
+}: NewsletterSignup): Promise<void> {
   const trimmedEmail = email.trim();
   const trimmedPhone = phone?.trim();
 
@@ -24,10 +34,11 @@ export async function subscribeToNewsletter({ email, phone, consent }: Newslette
   const data: Record<string, unknown> = {
     email: trimmedEmail,
     consent,
-    source: 'meditation_banner',
+    source,
     createdAt: serverTimestamp(),
   };
   if (trimmedPhone) data.phone = trimmedPhone;
+  if (therapeuticConsent) data.therapeuticConsent = true;
 
   // 1. Zapis do Firestore – źródło prawdy listy mailingowej.
   await addDoc(collection(db, 'newsletter_signups'), data);
@@ -46,8 +57,9 @@ export async function subscribeToNewsletter({ email, phone, consent }: Newslette
           `Nowy zapis do newslettera:\n\n` +
           `Email: ${trimmedEmail}\n` +
           `Telefon: ${trimmedPhone || '\u2014'}\n` +
-          `Zgoda: ${consent ? 'tak' : 'nie'}\n` +
-          `\u0179r\u00f3d\u0142o: banner z medytacj\u0105`,
+          `Zgoda (newsletter): ${consent ? 'tak' : 'nie'}\n` +
+          `Zgoda terapeutyczna: ${therapeuticConsent ? 'tak' : '\u2014'}\n` +
+          `\u0179r\u00f3d\u0142o: ${source === 'qr' ? 'kod QR' : 'banner z medytacj\u0105'}`,
         reply_to: trimmedEmail,
         to_name: 'Agnieszka',
       },
