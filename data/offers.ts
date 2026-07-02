@@ -87,14 +87,14 @@ export const offers: Record<string, OfferSubCategory> = {
   },
   'psychedelic-therapy': {
     id: 'psychedelic-therapy',
-    title: 'Regulacja trzeźwości',
+    title: 'Regulacja emocji i zmiana nawyków',
     description: 'Trudności z alkoholem bardzo często nie dotyczą samej substancji, lecz funkcji, jaką pełni ona w życiu — regulowania emocji, napięcia, relacji czy poczucia ulgi. W pracy hipnoterapeutycznej skupiamy się na dotarciu do tych mechanizmów i znalezieniu dla nich zdrowszych, bezpiecznych rozwiązań',
-    fullDescription: ' W pracy hipnoterapeutycznej skupiamy się na dotarciu do tych mechanizmów i znalezieniu dla nich zdrowszych, bezpiecznych rozwiązań. Podczas indywidualnych sesji dobieramy sposób pracy odpowiedni do Twojej historii, potrzeb i gotowości do zmiany. Może to obejmować budowanie nowych nawyków, pracę z emocjami, które wcześniej były „regulowane" alkoholem, powrót do zasobów sprzed momentu, w którym alkohol stał się problemem, lub zmianę nieświadomych reakcji związanych z jego używaniem.',
+    fullDescription: ' Dla jednych będzie to alkohol, dla innych papierosy, jedzenie, marihuana, pornografia, nadmierna praca czy inne zachowania, które z czasem zaczynają przejmować coraz więcej przestrzeni w życiu. W pracy hipnoterapeutycznej skupiamy się nie tyle na samym zachowaniu, ile na funkcji, jaką ono pełni. Wspólnie przyglądamy się mechanizmom, które stoją za tymi wyborami, oraz poszukujemy bardziej wspierających sposobów radzenia sobie z emocjami i napięciem. Podczas indywidualnych sesji dobieramy sposób pracy odpowiedni do Twojej historii, potrzeb i gotowości do zmiany. Może to obejmować budowanie nowych nawyków, pracę z emocjami, powrót do własnych zasobów czy zmianę nieświadomych reakcji związanych z utrwalonymi schematami..',
     benefits: [' '],
     image: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80',
     tileBackgroundImage: '/assets/TILES_8.jpg',
     additionalInfo: ' ',
-    autonomousHeadline: 'Trudności z alkoholem bardzo często nie dotyczą samej substancji, lecz funkcji, jaką pełni ona w życiu — regulowania emocji, napięcia, relacji czy poczucia ulgi',
-    benefitsHeadline: 'Hipnoterapia jest procesem indywidualnym — dlatego właściwy kierunek i tempo pracy ustalamy wspólnie, w bezpiecznej i wspierającej przestrzeni. Celem jest odzyskanie kontroli, wewnętrznej równowagi i realnej wolności wyboru.'
+    autonomousHeadline: 'Za wieloma nawykami stoi próba poradzenia sobie z napięciem, trudnymi emocjami lub wewnętrzną pustką',
+    benefitsHeadline: 'Hipnoterapia jest procesem indywidualnym, dlatego kierunek i tempo pracy ustalamy wspólnie, w bezpiecznej i wspierającej przestrzeni. Celem tej pracy jest rozwijanie świadomości siebie, poczucia wpływu na własne wybory i większej wewnętrznej równowagi.'
   }
 };
