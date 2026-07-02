@@ -9,7 +9,7 @@ export const offers: Record<string, OfferSubCategory> = {
     benefits: ['wewnętrznym dialogiem', 'obrazami mentalnymi', 'ciałem', 'emocjami'],
     image: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80',
     tileBackgroundImage: '/assets/TILES_1.jpg',
-    additionalInfo: 'tak, aby przestały działać przeciwko Tobie, a zaczęły wzmacniać Twoje poczucie spokoju, stabilności i sprawczości. Odzyskanie równowagi emocjonalnej wymaga uważności, czasu i odpowiednich narzędzi. To proces, który pozwala wrócić do siebie i funkcjonować w zgodzie z własnymi potrzebami - bez ciągłego napięcia i wewnętrznej walki.',
+    additionalInfo: 'tak, aby lepiej rozumieć ich wpływ na swoje codzienne doświadczenia oraz rozwijać większe poczucie spokoju, stabilności i sprawczości.',
     autonomousHeadline: 'Czujesz, że straciłaś/łeś grunt pod nogami?',
     benefitsHeadline: 'Podczas sesji indywidualnych pokażę Ci, jak świadomie pracować z:'
   },
@@ -17,13 +17,13 @@ export const offers: Record<string, OfferSubCategory> = {
     id: 'smoking-cessation',
     title: 'Fobie, lęki i poczucie winy',
     description: 'Czujesz, że coś w środku ciągle trzyma Cię za gardło? Samolot, winda, pająk, rozmowa z szefem, a czasem po prostu… wychodzenie z domu.',
-    fullDescription: 'Samolot, winda, pająk, rozmowa z szefem, a czasem po prostu… wychodzenie z domu. Lęk potrafi skutecznie zawężać codzienne funkcjonowanie. Może pojawiać się nagle lub towarzyszyć od lat, przyjmując formę fobii, napięcia, niepokoju albo ciągłego poczucia zagrożenia. Często nie wynika z aktualnej sytuacji, lecz z utrwalonych reakcji i doświadczeń zapisanych głębiej niż świadome myślenie. Podobnie działa poczucie winy — ciche, uporczywe, nierzadko nieadekwatne do rzeczywistości. Może blokować decyzje, odbierać energię i utrzymywać w stanie wewnętrznego napięcia, nawet wtedy, gdy obiektywnie „wszystko jest w porządku". Te stany mają jedną wspólną cechę: mózg uruchomił kiedyś bardzo silny program ochronny… i zapomniał go wyłączyć. W hipnoterapii nie walczymy z lękiem ani nie próbujemy go przekonać, że „nie ma się czego bać". Zamiast tego zajmujemy się docieraniem do źródeł tych stanów i stopniowym ich rozbrajaniem. Pracujemy z podświadomymi schematami, reakcjami ciała i wewnętrznymi przekonaniami tak, aby lęk przestał przejmować kontrolę, a poczucie winy straciło swoją destrukcyjną siłę.',
-    benefits: ['ciało przestaje reagować paniką na dawne wyzwalacze', 'poczucie winy traci swoją miażdżącą siłę', 'wraca możliwość normalnego oddychania i myślenia w sytuacjach, które wcześniej paraliżowały'],
+    fullDescription: 'Samolot, winda, pająk, rozmowa z szefem, a czasem po prostu… wychodzenie z domu. Lęk potrafi skutecznie zawężać codzienne funkcjonowanie. Może pojawiać się nagle lub towarzyszyć od lat, przyjmując formę fobii, napięcia, niepokoju albo ciągłego poczucia zagrożenia. Często nie wynika z aktualnej sytuacji, lecz z utrwalonych reakcji i doświadczeń zapisanych głębiej niż świadome myślenie. Podobnie działa poczucie winy — ciche, uporczywe, nierzadko nieadekwatne do rzeczywistości. Może blokować decyzje, odbierać energię i utrzymywać w stanie wewnętrznego napięcia, nawet wtedy, gdy obiektywnie „wszystko jest w porządku". Te stany mają jedną wspólną cechę: mózg uruchomił kiedyś bardzo silny program ochronny… i zapomniał go wyłączyć. W hipnoterapii nie walczymy z lękiem ani nie próbujemy go przekonać, że „nie ma się czego bać”. Zamiast tego przyglądamy się źródłom tych doświadczeń oraz reakcjom, które im towarzyszą. Pracujemy z podświadomymi schematami, reakcjami ciała i wewnętrznymi przekonaniami tak, aby budować większą świadomość własnych reakcji i odzyskiwać poczucie wpływu na codzienne doświadczenia.',
+    benefits: ['większą świadomość reakcji ciała w sytuacjach, które wcześniej wywoływały silny lęk', 'że poczucie winy przestaje być tak dominującym doświadczeniem', 'więcej przestrzeni na spokojniejsze reagowanie w sytuacjach, które wcześniej wydawały się przytłaczające'],
     image: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80',
     tileBackgroundImage: '/assets/TILES_2.jpg',
     additionalInfo: '',
     autonomousHeadline: 'Czujesz, że coś w środku ciągle trzyma Cię za gardło? ',
-    benefitsHeadline: 'Najczęściej po kilku spotkaniach ludzie zauważają, że:'
+    benefitsHeadline: 'Niektóre osoby opisują, że w trakcie procesu zauważają między innymi:'
   },
   'regression': {
     id: 'regression',
@@ -65,7 +65,7 @@ export const offers: Record<string, OfferSubCategory> = {
     id: 'procrastination',
     title: 'Powrót do równowagi po rozstaniu',
     description: 'Rozstanie boli - niezależnie od tego, kto podjął decyzję i jak bardzo „słuszna" wydawała się w danym momencie. Często długo potem nosimy w sobie smutek, żal, złość, poczucie straty albo pustki, która nie chce się zagoić.',
-    fullDescription: 'Często długo potem nosimy w sobie smutek, żal, złość, poczucie straty albo pustki, która nie chce się zagoić. W hipnoterapii towarzyszę Ci w tym procesie w sposób łagodny i bezpieczny. Pracujemy z emocjami, które wciąż mocno trzymają, z myślami, które wracają w kółko, z przywiązaniami, które nie pozwalają puścić. Nie chodzi o to, żeby „zapomnieć" czy „szybko przejść dalej", tylko o to, żeby pozwolić sobie przeżyć to doświadczenie w pełni - i w końcu móc je odłożyć z szacunkiem. Po tej pracy zwykle pojawia się więcej spokoju wewnętrznego, lżejsze oddychanie i powoli rodząca się przestrzeń na nowe - na siebie i na relacje, które już nie będą musiały dźwigać ciężaru starego bólu.',
+    fullDescription: 'Często długo potem nosimy w sobie smutek, żal, złość, poczucie straty albo pustki, która nie chce się zagoić. W hipnoterapii towarzyszę Ci w tym procesie w sposób łagodny i bezpieczny. Pracujemy z emocjami, które wciąż mocno trzymają, z myślami, które wracają w kółko, z przywiązaniami, które nie pozwalają puścić. Nie chodzi o to, żeby „zapomnieć" czy „szybko przejść dalej", tylko o to, żeby pozwolić sobie przeżyć to doświadczenie w pełni - i w końcu móc je odłożyć z szacunkiem. Dla wielu osób z czasem pojawia się więcej spokoju wewnętrznego, lżejsze oddychanie i powoli rodząca się przestrzeń na nowe – na siebie i na relacje, które już nie będą musiały dźwigać ciężaru starego bólu.',
     benefits: ['więcej zgody na to, co trudne i niedomknięte','mniej napięcia wokół tego, co było', 'więcej wewnętrznego spokoju i gotowości na to, co nowe'],
     image: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80',
     tileBackgroundImage: '/assets/TILES_6.jpg',
@@ -77,7 +77,7 @@ export const offers: Record<string, OfferSubCategory> = {
     id: 'relationships',
     title: 'Regulacja wagi',
     description: 'Praca z wagą w hipnoterapii nie polega na walce z ciałem ani na narzucaniu sztywnych zasad. To proces, w którym skupiamy się na zmianie głębokich, nieuświadomionych schematów wpływających na sposób jedzenia, relację z jedzeniem, motywację i dbanie o siebie',
-    fullDescription: 'To proces, w którym skupiamy się na zmianie głębokich, nieuświadomionych schematów wpływających na sposób jedzenia, relację z jedzeniem, motywację i dbanie o siebie. Podczas cyklu indywidualnych sesji wspólnie wypracowujemy rozwiązania dopasowane do Twojego organizmu, stylu życia i wewnętrznych potrzeb. Pracujemy nad budowaniem wspierających nawyków żywieniowych i ruchowych, wzmacnianiem motywacji oraz poczucia sprawczości — w zgodzie z Twoim systemem wartości i realnymi możliwościami.',
+    fullDescription: 'To proces, w którym skupiamy się na zmianie głębokich, nieuświadomionych schematów wpływających na sposób jedzenia, relację z jedzeniem, motywację i dbanie o siebie. Podczas cyklu indywidualnych sesji wspólnie wypracowujemy rozwiązania dopasowane do Twojego stylu życia i indywidualnych potrzeb.',
     benefits: ['większe zrozumienie mechanizmów, które wpływają na jedzenie i relację z ciałem','więcej sprawczości, motywacji i nawyków dopasowanych do Twoich realnych możliwości', 'bardziej naturalna troska o siebie, oparta na równowadze, a nie na przymusie'],
     image: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80',
     tileBackgroundImage: '/assets/TILES_7.jpg',

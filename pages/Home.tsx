@@ -102,7 +102,7 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
-      <section className="relative h-dvh w-full overflow-hidden">
+      <section className="relative min-h-dvh xl:h-dvh w-full overflow-hidden">
         {/* Video Background */}
         <div className="absolute top-0 left-0 w-full h-full bg-warm-950">
           <video
@@ -123,7 +123,7 @@ const Home: React.FC = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 h-full flex flex-col justify-end items-center text-center px-4 max-w-4xl mx-auto pb-10">
+        <div className="relative z-10 min-h-dvh xl:h-full flex flex-col justify-end items-center text-center px-4 max-w-4xl mx-auto pt-24 xl:pt-0 pb-10">
  {/*
           <span className="text-coffee-400 uppercase tracking-[0.3em] mb-6 text-sm md:text-base animate-fade-in-up font-medium [animation-fill-mode:both]">
             Certyfikowana Hipnoterapeutka
@@ -131,7 +131,7 @@ const Home: React.FC = () => {
           */}
           <MeditationBanner />
           <h1
-            className="font-serif text-5xl md:text-7xl text-[#f3f3f3] mb-8 leading-tight drop-shadow-2xl animate-fade-in-up [animation-delay:0.2s] [animation-fill-mode:both]"
+            className="order-1 xl:order-2 font-serif text-5xl md:text-7xl text-[#f3f3f3] mb-8 leading-tight drop-shadow-2xl animate-fade-in-up [animation-delay:0.2s] [animation-fill-mode:both]"
           >
             Przestrzeń Integracji  <br /> Świadomości <br /> i Rozwoju
           </h1>
@@ -144,7 +144,7 @@ const Home: React.FC = () => {
           </p>
           
           {/* Video Controls - Moved after text */}
-          <div className="mb-8 flex space-x-2 animate-fade-in-up [animation-delay:0.5s] [animation-fill-mode:both]">
+          <div className="order-3 mb-8 flex space-x-2 animate-fade-in-up [animation-delay:0.5s] [animation-fill-mode:both]">
             <button
               onClick={togglePlay}
               className="group p-2 rounded-full bg-warm-900/40 border border-warm-300/20 backdrop-blur-md text-[#f3f3f3] hover:bg-coffee-600 hover:border-coffee-500 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-coffee-900/50 focus:outline-none focus:ring-2 focus:ring-coffee-400"
@@ -170,7 +170,7 @@ const Home: React.FC = () => {
           </div>
 
           <div
-            className="flex flex-col sm:flex-row gap-16 animate-fade-in-up [animation-delay:0.6s] [animation-fill-mode:both]"
+            className="order-4 flex flex-col sm:flex-row gap-16 animate-fade-in-up [animation-delay:0.6s] [animation-fill-mode:both]"
           >
             <button
               onClick={scrollToAbout}

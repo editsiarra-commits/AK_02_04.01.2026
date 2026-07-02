@@ -92,7 +92,7 @@ const MeditationBanner: React.FC = () => {
   const qrUrl = 'https://www.agnieszkakochanowska.pl/?zapis=qr';
 
   return (
-    <div id="meditation-banner" className="relative z-20 w-fit max-w-[calc(100vw-2rem)] mx-auto mb-8 -translate-y-[80px] animate-fade-in-up [animation-delay:0.1s] [animation-fill-mode:both]">
+    <div id="meditation-banner" className="order-2 xl:order-1 relative z-20 w-fit max-w-[calc(100vw-2rem)] mx-auto mb-8 xl:-translate-y-[80px] animate-fade-in-up [animation-delay:0.1s] [animation-fill-mode:both]">
       <div className="flex flex-col xl:flex-row rounded-4xl border border-warm-300/15 bg-warm-50/30 backdrop-blur-md shadow-xl shadow-warm-50/20 overflow-hidden transition-all duration-500">
         
         {/* Lewa część: Formularz (zawsze widoczna) */}

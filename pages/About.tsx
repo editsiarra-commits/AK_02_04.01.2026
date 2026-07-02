@@ -15,12 +15,7 @@ const logos = [
 
 const credentials = [
   
-  {
-    title: "Tripsitting & Integracja Psychodeliczna",
-    org: "Psychedelic Guide Training - Lucid States Development Piotr Matejuk",
-    desc: "Prowadzę sesje przygotowania i integracji doświadczeń psychodelicznych oraz doświadczeń w poszerzonych stanach świadomości",
-    icon: Globe
-  },
+  
   
   {
     title: "Certyfikowana i Rekomendowana Hipnoterapeutka",
@@ -28,17 +23,27 @@ const credentials = [
     desc: "Jestem Członkiem Renomowanej Organizacji Hipnoterapeutów - International Hypnosis Association ( IHA Certified Hypnotherapist ) ",
     icon: GraduationCap
   },
+ 
+  {
+    title: "Studia Psychologiczne",
+    org: "Uniwersytet Vizja w Warszawie - w trakcie",
+    desc: "Studia Psychologiczne: specjalność - Neuropsychologia   ",
+    icon: FileCheck
+  },
+ 
   {
     title: "Facilitator Certification Program",
     org: "Grof Transpersonal Training",
     desc: 'Od 2024 r uczestniczę w programie „Facilitator Certification Program", gdzie doskonalę swoje umiejętności terapeutyczne w nurcie transpersonalnym i przygotowuję się do uzyskania certyfikacji facylitatora GTT',
     icon: Award
   },
+  
+
   {
-    title: "Studia Psychologiczne",
-    org: "Uniwersytet Vizja w Warszawie - w trakcie",
-    desc: "Studia Psychologiczne: specjalność - Neuropsychologia   ",
-    icon: FileCheck
+    title: "Tripsitting & Integracja Psychodeliczna",
+    org: "Psychedelic Guide Training - Lucid States Development Piotr Matejuk",
+    desc: "Prowadzę sesje przygotowania i integracji doświadczeń psychodelicznych oraz doświadczeń w poszerzonych stanach świadomości",
+    icon: Globe
   },
   
 ];
@@ -76,18 +81,22 @@ const About: React.FC<SectionProps> = ({ id }) => {
            <div className="w-full md:w-7/12 space-y-8">
               <h3 className="font-serif text-3xl text-coffee-400 italic">Moja Podróż</h3>
               <p className="flex text-warm-300 leading-relaxed font-light text-lg">
-              Moja przygoda z hipnoterapią rozpoczęła się ponad 6 lat temu, kiedy zaczęłam obserwować, jak praca z podświadomością otwiera ludziom drogę do uwalniania starych blokad, głębokiego kontaktu ze sobą i odzyskiwania wewnętrznego spokoju.
+              Moja droga związana z hipnozą i pracą rozwojową rozpoczęła się ponad 6 lat temu, kiedy zaczęłam obserwować, jak praca z podświadomością może wspierać ludzi w lepszym rozumieniu siebie, pogłębianiu kontaktu z własnymi emocjami i budowaniu większej świadomości siebie.
               </p>
               <p className="text-warm-300 leading-relaxed font-light text-lg">
-              Po intensywnym szkoleniu i certyfikacji w zaawansowanych technikach, otworzyłam swoją praktykę z prostą misją: dawać klientom sprawdzone narzędzia do świadomego rozwoju i odzyskiwania życiowej sprawczości. Wierzę, że każdy z nas nosi w sobie potencjał do przełamywania schematów i budowania trwałego dobrostanu.
+              Po ukończeniu licznych szkoleń i certyfikacji rozpoczęłam własną praktykę z prostą intencją – tworzyć bezpieczną przestrzeń do zatrzymania się, refleksji i osobistego rozwoju. Wierzę, że każdy z nas ma w sobie potencjał do wprowadzania świadomych zmian i budowania życia w większej zgodzie ze sobą.
               </p>
 
               <p className="text-warm-300 leading-relaxed font-light text-lg">
-              Jako hipnoterapeutka w nurcie integratywnym oraz studentka psychologii, opieram się na holistycznym podejściu. Łączę najskuteczniejsze metody pracy rozwojowej: pracę z oddechem, ciałem, techniki wizualizacyjne oraz hipnozę transformacyjną. Pracuję również z osobami przygotowującymi się do doświadczeń w poszerzonych stanach świadomości oraz pomagam zintegrować te doświadczenia, przekładając je na realne zmiany w codziennym życiu.
+              Jako hipnoterapeutka w nurcie integratywnym oraz studentka psychologii pracuję w podejściu holistycznym. W swojej pracy łączę hipnozę i techniki hipnotyczne z elementami pracy z oddechem, ciałem oraz technikami wizualizacyjnymi.
+              </p>
+
+              <p className="text-warm-300 leading-relaxed font-light text-lg">
+              Towarzyszę również osobom, które chcą lepiej zrozumieć i integrować ważne doświadczenia wewnętrzne, przekładając płynące z nich wnioski na bardziej świadome funkcjonowanie w codziennym życiu.
               </p>
               
               <div className="py-8">
-                <blockquote className="border-l-2 border-coffee-400 pl-8 text-warm-80 text-xl font-serif leading-relaxed">
+                <blockquote className="border-l-2 border-coffee-400 pl-4 text-warm-80 text-xl font-serif leading-relaxed">
                 Sesje mają charakter rozwojowy i edukacyjny. Nie stanowią diagnozy psychologicznej, psychoterapii ani leczenia medycznego.
                 </blockquote>
               </div>
