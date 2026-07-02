@@ -44,9 +44,18 @@ const MeditationBanner: React.FC = () => {
   const [consent, setConsent] = useState(false);
   const [therapeuticConsent, setTherapeuticConsent] = useState(false);
 
-  // Po zeskanowaniu kodu QR (?zapis=qr) automatycznie otwórz formularz.
+  // Po zeskanowaniu kodu QR (?zapis=qr) automatycznie otwórz formularz i przewiń do niego.
   useEffect(() => {
-    if (qrMode) setExpanded(true);
+    if (qrMode) {
+      setExpanded(true);
+      // Dajemy chwilę na wyrenderowanie komponentu, a potem przewijamy do niego
+      setTimeout(() => {
+        const banner = document.getElementById('meditation-banner');
+        if (banner) {
+          banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 300);
+    }
   }, [qrMode]);
 
   const triggerDownload = () => {
@@ -83,7 +92,7 @@ const MeditationBanner: React.FC = () => {
   const qrUrl = 'https://www.agnieszkakochanowska.pl/?zapis=qr';
 
   return (
-    <div className="relative z-20 w-fit max-w-[calc(100vw-2rem)] mx-auto mb-8 -translate-y-[80px] animate-fade-in-up [animation-delay:0.1s] [animation-fill-mode:both]">
+    <div id="meditation-banner" className="relative z-20 w-fit max-w-[calc(100vw-2rem)] mx-auto mb-8 -translate-y-[80px] animate-fade-in-up [animation-delay:0.1s] [animation-fill-mode:both]">
       <div className="flex flex-col xl:flex-row rounded-4xl border border-warm-300/15 bg-warm-50/30 backdrop-blur-md shadow-xl shadow-warm-50/20 overflow-hidden transition-all duration-500">
         
         {/* Lewa część: Formularz (zawsze widoczna) */}
