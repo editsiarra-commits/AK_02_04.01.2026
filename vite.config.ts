@@ -17,11 +17,13 @@ export default defineConfig(({ mode }) => {
       host: true,
       strictPort: false,
       watch: {
-        usePolling: true,
+        ignored: ['**/node_modules/**', '**/.git/**', '**/dist/**'],
       },
     },
     plugins: [
-      liveDesigner(),
+      // Pinegrow liveDesigner hangs the Vite HTTP server in this environment
+      // (requests never complete → blank page). Enable with PINY_LIVE=1 if needed.
+      ...(env.PINY_LIVE === '1' ? [liveDesigner()] : []),
       tailwindcss(),
       react(),
       partytownVite({
@@ -36,6 +38,9 @@ export default defineConfig(({ mode }) => {
       alias: {
         '@': path.resolve(__dirname, '.'),
       }
+    },
+    optimizeDeps: {
+      include: ['react', 'react-dom', 'react-dom/client', 'react-router-dom'],
     },
     build: {
       rollupOptions: {
