@@ -53,13 +53,13 @@ const SesjeOddechowe: React.FC = () => {
           </div>
           <div className="prose prose-lg text-warm-300 font-light leading-relaxed">
             <p>
-            W moim gabinecie możesz skorzystać z indywidualnych sesji oddechowych inspirowanych oddychaniem holotropowym — pogłębionej pracy z oddechem, ciałem i świadomością, która umożliwia kontakt z głębokimi warstwami doświadczenia wewnętrznego. Sesje te łączą świadomy, intensywniejszy oddech, muzykę oraz pracę z ciałem, tworząc spójny, ugruntowany proces. Dla wielu osób są to doświadczenia poruszające, inicjacyjne i transformujące - odbywające się bez użycia substancji.
+            W moim gabinecie możesz skorzystać z indywidualnych sesji oddechowych inspirowanych oddychaniem holotropowym — pogłębionej pracy z oddechem, ciałem i świadomością, która może sprzyjać kontaktowi z głębszymi warstwami doświadczenia wewnętrznego. Sesje te łączą świadomy, intensywniejszy oddech, muzykę oraz pracę z ciałem, tworząc spójny, ugruntowany proces. Dla wielu osób są to doświadczenia poruszające, inicjacyjne i transformujące - odbywające się bez użycia substancji.
             </p>
             
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Jeśli tu jesteś i czytasz ten tekst…</h2>
             
             <ul className="list-none space-y-2 pl-0">
-              <li>* bardzo możliwe, że coś w Tobie już wie, że rozmowa nie sięga wystarczająco głęboko.
+              <li>* bardzo możliwe, że coś w Tobie już wie, że potrzebujesz doświadczenia wykraczającego poza samą rozmowę.
               Być może czujesz napięcie w ciele, emocje bez jasnej przyczyny, poczucie utknięcia albo wewnętrzne wezwanie do zmiany, której nie da się „przegadać".</li>
               <li>* sesje oddechowe są zaproszeniem do spotkania z tym, co chce zostać zobaczone i przeżyte, a nie tylko zrozumiane.</li>
             </ul>
@@ -70,20 +70,19 @@ const SesjeOddechowe: React.FC = () => {
             </p> 
 
             <ul className="list-none space-y-2 pl-0 mt-4">
-              <li>* oddech świadomie prowadzony, intensywniejszy, otwiera dostęp do poszerzonego stanu świadomości. To w nim często ujawniają się emocje, wspomnienia i obrazy, które do tej pory pozostawały poza zasięgiem uwagi.</li>
+              <li>* oddech świadomie prowadzony, intensywniejszy, może prowadzić do doświadczenia poszerzonego stanu świadomości.</li>
               <li>* muzyka towarzyszy kadej sesji. Przygotowany przeze mnie set muzyczny, który prowadzi proces i pogłębia doświadczenie, wspierając naturalny rytm tego, co się pojawia.</li>
               <li>* pracujemy w bezpiecznej, komfortowej przestrzeni — z materacem i opaską na oczy — tak, abyś mógł/mogła w pełni skierować uwagę do wewnątrz.</li>
-              <li>* body scanning i praca z ciałem. Sesja rozpoczyna się od świadomego skanowania ciała. W trakcie procesu stosuję również delikatne techniki pracy z ciałem, które pomagają uwalniać napięcia i domykać pojawiające się procesy — zawsze z uważnością na granice i zgodę.</li>
+              <li>* body scanning i praca z ciałem. Sesja rozpoczyna się od świadomego skanowania ciała. W trakcie procesu stosuję również delikatne techniki pracy z ciałem, które mogą wspierać regulację napięcia i kontakt z pojawiającymi się doświadczeniami — zawsze z uważnością na granice i zgodę.</li>
             </ul>
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Integracja — to, co najważniejsze</h2>
             <p>
-            To, co wydarza się podczas sesji oddechowej, nie kończy się wraz z ostatnim oddechem.
-Dlatego integralną częścią pracy jest osobna sesja integracyjna, podczas której pomagam Ci zrozumieć i osadzić to, co się ujawniło — oraz przełożyć doświadczenie na realne życie.
+            To, co wydarza się podczas sesji oddechowej, nie kończy się wraz z ostatnim oddechem. Dlatego integralną częścią pracy jest osobna sesja integracyjna, podczas której wspólnie przyglądamy się temu, co się pojawiło, i poszukujemy sposobów nadania temu znaczenia w codziennym życiu.
             </p> 
 
             <ul className="list-none space-y-2 pl-0 mt-4">
-              <li>Integracja sprawia, że to, co głębokie i intensywne, może stać się wspierającą zmianą, a nie tylko silnym przeżyciem.</li>
+              <li>Integracja może wspierać proces osadzania doświadczenia, tak aby nie pozostało ono jedynie intensywnym przeżyciem, lecz mogło znaleźć swoje miejsce w codziennym funkcjonowaniu.</li>
             </ul>
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Forma pracy</h2>
@@ -96,7 +95,7 @@ Dlatego integralną częścią pracy jest osobna sesja integracyjna, podczas kt�
               <li>* 2-godzinna sesja integracyjna, odbywająca się po procesie oddechowym.</li>
             </ul>
 
-            <h2 className="font-serif text-2xl text-warm-100 mt-16 mb-6">Ta struktura pozwala Ci nie tylko przeżyć doświadczenie, ale także je zrozumieć, zintegrować i włączyć w codzienne funkcjonowanie.</h2>
+            <h2 className="font-serif text-2xl text-warm-100 mt-16 mb-6">Ta struktura tworzy przestrzeń nie tylko do przeżycia doświadczenia, ale również do jego lepszego zrozumienia, integracji i poszukiwania sposobów włączania płynących z niego wglądów do codziennego życia.</h2>
             
           </div>
             <div className="mt-8 text-center">

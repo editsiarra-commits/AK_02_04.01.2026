@@ -62,17 +62,29 @@ const PrzydatnaWiedza: React.FC = () => {
               
               <article className="mb-16 bg-warm-800/30 p-8 md:p-10 rounded-2xl border border-warm-800">
                 <h3 className="font-serif text-3xl text-warm-100 mb-6 leading-tight">
-                  Wahadełko, sen i utrata woli? Zapomnij. Czym naprawdę jest i jak działa hipnoterapia
+                  Wahadełko, sen i utrata woli? Zapomnij. Czym naprawdę jest i jak działa hipnoterapia ?
                 </h3>
                 <div className="prose prose-lg prose-invert max-w-none text-warm-300 font-light leading-relaxed">
                   <p>
-                    Wyobraź sobie klasyczną scenę z filmu: tajemniczy człowiek z przenikliwym spojrzeniem kołysze przed twoimi oczami błyszczącym zegarkiem. Twoje powieki stają się ciężkie, zapadasz w sen, a po chwili na pstryknięcie palców robisz wszystko, co ci każe – szczekasz jak pies albo zdradzasz najgłębsze sekrety. Brzmi znajomo? Niestety, popkultura wyrządziła hipnozie ogromną krzywdę. Czas obalić mity, bo to, co nauka wie o hipnoterapii w 2026 roku, jest o wiele bardziej fascynujące niż jakakolwiek filmowa fikcja.
+                  Wyobraź sobie klasyczną scenę z filmu: tajemniczy człowiek z przenikliwym spojrzeniem kołysze przed twoimi oczami błyszczącym zegarkiem. Twoje powieki stają się ciężkie, zapadasz w sen, a po chwili, na pstryknięcie palców, robisz wszystko, co ci każe – szczekasz jak pies albo zdradzasz najgłębsze sekrety.
+
+Brzmi znajomo? Niestety, popkultura wyrządziła hipnozie ogromną krzywdę. Czas obalić mity, bo to, co nauka wie o hipnozie i hipnoterapii, jest o wiele bardziej fascynujące niż jakakolwiek filmowa fikcja.
                   </p>
                   <p>
-                    Największy mit? Hipnotyzer może przejąć kontrolę nad twoim umysłem. Prawda jest taka, że w stanie hipnozy <strong>nie zrobisz absolutnie niczego, czego nie zaakceptowałbyś w swoim zwyczajnym stanie świadomości</strong>. Nawet w najgłębszym transie twój system wartości pozostaje nienaruszony – gdyby ktoś zasugerował ci coś, co budzi twój wewnętrzny sprzeciw, natychmiast byś się wybudził. Nie jest to też wcale sen. To zawężony, ale niezwykle ostry stan hiperkoncentracji świadomości, w którym twój mózg operuje na falach alfa i theta. Paradoksalnie, na hipnozę wcale nie są podatne osoby "słabe psychicznie" czy naiwne. Wręcz przeciwnie – w trans najszybciej i najgłębiej zapadają osoby o ponadprzeciętnej wyobraźni i zdolności do silnej koncentracji.
+                  Największy mit? Hipnotyzer może przejąć kontrolę nad twoim umysłem. Prawda jest taka, że w stanie hipnozy nie zrobisz niczego, co byłoby całkowicie sprzeczne z twoim systemem wartości czy wewnętrznymi granicami. Gdyby pojawiła się sugestia budząca silny sprzeciw, najprawdopodobniej zostałaby odrzucona lub doprowadziłaby do przerwania procesu.
+
+Nie jest to też sen. To szczególny stan skupienia uwagi i zwiększonego zaangażowania wyobraźni. W badaniach EEG u części osób obserwuje się zmiany aktywności fal mózgowych, między innymi w zakresie alfa i theta, choć nie istnieje jeden uniwersalny wzorzec aktywności charakterystyczny dla hipnozy.
                   </p>
                   <p>
-                    Zastanawiasz się, po co w ogóle wchodzić w taki stan? Odpowiedzią jest potęga neuroplastyczności mózgu. W normalnym stanie nasz umysł chroni się tzw. filtrem krytycznym, który często blokuje pozytywne zmiany. Hipnoterapia omija ten filtr. Wyobraź sobie pacjentkę, która przez lata bezskutecznie walczyła z otyłością za pomocą restrykcyjnych diet. Dopiero hipnoza regresyjna – pozwalająca przywołać wspomnienia, o których świadomy umysł dawno "zapomniał" – ujawniła, że nadwaga była jedynie psychologiczną tarczą ochronną zbudowaną po wczesnodziecięcej traumie. Gdy podświadomość na nowo uczy się odróżniać autentyczny głód fizjologiczny od głodu emocjonalnego (jedzenia z powodu stresu, lęku czy nudy), waga spada całkowicie naturalnie, bez oporu silnej woli. To nie magia, to czysta nauka o restrukturyzacji ścieżek neuronowych.
+                  Paradoksalnie, na hipnozę wcale nie są bardziej podatne osoby „słabe psychicznie” czy naiwne. Wręcz przeciwnie – badania sugerują, że łatwiej wchodzą w ten stan osoby o rozwiniętej wyobraźni, zdolności koncentracji oraz większej otwartości na doświadczenie.
+
+Zastanawiasz się, po co w ogóle wchodzić w taki stan? Jedną z odpowiedzi może być neuroplastyczność mózgu – jego naturalna zdolność do uczenia się, adaptacji i tworzenia nowych wzorców reagowania.
+
+Niektóre modele hipnoterapii opisują ten proces poprzez koncepcję tzw. filtra krytycznego – metaforycznego mechanizmu, który może utrudniać zmianę utrwalonych schematów myślenia i reagowania. W stanie hipnozy część osób doświadcza większej łatwości w przyglądaniu się emocjom, wspomnieniom i wewnętrznym przekonaniom z nowej perspektywy.
+
+Przykładem może być osoba, która przez lata bezskutecznie próbowała zmienić swoje nawyki związane z jedzeniem. W niektórych przypadkach praca z doświadczeniami z przeszłości pozwala lepiej zrozumieć emocjonalne i behawioralne czynniki wpływające na relację z jedzeniem. Dla części osób takie zrozumienie może ułatwiać wprowadzanie zmian związanych z odżywianiem i stylem życia.
+
+To nie magia. Jedną z hipotez wyjaśniających skuteczność niektórych interwencji psychologicznych, w tym hipnoterapii, jest zdolność mózgu do tworzenia nowych wzorców uczenia się i adaptacji, określana mianem neuroplastyczności.
                   </p>
                 </div>
               </article>
@@ -83,16 +95,21 @@ const PrzydatnaWiedza: React.FC = () => {
                 </h3>
                 <div className="prose prose-lg prose-invert max-w-none text-warm-300 font-light leading-relaxed">
                   <p>
-                    Ludzka psychika uwielbia płatać nam figle, a najskuteczniejsza psychoterapia często opiera się na zrozumieniu wewnętrznych paradoksów. Zastanawiałeś się kiedyś, dlaczego tak bardzo irytują cię określone cechy u innych ludzi? Dlaczego czyjaś arogancja, spóźnialstwo czy głośny śmiech doprowadzają cię do szału?
-                  </p>
-                  <p>
-                    Psychologia określa to zjawisko bezlitośnie: im bardziej nienawidzisz jakiejś cechy u kogoś innego, tym większe jest prawdopodobieństwo, że w rzeczywistości unikasz konfrontacji z tą samą cechą u siebie. To tak zwane zjawisko projekcji. Widzimy w innych to, czego nie potrafimy zaakceptować we własnym wnętrzu. To jednak tylko początek fascynującej listy życiowych paradoksów.
-                  </p>
-                  <p>
-                    Weźmy na przykład zaufanie. Badania i obserwacje kliniczne potwierdzają stary truizm: ludzie, którzy sami nie potrafią ufać innym, najczęściej sami nie są godni zaufania. Dlaczego? Ponieważ oceniają intencje świata przez pryzmat własnych, ukrytych motywacji. Kolejnym fascynującym zjawiskiem jest "paradoks wysiłku". Widzisz mistrza sportu, wybitnego mówcę lub genialnego artystę i myślisz: "Przychodzi mu to tak naturalnie, bez żadnego wysiłku". Prawda jest taka, że trzeba włożyć gigantyczny wysiłek i tysiące godzin brutalnej pracy, aby ostateczny efekt wydawał się lekki i niewymagający starań.
-                  </p>
-                  <p>
-                    Zrozumienie tych mechanizmów w gabinecie psychoterapeutycznym działa uwalniająco. Przestajemy walczyć z wiatrakami. Odkrywamy, że im bardziej próbujemy zaimponować otoczeniu, tym mniejsze wrażenie robimy na ludziach. Zauważamy też w komunikacji "paradoks perswazji": najbardziej kłótliwe osoby rzadko kogoś przekonują; ci najbardziej wpływowi nie krzyczą – oni obserwują, słuchają i zadają pytania. Rozwój osobisty to nie ciągłe pasmo sukcesów, lecz uświadomienie sobie, że im więcej razy poniesiemy porażkę, tym większe mamy szanse na ostateczny triumf.
+                  Ludzka psychika uwielbia płatać nam figle, a wiele zjawisk, które obserwujemy w sobie i innych, opiera się na wewnętrznych paradoksach. Zastanawiałeś się kiedyś, dlaczego tak bardzo irytują cię określone cechy u innych ludzi? Dlaczego czyjaś arogancja, spóźnialstwo czy głośny śmiech wywołują w tobie tak silne emocje?
+
+Psychologia podpowiada, że nasze reakcje na innych często mówią coś również o nas samych. Silna irytacja może czasami skłaniać do refleksji nad własnymi doświadczeniami, przekonaniami lub cechami, których w sobie nie lubimy albo których nie chcemy dostrzegać. W psychologii psychodynamicznej jednym z mechanizmów wyjaśniających takie zjawiska jest projekcja – tendencja do przypisywania innym własnych uczuć, impulsów lub cech.
+
+To jednak dopiero początek fascynującej listy życiowych paradoksów.
+
+Weźmy na przykład zaufanie. Sposób, w jaki postrzegamy innych ludzi, często jest kształtowany przez nasze wcześniejsze doświadczenia, styl przywiązania i historię relacji. Osoby, które doświadczyły zranienia lub zawodów, mogą mieć większą trudność z obdarzaniem innych zaufaniem, nawet jeśli bardzo tego pragną.
+
+Kolejnym ciekawym zjawiskiem jest „paradoks wysiłku”. Widzisz mistrza sportu, wybitnego mówcę lub genialnego artystę i myślisz: „Przychodzi mu to tak naturalnie, bez żadnego wysiłku”. Tymczasem za tą pozorną lekkością bardzo często stoją lata praktyki, tysiące godzin ćwiczeń i niezliczone próby. Im większa biegłość, tym mniej widoczny staje się wysiłek, który do niej doprowadził.
+
+Zrozumienie takich mechanizmów potrafi działać uwalniająco. Przestajemy walczyć z wiatrakami i zaczynamy z większą ciekawością przyglądać się sobie. Odkrywamy, że nadmierna koncentracja na tym, jak jesteśmy postrzegani przez innych, często utrudnia autentyczny kontakt i zwiększa napięcie.
+
+Podobnie jest w komunikacji. Badania pokazują, że ludzie częściej zmieniają zdanie w kontakcie z osobami, które potrafią słuchać, okazują ciekawość i zadają pytania, niż pod wpływem agresywnej argumentacji czy prób przekonywania za wszelką cenę.
+
+Rozwój osobisty rzadko przebiega w linii prostej. Błędy, potknięcia i niepowodzenia są naturalną częścią procesu uczenia się. To właśnie gotowość do wyciągania wniosków i podejmowania kolejnych prób często staje się jednym z najważniejszych czynników rozwoju i osiągania długoterminowych celów.
                   </p>
                 </div>
               </article>
@@ -103,37 +120,57 @@ const PrzydatnaWiedza: React.FC = () => {
                 </h3>
                 <div className="prose prose-lg prose-invert max-w-none text-warm-300 font-light leading-relaxed">
                   <p>
-                    Żyjemy w erze informacyjnego paradoksu. Jesteśmy w stałym, nieustannym kontakcie z całym światem, a jednocześnie statystyki dotyczące samotności, depresji i deficytów uwagi biją w 2026 roku niechlubne rekordy. Neuropsychologia kliniczna już dawno przestała traktować telefony jak niewinne narzędzia ułatwiające życie. Na wielu konferencjach naukowych smartfon bywa wprost określany mianem "cichego sabotażysty mózgu", ze względu na to, w jak radykalny sposób ingeruje on w nasze procesy uwagi, głębokiej pamięci i kontroli impulsów.
-                  </p>
-                  <p>
-                    Do tego dołącza zjawisko, które specjaliści od technologii nazywają "AI Backlash" (bunt przeciwko AI). Ostatnie lata to zalew sieci masowo generowanymi tekstami, idealnymi, ale pustymi obrazami i sztucznymi odpowiedziami (tzw. "AI Slop"). Ludzka psychika jest jednak ewolucyjnie zaprogramowana na poszukiwanie autentyczności. Społeczeństwo jest tym po prostu przebodźcowane i potwornie zmęczone. Dziś to autentyczność, empatia i realny kontakt stają się najcenniejszym dobrem luksusowym.
-                  </p>
-                  <p>
-                    Dlatego rola profesjonalnej psychoterapii i rzetelnej wiedzy jest dziś tak ogromna. W dobie iluzji wirtualnego świata, spotkanie ze specjalistą – stacjonarnie lub podczas starannie przygotowanej sesji online – stanowi bezpieczną przystań, "Zacisze Dobrych Myśli", wolne od algorytmów i ocen. Jeśli zmagasz się z prokrastynacją, kryzysem relacji czy przewlekłym stresem, pamiętaj, że diagnozy na tiktoku i porady ChatGPT to tylko cyfrowe złudzenie wsparcia. Prawdziwa zmiana zaczyna się tam, gdzie odkładamy na bok elektronikę, a naprzeciwko nas zasiada drugi, prawdziwy człowiek. To przestrzeń na budowanie więzi, której żaden cyfrowy asystent nigdy nie zastąpi.
+                  Żyjemy w erze informacyjnego paradoksu. Jesteśmy w stałym kontakcie z niemal całym światem, a jednocześnie coraz więcej badań wskazuje na wzrost poczucia samotności, przeciążenia informacyjnego i trudności z koncentracją.
+
+Neuropsychologia już od dawna zwraca uwagę na to, że sposób korzystania ze smartfonów i mediów cyfrowych może wpływać na uwagę, pamięć roboczą oraz zdolność do samoregulacji. Coraz częściej mówi się również o kosztach nieustannego rozproszenia i nadmiaru bodźców.
+
+Do tego dochodzi zjawisko określane jako „AI Backlash” – rosnące zmęczenie masowo generowanymi treściami, idealnymi, ale często powierzchownymi obrazami i automatycznie tworzonymi odpowiedziami, określanymi czasem mianem „AI Slop”. Wiele osób doświadcza dziś przesytu informacyjnego i coraz bardziej poszukuje autentyczności, empatii oraz prawdziwego kontaktu z drugim człowiekiem.
+
+Dlatego rola profesjonalnej pomocy psychologicznej, rzetelnej wiedzy i bezpiecznych relacji staje się dziś szczególnie ważna. W świecie pełnym bodźców i szybkich odpowiedzi spotkanie z drugim człowiekiem – stacjonarnie lub online – może stać się przestrzenią zatrzymania, refleksji i budowania prawdziwej więzi.
+
+Treści publikowane w mediach społecznościowych czy odpowiedzi generowane przez sztuczną inteligencję mogą być źródłem informacji i inspiracji, ale nie zastępują indywidualnej diagnozy, profesjonalnej pomocy ani relacji terapeutycznej. Mimo dynamicznego rozwoju technologii wiele osób nadal potrzebuje tego, czego żaden algorytm nie potrafi w pełni odtworzyć – poczucia bycia zobaczonym, wysłuchanym i autentycznie spotkanym przez drugiego człowieka.
                   </p>
                 </div>
               </article>
             </section>
 
-            {/* KATEGORIA 2: INTEGRACJA PSYCHODELICZNA */}
+            {/* KATEGORIA 2: POSZERZONE STANY ŚWIADOMOŚCI */}
             <section>
               <h2 className="font-serif text-4xl text-coffee-400 border-b border-coffee-900/50 pb-4 mb-10 text-center tracking-wider">
-                INTEGRACJA PSYCHODELICZNA
+              POSZERZONE STANY ŚWIADOMOŚCI
               </h2>
               
               <article className="bg-warm-800/30 p-8 md:p-10 rounded-2xl border border-warm-800">
                 <h3 className="font-serif text-3xl text-warm-100 mb-6 leading-tight">
-                  Powrót z Drugiej Strony. Dlaczego samo zażycie psychodelików nie leczy?
+                Powrót z Drugiej Strony. Dlaczego samo doświadczenie psychodeliczne nie wystarcza?
                 </h3>
                 <div className="prose prose-lg prose-invert max-w-none text-warm-300 font-light leading-relaxed">
                   <p>
-                    Renesans psychodeliczny trwa w najlepsze. Setki artykułów zachwalają zbawienny wpływ na depresję lekooporną i PTSD, a kultura masowa ponownie zafascynowała się substancjami poszerzającymi świadomość. Ale psychologia stawia sprawę jasno: <strong>samo zażycie psychodeliku nie jest terapią</strong>. To tak, jakby samo wejście na szczyt góry miało uczynić cię alpinistą. Prawdziwa praca – i prawdziwe leczenie – zaczyna się dopiero po zejściu na ziemię. Zjawisko to nazywamy integracją.
-                  </p>
-                  <p>
-                    Polskie Towarzystwo Integracji Psychodelicznej (PTIP), które w ostatnich latach uruchomiło darmowe grupy wsparcia w największych polskich miastach (od Warszawy, przez Białystok i Szczecin, aż po grupy online), alarmuje: doświadczenie poszerzonej świadomości może być wstrząsające. Użytkownik konfrontuje się z tłumionym latami bólem, przerażającymi wizjami z nieświadomości lub przeciwnie – z poczuciem kosmicznej jedności. Niezależnie od charakteru przeżycia, bez odpowiedniego przełożenia tego na język codzienności (narrację), doświadczenie to szybko wyblaknie lub wręcz stanie się zarzewiem lęku.
-                  </p>
-                  <p>
-                    Integracja to proces, w którym pozornie abstrakcyjne wglądy i emocje są rozkodowywane. W profesjonalnym gabinecie często wykorzystuje się tu na przykład model IFS (System Wewnętrznej Rodziny), by zrozumieć zantagonizowane "części" naszej psychiki, które nagle doszły do głosu. Chodzi o to, by przeformułować opowieść pacjenta o traumie. Jeśli doświadczyłeś ataku paniki pod wpływem substancji (tzw. bad trip), specjalista pomoże ci zdekodować, z jakim wypartym lękiem z dzieciństwa próbowałaś się skonfrontować. Integracja to sztuka wyciągania mądrości z chaosu nieświadomości i przekuwania jej w zdrowe, trzeźwe nawyki w poniedziałkowy poranek.
+                  Renesans psychodeliczny trwa w najlepsze. Setki artykułów opisują obiecujące wyniki badań dotyczących depresji lekoopornej, PTSD czy lęku egzystencjalnego, a kultura masowa ponownie zafascynowała się substancjami poszerzającymi świadomość.
+
+Coraz więcej specjalistów podkreśla jednak, że samo doświadczenie psychodeliczne nie jest równoznaczne z trwałą zmianą. To trochę tak, jakby samo wejście na szczyt góry miało uczynić cię alpinistą. Prawdziwa praca często zaczyna się dopiero po zakończeniu doświadczenia. To właśnie ten etap nazywamy integracją.
+
+Polskie Towarzystwo Integracji Psychodelicznej (PTIP), które prowadzi grupy wsparcia w różnych miastach Polski oraz online, zwraca uwagę, że doświadczenia poszerzonej świadomości mogą być głębokie i intensywne. Niektórzy konfrontują się z długo tłumionymi emocjami, inni doświadczają poczucia jedności, głębokich wglądów lub trudnych, dezorientujących przeżyć.
+
+Niezależnie od charakteru doświadczenia wiele osób potrzebuje czasu i przestrzeni, aby nadać mu znaczenie i odnaleźć jego miejsce w codziennym życiu. Bez procesu integracji część przeżyć może z czasem wyblaknąć lub pozostawić po sobie poczucie dezorientacji i niepokoju.
+
+Integracja to proces rozumienia i osadzania tego, co zostało przeżyte. Niektórzy specjaliści korzystają między innymi z modelu IFS (System Wewnętrznej Rodziny), aby lepiej zrozumieć wewnętrzne konflikty, emocje i różne „części” naszej psychiki, które mogły ujawnić się podczas doświadczenia.
+
+Jeśli ktoś doświadczył intensywnego lęku lub tzw. bad tripu, proces integracji może pomóc przyjrzeć się temu doświadczeniu z większą ciekawością i zrozumieniem oraz zastanowić się, czy wiąże się ono z ważnymi wydarzeniami, przekonaniami lub nierozwiązanymi doświadczeniami z przeszłości.
+
+Integrację można rozumieć jako proces wydobywania znaczenia z intensywnych doświadczeń i przekładania wglądów na codzienne życie – tak, aby nie pozostały jedynie niezwykłym wspomnieniem, ale mogły stać się źródłem refleksji i świadomych zmian. Tarcza ochronna mózgu czy zagrożenie? Dwa oblicza medycznej marihuany
+
+Przez dekady wmawiano nam, że marihuana bezpowrotnie niszczy pamięć i degeneruje komórki nerwowe. Tymczasem ostatnie lata przyniosły wyniki badań, które pokazały, że wpływ konopi na mózg jest znacznie bardziej złożony i może zależeć między innymi od wieku, dawki, składu preparatu oraz indywidualnych predyspozycji.
+
+Jednym z bardziej zaskakujących odkryć były analizy danych z UK Biobank, które wykazały, że u części osób w średnim i starszym wieku historia używania konopi wiązała się z większą objętością niektórych struktur mózgu oraz lepszymi wynikami w wybranych testach poznawczych. Wyniki te nie oznaczają jednak, że konopie „chronią mózg” ani nie dowodzą związku przyczynowo-skutkowego. Pokazują raczej, że zależność między konopiami a funkcjonowaniem mózgu może być bardziej złożona, niż przez lata sądzono.
+
+Nauka rzuca jednak równie ważne ostrzeżenie. W przypadku osób młodych, których mózg nadal intensywnie się rozwija, używanie konopi – szczególnie preparatów o wysokiej zawartości THC – wiąże się ze zwiększonym ryzykiem wystąpienia zaburzeń psychotycznych, zwłaszcza u osób posiadających indywidualne predyspozycje.
+
+Badania pokazują również, że wbrew powszechnym opiniom sama marihuana nie jest uniwersalnym sposobem leczenia depresji czy lęku. U części osób może przynosić subiektywną ulgę, podczas gdy u innych nasilać objawy niepokoju, obniżenia nastroju lub dezorganizacji.
+
+Coraz większe zainteresowanie budzą natomiast badania nad wykorzystaniem konopi w połączeniu z psychoterapią i pracą integracyjną. Pojawiają się pojedyncze opisy przypadków oraz wstępne wyniki sugerujące, że w określonych warunkach medycznych i terapeutycznych konopie mogą wspierać pogłębianie kontaktu z emocjami i doświadczeniami wewnętrznymi. Obszar ten nadal wymaga jednak dalszych badań i dużej ostrożności w wyciąganiu wniosków.
+
+Konopie nie są „magiczną pigułką” ani rozwiązaniem dla każdego. Ich wpływ na psychikę i mózg okazuje się znacznie bardziej złożony, niż przez lata sądzono. Dlatego coraz więcej specjalistów podkreśla znaczenie odpowiedniej kwalifikacji, uwzględnienia przeciwwskazań oraz świadomego podejścia do integracji doświadczeń związanych z ich stosowaniem.
                   </p>
                 </div>
               </article>
@@ -151,44 +188,25 @@ const PrzydatnaWiedza: React.FC = () => {
                 </h3>
                 <div className="prose prose-lg prose-invert max-w-none text-warm-300 font-light leading-relaxed">
                   <p>
-                    Co byś powiedział, gdyby ktoś zaproponował ci podróż do najgłębszych zakamarków twojej podświadomości, dostęp do wypartych wspomnień, a nawet doświadczeń mistycznych – bez użycia jakichkolwiek substancji psychoaktywnych? Brzmi jak obietnica szamana, ale to naukowa metoda wywodząca się z psychologii transpersonalnej, stworzona w latach 70. przez psychiatrę, dr. Stanislava Grofa. Mowa o oddychaniu holotropowym.
-                  </p>
-                  <p>
-                    Słowo "holotropowy" pochodzi z greki i oznacza "zmierzający ku całości". Grof odkrył, że odpowiednio zintensyfikowane, pogłębione i przyspieszone oddychanie, w połączeniu ze specyficzną, ewokatywną muzyką, prowadzi do aktywacji głębokiego, limbicznego systemu emocjonalnego. Zdejmuje ono blokady i filtry, które na co dzień chronią nasz umysł, ale też więzią w nim dawne traumy.
-                  </p>
-                  <p>
-                    Doświadczenia podczas takich sesji (prowadzonych wyłącznie przez wykwalifikowanych facylitatorów) bywają wstrząsające. Uczestnicy mogą doświadczyć fizycznych wibracji, zmian temperatury, a nierzadko odzyskują wspomnienia z wczesnego dzieciństwa, a nawet... z własnych narodzin. Grof opracował teorię matryc perinatalnych, dowodząc, że bolesne przeżycia fizyczne i emocjonalne z momentu utknięcia w kanale rodnym zostają zakodowane w najgłębszych strukturach naszej psychiki. Doświadczenie tej traumy ponownie w bezpiecznych warunkach bywa opisywane przez pacjentów jako symboliczne "umieranie za życia". Prowadzi to do potężnego uwolnienia przewlekłych napięć w ciele i umyśle, przynosząc uczucie błogiego rozluźnienia i wewnętrznej harmonii. Ze względu na ekstremalną intensywność procesu, metoda ta ma jasne przeciwwskazania (m.in. ciąża, padaczka, astma, choroby układu krążenia), jednak dla wielu poszukujących głębokiej transformacji jest to jedno z najpotężniejszych narzędzi poznania samego siebie.
+                  Co byś powiedział, gdyby ktoś zaproponował ci podróż do głębokich warstw własnego doświadczenia wewnętrznego – bez użycia substancji psychoaktywnych? Brzmi niezwykle, ale właśnie na tym opiera się oddychanie holotropowe – metoda wywodząca się z psychologii transpersonalnej, rozwijana od lat 70. przez psychiatrę Stanislava Grofa i jego żonę Christinę Grof, współtwórczynię tej metody oraz pionierkę pracy z poszerzonymi stanami świadomości.
+
+Słowo „holotropowy” pochodzi z greki i oznacza „zmierzający ku całości”. Metoda wykorzystuje pogłębiony i intensywniejszy oddech, połączony ze specjalnie dobraną muzyką oraz wspierającą obecnością facylitatorów. Celem jest stworzenie warunków sprzyjających pogłębionemu kontaktowi z własnym doświadczeniem, emocjami i wewnętrznym światem.
+
+Doświadczenia podczas takich sesji bywają bardzo intensywne. Uczestnicy opisują między innymi silne emocje, obrazy, odczucia płynące z ciała, doświadczenia symboliczne czy poczucie głębokiego wglądu. Niektórzy interpretują część tych przeżyć jako związane z bardzo wczesnym okresem życia, a nawet z własnymi narodzinami.
+
+Stanislav Grof zaproponował teorię matryc perinatalnych, zakładającą, że doświadczenia związane z okresem narodzin mogą pozostawiać ślad w psychice człowieka i ujawniać się w poszerzonych stanach świadomości. Koncepcja ta pozostaje jednak elementem teorii psychologii transpersonalnej i nie została jednoznacznie potwierdzona empirycznie.
+
+Część uczestników opisuje swoje doświadczenia jako symboliczne „umieranie za życia” – głęboki proces konfrontacji z własnymi lękami, stratami lub starymi sposobami funkcjonowania. Niektóre osoby po sesjach mówią o poczuciu ulgi, większego spokoju i rozluźnienia.
+
+Ze względu na intensywność procesu metoda posiada wyraźne przeciwwskazania, między innymi dotyczące niektórych chorób układu krążenia, padaczki, ciąży czy części schorzeń oddechowych. Dlatego przed udziałem w sesji zawsze konieczna jest odpowiednia kwalifikacja i uwzględnienie stanu zdrowia uczestnika.
+
+Dla wielu osób oddychanie holotropowe staje się ważnym doświadczeniem samopoznania i okazją do głębszego kontaktu z własnym światem wewnętrznym.
                   </p>
                 </div>
               </article>
             </section>
 
-            {/* KATEGORIA 4: CAT Cannabis Assisted Therapy */}
-            <section>
-              <h2 className="font-serif text-4xl text-coffee-400 border-b border-coffee-900/50 pb-4 mb-10 text-center tracking-wider">
-                CAT CANNABIS ASSISTED THERAPY
-              </h2>
-
-              <article className="bg-warm-800/30 p-8 md:p-10 rounded-2xl border border-warm-800">
-                <h3 className="font-serif text-3xl text-warm-100 mb-6 leading-tight">
-                  Tarcza ochronna mózgu czy zagrożenie? Dwa oblicza medycznej marihuany w psychoterapii
-                </h3>
-                <div className="prose prose-lg prose-invert max-w-none text-warm-300 font-light leading-relaxed">
-                  <p>
-                    Przez dekady wmawiano nam, że marihuana bezpowrotnie niszczy pamięć i degeneruje komórki nerwowe. Tymczasem rok 2026 przyniósł wyniki badań, które wprawiły w osłupienie nawet doświadczonych neurologów i psychologów. Prawda o wpływie konopi na mózg okazała się niezwykle złożona i... mocno zależna od wieku.
-                  </p>
-                  <p>
-                    Zacznijmy od odkryć, które budzą największe zdumienie: analiza danych z UK Biobank wykazała, że u pacjentów w średnim i starszym wieku (powyżej 40. roku życia) umiarkowany kontakt z konopiami może działać jak biologiczna tarcza. Użytkownicy konopi po czterdziestce często wykazują sprawniejsze umysły i większą objętość tkanki mózgowej w rejonach bogatych w receptory CB1 niż ich rówieśnicy, którzy nigdy nie mieli kontaktu z tą rośliną.
-                  </p>
-                  <p>
-                    Zanim jednak uznamy to za cudowny lek na wszystko, nauka rzuca równie potężne ostrzeżenie. W przypadku osób młodych, których mózgi wciąż się rozwijają, ryzyko wystąpienia poważnych zaburzeń psychotycznych (w tym schizofrenii) jest drastycznie wyższe. Co więcej, potężne metaanalizy z 2026 roku wykazały, że wbrew powszechnym opiniom, sama marihuana często jest nieskuteczna w samodzielnym leczeniu depresji, a w stanach lękowych może te objawy wręcz nasilać.
-                  </p>
-                  <p>
-                    Gdzie leży złoty środek? W innowacyjnych protokołach CAPT (Cannabis-Assisted Psychotherapy). Badania nad klinicznym wykorzystaniem konopi jako katalizatora dla terapii u osób z najcięższymi formami dysocjacyjnego PTSD przyniosły spektakularne rezultaty. W jednym z udokumentowanych przypadków pacjentka po 10 sesjach psychoterapii wspomaganej medyczną marihuaną zanotowała redukcję patologicznej dysocjacji aż o 98,5%, całkowicie wychodząc z kryteriów diagnostycznych D-PTSD. Konopie, podawane pod ścisłą kontrolą lekarza (np. w optymalnych, przeciwlękowych proporcjach CBD do THC wynoszących 4:1), nie są magiczną pigułką, ale mogą otwierać zamknięte drzwi do uleczenia najgłębszych traum.
-                  </p>
-                </div>
-              </article>
-            </section>
+           
 
           </div>
 

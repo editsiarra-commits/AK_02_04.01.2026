@@ -71,7 +71,7 @@ const Hipnoterapia: React.FC = () => {
             </ul>
 
             <p className="mt-6">
-              Celem nie jest „naprawianie" ani forsowanie zmiany, lecz stworzenie warunków, w których zmiana może pojawić się w sposób bardziej naturalny, trwały i spójny z Twoim doświadczeniem.
+              Celem nie jest „naprawianie" ani forsowanie zmiany, lecz stworzenie warunków, w których zmiana może pojawić się w sposób bardziej naturalny i spójny z Twoim doświadczeniem.
             </p>
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Dla kogo jest szczególnie pomocna?</h2>
@@ -112,20 +112,20 @@ const Hipnoterapia: React.FC = () => {
             </ul>
 
             <p className="mt-6">
-              To świadomy, aktywny proces wymagający Twojego zaangażowania - i dający trwałe efekty.
+            To świadomy, aktywny proces wymagający Twojego zaangażowania i otwartości na zmianę.
             </p>
 
-            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Przykłady efektów, których najczęściej doświadczają moi Klienci</h2>
+            <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Do doświadczeń, o których klienci mówią najczęściej, należą między innymi:</h2>
 
             <ul className="list-none space-y-2 pl-0">
-              <li>- wyraźny spokój wewnętrzny i zmniejszenie napięcia</li>
-              <li>- zanik lub znaczne osłabienie fobii, lęków i wewnętrznego krytyka</li>
-              <li>- lżejsze relacje z innymi i z samym sobą</li>
-              <li>- powrót poczucia sprawczości i energii do działania</li>
-              <li>- umiejętność spokojniejszego radzenia sobie z trudnymi emocjami</li>
+              <li>- większy spokój wewnętrzny i mniejsze napięcie</li>
+              <li>- inny sposób przeżywania lęku, obaw i wewnętrznego krytyka</li>
+              <li>- większa lekkość w relacjach z innymi i z samym sobą</li>
+              <li>- poczucie większej sprawczości i gotowości do działania</li>
+              <li>- większa umiejętność radzenia sobie z trudnymi emocjami</li>
             </ul>
 
-            <h2 className="font-serif text-2xl text-warm-100 mt-16 mb-6">Jeśli masz wrażenie, że utknąłeś w schematach, z których nie potrafisz się wydostać samodzielnie – hipnoterapia bardzo często okazuje się przełomem. Chcesz sprawdzić, czy to dobry kierunek właśnie dla Ciebie? Zapraszam na spokojną, bez zobowiązań konsultację.</h2>
+            <h2 className="font-serif text-2xl text-warm-100 mt-16 mb-6">Jeśli masz wrażenie, że utknąłeś w schematach, z których nie potrafisz się wydostać samodzielnie, hipnoterapia bywa doświadczeniem, które otwiera przestrzeń do ważnych zmian. Chcesz sprawdzić, czy to dobry kierunek właśnie dla Ciebie? Zapraszam na spokojną, bez zobowiązań konsultację.</h2>
 
             <div className="mt-8 text-center">
               <button

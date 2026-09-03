@@ -31,9 +31,9 @@ const navItems: NavItem[] = [
     path: '#offer',
     children: [
       { label: 'HIPNOTERAPIA', path: '/hipnoterapia' },
-      { label: 'INTEGRACJA PSYCHODELICZNA', path: '/integracja-psychodeliczna' },
-      { label: 'SESJE ODDECHOWE', path: '/sesje-oddechowe' },
-      { label: 'CAT Cannabis Assisted Therapy', path: '/cat' }
+      { label: 'PRACA Z POSZERZONYMI STANAMI ŚWIADOMOŚCI', path: '/integracja-psychodeliczna' },
+      { label: 'SESJE ODDECHOWE', path: '/sesje-oddechowe' }
+      // { label: 'CAT Cannabis Assisted Therapy', path: '/cat' }
     ]
   },
   { label: 'Przydatna Wiedza', path: '/przydatna-wiedza' },

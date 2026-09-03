@@ -31,7 +31,7 @@ const IntegracjaPsychodeliczna: React.FC = () => {
             Przekształcanie Wglądów w Zmianę
           </p>
           <h1 className="font-serif text-4xl md:text-6xl text-warm-100 mb-2">
-            Przygotowanie i Integracja Doświadczeń Psychodelicznych
+          Przygotowanie i Integracja Poszerzonych Stanów Świadomości
           </h1>
           <h2 className="text-xl md:text-2xl text-coffee-400 block mt-1 opacity-90 font-serif font-light tracking-wider mb-4">
             Białystok — Warszawa — Online
@@ -53,11 +53,10 @@ const IntegracjaPsychodeliczna: React.FC = () => {
           </div>
           <div className="prose prose-lg text-warm-300 font-light leading-relaxed">
             <p>
-            Doświadczenia psychodeliczne — czy to z użyciem Ayahuaski, psylocybiny, MDMA, ketaminy, medycznej marihuany, czy poprzez oddech, medytację i inne poszerzone stany świadomości - potrafią być głębokie, graniczne i transformujące. Często poruszają warstwy emocjonalne, cielesne i egzystencjalne, otwierając przestrzenie, do których na co dzień nie mamy dostępu.
+            Doświadczenia związane z Ayahuaską, psylocybiną, MDMA, legalnymi terapiami ketaminowymi, medyczną marihuaną, a także intensywnymi praktykami oddechowymi, medytacyjnymi i innymi poszerzonymi stanami świadomości mogą być głębokie, graniczne i transformujące. Często poruszają warstwy emocjonalne, cielesne i egzystencjalne, otwierając perspektywy, które na co dzień pozostają poza obszarem zwykłej świadomości.
+Jednocześnie samo doświadczenie to dopiero początek. To, co wydarza się przed i po — przygotowanie oraz integracja — w dużej mierze wpływa na to, w jaki sposób doświadczenie zostanie zrozumiane i włączone do codziennego życia.
             </p>
-            <p>
-            Jednocześnie samo doświadczenie to dopiero początek. To, co wydarza się przed i po — przygotowanie oraz integracja - decyduje o tym, czy stanie się ono realną, wspierającą zmianą, czy pozostanie intensywnym, ale niezintegrowanym przeżyciem.
-            </p>
+            
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Dla kogo jest ta praca?</h2>
             <p>
@@ -90,10 +89,11 @@ To praca z intencją, regulacją ciała i układu nerwowego, z lękami, oczekiwa
             </p>
             
             <p className="mt-4">
-              Pracujemy z wglądami, symbolami i emocjami, przekładając je na realne zmiany — w relacjach, decyzjach, granicach i sposobie bycia ze sobą. Bez pośpiechu, bez idealizowania, z uważnością na regulację i ugruntowanie.
+            Pracujemy z wglądami, symbolami i emocjami, poszukując sposobów ich zrozumienia i osadzenia w codziennym życiu. Bez pośpiechu, bez idealizowania, z uważnością na regulację i ugruntowanie.
+
             </p>
             <p className="mt-4">
-              Integracja sprawia, że to, co było intensywnym przeżyciem, może stać się żywym, wspierającym procesem zmiany, a nie tylko wspomnieniem „tripa".
+            Integracja może pomóc nadać znaczenie temu, co zostało przeżyte, i stworzyć przestrzeń, w której intensywne doświadczenie staje się żywym, wspierającym procesem, a nie tylko wspomnieniem tripa.
             </p>
 
             <h2 className="font-serif text-3xl text-warm-100 mt-16 mb-6">Ważna informacja prawna</h2>

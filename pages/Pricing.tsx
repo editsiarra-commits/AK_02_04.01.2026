@@ -103,15 +103,15 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
 
     {
       id: 4,
-      title: "Sesja integracji psychodelicznej",
-      subtitle: "/ Sesja przygotowująca",
+      title: "Praca z Poszerzonymi Stanami Świadomości",
+      subtitle: "+ Sesja przygotowująca",
       price: "600 zł",
       duration: "2-2,5 godziny",
-      description: "To przestrzeń, w której wglądy stają się trwałą zmianą, a nie tylko chwilowym olśnieniem.",
+      description: "To przestrzeń, w której wglądy mają szansę stać się początkiem świadomej zmiany, a nie tylko chwilowym olśnieniem.",
       targetAudience: "Dla Ciebie, jeśli:",
       details: [
-        "niedawno przeżyłeś/aś intensywne doświadczenie i potrzebujesz uporządkować, nazwać i osadzić to, co się wydarzyło",
-        "planujesz pracę psychodeliczną i chcesz wejść w nią z maksymalną świadomością, intencją i wsparciem"
+        "niedawno przeżyłeś/aś intensywne doświadczenie i potrzebujesz uporządkować, nazwać i osadzić to, co się wydarzyło,",
+        "planujesz doświadczenie psychodeliczne i chcesz wejść w nie w sposób świadomy, odpowiedzialny i dobrze przygotowany."
       ]
     },
 
@@ -119,8 +119,8 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
 
     {
       id: 5,
-      title: "Pogłębiona sesja oddechowa z integracją",
-      subtitle: "+ integracja",
+      title: "Pogłębiona sesja oddechowa z przygotowaniem",
+      subtitle: "+ Sesja integracyjna",
       price: "1500 zł",
       duration: "Do 5 godzin + sesja integracyjna",
       description: "Dla osób, które pragną głębokiej, doświadczeniowej i somatycznej pracy — bez substancji, a z ogromnym potencjałem transformacji. To proces pozwalający dotrzeć do głębiej zapisanych napięć, emocji i wzorców oraz przełożyć to doświadczenie na realną zmianę w codziennym życiu.",
@@ -137,20 +137,7 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
 
     },
 
-    {
-      id: 3,
-      title: "Cannabis Assisted Therapy",
-      subtitle: "Pełny 3 etapowy proces",
-      price: "2500 zł",
-      duration: "Ok. 9 godzin łącznie",
-      description: "Uporządkowana, bezpieczna podróż w głąb: przygotowanie → doświadczenie → integracja. Proces realizowany zgodnie z najwyższymi standardami bezpieczeństwa i etyki. Dla osób gotowych na głęboką, świadomą zmianę – w kontrolowanych, profesjonalnych ramach.",
-      targetAudience: "W pakiecie:",
-      details: [
-        "sesja przygotowująca - ok. 2 h (intencja, granice, zasoby bezpieczeństwa, plan wsparcia)",
-        "sesja psychodeliczna - Mindfulness-Based Psychedelic Therapy z wykorzystaniem medycznej marihuany - ok. 5 h (głęboka, prowadzona, w pełni legalna i nadzorowana)",
-        "sesja integracyjna - ok. 2 h (przekładanie wglądów na codzienne życie, nowe decyzje, stabilne osadzenie)"
-      ]
-    },
+   
 
   ];
 
@@ -380,10 +367,11 @@ const Pricing: React.FC<PricingProps> = ({ id }) => {
               </li>
             </ul>
             <p className="text-warm-400 text-sm font-light leading-relaxed">
-              Płatność realizowana jest z góry – stanowi jednocześnie gwarancję Twojego miejsca w moim kalendarzu.
-              W razie odwołania lub niewykorzystania sesji przez Ciebie – opłata nie podlega zwrotowi.
-              Przełożenie terminu jest możliwe do 24 h przed spotkaniem.
-              Potrzebujesz faktury usługa terapeutyczna / superwizja? Napisz lub zadzwoń przed opłatą – przygotuję ją bez problemu.
+            Płatność za sesję realizowana jest z góry i stanowi potwierdzenie rezerwacji terminu w moim kalendarzu.
+
+W przypadku odwołania sesji później niż 24 godziny przed umówionym spotkaniem lub nieobecności na sesji opłata nie podlega zwrotowi. Zmiana terminu jest możliwa najpóźniej na 24 godziny przed planowanym spotkaniem.
+
+Potrzebujesz faktury? Napisz lub zadzwoń przed dokonaniem płatności.
             </p>
           </div>
         </div>

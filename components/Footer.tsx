@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
           <div className="space-y-6">
             <h3 className="font-serif text-2xl text-warm-100 tracking-wider">Agnieszka Kochanowska</h3>
             <p className="font-sans text-sm leading-relaxed text-warm-400 font-light max-w-xs">
-              Hipnoterapia, integracja psychodeliczna, sesje oddechowe i praca w nurcie Cannabis Assisted Therapy — gabinet w Białymstoku i Warszawie, możliwość sesji online.
+            Hipnoterapia, praca z poszerzonymi stanami świadomości i sesje oddechowe. Prowadzę sesje online oraz spotkania stacjonarne w Białymstoku i Warszawie.
             </p>
           </div>
 
